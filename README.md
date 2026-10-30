@@ -4,9 +4,9 @@ Greenfield Azure portfolio project for **fictional Northstar Insurance Group**, 
 
 ## Evidence status
 
-**IMPLEMENTED AND LOCALLY TESTED:** the `claims_ai` Python foundation and Milestone 4 seeded synthetic dataset tooling. The foundation supplies Pydantic v2 contracts, deterministic state-transition guards, local configuration, redacted JSON logging and typed service protocols. The [motor-v1 corpus](data/synthetic/motor/README.md) supplies 12 development scenarios, readable artifacts and source-linked labels; policies/coverage interpretations remain unapproved. See [Milestone 2 evidence](docs/milestones/milestone-2.md) and [Milestone 4 evidence](docs/milestones/milestone-4.md) for actual checks and limitations.
+**IMPLEMENTED AND LOCALLY TESTED:** the `claims_ai` Python foundation, Milestone 4 synthetic dataset tools and Milestone 5 offline extraction benchmark. The foundation supplies Pydantic v2 contracts, deterministic state-transition guards, local configuration, redacted JSON logging and typed protocols. The [motor-v1 corpus](data/synthetic/motor/README.md) supplies 12 development scenarios and source-linked labels; policies/coverage interpretations remain unapproved. The [benchmark](docs/quality/document-intelligence-benchmark.md) has typed interfaces and deterministic scoring; **all fixture extraction results are SIMULATED ground-truth echoes**, not OCR/vision/provider performance results.
 
-The end-to-end application and all Azure/AI integrations, coverage rules, durable persistence/audit, authentication, UI, held-out model evaluation and OpenTelemetry remain **PLANNED**. No agent/service integration is implemented or simulated. No performance benchmark or cloud deployment is claimed. Domain role checks require a trusted caller context; they do not authenticate a human or persist an approval. Dataset labels are authored expectations, not extracted/model-produced or approved case outcomes.
+The end-to-end application and all live Azure/Mistral/GPT integrations, coverage rules, durable persistence/audit, authentication, UI, held-out model evaluation and OpenTelemetry remain **PLANNED**. No live service comparison or cloud deployment is claimed. Domain role checks require a trusted caller context; they do not authenticate a human or persist an approval. Dataset labels and simulated responses are not model-produced facts or approved case outcomes.
 
 **Milestone 3 documentation is complete:** the business process, responsibilities, requirements, traceability, risk register and authority ADR refine the baseline. No runtime files changed. The 115 passing foundation tests and package/typing results remain historical Milestone 2 evidence; they were not rerun or promoted into business-performance results by this documentation milestone.
 
@@ -44,6 +44,8 @@ Only fictional policies, people, identifiers, documents and generated/non-identi
 | [Milestone 3 record](docs/milestones/milestone-3.md) | Process/requirement refinements, checks and scope sequencing |
 | [Synthetic motor corpus](data/synthetic/motor/README.md) | Scenarios, generation command, schema, provenance and limitations |
 | [Milestone 4 record](docs/milestones/milestone-4.md) | Dataset implementation, tests and reproducibility evidence |
+| [Document intelligence benchmark](docs/quality/document-intelligence-benchmark.md) | Offline CLI, typed extraction boundaries, scoring and limitations |
+| [Milestone 5 record](docs/milestones/milestone-5.md) | Harness checks and explicitly simulated fixture results |
 
 ## Local Python foundation
 
@@ -66,8 +68,16 @@ PYTHONPATH=src .venv/bin/python -m claims_ai.dataset generate --output /tmp/nort
 
 The output path must not already exist. The [corpus guide](data/synthetic/motor/README.md) documents exact reproduction and safe handling of malicious fixture text. Standard-library PDF/PNG rendering adds no dependency to the application.
 
+Run the offline extraction harness with a new output filename:
+
+```sh
+PYTHONPATH=src .venv/bin/python -m claims_ai.benchmark --corpus data/synthetic/motor/v1 --output outputs/benchmarks/fixture.json
+```
+
+This emits versioned JSON for 75 unique documents/335 field labels, preserving duplicate scenario references. Results are **SIMULATED**, grouped by media/document/capability profile, with unavailable latency/token/cost metadata left null. `--pdf-only` tests unsupported-image handling on the fixture; no vendor adapter is executed. See the [scoring guide](docs/quality/document-intelligence-benchmark.md#scoring-methodology--field-v1). `make benchmark-check` runs its focused tests.
+
 Settings use `CLAIMS_AI_` environment variables with local/test-only defaults. See [.env.example](.env.example); dotenv loading requires an explicit `Settings(_env_file=...)` path. No credentials or external endpoints are supported. The 10 MiB configurable document limit is a setting only until ingestion exists.
 
 Domain validation checks synthetic identifiers, object references, document/evidence hash metadata, policy-version metadata and caller-supplied evidence checklists. It does not scan files, resolve policy coverage or approve fictional insurance rules. Dataset validation additionally checks fixture bytes against hashes/source renderings; it is not live upload validation or malware scanning. Structured logging emits approved event names and allowlisted operational fields; arbitrary payloads and exception text are suppressed. Do not send raw model dumps or validation-error payloads to other loggers.
 
-Git setup and all commits/pushes remain manual. **Milestone 5 has not started.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) reflects the approved dataset-only Milestone 4.
+Git setup and all commits/pushes remain manual. **Milestone 6 has not started.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) reflects the approved offline-benchmark Milestone 5.

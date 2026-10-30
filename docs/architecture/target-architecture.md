@@ -4,6 +4,8 @@ Status: **PLANNED runtime architecture**. [Milestone 2](../milestones/milestone-
 
 [Milestone 4](../milestones/milestone-4.md) adds offline synthetic artifact authoring, source-linked annotations and byte/reproduction validation. These tools do not implement any processing component below: intake remains quarantined, and authored labels are not extracted facts, approved policies or operational decisions.
 
+[Milestone 5](../milestones/milestone-5.md) adds a separate model-neutral benchmark transport and fixture-only extraction harness. Typed Azure/Mistral/GPT adapter interfaces are not live integrations; SIMULATED ground-truth echoes do not change the operational `DocumentProcessor` contract or promote quarantined evidence. No architectural authority boundary changes.
+
 ## Logical components and data flow
 
 ```mermaid
