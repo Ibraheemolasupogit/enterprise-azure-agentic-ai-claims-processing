@@ -8,6 +8,8 @@ Greenfield Azure portfolio project for **fictional Northstar Insurance Group**, 
 
 The end-to-end application and all Azure/AI integrations, coverage rules, durable persistence/audit, authentication, UI, golden evaluation and OpenTelemetry remain **PLANNED**. No agent/service integration is implemented or simulated. No performance benchmark or cloud deployment is claimed. Domain role checks require a trusted caller context; they do not authenticate a human or persist an approval.
 
+**Milestone 3 documentation is complete:** the business process, responsibilities, requirements, traceability, risk register and authority ADR refine the baseline. No runtime files changed. The 115 passing foundation tests and package/typing results remain historical Milestone 2 evidence; they were not rerun or promoted into business-performance results by this documentation milestone.
+
 The original Microsoft Claims Processing Hackathon source was not located. This is independently engineered, informed by lessons from that context; it does not continue the hackathon challenge roadmap. It is separate from the Agentic SDLC portfolio repository. No reference application was imported, and no further source search is planned.
 
 ## Initial scope and planned capabilities
@@ -28,13 +30,18 @@ Only fictional policies, people, identifiers, documents and generated/non-identi
 | Document | Purpose |
 | --- | --- |
 | [Project charter](docs/business/project-charter.md) | Business scope, stakeholders and proposed outcomes |
+| [Requirements](docs/business/requirements.md) | Stable business-to-system requirements and acceptance criteria |
+| [Traceability matrix](docs/business/traceability-matrix.md) | Actual contracts/existing tests versus planned capabilities and verification |
+| [Risk register](docs/business/risk-register.md) | Open risks, owners and required closure evidence |
 | [Target architecture](docs/architecture/target-architecture.md) | Components, contracts, workflow and agent boundaries |
+| [Authority ADR](docs/architecture/decisions/0001-decision-authority.md) | Existing code/agent/human decision boundary |
 | [Security and governance](docs/architecture/security-and-governance.md) | Trust, identity, privacy and decision controls |
 | [Evaluation and observability](docs/quality/evaluation-and-observability.md) | Proposed acceptance gates and operational evidence |
 | [Deployment strategy](docs/deployment/deployment-strategy.md) | Services, deployment gates and cost constraints |
 | [Roadmap](docs/milestones/roadmap.md) | Incremental implementation and evidence requirements |
 | [Milestone 1 record](docs/milestones/milestone-1.md) | Decisions, verification, assumptions and remaining gaps |
 | [Milestone 2 record](docs/milestones/milestone-2.md) | Python foundation, verification and unresolved decisions |
+| [Milestone 3 record](docs/milestones/milestone-3.md) | Process/requirement refinements, checks and scope sequencing |
 
 ## Local Python foundation
 
@@ -53,4 +60,4 @@ Settings use `CLAIMS_AI_` environment variables with local/test-only defaults. S
 
 Domain validation checks synthetic identifiers, object references, document/evidence hashes, policy-version metadata and caller-supplied evidence checklists. It does not scan files, verify artifact bytes, resolve policy coverage or approve fictional insurance rules. Structured logging emits approved event names and allowlisted operational fields; arbitrary payloads and exception text are suppressed. Do not send raw model dumps or validation-error payloads to other loggers.
 
-Git setup and all commits/pushes remain manual. **Milestone 3 has not started.**
+Git setup and all commits/pushes remain manual. **Milestone 4 has not started.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) reflects the approved documentation-only Milestone 3.

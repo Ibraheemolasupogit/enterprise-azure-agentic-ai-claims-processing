@@ -1,6 +1,6 @@
 # Evaluation and observability baseline
 
-Status: **PLANNED**. No golden cases, test runner, telemetry, benchmark results or fault-injection runs exist. Targets below are proposals for the [architecture](../architecture/target-architecture.md), not measured performance.
+Status: **PLANNED business/model evaluation and distributed observability**. Milestone 2 supplies a foundation unit-test runner and local redacted JSON logging; no golden cases/evaluation runner, distributed telemetry, benchmark results or fault-injection runs exist. Targets below are proposals for the [architecture](../architecture/target-architecture.md), not measured performance. [Milestone 3 traceability](../business/traceability-matrix.md) maps existing tests separately from future verification; this document remains the source for proposed numeric evaluation targets.
 
 ## Synthetic golden dataset and reproducibility
 
@@ -8,7 +8,7 @@ Plan an initial 60-case suite: 15 straightforward covered damage, 10 exclusions/
 
 Each case will contain generated artifacts with hashes, a synthetic policy bundle/rule version, labeled critical fields (policy ID, loss date, vehicle reference, estimate amount/currency), relevant clause IDs, expected rule results, expected routing and prohibited actions. Labels must be independently reviewed where feasible; disclose single-maintainer review. Separate development and held-out cases; track changes without silently rewriting expected outputs.
 
-Every run records source revision or pre-Git content hashes, dataset manifest/hash, schema/rules/policy/index versions, model/deployment/version, inference parameters, prompts, tools, package lock, environment and evaluator versions. Repeat probabilistic steps three times per held-out case; report all runs and worst-case safety failures. Fixed inputs and manifests make runs comparable, not bitwise deterministic. Distinguish local stub results (**SIMULATED**) from actual service tests (**TESTED**); neither label is earned in Milestone 1.
+Every evaluation run will record source revision or pre-Git content hashes, dataset manifest/hash, schema/rules/policy/index versions, model/deployment/version, inference parameters, prompts, tools, package lock, environment and evaluator versions. Repeat probabilistic steps three times per held-out case; report all runs and worst-case safety failures. Fixed inputs and manifests make runs comparable, not bitwise deterministic. Distinguish local stub results (**SIMULATED**) from actual service tests (**TESTED**); current foundation unit tests establish neither service-integration nor golden-evaluation evidence.
 
 ## Proposed acceptance metrics
 

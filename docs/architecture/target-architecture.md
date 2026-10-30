@@ -1,6 +1,6 @@
 # Target architecture
 
-Status: **PLANNED runtime architecture**. [Milestone 2](../milestones/milestone-2.md) implements and locally tests domain contracts, in-memory transition guards, configuration, redacted logging and typed protocols. Azure services, agents, API/UI, persistence/audit and coverage rules remain unimplemented. This is an independent greenfield design for the [charter](../business/project-charter.md).
+Status: **PLANNED runtime architecture**. [Milestone 2](../milestones/milestone-2.md) implements and locally tests domain contracts, in-memory transition guards, configuration, redacted logging and typed protocols. [Milestone 3 requirements](../business/requirements.md) refine business acceptance/traceability without changing contracts or this design. Azure services, agents, API/UI, persistence/audit and coverage rules remain unimplemented. This is an independent greenfield design for the [charter](../business/project-charter.md).
 
 ## Logical components and data flow
 
@@ -53,6 +53,8 @@ Policy publication is a separate authorized pipeline: approve artifacts and rule
 | Policy explanation agent | Reviewers need a concise synthesis of applicable clauses, validated facts and rule results, including conflicting evidence. | Retrieve only the resolved policy bundle; draft cited explanations and unresolved questions. Cannot select policy versions, invent rules, override results or approve outcomes. |
 
 Each agent has bounded tool calls, tokens and wall time, schema-validated output and separate instructions/tool grants. A deterministic workflow orders them; no free-running supervisor agent is required. OCR, authorization, retrieval filters, calculations, routing, retries and persistence are ordinary code. Agent necessity must be compared against a simpler non-agent baseline during evaluation; remove complexity if it provides no measurable benefit.
+
+[ADR-0001](decisions/0001-decision-authority.md) records this existing authority boundary. The [requirements traceability matrix](../business/traceability-matrix.md) distinguishes implemented contract/local guards from planned agents, authorization and durable workflow enforcement. Claimant, operator and compliance/audit responsibilities do not add values to the implemented `ReviewerRole` enum.
 
 Typed tools will include `get_case_evidence`, `retrieve_policy_clauses` and `get_rule_assessment`. Schemas will bound arguments/results and carry provenance. Authorization derives case scope from the authenticated workflow, never a model-provided identity. MCP exposes selected read-only synthetic service operations behind APIM; private SDK adapters serve extraction/search. Both paths enforce the same grants. There is no agent tool for final decision, arbitrary HTTP, shell, SQL or file access.
 
