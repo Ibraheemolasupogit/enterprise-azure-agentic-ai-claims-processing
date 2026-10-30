@@ -1,0 +1,80 @@
+# Python bytecode, environments and package builds
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Test, type, lint and coverage output
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyright/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+junit.xml
+.hypothesis/
+.ipynb_checkpoints/
+
+# macOS and editor-local files
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local configuration and secrets; sanitized examples remain trackable
+.env
+.env.*
+!.env.example
+!.env.*.example
+.envrc
+.secrets/
+secrets/
+*.pem
+*.key
+*.pfx
+*.p12
+credentials.json
+service-account*.json
+local.settings.json
+*.bicepparam.local
+*.parameters.local.json
+
+# Local cloud authentication state
+.azure/
+.aws/
+.kube/
+
+# Runtime data and generated evidence, not curated synthetic fixtures
+*.log
+*.pid
+*.sqlite
+*.sqlite3
+*.db
+data/local/
+data/raw/
+uploads/
+outputs/
+artifacts/
+tmp/
+.cache/
+
+# Frontend dependencies/build output, if introduced later
+node_modules/
+.next/
