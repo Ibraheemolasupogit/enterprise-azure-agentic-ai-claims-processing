@@ -6,6 +6,8 @@ Status: **PLANNED runtime architecture**. [Milestone 2](../milestones/milestone-
 
 [Milestone 5](../milestones/milestone-5.md) adds a separate model-neutral benchmark transport and fixture-only extraction harness. Typed Azure/Mistral/GPT adapter interfaces are not live integrations; SIMULATED ground-truth echoes do not change the operational `DocumentProcessor` contract or promote quarantined evidence. No architectural authority boundary changes.
 
+[Milestone 6](../milestones/milestone-6.md) implements the deterministic, local [structured-evidence boundary](structured-evidence-processing.md) within step 3 below: typed mapping, source/hash/ownership checks, normalization, quality holds, immutable caller-held history and guarded in-memory admission. Independent quote verification currently supports generated single-page fixtures only; other inputs stay quarantined. Original M4 cases remain unchanged and the offline demonstration admits no evidence. Intake/scanning, authenticated assertions, repository integration and durable audit remain planned. Agent, rule and human-decision authority is unchanged.
+
 ## Logical components and data flow
 
 ```mermaid
@@ -64,7 +66,7 @@ Typed tools will include `get_case_evidence`, `retrieve_policy_clauses` and `get
 
 ## Contracts and case lifecycle
 
-The table defines the target contracts. Milestone 2 supplies foundation models and validation; real artifact verification, policy approval/resolution, service-produced assessments and durable review/audit enforcement require later milestones. A transition returns a validated in-memory record for future atomic persistence, not evidence of a persisted outcome.
+The table defines the target contracts. Milestone 2 supplies foundation models and validation; Milestone 6 verifies supplied artifact bytes and generated source quotes locally. General document indexing, authenticated artifact/scan assertions, policy approval/resolution, service-produced assessments and durable review/audit enforcement require later milestones. A transition or evidence admission returns validated in-memory snapshots for future atomic persistence, not evidence of a persisted outcome.
 
 | Contract | Required information |
 | --- | --- |

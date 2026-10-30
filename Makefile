@@ -1,6 +1,6 @@
 PYTHON ?= .venv/bin/python
 
-.PHONY: test lint format format-check typecheck check package dataset-check benchmark-check
+.PHONY: test lint format format-check typecheck check package dataset-check benchmark-check evidence-check
 
 test:
 	$(PYTHON) -m pytest
@@ -24,6 +24,9 @@ dataset-check:
 
 benchmark-check:
 	$(PYTHON) -m pytest tests/test_benchmark_scoring.py tests/test_benchmark_runner.py
+
+evidence-check:
+	$(PYTHON) -m pytest tests/test_evidence.py
 
 package:
 	$(PYTHON) -m pip wheel --no-index --no-cache-dir --no-deps --no-build-isolation --wheel-dir dist .

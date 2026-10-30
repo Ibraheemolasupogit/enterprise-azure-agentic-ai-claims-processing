@@ -8,6 +8,8 @@ Greenfield Azure portfolio project for **fictional Northstar Insurance Group**, 
 
 The end-to-end application and all live Azure/Mistral/GPT integrations, coverage rules, durable persistence/audit, authentication, UI, held-out model evaluation and OpenTelemetry remain **PLANNED**. No live service comparison or cloud deployment is claimed. Domain role checks require a trusted caller context; they do not authenticate a human or persist an approval. Dataset labels and simulated responses are not model-produced facts or approved case outcomes.
 
+**Milestone 6 implements the [structured evidence boundary](docs/architecture/structured-evidence-processing.md):** deterministic field normalization, identity/hash/source validation, actionable holds/rejections, immutable local history, idempotent retries and guarded case admission. It preserves M4 data and M5 benchmark semantics. The CLI maps SIMULATED fixture proposals while keeping original documents quarantined; no scanner or operational ingestion is claimed.
+
 **Milestone 3 documentation is complete:** the business process, responsibilities, requirements, traceability, risk register and authority ADR refine the baseline. No runtime files changed. The 115 passing foundation tests and package/typing results remain historical Milestone 2 evidence; they were not rerun or promoted into business-performance results by this documentation milestone.
 
 The original Microsoft Claims Processing Hackathon source was not located. This is independently engineered, informed by lessons from that context; it does not continue the hackathon challenge roadmap. It is separate from the Agentic SDLC portfolio repository. No reference application was imported, and no further source search is planned.
@@ -46,6 +48,8 @@ Only fictional policies, people, identifiers, documents and generated/non-identi
 | [Milestone 4 record](docs/milestones/milestone-4.md) | Dataset implementation, tests and reproducibility evidence |
 | [Document intelligence benchmark](docs/quality/document-intelligence-benchmark.md) | Offline CLI, typed extraction boundaries, scoring and limitations |
 | [Milestone 5 record](docs/milestones/milestone-5.md) | Harness checks and explicitly simulated fixture results |
+| [Structured evidence processing](docs/architecture/structured-evidence-processing.md) | Mapping, source/quality gates, history and admission |
+| [Milestone 6 record](docs/milestones/milestone-6.md) | Evidence-boundary checks and limitations |
 
 ## Local Python foundation
 
@@ -78,6 +82,14 @@ This emits versioned JSON for 75 unique documents/335 field labels, preserving d
 
 Settings use `CLAIMS_AI_` environment variables with local/test-only defaults. See [.env.example](.env.example); dotenv loading requires an explicit `Settings(_env_file=...)` path. No credentials or external endpoints are supported. The 10 MiB configurable document limit is a setting only until ingestion exists.
 
+Generate a deterministic evidence-validation report with a new output filename:
+
+```sh
+PYTHONPATH=src .venv/bin/python -m claims_ai.evidence --corpus data/synthetic/motor/v1 --output outputs/evidence/processing.json
+```
+
+All original documents remain quarantined; the report contains proposals/issues and no case admission. The library's accepted/admitted paths are separately tested with explicit synthetic scan assertions and simulation opt-in. `make evidence-check` runs those focused tests; `make check` includes them. Confidence remains uncalibrated, and conflicts require human review rather than automatic fact replacement.
+
 Domain validation checks synthetic identifiers, object references, document/evidence hash metadata, policy-version metadata and caller-supplied evidence checklists. It does not scan files, resolve policy coverage or approve fictional insurance rules. Dataset validation additionally checks fixture bytes against hashes/source renderings; it is not live upload validation or malware scanning. Structured logging emits approved event names and allowlisted operational fields; arbitrary payloads and exception text are suppressed. Do not send raw model dumps or validation-error payloads to other loggers.
 
-Git setup and all commits/pushes remain manual. **Milestone 6 has not started.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) reflects the approved offline-benchmark Milestone 5.
+Git setup and all commits/pushes remain manual. **Milestone 7 has not started.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) reflects the approved structured-evidence Milestone 6.
