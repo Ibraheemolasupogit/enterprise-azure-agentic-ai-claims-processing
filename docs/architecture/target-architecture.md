@@ -1,6 +1,6 @@
 # Target architecture
 
-Status: **PLANNED**. No components or schema files are implemented. This is an independent greenfield design for the [charter](../business/project-charter.md).
+Status: **PLANNED runtime architecture**. [Milestone 2](../milestones/milestone-2.md) implements and locally tests domain contracts, in-memory transition guards, configuration, redacted logging and typed protocols. Azure services, agents, API/UI, persistence/audit and coverage rules remain unimplemented. This is an independent greenfield design for the [charter](../business/project-charter.md).
 
 ## Logical components and data flow
 
@@ -56,7 +56,9 @@ Each agent has bounded tool calls, tokens and wall time, schema-validated output
 
 Typed tools will include `get_case_evidence`, `retrieve_policy_clauses` and `get_rule_assessment`. Schemas will bound arguments/results and carry provenance. Authorization derives case scope from the authenticated workflow, never a model-provided identity. MCP exposes selected read-only synthetic service operations behind APIM; private SDK adapters serve extraction/search. Both paths enforce the same grants. There is no agent tool for final decision, arbitrary HTTP, shell, SQL or file access.
 
-## Planned contracts and case lifecycle
+## Contracts and case lifecycle
+
+The table defines the target contracts. Milestone 2 supplies foundation models and validation; real artifact verification, policy approval/resolution, service-produced assessments and durable review/audit enforcement require later milestones. A transition returns a validated in-memory record for future atomic persistence, not evidence of a persisted outcome.
 
 | Contract | Required information |
 | --- | --- |

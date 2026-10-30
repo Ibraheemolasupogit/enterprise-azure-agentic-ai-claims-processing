@@ -1,0 +1,3 @@
+include Makefile .env.example .gitignore
+recursive-include tests *.py
+recursive-include docs *.md
