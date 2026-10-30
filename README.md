@@ -4,9 +4,9 @@ Greenfield Azure portfolio project for **fictional Northstar Insurance Group**, 
 
 ## Evidence status
 
-**IMPLEMENTED AND LOCALLY TESTED: Milestones 1–2**, comprising the architecture baseline and a `claims_ai` Python foundation: Pydantic v2 contracts, deterministic state-transition guards, local configuration, redacted JSON logging and typed service protocols. Unit tests use hand-authored synthetic contract examples, not an approved policy corpus or golden evaluation dataset. See the [Milestone 2 evidence](docs/milestones/milestone-2.md) for commands, results and limitations.
+**IMPLEMENTED AND LOCALLY TESTED:** the `claims_ai` Python foundation and Milestone 4 seeded synthetic dataset tooling. The foundation supplies Pydantic v2 contracts, deterministic state-transition guards, local configuration, redacted JSON logging and typed service protocols. The [motor-v1 corpus](data/synthetic/motor/README.md) supplies 12 development scenarios, readable artifacts and source-linked labels; policies/coverage interpretations remain unapproved. See [Milestone 2 evidence](docs/milestones/milestone-2.md) and [Milestone 4 evidence](docs/milestones/milestone-4.md) for actual checks and limitations.
 
-The end-to-end application and all Azure/AI integrations, coverage rules, durable persistence/audit, authentication, UI, golden evaluation and OpenTelemetry remain **PLANNED**. No agent/service integration is implemented or simulated. No performance benchmark or cloud deployment is claimed. Domain role checks require a trusted caller context; they do not authenticate a human or persist an approval.
+The end-to-end application and all Azure/AI integrations, coverage rules, durable persistence/audit, authentication, UI, held-out model evaluation and OpenTelemetry remain **PLANNED**. No agent/service integration is implemented or simulated. No performance benchmark or cloud deployment is claimed. Domain role checks require a trusted caller context; they do not authenticate a human or persist an approval. Dataset labels are authored expectations, not extracted/model-produced or approved case outcomes.
 
 **Milestone 3 documentation is complete:** the business process, responsibilities, requirements, traceability, risk register and authority ADR refine the baseline. No runtime files changed. The 115 passing foundation tests and package/typing results remain historical Milestone 2 evidence; they were not rerun or promoted into business-performance results by this documentation milestone.
 
@@ -42,6 +42,8 @@ Only fictional policies, people, identifiers, documents and generated/non-identi
 | [Milestone 1 record](docs/milestones/milestone-1.md) | Decisions, verification, assumptions and remaining gaps |
 | [Milestone 2 record](docs/milestones/milestone-2.md) | Python foundation, verification and unresolved decisions |
 | [Milestone 3 record](docs/milestones/milestone-3.md) | Process/requirement refinements, checks and scope sequencing |
+| [Synthetic motor corpus](data/synthetic/motor/README.md) | Scenarios, generation command, schema, provenance and limitations |
+| [Milestone 4 record](docs/milestones/milestone-4.md) | Dataset implementation, tests and reproducibility evidence |
 
 ## Local Python foundation
 
@@ -56,8 +58,16 @@ make package
 
 `make check` runs Ruff format/lint, strict mypy and pytest. `make format` formats source/tests. Tests explicitly load `src`; package installation is verified separately. `make package` builds a wheel and source distribution in ignored `dist/`, using installed setuptools without downloading build dependencies. Reinstall the package after edits when using the non-editable setup above; unit tests always exercise the current source.
 
+Verify the checked-in dataset with `make dataset-check`. To generate a fresh copy without installing anything else:
+
+```sh
+PYTHONPATH=src .venv/bin/python -m claims_ai.dataset generate --output /tmp/northstar-motor-v1 --seed 20261030
+```
+
+The output path must not already exist. The [corpus guide](data/synthetic/motor/README.md) documents exact reproduction and safe handling of malicious fixture text. Standard-library PDF/PNG rendering adds no dependency to the application.
+
 Settings use `CLAIMS_AI_` environment variables with local/test-only defaults. See [.env.example](.env.example); dotenv loading requires an explicit `Settings(_env_file=...)` path. No credentials or external endpoints are supported. The 10 MiB configurable document limit is a setting only until ingestion exists.
 
-Domain validation checks synthetic identifiers, object references, document/evidence hashes, policy-version metadata and caller-supplied evidence checklists. It does not scan files, verify artifact bytes, resolve policy coverage or approve fictional insurance rules. Structured logging emits approved event names and allowlisted operational fields; arbitrary payloads and exception text are suppressed. Do not send raw model dumps or validation-error payloads to other loggers.
+Domain validation checks synthetic identifiers, object references, document/evidence hash metadata, policy-version metadata and caller-supplied evidence checklists. It does not scan files, resolve policy coverage or approve fictional insurance rules. Dataset validation additionally checks fixture bytes against hashes/source renderings; it is not live upload validation or malware scanning. Structured logging emits approved event names and allowlisted operational fields; arbitrary payloads and exception text are suppressed. Do not send raw model dumps or validation-error payloads to other loggers.
 
-Git setup and all commits/pushes remain manual. **Milestone 4 has not started.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) reflects the approved documentation-only Milestone 3.
+Git setup and all commits/pushes remain manual. **Milestone 5 has not started.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) reflects the approved dataset-only Milestone 4.

@@ -1,10 +1,12 @@
 # Evaluation and observability baseline
 
-Status: **PLANNED business/model evaluation and distributed observability**. Milestone 2 supplies a foundation unit-test runner and local redacted JSON logging; no golden cases/evaluation runner, distributed telemetry, benchmark results or fault-injection runs exist. Targets below are proposals for the [architecture](../architecture/target-architecture.md), not measured performance. [Milestone 3 traceability](../business/traceability-matrix.md) maps existing tests separately from future verification; this document remains the source for proposed numeric evaluation targets.
+Status: **PLANNED business/model evaluation and distributed observability**. Milestone 2 supplies foundation tests/local logs; Milestone 4 adds a [12-scenario development corpus](../../data/synthetic/motor/README.md) with authored extraction/routing labels and integrity/reproduction checks. No held-out business/model evaluation runner, distributed telemetry, benchmark results or fault-injection runs exist. Targets below remain proposals for the [architecture](../architecture/target-architecture.md), not measured performance. [Traceability](../business/traceability-matrix.md#milestone-4-dataset-evidence) separates actual dataset checks from future verification; this document remains the source for proposed numeric evaluation targets.
 
 ## Synthetic golden dataset and reproducibility
 
 Plan an initial 60-case suite: 15 straightforward covered damage, 10 exclusions/out-of-period, 10 missing/conflicting/poor-quality evidence, 10 policy-version/endorsement boundaries, 10 adversarial/security cases and 5 operational recovery cases. Assign one primary category per case and overlapping tags for image quality, document format and language variation. Include exact effective-date boundaries, superseded clauses, currency/excess arithmetic, duplicate submissions and unsupported injury claims.
+
+The implemented `motor-v1` set is a smaller development precursor, not this 60-case deliverable. Its policies and coverage hypotheses require approval; no eligible/ineligible ground truth or financial rule output is provided. Keep a future independently reviewed held-out split separate from these public generator inputs/labels before measuring model or insurance accuracy.
 
 Each case will contain generated artifacts with hashes, a synthetic policy bundle/rule version, labeled critical fields (policy ID, loss date, vehicle reference, estimate amount/currency), relevant clause IDs, expected rule results, expected routing and prohibited actions. Labels must be independently reviewed where feasible; disclose single-maintainer review. Separate development and held-out cases; track changes without silently rewriting expected outputs.
 

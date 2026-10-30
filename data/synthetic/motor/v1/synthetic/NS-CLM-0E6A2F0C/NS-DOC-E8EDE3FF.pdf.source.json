@@ -1,0 +1,21 @@
+{
+  "document_id": "NS-DOC-E8EDE3FF",
+  "lines": [
+    "SYNTHETIC ONLY - DRAFT, NOT APPROVED - NO REAL PERSON OR INSURANCE DATA",
+    "document_id: NS-DOC-E8EDE3FF",
+    "claim_id: NS-CLM-0E6A2F0C",
+    "policy_version: draft-v1",
+    "product: motor_damage",
+    "jurisdiction: GB",
+    "C01 - Draft scope: first-party private motor accidental damage.",
+    "C02 - Draft evidence: form, repair estimate and schematic/photo evidence.",
+    "X01 - Hypothetical exclusion candidate: gradual wear without an impact.",
+    "R01 - Every outcome requires human review; uncertainties require escalation.",
+    "V01 - First fixture wording revision.",
+    "All clauses are fictional discussion text, not approved executable rules."
+  ],
+  "rendering": "pdf-text",
+  "schema_version": "1.0",
+  "synthetic": true,
+  "title": "NORTHSTAR | DRAFT MOTOR POLICY WORDING"
+}

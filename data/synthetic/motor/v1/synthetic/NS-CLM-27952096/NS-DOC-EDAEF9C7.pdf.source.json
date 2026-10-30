@@ -1,0 +1,19 @@
+{
+  "document_id": "NS-DOC-EDAEF9C7",
+  "lines": [
+    "SYNTHETIC ONLY - DRAFT, NOT APPROVED - NO REAL PERSON OR INSURANCE DATA",
+    "document_id: NS-DOC-EDAEF9C7",
+    "claim_id: NS-CLM-27952096",
+    "policy_id: NS-POL-A77636D1",
+    "policy_version: draft-v1",
+    "effective_from: 2026-01-01",
+    "effective_to: 2026-07-01",
+    "vehicle_reference: SYNTHETIC-VEHICLE-C3E260AA",
+    "Dataset intervals are start-inclusive/end-exclusive metadata.",
+    "No binding coverage or financial terms are approved."
+  ],
+  "rendering": "pdf-text",
+  "schema_version": "1.0",
+  "synthetic": true,
+  "title": "NORTHSTAR | DRAFT MOTOR POLICY SCHEDULE"
+}

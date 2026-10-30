@@ -1,0 +1,20 @@
+{
+  "document_id": "NS-DOC-8C7DD0B7",
+  "lines": [
+    "SYNTHETIC ONLY - DRAFT, NOT APPROVED - NO REAL PERSON OR INSURANCE DATA",
+    "document_id: NS-DOC-8C7DD0B7",
+    "claim_id: NS-CLM-BB712B52",
+    "policy_id: NS-POL-74E942BB",
+    "loss_at: 2026-08-18T10:00:00+00:00",
+    "vehicle_reference: SYNTHETIC-VEHICLE-B73DDA0F",
+    "claimed_amount: 2143.70",
+    "currency: GBP",
+    "narrative: Synthetic parking scrape to side door.",
+    "submitted_policy_version: draft-v2",
+    "claimant_reference: SYNTHETIC-PERSON-02"
+  ],
+  "rendering": "pdf-text",
+  "schema_version": "1.0",
+  "synthetic": true,
+  "title": "NORTHSTAR | MOTOR CLAIM FORM"
+}

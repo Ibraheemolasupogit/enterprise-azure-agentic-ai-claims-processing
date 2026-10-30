@@ -1,0 +1,1073 @@
+{
+  "dataset_version": "motor-v1",
+  "files": [
+    {
+      "byte_size": 31337,
+      "path": "ground-truth.schema.json",
+      "schema_version": "1.0",
+      "sha256": "7a33cba66bab2dba3c68f95563958ef25d3163feccf1925a84eef1e8af8ea10b",
+      "synthetic": true
+    },
+    {
+      "byte_size": 412507,
+      "path": "ground_truth.json",
+      "schema_version": "1.0",
+      "sha256": "2c7490c34daca7638d879c16992ea9818043ec368d8eec2e17ac1c12dd6205af",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-0E6A2F0C/NS-DOC-36943950.pdf",
+      "schema_version": "1.0",
+      "sha256": "9aa6db8f2e81e20edee39d9b4ecb652e883daff53d9e240134db5eb843411974",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-0E6A2F0C/NS-DOC-36943950.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "3d44a682a6de92ab9114ac8067ffd6f78ad19ad05d560ebde1419bdce290c106",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1613,
+      "path": "synthetic/NS-CLM-0E6A2F0C/NS-DOC-424B2FF2.pdf",
+      "schema_version": "1.0",
+      "sha256": "5f937f9b45298238a6cf70ec059a93eb760e755b98a99379c3a2f5807e0bde3b",
+      "synthetic": true
+    },
+    {
+      "byte_size": 895,
+      "path": "synthetic/NS-CLM-0E6A2F0C/NS-DOC-424B2FF2.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "6245fbf952b9dd8f9427127266646141f4abed4c71b12863c7a18e45da4b3bdb",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1379,
+      "path": "synthetic/NS-CLM-0E6A2F0C/NS-DOC-8B3FA5C6.pdf",
+      "schema_version": "1.0",
+      "sha256": "d9f5bb3b12611b62751291ea8f18c6c43ac1ff1dfe10c042cea8a5402990ddbb",
+      "synthetic": true
+    },
+    {
+      "byte_size": 663,
+      "path": "synthetic/NS-CLM-0E6A2F0C/NS-DOC-8B3FA5C6.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "dd98f6f6274eea1bb07409f1970edc2ba3346bafc7c506c7cf58b0a03b8ed089",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-0E6A2F0C/NS-DOC-BC97AB73.pdf",
+      "schema_version": "1.0",
+      "sha256": "a03afcd173947c0d9253413ca33eb4e5c5142c2d5ac21e5baeb45b957981d4e4",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-0E6A2F0C/NS-DOC-BC97AB73.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "7929dd81c1524085faac696ba239e56ab5b9c6938d7937c813cf4ecc74a7e38f",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1576,
+      "path": "synthetic/NS-CLM-0E6A2F0C/NS-DOC-E8EDE3FF.pdf",
+      "schema_version": "1.0",
+      "sha256": "b1edb3fbfc4796334fc321987b14f28af76bd24f8083cbfa4084e55cef653903",
+      "synthetic": true
+    },
+    {
+      "byte_size": 858,
+      "path": "synthetic/NS-CLM-0E6A2F0C/NS-DOC-E8EDE3FF.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "9d142b57a93cc6bb044e46e1fb4bcb6c7002ddbc132a301d5afd2d0b662b6345",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1396,
+      "path": "synthetic/NS-CLM-0E6A2F0C/NS-DOC-ECFCD8D3.pdf",
+      "schema_version": "1.0",
+      "sha256": "e5a5f7be417218536a49783dddced9b8bf55660426ae3940089a1713b1213106",
+      "synthetic": true
+    },
+    {
+      "byte_size": 679,
+      "path": "synthetic/NS-CLM-0E6A2F0C/NS-DOC-ECFCD8D3.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "231d488fde94a2bb87f62d01c47a53dfe8dcf7ede665933cc54f10e4248ea3cc",
+      "synthetic": true
+    },
+    {
+      "byte_size": 912,
+      "path": "synthetic/NS-CLM-0E6A2F0C/NS-DOC-FD1DF289.png",
+      "schema_version": "1.0",
+      "sha256": "be6b7c9fd176e3464fa62cf944ec6fb2f3593801f3d7f46aa70233700c9ba89a",
+      "synthetic": true
+    },
+    {
+      "byte_size": 421,
+      "path": "synthetic/NS-CLM-0E6A2F0C/NS-DOC-FD1DF289.png.source.json",
+      "schema_version": "1.0",
+      "sha256": "bb5247ed6415e3088d59f084a25180f1fb6a3c1c94c1c813cd12ce4107019c6f",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-27952096/NS-DOC-1C45A005.pdf",
+      "schema_version": "1.0",
+      "sha256": "a0241f82b7a91ae4705dbea84bd8e1a346b4c41027d7f4d3925aeec58f1539ff",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-27952096/NS-DOC-1C45A005.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "c691228c2fa6e65ca290bd3469664ad4b693477f839e920173b48ccc5dcc3f60",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1576,
+      "path": "synthetic/NS-CLM-27952096/NS-DOC-85DEF192.pdf",
+      "schema_version": "1.0",
+      "sha256": "dfd0d3233016686661dd5e6a6321b453add1a160d60565285010cf6bd1e2231d",
+      "synthetic": true
+    },
+    {
+      "byte_size": 858,
+      "path": "synthetic/NS-CLM-27952096/NS-DOC-85DEF192.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "2a962d69f45097490443fc50a6f37742f36ec4c025bfae8c1acd8c270d319d58",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1374,
+      "path": "synthetic/NS-CLM-27952096/NS-DOC-9563AF8E.pdf",
+      "schema_version": "1.0",
+      "sha256": "14fea7aadd6962ea664497db8e9552b33343499e7f894958b71f5e3917839df2",
+      "synthetic": true
+    },
+    {
+      "byte_size": 657,
+      "path": "synthetic/NS-CLM-27952096/NS-DOC-9563AF8E.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "a4914b08ab6c8e16665c468ba46afd0deb4dd8e7b282ab46c9c6f7be588e7bf3",
+      "synthetic": true
+    },
+    {
+      "byte_size": 912,
+      "path": "synthetic/NS-CLM-27952096/NS-DOC-9B6F7783.png",
+      "schema_version": "1.0",
+      "sha256": "be6b7c9fd176e3464fa62cf944ec6fb2f3593801f3d7f46aa70233700c9ba89a",
+      "synthetic": true
+    },
+    {
+      "byte_size": 421,
+      "path": "synthetic/NS-CLM-27952096/NS-DOC-9B6F7783.png.source.json",
+      "schema_version": "1.0",
+      "sha256": "47dcb468cd839552a50b3648b7c88dd198d307bd97ff5412045464cd075d05d0",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1613,
+      "path": "synthetic/NS-CLM-27952096/NS-DOC-D2F64DC1.pdf",
+      "schema_version": "1.0",
+      "sha256": "8583c5a43ce39c45abedaff89490f045c8d6332c5da3d8fba3b8b6560915552a",
+      "synthetic": true
+    },
+    {
+      "byte_size": 895,
+      "path": "synthetic/NS-CLM-27952096/NS-DOC-D2F64DC1.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "d43d5ef0a07c07ae8885a96713ddc17b7db9c4b366944580207c6c105c65d301",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-27952096/NS-DOC-EDAEF9C7.pdf",
+      "schema_version": "1.0",
+      "sha256": "d6e5a5c4ebbaae59902683e290d927a41e39f126b75de2ad118f221b70a3d08a",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-27952096/NS-DOC-EDAEF9C7.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "5771297b6ea8e1265cca22540df63dc81a5952cf00178989a35d9dbdaeec7a4b",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1613,
+      "path": "synthetic/NS-CLM-713D4D20/NS-DOC-1E0BD250.pdf",
+      "schema_version": "1.0",
+      "sha256": "2515f1c2dfa8a3a0ec4a192aeaef27b9d1a95b059b63e8359a826597899aeca1",
+      "synthetic": true
+    },
+    {
+      "byte_size": 895,
+      "path": "synthetic/NS-CLM-713D4D20/NS-DOC-1E0BD250.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "f821af11cbbe9707f3f96e4d1c97e129d426fd7cbdaa53e49c496cb4d1f85585",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1373,
+      "path": "synthetic/NS-CLM-713D4D20/NS-DOC-2CEC7711.pdf",
+      "schema_version": "1.0",
+      "sha256": "d09c6aafc38e44f881cd7d2e8f161a9bf1bbf372eb2efd17662da976ec84480c",
+      "synthetic": true
+    },
+    {
+      "byte_size": 656,
+      "path": "synthetic/NS-CLM-713D4D20/NS-DOC-2CEC7711.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "78c50c5e149fb3a0a10c3f1bdd9f94eb5cbba086f399fe3c8573f3b94a45eb05",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1576,
+      "path": "synthetic/NS-CLM-713D4D20/NS-DOC-326E0A5F.pdf",
+      "schema_version": "1.0",
+      "sha256": "17cb705e9cdc67bb66116448e0a354b96c12d112b3696d870b7c23b7df9a4089",
+      "synthetic": true
+    },
+    {
+      "byte_size": 858,
+      "path": "synthetic/NS-CLM-713D4D20/NS-DOC-326E0A5F.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "41bad8f788123c2cafc82f8943f3b2859b323edbcbe324cbedc95b4c53f70dbd",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-713D4D20/NS-DOC-3B1B6355.pdf",
+      "schema_version": "1.0",
+      "sha256": "468313f63ca55067c6935cf20afe9c5ebbdcbfcfe6e09815577697537b9587c4",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-713D4D20/NS-DOC-3B1B6355.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "12ee0395d94413d043f49a85636719365b3159e32e4d8feffa9935be3eb8f9cc",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-713D4D20/NS-DOC-6BC12236.pdf",
+      "schema_version": "1.0",
+      "sha256": "6f0c4ea11c91159a19e6ad2e640b9bfe6612a2a3efb8f29be55b5885ee38bb6f",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-713D4D20/NS-DOC-6BC12236.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "f9df3725f7beab21abb92f4d183b93e86dfc0572c831088f2f6ea5639fe28ae9",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1378,
+      "path": "synthetic/NS-CLM-713D4D20/NS-DOC-763A594F.pdf",
+      "schema_version": "1.0",
+      "sha256": "f9796b9b75689df70dfe731dcb7a8cf9d65b45d885a61c1fdebf56617a45c329",
+      "synthetic": true
+    },
+    {
+      "byte_size": 662,
+      "path": "synthetic/NS-CLM-713D4D20/NS-DOC-763A594F.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "bd0cadcea8d7bb4500763c6d87abe1fe9f1de478f59c390aebef5190b174c1d9",
+      "synthetic": true
+    },
+    {
+      "byte_size": 912,
+      "path": "synthetic/NS-CLM-713D4D20/NS-DOC-F6AF825D.png",
+      "schema_version": "1.0",
+      "sha256": "be6b7c9fd176e3464fa62cf944ec6fb2f3593801f3d7f46aa70233700c9ba89a",
+      "synthetic": true
+    },
+    {
+      "byte_size": 421,
+      "path": "synthetic/NS-CLM-713D4D20/NS-DOC-F6AF825D.png.source.json",
+      "schema_version": "1.0",
+      "sha256": "b183aa4cb10d1913319615b1196b7730cac8101fedd9b9a62c4acba5b0935895",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1374,
+      "path": "synthetic/NS-CLM-72B5CE88/NS-DOC-54B3881B.pdf",
+      "schema_version": "1.0",
+      "sha256": "12d58768a16fb72d48984b61ece3c5da9b079148c95f78ae37c3618ab1278848",
+      "synthetic": true
+    },
+    {
+      "byte_size": 657,
+      "path": "synthetic/NS-CLM-72B5CE88/NS-DOC-54B3881B.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "4cf33397b8c5747ec650051f1ee2fb7c4295724e743be4c1565e5150dc36f74d",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-72B5CE88/NS-DOC-73F93D11.pdf",
+      "schema_version": "1.0",
+      "sha256": "144d29d4c280b4061b5ddef99ac72e5f7a0a35348b65875e3f77efabeb367f70",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-72B5CE88/NS-DOC-73F93D11.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "736cc59d141f630cff3a4499ad09783fbbfb7d47b1b0ab17aa83926b8c9cb86c",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-72B5CE88/NS-DOC-756A9B90.pdf",
+      "schema_version": "1.0",
+      "sha256": "3b6f925a3b0fddd3faa68b73f61bd9d525aff6305cf066384c03d839654bfc26",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-72B5CE88/NS-DOC-756A9B90.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "0b36f0bd8094c03864970bd4c739ddefa550519253937c07da3021404793ff04",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1613,
+      "path": "synthetic/NS-CLM-72B5CE88/NS-DOC-A0FE72DA.pdf",
+      "schema_version": "1.0",
+      "sha256": "a0ee9d58fc24c5a8ed798ee990df79334d8bdb3cf6be8658fcb696e994bf5240",
+      "synthetic": true
+    },
+    {
+      "byte_size": 895,
+      "path": "synthetic/NS-CLM-72B5CE88/NS-DOC-A0FE72DA.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "a18c6a1c7d1f8816675abbe089f181253a9f7815c6e3491f584308ff153ac065",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1576,
+      "path": "synthetic/NS-CLM-72B5CE88/NS-DOC-BBB2BC23.pdf",
+      "schema_version": "1.0",
+      "sha256": "fe83e55e5aaa0360e94c190e80f4c1b54153ced6aa60dfaecc87712c9eac11b4",
+      "synthetic": true
+    },
+    {
+      "byte_size": 858,
+      "path": "synthetic/NS-CLM-72B5CE88/NS-DOC-BBB2BC23.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "a94427e9d01ade7dfad97924f0c82c95104b5e5621afbb5a599d339601b2be20",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1379,
+      "path": "synthetic/NS-CLM-72B5CE88/NS-DOC-D68CD281.pdf",
+      "schema_version": "1.0",
+      "sha256": "4e550c17e06f118d4e421f6893adb0d759a962e76a179626c718767d9cd3f937",
+      "synthetic": true
+    },
+    {
+      "byte_size": 663,
+      "path": "synthetic/NS-CLM-72B5CE88/NS-DOC-D68CD281.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "18cff87b4500bfcb1b948715f28bb18b3b26b77853e2d04f4c63144434f24b22",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1613,
+      "path": "synthetic/NS-CLM-7DE48CA0/NS-DOC-29AC4C92.pdf",
+      "schema_version": "1.0",
+      "sha256": "77eefbcf9b4c47290e332c5884949d1cd4f287c250c512d9b5b465a8b2db6cd9",
+      "synthetic": true
+    },
+    {
+      "byte_size": 895,
+      "path": "synthetic/NS-CLM-7DE48CA0/NS-DOC-29AC4C92.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "be06320f9b1c3a52e68fd43052bcc7c5b1c68dd75bff2ab3c666b71dcb746403",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1576,
+      "path": "synthetic/NS-CLM-7DE48CA0/NS-DOC-4D05ACF4.pdf",
+      "schema_version": "1.0",
+      "sha256": "776476a74086f334f57dc26c466d801b2a88fb0e31d4a6043e07b836e423147c",
+      "synthetic": true
+    },
+    {
+      "byte_size": 858,
+      "path": "synthetic/NS-CLM-7DE48CA0/NS-DOC-4D05ACF4.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "1de56b87435a4011c773901598537bd3ecb31b63befe400a1f11debfaaa8af8a",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-7DE48CA0/NS-DOC-5932009C.pdf",
+      "schema_version": "1.0",
+      "sha256": "078f862766c3ff8f9d67cf93e480a4cc185e57f5882a7569a67c925f2e86a3fe",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-7DE48CA0/NS-DOC-5932009C.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "3178074bcde4ce5204fc68b6e19f8b29ac0de8d2f5db9626f310f3919f894e6e",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1374,
+      "path": "synthetic/NS-CLM-7DE48CA0/NS-DOC-683CEA73.pdf",
+      "schema_version": "1.0",
+      "sha256": "189022272d5b06e261303705c4de1454d570189f0ad5ffba021c4b6c83b52789",
+      "synthetic": true
+    },
+    {
+      "byte_size": 657,
+      "path": "synthetic/NS-CLM-7DE48CA0/NS-DOC-683CEA73.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "563b2c21ffb14ce30088042c4f9e010a9cf99f433132ae198d928c883743f007",
+      "synthetic": true
+    },
+    {
+      "byte_size": 912,
+      "path": "synthetic/NS-CLM-7DE48CA0/NS-DOC-6AEE955E.png",
+      "schema_version": "1.0",
+      "sha256": "be6b7c9fd176e3464fa62cf944ec6fb2f3593801f3d7f46aa70233700c9ba89a",
+      "synthetic": true
+    },
+    {
+      "byte_size": 421,
+      "path": "synthetic/NS-CLM-7DE48CA0/NS-DOC-6AEE955E.png.source.json",
+      "schema_version": "1.0",
+      "sha256": "e7dba4ae44b55afd9c0a5f860c74d2f5599b97a4e4879a321dfe91fa5c897420",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-7DE48CA0/NS-DOC-C7268BB8.pdf",
+      "schema_version": "1.0",
+      "sha256": "b61d91c5baaad487bc6c516a1d3ff754f55755feb2ddf2cdbfb187fbace24ce1",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-7DE48CA0/NS-DOC-C7268BB8.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "2191a22add475716090f22807533e553bc6f0d5d895b7d4b72969dc3f10fbe11",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1379,
+      "path": "synthetic/NS-CLM-7DE48CA0/NS-DOC-E3604354.pdf",
+      "schema_version": "1.0",
+      "sha256": "81ff5525d7cae56700512c74e242dba450b169a8c55cbbcca2eb2f3e8afe7f15",
+      "synthetic": true
+    },
+    {
+      "byte_size": 663,
+      "path": "synthetic/NS-CLM-7DE48CA0/NS-DOC-E3604354.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "c3263d274ccdae418638e10ff1531cbd0063de4eca6ff359e1057cebdc0a017c",
+      "synthetic": true
+    },
+    {
+      "byte_size": 912,
+      "path": "synthetic/NS-CLM-8F63DCBD/NS-DOC-2862AAFF.png",
+      "schema_version": "1.0",
+      "sha256": "be6b7c9fd176e3464fa62cf944ec6fb2f3593801f3d7f46aa70233700c9ba89a",
+      "synthetic": true
+    },
+    {
+      "byte_size": 421,
+      "path": "synthetic/NS-CLM-8F63DCBD/NS-DOC-2862AAFF.png.source.json",
+      "schema_version": "1.0",
+      "sha256": "e59c36a412927226b00d217f071b6a0c2886249eab3651b6c4a8665ffad7c67a",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-8F63DCBD/NS-DOC-6B58A6BE.pdf",
+      "schema_version": "1.0",
+      "sha256": "25478c19cc1f4b3f18ec3ce19f6c9a0673231189884b2f68dcaf710e6bb81abf",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-8F63DCBD/NS-DOC-6B58A6BE.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "371109562bbd097dd5c97304f2cfc117c706d02e942aebf979b02dbbcca8cca2",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-8F63DCBD/NS-DOC-82D8C79D.pdf",
+      "schema_version": "1.0",
+      "sha256": "02a09025e0ce0b0b067ca3c550f3e8f56661a78b85b3daac3bebba86d0de1853",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-8F63DCBD/NS-DOC-82D8C79D.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "4276543554b928dd6e187f722a2caca5083ba531d72ac43b75b3a8f2370b86b0",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1379,
+      "path": "synthetic/NS-CLM-8F63DCBD/NS-DOC-9B89E2CD.pdf",
+      "schema_version": "1.0",
+      "sha256": "42a9e910afe14f48e18b28cbb10143a2431791bbb905bb3ed84377ee6de4c791",
+      "synthetic": true
+    },
+    {
+      "byte_size": 663,
+      "path": "synthetic/NS-CLM-8F63DCBD/NS-DOC-9B89E2CD.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "d06eeb3371231f8e653e37548be14512fa53a70a2cbe083339969ad50b0be0c2",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1576,
+      "path": "synthetic/NS-CLM-8F63DCBD/NS-DOC-A457CD9F.pdf",
+      "schema_version": "1.0",
+      "sha256": "cd8d39473cdbadeb0ffd654338b71de2d63547e17d12d498faf1b4fdce7ff472",
+      "synthetic": true
+    },
+    {
+      "byte_size": 858,
+      "path": "synthetic/NS-CLM-8F63DCBD/NS-DOC-A457CD9F.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "86bb979eb4187d9de7c35954bbbe7cccb97912961e838d7ef7c9284fb60ea293",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1613,
+      "path": "synthetic/NS-CLM-8F63DCBD/NS-DOC-EBDE323F.pdf",
+      "schema_version": "1.0",
+      "sha256": "93061bbc55a92c50e4b86e932d922e7014d9ab495a0f315d32b692608cfe5342",
+      "synthetic": true
+    },
+    {
+      "byte_size": 895,
+      "path": "synthetic/NS-CLM-8F63DCBD/NS-DOC-EBDE323F.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "ba00400c0ab5e9e3280fb79211c07e9fa3d5c0314d5df71d346007859d94bb76",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1374,
+      "path": "synthetic/NS-CLM-8F63DCBD/NS-DOC-EEDADA25.pdf",
+      "schema_version": "1.0",
+      "sha256": "deb060144eef189899869103cf86b23cff7a66ef55428a686f7db84de0a9e39f",
+      "synthetic": true
+    },
+    {
+      "byte_size": 657,
+      "path": "synthetic/NS-CLM-8F63DCBD/NS-DOC-EEDADA25.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "1922a6807554dce26b0346ee0da5c3c9fb0d8c3e2353c16fbdaaaa9c3693e790",
+      "synthetic": true
+    },
+    {
+      "byte_size": 912,
+      "path": "synthetic/NS-CLM-AEBA1F57/NS-DOC-50E59677.png",
+      "schema_version": "1.0",
+      "sha256": "be6b7c9fd176e3464fa62cf944ec6fb2f3593801f3d7f46aa70233700c9ba89a",
+      "synthetic": true
+    },
+    {
+      "byte_size": 421,
+      "path": "synthetic/NS-CLM-AEBA1F57/NS-DOC-50E59677.png.source.json",
+      "schema_version": "1.0",
+      "sha256": "09f657c262e0a6f73518b8d5a230c9b02e1bf2492d7eeaf028f04b9b9b0c8cb2",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1379,
+      "path": "synthetic/NS-CLM-AEBA1F57/NS-DOC-5839970A.pdf",
+      "schema_version": "1.0",
+      "sha256": "a31bfa6daed0b2ebab01ee0677685cc16d5ab84b3c0a44ec04059a22aeb3b459",
+      "synthetic": true
+    },
+    {
+      "byte_size": 663,
+      "path": "synthetic/NS-CLM-AEBA1F57/NS-DOC-5839970A.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "1f503e5a929c8f2586326dbea01d948e282e6ac86f0bb047087db551128287b6",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-AEBA1F57/NS-DOC-72404AB0.pdf",
+      "schema_version": "1.0",
+      "sha256": "452272312dbbb6c0f9563a8a529f3bdee910eb722e825d3378fb907323b3f443",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-AEBA1F57/NS-DOC-72404AB0.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "d724acc8d8d6ca59d4e5833b45cab3a0f90800532fd6799b0a59829940d6a139",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1512,
+      "path": "synthetic/NS-CLM-AEBA1F57/NS-DOC-9720952D.pdf",
+      "schema_version": "1.0",
+      "sha256": "8652f6a47e794727422927c49d18dd1bce6f7a9f766e2c1701b16829e75eba4e",
+      "synthetic": true
+    },
+    {
+      "byte_size": 793,
+      "path": "synthetic/NS-CLM-AEBA1F57/NS-DOC-9720952D.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "a9cb344c319b8bc8b6c405c7e68ff3d00d7e88dec95b0ce8230cac1c46ea26ea",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1576,
+      "path": "synthetic/NS-CLM-AEBA1F57/NS-DOC-A28B04D4.pdf",
+      "schema_version": "1.0",
+      "sha256": "293b324bfa83be1190a83151c84afa1c779d502d6540284f61d5afb4454f1762",
+      "synthetic": true
+    },
+    {
+      "byte_size": 858,
+      "path": "synthetic/NS-CLM-AEBA1F57/NS-DOC-A28B04D4.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "7ab84aa35a5d3dec93b66a3b0011065baaea96df9d60d703e1a3fa5a85d11b24",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1613,
+      "path": "synthetic/NS-CLM-AEBA1F57/NS-DOC-B2FDA259.pdf",
+      "schema_version": "1.0",
+      "sha256": "98c13b67cbd07c30bf96bd64db4a8ebd279e10dcc07283677fbdafe396e02439",
+      "synthetic": true
+    },
+    {
+      "byte_size": 895,
+      "path": "synthetic/NS-CLM-AEBA1F57/NS-DOC-B2FDA259.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "795ddba2e160381e54ee83e75f417109307ad194b6057795d28d9218dcad0561",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-AEBA1F57/NS-DOC-C871048A.pdf",
+      "schema_version": "1.0",
+      "sha256": "9ac82c6edd325cb32fb45146fc18b47f7d9cf915e86254ac5795d0b3a34501bb",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-AEBA1F57/NS-DOC-C871048A.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "317c7fc5a5391c97fe8ecba1cfa937cf74e1f932365e46bdc0780c757e13cf74",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-B4CE3F34/NS-DOC-0D55903B.pdf",
+      "schema_version": "1.0",
+      "sha256": "03d733c42488acaa7527beb554352d609c97a320ca9b1f23afa2dfeeea3a8dd8",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-B4CE3F34/NS-DOC-0D55903B.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "b3ddfc5f45d3a0cd343de012a61de473729330dff93d88ba23690650d5c53ac1",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1374,
+      "path": "synthetic/NS-CLM-B4CE3F34/NS-DOC-56B835FD.pdf",
+      "schema_version": "1.0",
+      "sha256": "f5b876f0ac799b78fcf821ac41f85b77a85f625fce71a278fdb82c4eee3e7e1a",
+      "synthetic": true
+    },
+    {
+      "byte_size": 657,
+      "path": "synthetic/NS-CLM-B4CE3F34/NS-DOC-56B835FD.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "aef5eaa46f94fe7e127eb8c88b32d5fd1b230412c54fb399d073da375d1b3f21",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1613,
+      "path": "synthetic/NS-CLM-B4CE3F34/NS-DOC-648A2ACD.pdf",
+      "schema_version": "1.0",
+      "sha256": "b9b2d4ea0067b39c9c9eaca442904d94fde48bbce000d6c5b0558871890286fa",
+      "synthetic": true
+    },
+    {
+      "byte_size": 895,
+      "path": "synthetic/NS-CLM-B4CE3F34/NS-DOC-648A2ACD.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "a83a15f2daa65d54b2d7a1e89aa2dd1a41760897a1c41dc67569be029a7f1400",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1379,
+      "path": "synthetic/NS-CLM-B4CE3F34/NS-DOC-6A2369D5.pdf",
+      "schema_version": "1.0",
+      "sha256": "fed11340decf4613ff71615a4605e55b9dbd9bb21dfb42d221afb6af07dc07fa",
+      "synthetic": true
+    },
+    {
+      "byte_size": 663,
+      "path": "synthetic/NS-CLM-B4CE3F34/NS-DOC-6A2369D5.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "d64291dca642871a2916e0ac263296ce4ea362ac602256656fd4480e33e965c7",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1576,
+      "path": "synthetic/NS-CLM-B4CE3F34/NS-DOC-920C78D5.pdf",
+      "schema_version": "1.0",
+      "sha256": "715e882a04a110f0e8935583514e9c71f8e88344a2382cdd5fc294caaec47fd7",
+      "synthetic": true
+    },
+    {
+      "byte_size": 858,
+      "path": "synthetic/NS-CLM-B4CE3F34/NS-DOC-920C78D5.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "ce9541b95478be7b4e831905dacad025109b8650d6b638c76cc7bd400bafffa5",
+      "synthetic": true
+    },
+    {
+      "byte_size": 912,
+      "path": "synthetic/NS-CLM-B4CE3F34/NS-DOC-E70A49C6.png",
+      "schema_version": "1.0",
+      "sha256": "be6b7c9fd176e3464fa62cf944ec6fb2f3593801f3d7f46aa70233700c9ba89a",
+      "synthetic": true
+    },
+    {
+      "byte_size": 421,
+      "path": "synthetic/NS-CLM-B4CE3F34/NS-DOC-E70A49C6.png.source.json",
+      "schema_version": "1.0",
+      "sha256": "5bfe54eaff92d596cd8c385fa5aba327ccf0592d91f95ad0e4e7e97121a4da88",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-B4CE3F34/NS-DOC-EC46A4C1.pdf",
+      "schema_version": "1.0",
+      "sha256": "d5a94a47d8c7b3fe9ae3449156d3d38f394145c9556717c9ace6eeaf70ea0435",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-B4CE3F34/NS-DOC-EC46A4C1.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "c72f75b967ba2aab96ef47d3bcfd26a30965ba7a51957de270abc3462f908903",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1379,
+      "path": "synthetic/NS-CLM-BB712B52/NS-DOC-302572F2.pdf",
+      "schema_version": "1.0",
+      "sha256": "99df899343f77831213a9372671ccb30791df7872cb86ba4d9f849fe707173c7",
+      "synthetic": true
+    },
+    {
+      "byte_size": 663,
+      "path": "synthetic/NS-CLM-BB712B52/NS-DOC-302572F2.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "f5a95e446a9799939dbfd092940e5bb3c745ef8bd3a37aa7187e4071db793717",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1576,
+      "path": "synthetic/NS-CLM-BB712B52/NS-DOC-3AFFA5F5.pdf",
+      "schema_version": "1.0",
+      "sha256": "200005c9e322f47d0f817cabb847da3d19e746ff28407b4185054b7da57b9a47",
+      "synthetic": true
+    },
+    {
+      "byte_size": 858,
+      "path": "synthetic/NS-CLM-BB712B52/NS-DOC-3AFFA5F5.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "fca5080f21586dd2ddd68e6dc01b3c13afb0d0f5d56cdec065dd830047aff88a",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-BB712B52/NS-DOC-534EC7D8.pdf",
+      "schema_version": "1.0",
+      "sha256": "8a0312143217c557222855df2975d390443a6da712a6a1e0f005e864b746c23b",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-BB712B52/NS-DOC-534EC7D8.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "d81c9a40104f8cd8680d7dad2ce8f22e6f6bdde1c7e368ead45c47235cedb6f1",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1366,
+      "path": "synthetic/NS-CLM-BB712B52/NS-DOC-8C7DD0B7.pdf",
+      "schema_version": "1.0",
+      "sha256": "49246bac5b38e2865806c287c82b89114884ae5d78187ebf78f73a243495d70a",
+      "synthetic": true
+    },
+    {
+      "byte_size": 649,
+      "path": "synthetic/NS-CLM-BB712B52/NS-DOC-8C7DD0B7.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "7dbd80ffeb1b157e090e63dede6963a80b22e955c0b45990de633ac19d924379",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1613,
+      "path": "synthetic/NS-CLM-BB712B52/NS-DOC-AE996C69.pdf",
+      "schema_version": "1.0",
+      "sha256": "978e68ccb70ad9b02b067c48c0c43c8d9e065b6c7e98b8b564aa465356343b73",
+      "synthetic": true
+    },
+    {
+      "byte_size": 895,
+      "path": "synthetic/NS-CLM-BB712B52/NS-DOC-AE996C69.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "ecc13f7043505f401b90092174eb0460c0a1c2e4f8c0d562ab3b433e1b58abe4",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-BB712B52/NS-DOC-B60F196D.pdf",
+      "schema_version": "1.0",
+      "sha256": "3eb549089a8f0a99b1a538e58a849ef62e4f9a15d6fd8c37af8a00c70ad94a6e",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-BB712B52/NS-DOC-B60F196D.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "5018bf40923fdd2077aff8549102e6569f1151f21dd2df638e1b3ca7f7b5d061",
+      "synthetic": true
+    },
+    {
+      "byte_size": 878,
+      "path": "synthetic/NS-CLM-BB712B52/NS-DOC-E674CB43.png",
+      "schema_version": "1.0",
+      "sha256": "e865eec347c381651349fab1ac4193376ca5bc2c8300c9280ea03e15898ba1d6",
+      "synthetic": true
+    },
+    {
+      "byte_size": 418,
+      "path": "synthetic/NS-CLM-BB712B52/NS-DOC-E674CB43.png.source.json",
+      "schema_version": "1.0",
+      "sha256": "d07b93307e1dcc0ae0ededbe6bf34a0c76089b4451d19e13378bc1b5f39ccb75",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-C4AC9B1C/NS-DOC-1C5E3B00.pdf",
+      "schema_version": "1.0",
+      "sha256": "49a376c32f9249a907b0090aba9122adc8ab5960470639f9c51043083dc97d3d",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-C4AC9B1C/NS-DOC-1C5E3B00.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "0e7fa18ef0babfb8e22d73bbd8ae77357152c3cc92b13186319f2a373314c2ad",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1375,
+      "path": "synthetic/NS-CLM-C4AC9B1C/NS-DOC-1CD47018.pdf",
+      "schema_version": "1.0",
+      "sha256": "513cedfb40bf90af7d9c5f0d9a2d3884d5bafe071ea4ffd1c2386ea0500832af",
+      "synthetic": true
+    },
+    {
+      "byte_size": 658,
+      "path": "synthetic/NS-CLM-C4AC9B1C/NS-DOC-1CD47018.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "e383b5a9a6401359cbccbdaa07013a3f5aec1fc91eb681d0e78fa395fde44fbd",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1613,
+      "path": "synthetic/NS-CLM-C4AC9B1C/NS-DOC-28D39D93.pdf",
+      "schema_version": "1.0",
+      "sha256": "8c4f501ff9667d9773ff3cf876e26643ecc1bc00b16a778b527b12d94f445aa3",
+      "synthetic": true
+    },
+    {
+      "byte_size": 895,
+      "path": "synthetic/NS-CLM-C4AC9B1C/NS-DOC-28D39D93.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "37d32b1785e9bdb9f95887a89baa3856d175cfc69f4ab9e3ba7935a428c03262",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1380,
+      "path": "synthetic/NS-CLM-C4AC9B1C/NS-DOC-2926499A.pdf",
+      "schema_version": "1.0",
+      "sha256": "78dfcc95ebe15d310aff5d60471d0060e5ec69a14f708217b4b9309e52138264",
+      "synthetic": true
+    },
+    {
+      "byte_size": 664,
+      "path": "synthetic/NS-CLM-C4AC9B1C/NS-DOC-2926499A.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "0f2004105a1382971cade5026d2b491ed2526c42d6527ca6c3f1b92eec1c1ae1",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-C4AC9B1C/NS-DOC-7A2387A5.pdf",
+      "schema_version": "1.0",
+      "sha256": "02434fbb3c09f55b051259ab67f6202e34ddb752d6dbedaed1a081e2d8bf3052",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-C4AC9B1C/NS-DOC-7A2387A5.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "13fc8c8d1bd460ce70779e6ceabf97a5c204a4e03415bd095e6f7f5991f26c32",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1576,
+      "path": "synthetic/NS-CLM-C4AC9B1C/NS-DOC-81B69C27.pdf",
+      "schema_version": "1.0",
+      "sha256": "f95a38633504fb9cf819b199f011294e6b70540e1e1b8604691349bf348b0113",
+      "synthetic": true
+    },
+    {
+      "byte_size": 858,
+      "path": "synthetic/NS-CLM-C4AC9B1C/NS-DOC-81B69C27.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "1c95bc3d265f70cde0ddce1d9535cede4c01275345cda094d7ed742ce641cc7c",
+      "synthetic": true
+    },
+    {
+      "byte_size": 912,
+      "path": "synthetic/NS-CLM-C4AC9B1C/NS-DOC-E118C983.png",
+      "schema_version": "1.0",
+      "sha256": "be6b7c9fd176e3464fa62cf944ec6fb2f3593801f3d7f46aa70233700c9ba89a",
+      "synthetic": true
+    },
+    {
+      "byte_size": 421,
+      "path": "synthetic/NS-CLM-C4AC9B1C/NS-DOC-E118C983.png.source.json",
+      "schema_version": "1.0",
+      "sha256": "378ba52ad32888c3612b7728d323d54d2e17c66eaff56fe53df63801684b4aed",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1613,
+      "path": "synthetic/NS-CLM-CDEB8AD0/NS-DOC-273C8FCC.pdf",
+      "schema_version": "1.0",
+      "sha256": "7895b3ca98fb0911b0b650de958fab68a2cabad402f749ab6a80c39d92ca06f8",
+      "synthetic": true
+    },
+    {
+      "byte_size": 895,
+      "path": "synthetic/NS-CLM-CDEB8AD0/NS-DOC-273C8FCC.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "f59efbfb9f46a5a60867e880bbe2053c433beb08c9e2e07d8ded1a8375172e3f",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1374,
+      "path": "synthetic/NS-CLM-CDEB8AD0/NS-DOC-7370A5DD.pdf",
+      "schema_version": "1.0",
+      "sha256": "387171c41c2f3cdf2fc6ef2bc28c408cde88e6ce2b8ba8dcb64b51a0df196805",
+      "synthetic": true
+    },
+    {
+      "byte_size": 657,
+      "path": "synthetic/NS-CLM-CDEB8AD0/NS-DOC-7370A5DD.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "ee9e869bc27202a64bb11a08eb5730efbf07434405ac9f37f287174de6fb1b50",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1576,
+      "path": "synthetic/NS-CLM-CDEB8AD0/NS-DOC-8821A124.pdf",
+      "schema_version": "1.0",
+      "sha256": "e71a86d7940b805536e34bf868e8b2b03caa5740d0d4b3bb4d2be69e8cee4e6e",
+      "synthetic": true
+    },
+    {
+      "byte_size": 858,
+      "path": "synthetic/NS-CLM-CDEB8AD0/NS-DOC-8821A124.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "3952dbc0f1caa12a93ca80350e123ec78a5e682b15fce046c4e7201034e2deee",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-CDEB8AD0/NS-DOC-9E6B0704.pdf",
+      "schema_version": "1.0",
+      "sha256": "ab138ff526a3f0f66a9350889a49e3c974cef64223e854d3b7983fa73db9db00",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-CDEB8AD0/NS-DOC-9E6B0704.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "419976446cc814fe540cca107307feae49501fdbe7411c74437f74912d674ac1",
+      "synthetic": true
+    },
+    {
+      "byte_size": 912,
+      "path": "synthetic/NS-CLM-CDEB8AD0/NS-DOC-AFB85670.png",
+      "schema_version": "1.0",
+      "sha256": "be6b7c9fd176e3464fa62cf944ec6fb2f3593801f3d7f46aa70233700c9ba89a",
+      "synthetic": true
+    },
+    {
+      "byte_size": 421,
+      "path": "synthetic/NS-CLM-CDEB8AD0/NS-DOC-AFB85670.png.source.json",
+      "schema_version": "1.0",
+      "sha256": "8f47a721c7b39d3c8f7880c60ab5e5057eeea816f59c5a0fcf99ee3f0b6b93c0",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1363,
+      "path": "synthetic/NS-CLM-CDEB8AD0/NS-DOC-C40951A5.pdf",
+      "schema_version": "1.0",
+      "sha256": "0f4670b6368c40817404edf7dc2fb53ad319cc7dd43e3a46338c87724b8a0f43",
+      "synthetic": true
+    },
+    {
+      "byte_size": 647,
+      "path": "synthetic/NS-CLM-CDEB8AD0/NS-DOC-C40951A5.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "4d0d60db3fa174753203199e6daf89a296ded3a6a462067785b7d8172db2df1c",
+      "synthetic": true
+    },
+    {
+      "byte_size": 1379,
+      "path": "synthetic/NS-CLM-CDEB8AD0/NS-DOC-E25C6DB9.pdf",
+      "schema_version": "1.0",
+      "sha256": "e5d183683a27995c55dc46e93a363b950a536579bc7bec6dd7fea300cb85f910",
+      "synthetic": true
+    },
+    {
+      "byte_size": 663,
+      "path": "synthetic/NS-CLM-CDEB8AD0/NS-DOC-E25C6DB9.pdf.source.json",
+      "schema_version": "1.0",
+      "sha256": "f46946c1b3fd34fddc5144aaf67abe13c4f3d75a9135204d90e8c7a8a68bcfe8",
+      "synthetic": true
+    }
+  ],
+  "generator_sha256": "8ee2f878f877e93b117ee3746663cf837ef3a6443b21b7bb1e1f5f9d33ffd5fd",
+  "schema_version": "1.0",
+  "seed": 20261030,
+  "synthetic": true
+}

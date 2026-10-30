@@ -1,6 +1,8 @@
 # Requirements traceability
 
-Status: **Milestone 3 documentation**. Every row maps a requirement to its business parent, actual foundation symbols, planned capability and verification. **PARTIAL** means a narrow M2 contract/local guard is implemented and tested, not that the end-to-end requirement is satisfied. **PLANNED** means no enforcing adapter/workflow exists; a protocol/model is not runtime evidence. Test names refer to existing functions inspected in this milestone, with prior results recorded in [Milestone 2](../milestones/milestone-2.md#verification); tests were not rerun for documentation edits.
+Status: **Requirements baselined in Milestone 3; dataset mapping added in Milestone 4**. Every row maps a requirement to its business parent, actual foundation symbols, planned capability and verification. **PARTIAL** means a narrow contract/local guard is implemented and tested, not that the end-to-end requirement is satisfied. **PLANNED** means no enforcing adapter/workflow exists; a protocol/model is not runtime evidence. Original foundation results are recorded in [Milestone 2](../milestones/milestone-2.md#verification); they were rerun within the expanded [Milestone 4 suite](../milestones/milestone-4.md#verification), not promoted into service-integration evidence.
+
+Milestone 4 adds the [dataset evidence mapping](#milestone-4-dataset-evidence) below. The original requirement IDs/acceptance criteria and future VT specifications remain unchanged; dataset validation alone does not satisfy their planned runtime behavior. The 115-test count in historical rows is the M2 baseline, not the current expanded suite.
 
 Definitions: [business requirements](project-charter.md#business-requirements), [FR/NFR acceptance](requirements.md), [target architecture](../architecture/target-architecture.md). Foundation symbols are qualified by module and link to their real source file. Future `VT-*` IDs below are stable verification specifications, **not existing test functions/files or passing results**.
 
@@ -61,3 +63,16 @@ These specifications inherit the corresponding requirement's acceptance criterio
 | VT-022 | NFR-007 | Time paired manual/target cases under the documented workload and correction effort; publish quality alongside effort/latency, including misses. |
 | VT-023 | NFR-008 | Review approved compatibility/cost record and test usage suspension/cleanup in a later authorized environment; do not spend merely to prove a document. |
 | VT-024 | NFR-009 | For the next authorized code change, run applicable quality/package/regression checks and link their actual outputs to changed requirements. |
+
+## Milestone 4 dataset evidence
+
+The [motor-v1 guide](../../data/synthetic/motor/README.md) defines the authored expectations. All scenarios are development fixtures; no VT specification is promoted to complete merely because its inputs now exist.
+
+| Requirements / future verification | Corpus support | Actual new test evidence / remaining gap |
+| --- | --- | --- |
+| FR-001/FR-013; VT-001/VT-013 | 12 submissions, 11 claims; SCN-10 reuses SCN-01 payload with a new submission ID | [test_duplicate_reuses_exact_payload](../../tests/test_dataset.py); no API/store idempotency demonstrated |
+| FR-002/FR-003; VT-002/VT-003 | PDF/PNG artifacts, source/hash/page labels, SCN-03/04 missing evidence | [test_integrity_and_exact_regeneration](../../tests/test_dataset.py), [test_corrupt_corpus_rejected](../../tests/test_dataset.py); no scanner/extraction accuracy claim |
+| FR-004/FR-005; VT-004/VT-005 | Two draft versions, conflict/expired/wrong-version/exact-boundary cases | [test_policy_version_labels_are_metadata_not_coverage](../../tests/test_dataset.py); no production resolver, Search or retrieval recall run |
+| FR-006/FR-011; VT-006/VT-011 | Draft X01 and authored high-risk/escalation labels; all coverage outcomes null | [test_schema_compatibility_and_no_processed_evidence](../../tests/test_dataset.py), [test_distinct_scenario_inventory](../../tests/test_dataset.py); no approved rule/financial engine or executed routing |
+| FR-007/FR-008/NFR-003; VT-007/VT-008/VT-018 | Conflicting facts and SCN-11 visible untrusted instructions with source provenance | [test_untrusted_payload_is_labeled_data](../../tests/test_dataset.py); no agent, detector or adversarial model evaluation |
+| NFR-001/NFR-006/NFR-009; VT-016/VT-021/VT-024 | Synthetic provenance markers, typed versioned annotations, schema, manifest, code fingerprint and seeded reproduction | [test_reproducible_for_seed](../../tests/test_dataset.py), [test_bad_ground_truth_rejected](../../tests/test_dataset.py), [test_rehashed_but_false_extraction_label_rejected](../../tests/test_dataset.py); no independent held-out labels, real-data certification or service-performance result |

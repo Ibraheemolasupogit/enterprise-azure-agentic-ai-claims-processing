@@ -2,6 +2,8 @@
 
 Status: **PLANNED runtime architecture**. [Milestone 2](../milestones/milestone-2.md) implements and locally tests domain contracts, in-memory transition guards, configuration, redacted logging and typed protocols. [Milestone 3 requirements](../business/requirements.md) refine business acceptance/traceability without changing contracts or this design. Azure services, agents, API/UI, persistence/audit and coverage rules remain unimplemented. This is an independent greenfield design for the [charter](../business/project-charter.md).
 
+[Milestone 4](../milestones/milestone-4.md) adds offline synthetic artifact authoring, source-linked annotations and byte/reproduction validation. These tools do not implement any processing component below: intake remains quarantined, and authored labels are not extracted facts, approved policies or operational decisions.
+
 ## Logical components and data flow
 
 ```mermaid

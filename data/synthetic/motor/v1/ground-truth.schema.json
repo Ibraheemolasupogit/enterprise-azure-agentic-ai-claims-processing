@@ -1,0 +1,1268 @@
+{
+  "$defs": {
+    "Assessment": {
+      "additionalProperties": false,
+      "properties": {
+        "assessment_id": {
+          "pattern": "^NS-ASM-[A-Z0-9]{8}$",
+          "title": "Assessment Id",
+          "type": "string"
+        },
+        "case_revision": {
+          "exclusiveMinimum": 0,
+          "title": "Case Revision",
+          "type": "integer"
+        },
+        "citations": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/PolicyCitation"
+          },
+          "title": "Citations",
+          "type": "array"
+        },
+        "claim_id": {
+          "pattern": "^NS-CLM-[A-Z0-9]{8}$",
+          "title": "Claim Id",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "pattern": "^NS-EVD-[A-Z0-9]{8}$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "input_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Input Sha256",
+          "type": "string"
+        },
+        "model_version": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Model Version"
+        },
+        "outcome": {
+          "$ref": "#/$defs/AssessmentOutcome"
+        },
+        "policy": {
+          "$ref": "#/$defs/Policy"
+        },
+        "producer_version": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$",
+          "title": "Producer Version",
+          "type": "string"
+        },
+        "prompt_version": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Prompt Version"
+        },
+        "rationale": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Rationale",
+          "type": "string"
+        },
+        "risk_flags": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/RiskFlag"
+          },
+          "title": "Risk Flags",
+          "type": "array"
+        },
+        "rule_results": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/RuleResult"
+          },
+          "title": "Rule Results",
+          "type": "array"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "synthetic": {
+          "const": true,
+          "default": true,
+          "title": "Synthetic",
+          "type": "boolean"
+        },
+        "tool_version": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Tool Version"
+        }
+      },
+      "required": [
+        "assessment_id",
+        "claim_id",
+        "case_revision",
+        "policy",
+        "input_sha256",
+        "producer_version",
+        "evidence_ids",
+        "outcome",
+        "rationale"
+      ],
+      "title": "Assessment",
+      "type": "object"
+    },
+    "AssessmentOutcome": {
+      "enum": [
+        "eligible",
+        "ineligible",
+        "undetermined"
+      ],
+      "title": "AssessmentOutcome",
+      "type": "string"
+    },
+    "Case": {
+      "additionalProperties": false,
+      "properties": {
+        "assessment": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Assessment"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "claim": {
+          "$ref": "#/$defs/Claim"
+        },
+        "decision": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ReviewerDecision"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "documents": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/DocumentMetadata"
+          },
+          "title": "Documents",
+          "type": "array"
+        },
+        "evidence": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "policy": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Policy"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "revision": {
+          "default": 1,
+          "exclusiveMinimum": 0,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "state": {
+          "$ref": "#/$defs/CaseState",
+          "default": "received"
+        },
+        "synthetic": {
+          "const": true,
+          "default": true,
+          "title": "Synthetic",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "claim"
+      ],
+      "title": "Case",
+      "type": "object"
+    },
+    "CaseState": {
+      "enum": [
+        "received",
+        "validating",
+        "extracting",
+        "assessing",
+        "awaiting_review",
+        "awaiting_evidence",
+        "quarantined",
+        "processing_failed",
+        "closed"
+      ],
+      "title": "CaseState",
+      "type": "string"
+    },
+    "Claim": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_id": {
+          "pattern": "^NS-CLM-[A-Z0-9]{8}$",
+          "title": "Claim Id",
+          "type": "string"
+        },
+        "claimed_amount": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "title": "Claimed Amount"
+        },
+        "currency": {
+          "const": "GBP",
+          "default": "GBP",
+          "title": "Currency",
+          "type": "string"
+        },
+        "document_ids": {
+          "default": [],
+          "items": {
+            "pattern": "^NS-DOC-[A-Z0-9]{8}$",
+            "type": "string"
+          },
+          "title": "Document Ids",
+          "type": "array"
+        },
+        "loss_at": {
+          "format": "date-time",
+          "title": "Loss At",
+          "type": "string"
+        },
+        "narrative": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Narrative",
+          "type": "string"
+        },
+        "policy_id": {
+          "pattern": "^NS-POL-[A-Z0-9]{8}$",
+          "title": "Policy Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "synthetic": {
+          "const": true,
+          "default": true,
+          "title": "Synthetic",
+          "type": "boolean"
+        },
+        "vehicle_reference": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$",
+          "title": "Vehicle Reference",
+          "type": "string"
+        }
+      },
+      "required": [
+        "claim_id",
+        "policy_id",
+        "loss_at",
+        "vehicle_reference",
+        "narrative",
+        "claimed_amount"
+      ],
+      "title": "Claim",
+      "type": "object"
+    },
+    "DecisionAction": {
+      "enum": [
+        "approve",
+        "override",
+        "request_evidence"
+      ],
+      "title": "DecisionAction",
+      "type": "string"
+    },
+    "DocumentKind": {
+      "enum": [
+        "claim_form",
+        "policy_schedule",
+        "policy_wording",
+        "endorsement",
+        "repair_estimate",
+        "damage_photo"
+      ],
+      "title": "DocumentKind",
+      "type": "string"
+    },
+    "DocumentMetadata": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_ref": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Artifact Ref",
+          "type": "string"
+        },
+        "byte_size": {
+          "exclusiveMinimum": 0,
+          "title": "Byte Size",
+          "type": "integer"
+        },
+        "claim_id": {
+          "pattern": "^NS-CLM-[A-Z0-9]{8}$",
+          "title": "Claim Id",
+          "type": "string"
+        },
+        "document_id": {
+          "pattern": "^NS-DOC-[A-Z0-9]{8}$",
+          "title": "Document Id",
+          "type": "string"
+        },
+        "kind": {
+          "$ref": "#/$defs/DocumentKind"
+        },
+        "media_type": {
+          "enum": [
+            "application/pdf",
+            "image/jpeg",
+            "image/png"
+          ],
+          "title": "Media Type",
+          "type": "string"
+        },
+        "page_count": {
+          "exclusiveMinimum": 0,
+          "title": "Page Count",
+          "type": "integer"
+        },
+        "scan_status": {
+          "$ref": "#/$defs/ScanStatus",
+          "default": "quarantined"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "synthetic": {
+          "const": true,
+          "default": true,
+          "title": "Synthetic",
+          "type": "boolean"
+        },
+        "uploaded_at": {
+          "format": "date-time",
+          "title": "Uploaded At",
+          "type": "string"
+        }
+      },
+      "required": [
+        "document_id",
+        "claim_id",
+        "kind",
+        "media_type",
+        "artifact_ref",
+        "sha256",
+        "byte_size",
+        "page_count",
+        "uploaded_at"
+      ],
+      "title": "DocumentMetadata",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Artifact Sha256",
+          "type": "string"
+        },
+        "bounding_region": {
+          "anyOf": [
+            {
+              "maxItems": 4,
+              "minItems": 4,
+              "prefixItems": [
+                {
+                  "maximum": 1,
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "maximum": 1,
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "maximum": 1,
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "maximum": 1,
+                  "minimum": 0,
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Bounding Region"
+        },
+        "claim_id": {
+          "pattern": "^NS-CLM-[A-Z0-9]{8}$",
+          "title": "Claim Id",
+          "type": "string"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        },
+        "document_id": {
+          "pattern": "^NS-DOC-[A-Z0-9]{8}$",
+          "title": "Document Id",
+          "type": "string"
+        },
+        "evidence_id": {
+          "pattern": "^NS-EVD-[A-Z0-9]{8}$",
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "extraction_method": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$",
+          "title": "Extraction Method",
+          "type": "string"
+        },
+        "extraction_version": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$",
+          "title": "Extraction Version",
+          "type": "string"
+        },
+        "field_name": {
+          "pattern": "^[a-z][a-z0-9_]{0,63}$",
+          "title": "Field Name",
+          "type": "string"
+        },
+        "normalized_value": {
+          "anyOf": [
+            {
+              "maxLength": 4000,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Normalized Value"
+        },
+        "observed_value": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Observed Value",
+          "type": "string"
+        },
+        "page": {
+          "exclusiveMinimum": 0,
+          "title": "Page",
+          "type": "integer"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "synthetic": {
+          "const": true,
+          "default": true,
+          "title": "Synthetic",
+          "type": "boolean"
+        },
+        "validation_flags": {
+          "default": [],
+          "items": {
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$",
+            "type": "string"
+          },
+          "title": "Validation Flags",
+          "type": "array"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "claim_id",
+        "document_id",
+        "artifact_sha256",
+        "page",
+        "field_name",
+        "observed_value",
+        "extraction_method",
+        "extraction_version"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "FieldTruth": {
+      "additionalProperties": false,
+      "properties": {
+        "expected": {
+          "$ref": "#/$defs/Evidence"
+        },
+        "location_kind": {
+          "enum": [
+            "pdf_line",
+            "image_caption"
+          ],
+          "title": "Location Kind",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "source_line": {
+          "exclusiveMinimum": 0,
+          "title": "Source Line",
+          "type": "integer"
+        },
+        "synthetic": {
+          "const": true,
+          "default": true,
+          "title": "Synthetic",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "expected",
+        "source_line",
+        "location_kind"
+      ],
+      "title": "FieldTruth",
+      "type": "object"
+    },
+    "Policy": {
+      "additionalProperties": false,
+      "properties": {
+        "effective_from": {
+          "format": "date",
+          "title": "Effective From",
+          "type": "string"
+        },
+        "effective_to": {
+          "format": "date",
+          "title": "Effective To",
+          "type": "string"
+        },
+        "endorsements": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/PolicyArtifact"
+          },
+          "title": "Endorsements",
+          "type": "array"
+        },
+        "index_version": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$",
+          "title": "Index Version",
+          "type": "string"
+        },
+        "jurisdiction": {
+          "const": "GB",
+          "default": "GB",
+          "title": "Jurisdiction",
+          "type": "string"
+        },
+        "policy_id": {
+          "pattern": "^NS-POL-[A-Z0-9]{8}$",
+          "title": "Policy Id",
+          "type": "string"
+        },
+        "product": {
+          "const": "motor_damage",
+          "default": "motor_damage",
+          "title": "Product",
+          "type": "string"
+        },
+        "rule_pack_version": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$",
+          "title": "Rule Pack Version",
+          "type": "string"
+        },
+        "schedule": {
+          "$ref": "#/$defs/PolicyArtifact"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "synthetic": {
+          "const": true,
+          "default": true,
+          "title": "Synthetic",
+          "type": "boolean"
+        },
+        "version": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$",
+          "title": "Version",
+          "type": "string"
+        },
+        "wording": {
+          "$ref": "#/$defs/PolicyArtifact"
+        }
+      },
+      "required": [
+        "policy_id",
+        "version",
+        "effective_from",
+        "effective_to",
+        "schedule",
+        "wording",
+        "index_version",
+        "rule_pack_version"
+      ],
+      "title": "Policy",
+      "type": "object"
+    },
+    "PolicyArtifact": {
+      "additionalProperties": false,
+      "properties": {
+        "document_id": {
+          "pattern": "^NS-DOC-[A-Z0-9]{8}$",
+          "title": "Document Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "synthetic": {
+          "const": true,
+          "default": true,
+          "title": "Synthetic",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "document_id",
+        "sha256"
+      ],
+      "title": "PolicyArtifact",
+      "type": "object"
+    },
+    "PolicyCitation": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Artifact Sha256",
+          "type": "string"
+        },
+        "clause_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$",
+          "title": "Clause Id",
+          "type": "string"
+        },
+        "document_id": {
+          "pattern": "^NS-DOC-[A-Z0-9]{8}$",
+          "title": "Document Id",
+          "type": "string"
+        },
+        "page": {
+          "exclusiveMinimum": 0,
+          "title": "Page",
+          "type": "integer"
+        },
+        "policy_id": {
+          "pattern": "^NS-POL-[A-Z0-9]{8}$",
+          "title": "Policy Id",
+          "type": "string"
+        },
+        "policy_version": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$",
+          "title": "Policy Version",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "synthetic": {
+          "const": true,
+          "default": true,
+          "title": "Synthetic",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "policy_id",
+        "policy_version",
+        "document_id",
+        "artifact_sha256",
+        "clause_id",
+        "page"
+      ],
+      "title": "PolicyCitation",
+      "type": "object"
+    },
+    "PolicySelectionTruth": {
+      "additionalProperties": false,
+      "properties": {
+        "approval_status": {
+          "const": "unapproved_fixture_metadata_only",
+          "default": "unapproved_fixture_metadata_only",
+          "title": "Approval Status",
+          "type": "string"
+        },
+        "basis": {
+          "enum": [
+            "fixture_interval",
+            "outside_fixture_intervals",
+            "conflicting_source_dates"
+          ],
+          "title": "Basis",
+          "type": "string"
+        },
+        "expected_version": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Expected Version"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "submitted_version": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$",
+          "title": "Submitted Version",
+          "type": "string"
+        },
+        "synthetic": {
+          "const": true,
+          "default": true,
+          "title": "Synthetic",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "submitted_version",
+        "expected_version",
+        "basis"
+      ],
+      "title": "PolicySelectionTruth",
+      "type": "object"
+    },
+    "ReviewTruth": {
+      "additionalProperties": false,
+      "properties": {
+        "automatic_outcome_allowed": {
+          "const": false,
+          "default": false,
+          "title": "Automatic Outcome Allowed",
+          "type": "boolean"
+        },
+        "coverage_outcome": {
+          "const": null,
+          "default": null,
+          "title": "Coverage Outcome",
+          "type": "null"
+        },
+        "expected_action": {
+          "enum": [
+            "handler_triage",
+            "request_evidence",
+            "supervisor_triage",
+            "duplicate_triage"
+          ],
+          "title": "Expected Action",
+          "type": "string"
+        },
+        "expected_role": {
+          "$ref": "#/$defs/ReviewerRole"
+        },
+        "human_outcome_required": {
+          "const": true,
+          "default": true,
+          "title": "Human Outcome Required",
+          "type": "boolean"
+        },
+        "label_basis": {
+          "const": "authored_scenario_not_executed_workflow",
+          "default": "authored_scenario_not_executed_workflow",
+          "title": "Label Basis",
+          "type": "string"
+        },
+        "risk_flags": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/RiskFlag"
+          },
+          "title": "Risk Flags",
+          "type": "array"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "synthetic": {
+          "const": true,
+          "default": true,
+          "title": "Synthetic",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "expected_role",
+        "expected_action"
+      ],
+      "title": "ReviewTruth",
+      "type": "object"
+    },
+    "ReviewerDecision": {
+      "additionalProperties": false,
+      "properties": {
+        "action": {
+          "$ref": "#/$defs/DecisionAction"
+        },
+        "assessment_id": {
+          "pattern": "^NS-ASM-[A-Z0-9]{8}$",
+          "title": "Assessment Id",
+          "type": "string"
+        },
+        "claim_id": {
+          "pattern": "^NS-CLM-[A-Z0-9]{8}$",
+          "title": "Claim Id",
+          "type": "string"
+        },
+        "decided_at": {
+          "format": "date-time",
+          "title": "Decided At",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "default": [],
+          "items": {
+            "pattern": "^NS-EVD-[A-Z0-9]{8}$",
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "expected_case_revision": {
+          "exclusiveMinimum": 0,
+          "title": "Expected Case Revision",
+          "type": "integer"
+        },
+        "outcome": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/AssessmentOutcome"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "reason": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Reason",
+          "type": "string"
+        },
+        "reviewer_id": {
+          "format": "uuid",
+          "title": "Reviewer Id",
+          "type": "string"
+        },
+        "role": {
+          "$ref": "#/$defs/ReviewerRole"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "synthetic": {
+          "const": true,
+          "default": true,
+          "title": "Synthetic",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "claim_id",
+        "assessment_id",
+        "expected_case_revision",
+        "reviewer_id",
+        "role",
+        "action",
+        "reason",
+        "decided_at"
+      ],
+      "title": "ReviewerDecision",
+      "type": "object"
+    },
+    "ReviewerRole": {
+      "enum": [
+        "reviewer",
+        "supervisor"
+      ],
+      "title": "ReviewerRole",
+      "type": "string"
+    },
+    "RiskFlag": {
+      "enum": [
+        "ambiguous",
+        "high_risk",
+        "conflicting",
+        "injection_flagged",
+        "unsupported"
+      ],
+      "title": "RiskFlag",
+      "type": "string"
+    },
+    "RuleResult": {
+      "additionalProperties": false,
+      "description": "A supplied rule trace; this model neither approves nor evaluates rules.",
+      "properties": {
+        "evidence_ids": {
+          "items": {
+            "pattern": "^NS-EVD-[A-Z0-9]{8}$",
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "outcome": {
+          "$ref": "#/$defs/AssessmentOutcome"
+        },
+        "rule_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$",
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "synthetic": {
+          "const": true,
+          "default": true,
+          "title": "Synthetic",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "rule_id",
+        "outcome",
+        "evidence_ids"
+      ],
+      "title": "RuleResult",
+      "type": "object"
+    },
+    "SampleTruth": {
+      "additionalProperties": false,
+      "properties": {
+        "completeness_basis": {
+          "const": "presence_only_unapproved_exercise_checklist",
+          "default": "presence_only_unapproved_exercise_checklist",
+          "title": "Completeness Basis",
+          "type": "string"
+        },
+        "coverage_hypothesis": {
+          "maxLength": 4000,
+          "minLength": 1,
+          "title": "Coverage Hypothesis",
+          "type": "string"
+        },
+        "duplicate_of": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Duplicate Of"
+        },
+        "expected_missing_kinds": {
+          "items": {
+            "$ref": "#/$defs/DocumentKind"
+          },
+          "title": "Expected Missing Kinds",
+          "type": "array"
+        },
+        "extraction_fields": {
+          "items": {
+            "$ref": "#/$defs/FieldTruth"
+          },
+          "minItems": 1,
+          "title": "Extraction Fields",
+          "type": "array"
+        },
+        "fixture_required_kinds": {
+          "items": {
+            "$ref": "#/$defs/DocumentKind"
+          },
+          "title": "Fixture Required Kinds",
+          "type": "array"
+        },
+        "hypothesis_status": {
+          "const": "requires_fictional_policy_approval",
+          "default": "requires_fictional_policy_approval",
+          "title": "Hypothesis Status",
+          "type": "string"
+        },
+        "input_case": {
+          "$ref": "#/$defs/Case"
+        },
+        "policies": {
+          "items": {
+            "$ref": "#/$defs/Policy"
+          },
+          "minItems": 1,
+          "title": "Policies",
+          "type": "array"
+        },
+        "policy_selection": {
+          "$ref": "#/$defs/PolicySelectionTruth"
+        },
+        "review": {
+          "$ref": "#/$defs/ReviewTruth"
+        },
+        "scenario": {
+          "$ref": "#/$defs/Scenario"
+        },
+        "scenario_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$",
+          "title": "Scenario Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "submission_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$",
+          "title": "Submission Id",
+          "type": "string"
+        },
+        "synthetic": {
+          "const": true,
+          "default": true,
+          "title": "Synthetic",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "scenario_id",
+        "scenario",
+        "submission_id",
+        "input_case",
+        "policies",
+        "extraction_fields",
+        "fixture_required_kinds",
+        "expected_missing_kinds",
+        "policy_selection",
+        "review",
+        "coverage_hypothesis"
+      ],
+      "title": "SampleTruth",
+      "type": "object"
+    },
+    "ScanStatus": {
+      "enum": [
+        "quarantined",
+        "accepted",
+        "rejected"
+      ],
+      "title": "ScanStatus",
+      "type": "string"
+    },
+    "Scenario": {
+      "enum": [
+        "straightforward_front_damage",
+        "straightforward_side_damage_v2",
+        "missing_repair_estimate",
+        "missing_damage_image",
+        "conflicting_loss_dates",
+        "expired_policy_metadata",
+        "wrong_submitted_policy_version",
+        "high_value_manual_risk_label",
+        "draft_exclusion_candidate",
+        "duplicate_submission",
+        "malicious_document_instructions",
+        "exact_policy_version_boundary"
+      ],
+      "title": "Scenario",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "dataset_version": {
+      "const": "motor-v1",
+      "default": "motor-v1",
+      "title": "Dataset Version",
+      "type": "string"
+    },
+    "generator_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Generator Version",
+      "type": "string"
+    },
+    "provenance": {
+      "const": "generated_from_code_no_real_people_or_external_inputs",
+      "default": "generated_from_code_no_real_people_or_external_inputs",
+      "title": "Provenance",
+      "type": "string"
+    },
+    "samples": {
+      "items": {
+        "$ref": "#/$defs/SampleTruth"
+      },
+      "title": "Samples",
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "seed": {
+      "maximum": 4294967295,
+      "minimum": 0,
+      "title": "Seed",
+      "type": "integer"
+    },
+    "split": {
+      "const": "development_not_held_out",
+      "default": "development_not_held_out",
+      "title": "Split",
+      "type": "string"
+    },
+    "synthetic": {
+      "const": true,
+      "default": true,
+      "title": "Synthetic",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "seed",
+    "samples"
+  ],
+  "title": "GroundTruth",
+  "type": "object"
+}

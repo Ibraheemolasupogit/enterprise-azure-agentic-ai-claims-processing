@@ -1,0 +1,20 @@
+{
+  "document_id": "NS-DOC-ECFCD8D3",
+  "lines": [
+    "SYNTHETIC ONLY - DRAFT, NOT APPROVED - NO REAL PERSON OR INSURANCE DATA",
+    "document_id: NS-DOC-ECFCD8D3",
+    "claim_id: NS-CLM-0E6A2F0C",
+    "policy_id: NS-POL-3DADA072",
+    "loss_at: 2026-06-18T10:00:00+00:00",
+    "vehicle_reference: SYNTHETIC-VEHICLE-355CC835",
+    "claimed_amount: 1425.12",
+    "currency: GBP",
+    "narrative: Synthetic report of gradual wear over time; no single impact stated.",
+    "submitted_policy_version: draft-v1",
+    "claimant_reference: SYNTHETIC-PERSON-09"
+  ],
+  "rendering": "pdf-text",
+  "schema_version": "1.0",
+  "synthetic": true,
+  "title": "NORTHSTAR | MOTOR CLAIM FORM"
+}

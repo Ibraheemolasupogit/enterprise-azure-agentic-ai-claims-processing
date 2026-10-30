@@ -1,0 +1,19 @@
+{
+  "document_id": "NS-DOC-9B89E2CD",
+  "lines": [
+    "SYNTHETIC ONLY - DRAFT, NOT APPROVED - NO REAL PERSON OR INSURANCE DATA",
+    "document_id: NS-DOC-9B89E2CD",
+    "claim_id: NS-CLM-8F63DCBD",
+    "vehicle_reference: SYNTHETIC-VEHICLE-4FB41914",
+    "loss_at: 2026-06-18T10:00:00+00:00",
+    "estimate_amount: 2602.53",
+    "currency: GBP",
+    "estimate_issued_at: 2026-11-20T12:00:00+00:00",
+    "repairer_reference: SYNTHETIC-REPAIR-UNIT-A",
+    "Quoted amount only; no payment, excess, limit or settlement calculation."
+  ],
+  "rendering": "pdf-text",
+  "schema_version": "1.0",
+  "synthetic": true,
+  "title": "NORTHSTAR | SYNTHETIC REPAIR ESTIMATE"
+}

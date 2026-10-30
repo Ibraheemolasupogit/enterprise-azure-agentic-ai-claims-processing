@@ -1,6 +1,6 @@
 # Business process requirements
 
-Status: **Documented in Milestone 3; target behavior PLANNED except the foundation checks explicitly identified in the [traceability matrix](traceability-matrix.md).** Scope and roles come from the [charter](project-charter.md); component/agent design remains in the [architecture](../architecture/target-architecture.md).
+Status: **Documented in Milestone 3; target behavior PLANNED except the foundation/dataset checks explicitly identified in the [traceability matrix](traceability-matrix.md).** Milestone 4 supplies development fixtures/annotations, not satisfaction of live processing requirements. Scope and roles come from the [charter](project-charter.md); component/agent design remains in the [architecture](../architecture/target-architecture.md).
 
 `BR-*` identifies business requirements, `FR-*` functional requirements and `NFR-*` non-functional requirements. IDs are stable; retire rather than reuse them. Each FR/NFR heading is the authoritative requirement and its following acceptance criterion. All are required for the target platform; this does not assert implementation, test completion or insurance-policy approval. Performance/quality targets inherited from Milestone 1 remain provisional until the stated evaluation plan is approved. All examples and verification use synthetic data only.
 
@@ -114,4 +114,4 @@ Cloud work must be gated by approved region/residency, service/SKU/model quota c
 
 ### NFR-009 Change quality and evidence status
 
-Future code changes must preserve strict typing, focused tests, package validity and documented schema/decision compatibility. Acceptance: applicable `make check`/package checks and regression evidence pass before promoting implementation status; docs-only changes validate links, symbols and traceability. Retain prior milestone evidence as historical, record scope changes and avoid claiming planned services as implemented. No code, dependency, deployment or runtime-test change is authorized by this milestone.
+Future code changes must preserve strict typing, focused tests, package validity and documented schema/decision compatibility. Acceptance: applicable `make check`/package checks and regression evidence pass before promoting implementation status; docs-only changes validate links, symbols and traceability. Retain prior milestone evidence as historical, record scope changes and avoid claiming planned services as implemented. Milestone 3 authorized documentation only; subsequent runtime changes require their own approved milestone scope.

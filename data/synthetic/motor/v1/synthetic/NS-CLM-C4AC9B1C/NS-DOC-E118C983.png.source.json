@@ -1,0 +1,14 @@
+{
+  "document_id": "NS-DOC-E118C983",
+  "lines": [
+    "SYNTHETIC ONLY - DRAFT, NOT APPROVED - NO REAL PERSON OR INSURANCE DATA",
+    "document_id: NS-DOC-E118C983",
+    "claim_id: NS-CLM-C4AC9B1C",
+    "damage_location: FRONT BUMPER",
+    "Illustration only; no actual vehicle or photograph."
+  ],
+  "rendering": "png-schematic",
+  "schema_version": "1.0",
+  "synthetic": true,
+  "title": "SYNTHETIC DAMAGE SCHEMATIC"
+}

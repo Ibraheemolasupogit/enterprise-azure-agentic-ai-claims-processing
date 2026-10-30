@@ -1,6 +1,6 @@
 PYTHON ?= .venv/bin/python
 
-.PHONY: test lint format format-check typecheck check package
+.PHONY: test lint format format-check typecheck check package dataset-check
 
 test:
 	$(PYTHON) -m pytest
@@ -18,6 +18,9 @@ typecheck:
 	$(PYTHON) -m mypy
 
 check: format-check lint typecheck test
+
+dataset-check:
+	PYTHONPATH=src $(PYTHON) -m claims_ai.dataset check --root data/synthetic/motor/v1
 
 package:
 	$(PYTHON) -m pip wheel --no-index --no-cache-dir --no-deps --no-build-isolation --wheel-dir dist .

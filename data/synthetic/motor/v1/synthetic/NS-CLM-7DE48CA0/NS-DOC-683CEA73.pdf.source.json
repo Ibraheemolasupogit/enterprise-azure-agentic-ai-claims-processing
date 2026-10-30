@@ -1,0 +1,20 @@
+{
+  "document_id": "NS-DOC-683CEA73",
+  "lines": [
+    "SYNTHETIC ONLY - DRAFT, NOT APPROVED - NO REAL PERSON OR INSURANCE DATA",
+    "document_id: NS-DOC-683CEA73",
+    "claim_id: NS-CLM-7DE48CA0",
+    "policy_id: NS-POL-0AEEAA6F",
+    "loss_at: 2026-08-18T10:00:00+00:00",
+    "vehicle_reference: SYNTHETIC-VEHICLE-5ABEA500",
+    "claimed_amount: 1239.50",
+    "currency: GBP",
+    "narrative: Synthetic parking impact; front bumper marked.",
+    "submitted_policy_version: draft-v1",
+    "claimant_reference: SYNTHETIC-PERSON-07"
+  ],
+  "rendering": "pdf-text",
+  "schema_version": "1.0",
+  "synthetic": true,
+  "title": "NORTHSTAR | MOTOR CLAIM FORM"
+}
