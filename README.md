@@ -10,6 +10,8 @@ The end-to-end application and all live Azure/Mistral/GPT integrations, coverage
 
 **Milestone 6 implements the [structured evidence boundary](docs/architecture/structured-evidence-processing.md):** deterministic field normalization, identity/hash/source validation, actionable holds/rejections, immutable local history, idempotent retries and guarded case admission. It preserves M4 data and M5 benchmark semantics. The CLI maps SIMULATED fixture proposals while keeping original documents quarantined; no scanner or operational ingestion is claimed.
 
+**Milestone 7 implements [draft-policy knowledge ingestion and lexical retrieval](docs/architecture/policy-knowledge-retrieval.md):** verified fixture parsing, deterministic source-linked chunks, exact claim/policy/version/date/snapshot filters and fail-closed abstentions. Token overlap is real local code over unapproved synthetic text; no semantic search, hybrid RAG, Azure AI Search implementation, retrieval-accuracy result or coverage decision is claimed.
+
 **Milestone 3 documentation is complete:** the business process, responsibilities, requirements, traceability, risk register and authority ADR refine the baseline. No runtime files changed. The 115 passing foundation tests and package/typing results remain historical Milestone 2 evidence; they were not rerun or promoted into business-performance results by this documentation milestone.
 
 The original Microsoft Claims Processing Hackathon source was not located. This is independently engineered, informed by lessons from that context; it does not continue the hackathon challenge roadmap. It is separate from the Agentic SDLC portfolio repository. No reference application was imported, and no further source search is planned.
@@ -50,6 +52,8 @@ Only fictional policies, people, identifiers, documents and generated/non-identi
 | [Milestone 5 record](docs/milestones/milestone-5.md) | Harness checks and explicitly simulated fixture results |
 | [Structured evidence processing](docs/architecture/structured-evidence-processing.md) | Mapping, source/quality gates, history and admission |
 | [Milestone 6 record](docs/milestones/milestone-6.md) | Evidence-boundary checks and limitations |
+| [Policy knowledge retrieval](docs/architecture/policy-knowledge-retrieval.md) | Offline ingestion, lexical filtering, citations and abstentions |
+| [Milestone 7 record](docs/milestones/milestone-7.md) | Draft-policy foundation, verification and remaining gaps |
 
 ## Local Python foundation
 
@@ -90,6 +94,14 @@ PYTHONPATH=src .venv/bin/python -m claims_ai.evidence --corpus data/synthetic/mo
 
 All original documents remain quarantined; the report contains proposals/issues and no case admission. The library's accepted/admitted paths are separately tested with explicit synthetic scan assertions and simulation opt-in. `make evidence-check` runs those focused tests; `make check` includes them. Confidence remains uncalibrated, and conflicts require human review rather than automatic fact replacement.
 
+Run the draft-policy lexical demonstration with a new output filename:
+
+```sh
+PYTHONPATH=src .venv/bin/python -m claims_ai.knowledge --corpus data/synthetic/motor/v1 --output outputs/knowledge/draft-lexical.json
+```
+
+This emits `OFFLINE_SYNTHETIC` clause/citation and abstention records. The draft-policy index preserves quarantine and approval status; exclusions are quoted candidates only. `make knowledge-check` runs focused parsing, filtering, citation, scope and outage tests. Azure search is a protocol, and no policy is activated or attached to a case.
+
 Domain validation checks synthetic identifiers, object references, document/evidence hash metadata, policy-version metadata and caller-supplied evidence checklists. It does not scan files, resolve policy coverage or approve fictional insurance rules. Dataset validation additionally checks fixture bytes against hashes/source renderings; it is not live upload validation or malware scanning. Structured logging emits approved event names and allowlisted operational fields; arbitrary payloads and exception text are suppressed. Do not send raw model dumps or validation-error payloads to other loggers.
 
-Git setup and all commits/pushes remain manual. **Milestone 7 has not started.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) reflects the approved structured-evidence Milestone 6.
+Git setup and all commits/pushes remain manual. **Milestone 8 has not started.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) reflects the approved policy-knowledge Milestone 7.

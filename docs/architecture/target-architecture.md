@@ -8,6 +8,8 @@ Status: **PLANNED runtime architecture**. [Milestone 2](../milestones/milestone-
 
 [Milestone 6](../milestones/milestone-6.md) implements the deterministic, local [structured-evidence boundary](structured-evidence-processing.md) within step 3 below: typed mapping, source/hash/ownership checks, normalization, quality holds, immutable caller-held history and guarded in-memory admission. Independent quote verification currently supports generated single-page fixtures only; other inputs stay quarantined. Original M4 cases remain unchanged and the offline demonstration admits no evidence. Intake/scanning, authenticated assertions, repository integration and durable audit remain planned. Agent, rule and human-decision authority is unchanged.
 
+[Milestone 7](../milestones/milestone-7.md) implements an offline [draft-policy parser and lexical retriever](policy-knowledge-retrieval.md), composing existing policy/clause/citation contracts. Case-bound indexes retain verified source lines, version/effective dates and deterministic chunk IDs; exact-version/date filters, snapshot/source validation and abstentions precede token scoring. This is an unapproved fixture-authoring path, not approved policy publication/resolution or the hybrid Search component below. The Azure AI Search adapter is a protocol only. No embeddings, case policy activation, agent, coverage authority or lifecycle changes are introduced.
+
 ## Logical components and data flow
 
 ```mermaid
