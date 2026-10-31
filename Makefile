@@ -1,6 +1,6 @@
 PYTHON ?= .venv/bin/python
 
-.PHONY: test lint format format-check typecheck check package dataset-check benchmark-check evidence-check knowledge-check retrieval-eval-check rules-check agents-check agent-tools-check
+.PHONY: test lint format format-check typecheck check package dataset-check benchmark-check evidence-check knowledge-check retrieval-eval-check rules-check agents-check agent-tools-check workflow-check
 
 test:
 	$(PYTHON) -m pytest
@@ -42,6 +42,9 @@ agents-check:
 
 agent-tools-check:
 	$(PYTHON) -m pytest tests/test_agent_tools.py
+
+workflow-check:
+	$(PYTHON) -m pytest tests/test_workflow.py
 
 package:
 	$(PYTHON) -m pip wheel --no-index --no-cache-dir --no-deps --no-build-isolation --wheel-dir dist .

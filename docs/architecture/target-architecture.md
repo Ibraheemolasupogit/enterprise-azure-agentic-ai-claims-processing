@@ -20,6 +20,8 @@ Status: **PLANNED runtime architecture**. [Milestone 2](../milestones/milestone-
 
 [Milestone 11](../milestones/milestone-11.md) extends the same assessment responsibility with [governed internal tools](governed-agent-tools.md), not another agent. Real SDK functions read verified evidence, exact-version clauses and provisional deterministic findings through local service methods. A trusted host grant binds case/fingerprint/correlation and permissions; each tool validates scope before reads and validates result provenance before release. Final drafts retain M10 validation and human/supervisor controls. These internal controls do not implement authentication, MCP/APIM or the target cloud tool gateway.
 
+[Milestone 12](../milestones/milestone-12.md) composes those local components in a [deterministic offline workflow](deterministic-claims-workflow.md). The host controls six stages, prerequisite checks, same-case grant delegation, bounded retry, immutable correlated records and checkpoint replay. M2 transitions and M6 admissions reach ASSESSING; a separate provisional advisory task routes humans/supervisors without fabricating the operational Assessment required for AWAITING_REVIEW. Existing services and agent profiles are unchanged. This is not the intake API, queue/outbox, durable store or deployed worker shown below.
+
 ```mermaid
 flowchart TD
     User[Authenticated intake and reviewer UI] --> API[FastAPI case API]

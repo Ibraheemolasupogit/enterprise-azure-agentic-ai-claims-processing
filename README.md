@@ -20,6 +20,8 @@ The end-to-end application and all live Azure/Mistral/GPT integrations, approved
 
 **Milestone 11 implements [governed internal agent tools](docs/architecture/governed-agent-tools.md):** three typed read-only tools backed by verified evidence, exact-version lexical retrieval and provisional rule findings. Host grants bind every call to one case snapshot; argument/provenance checks, bounded execution and safe failures preserve human/supervisor authority. Real SDK invocation is locally tested; chat responses and identity/fault assertions are **SIMULATED**. No MCP/APIM or authenticated cloud integration is claimed. See the [M11 record](docs/milestones/milestone-11.md).
 
+**Milestone 12 implements the [deterministic offline claims workflow](docs/architecture/deterministic-claims-workflow.md):** intake, evidence, exact-version policy retrieval, provisional findings, existing governed agent synthesis and mandatory human/supervisor routing. Bounded retries, immutable correlated records and validated caller-held checkpoints support offline replay/recovery. Chat and scan/identity/reviewer assertions remain **SIMULATED**. Successful advisory processing leaves the operational case ASSESSING; no approved assessment, claim outcome or durable cloud workflow is created. See the [M12 record](docs/milestones/milestone-12.md).
+
 **Milestone 3 documentation is complete:** the business process, responsibilities, requirements, traceability, risk register and authority ADR refine the baseline. No runtime files changed. The 115 passing foundation tests and package/typing results remain historical Milestone 2 evidence; they were not rerun or promoted into business-performance results by this documentation milestone.
 
 The original Microsoft Claims Processing Hackathon source was not located. This is independently engineered, informed by lessons from that context; it does not continue the hackathon challenge roadmap. It is separate from the Agentic SDLC portfolio repository. No reference application was imported, and no further source search is planned.
@@ -73,6 +75,8 @@ Only fictional policies, people, identifiers, documents and generated/non-identi
 | [Milestone 10 record](docs/milestones/milestone-10.md) | Bounded offline integration, checks and remaining live-model limitations |
 | [Governed agent tools](docs/architecture/governed-agent-tools.md) | Typed internal reads, host grants, scope/provenance checks and bounded SDK dispatch |
 | [Milestone 11 record](docs/milestones/milestone-11.md) | Tool contract/security checks, offline reproduction and limitations |
+| [Deterministic workflow](docs/architecture/deterministic-claims-workflow.md) | Six-stage orchestration, immutable records, bounded retry and checkpoint recovery |
+| [Milestone 12 record](docs/milestones/milestone-12.md) | Workflow safety/integration checks, offline reproduction and limitations |
 
 ## Local Python foundation
 
@@ -153,6 +157,14 @@ PYTHONPATH=src .venv/bin/python -m claims_ai.agent_tools --output outputs/agent-
 
 Use a new output filename. This ten-case demonstration covers authorized reads, adverse review, missing evidence, unauthorized/cross-case requests, wrong versions, malformed/forbidden calls, injected notes and a simulated retrieval outage. Host grants are synthetic assertions, not authentication tokens. `make agent-tools-check` runs focused real-SDK tool contract and security checks.
 
+Run the complete offline advisory workflow:
+
+```sh
+PYTHONPATH=src .venv/bin/python -m claims_ai.workflow --output outputs/workflow/offline-v1.json
+```
+
+Use a new output filename. Seven cases cover an advisory draft, missing evidence, a simulated retrieval outage, injected document content, adverse/high-risk escalation and serialized checkpoint resume. JSON includes full synthetic execution records; checkpoints are local caller-held artifacts, not signed or durable audit. `make workflow-check` runs focused workflow tests. The architecture guide documents trusted-input recovery and the separation between advisory tasks and operational outcomes.
+
 Domain validation checks synthetic identifiers, object references, document/evidence hash metadata, policy-version metadata and caller-supplied evidence checklists. It does not scan files, resolve policy coverage or approve fictional insurance rules. Dataset validation additionally checks fixture bytes against hashes/source renderings; it is not live upload validation or malware scanning. Structured logging emits approved event names and allowlisted operational fields; arbitrary payloads and exception text are suppressed. Do not send raw model dumps or validation-error payloads to other loggers.
 
-Git setup and all commits/pushes remain manual. **Milestones 10–11 are complete within their bounded offline scopes; Milestone 12 has not started.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) records M1–M11 delivery and planned later work.
+Git setup and all commits/pushes remain manual. **Milestones 10–12 are complete within their bounded offline scopes; Milestone 13 has not started.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) records M1–M12 delivery and planned later work.
