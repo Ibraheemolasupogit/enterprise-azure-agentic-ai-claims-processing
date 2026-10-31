@@ -30,6 +30,8 @@ Hybrid keyword/vector retrieval must be restricted to the authorized resolved po
 
 Only owner-approved, versioned rules may compute coverage/financial results outside prompts. Acceptance: approved fixtures reproduce rule IDs/results and evidence links; unknown facts return `undetermined`; mismatched rule/policy versions block evaluation. Until fictional policy approval, contracts may carry clearly labeled supplied test outcomes but no operational recommendation or calculation is released. A supervisor override does not publish a new rule or erase the original result.
 
+The user-authorized [M9 provisional foundation](../architecture/deterministic-provisional-rules.md) runs separate fictional, non-binding offline findings/illustrations with explicit unapproved status; it does not satisfy or weaken this operational release criterion. Its PASS/FAIL/INDETERMINATE/NOT_APPLICABLE findings are not the existing `AssessmentOutcome` values, and no operational assessment or financial outcome is released.
+
 ### FR-007 Evidence reconciliation assistance
 
 The proposed evidence agent may compare heterogeneous evidence and propose facts/discrepancies, never change canonical facts or approve outcomes. Acceptance: contradictory synthetic form/photo/estimate inputs surface uncertainties with evidence references; invalid outputs/timeouts become visible exceptions. Bounded tool/token/time limits and comparison against a simpler baseline are required before claiming agent benefit. Only the service protocol exists.

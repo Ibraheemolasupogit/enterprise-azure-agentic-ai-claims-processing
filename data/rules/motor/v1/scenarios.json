@@ -1,0 +1,261 @@
+{
+  "provenance": "new_authored_synthetic_fixtures_not_m4",
+  "scenarios": [
+    {
+      "amount": "1000.00",
+      "category": "motor_damage",
+      "cause": "impact",
+      "fault": "none",
+      "fixture_id": "valid-v1",
+      "incident_at": "2026-06-18T10:00:00Z",
+      "policy_version": "provisional-v1",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "1000.00",
+      "category": "motor_damage",
+      "cause": "impact",
+      "fault": "none",
+      "fixture_id": "valid-v2",
+      "incident_at": "2026-08-18T10:00:00Z",
+      "policy_version": "provisional-v2",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "249.99",
+      "category": "motor_damage",
+      "cause": "impact",
+      "fault": "none",
+      "fixture_id": "below-excess",
+      "incident_at": "2026-06-18T10:00:00Z",
+      "policy_version": "provisional-v1",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "250.00",
+      "category": "motor_damage",
+      "cause": "impact",
+      "fault": "none",
+      "fixture_id": "exact-excess",
+      "incident_at": "2026-06-18T10:00:00Z",
+      "policy_version": "provisional-v1",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "250.01",
+      "category": "motor_damage",
+      "cause": "impact",
+      "fault": "none",
+      "fixture_id": "one-penny-above-excess",
+      "incident_at": "2026-06-18T10:00:00Z",
+      "policy_version": "provisional-v1",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "10250.00",
+      "category": "motor_damage",
+      "cause": "impact",
+      "fault": "none",
+      "fixture_id": "exact-net-limit",
+      "incident_at": "2026-06-18T10:00:00Z",
+      "policy_version": "provisional-v1",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "10250.01",
+      "category": "motor_damage",
+      "cause": "impact",
+      "fault": "none",
+      "fixture_id": "over-net-limit",
+      "incident_at": "2026-06-18T10:00:00Z",
+      "policy_version": "provisional-v1",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "1000.00",
+      "category": "motor_damage",
+      "cause": "impact",
+      "fault": "none",
+      "fixture_id": "expired",
+      "incident_at": "2027-01-01T00:00:00Z",
+      "policy_version": "provisional-v2",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "1000.00",
+      "category": "motor_damage",
+      "cause": "impact",
+      "fault": "missing_estimate",
+      "fixture_id": "missing-estimate",
+      "incident_at": "2026-06-18T10:00:00Z",
+      "policy_version": "provisional-v1",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "1000.00",
+      "category": "motor_damage",
+      "cause": "impact",
+      "fault": "contradictory_estimate",
+      "fixture_id": "contradictory-loss",
+      "incident_at": "2026-06-18T10:00:00Z",
+      "policy_version": "provisional-v1",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "1000.00",
+      "category": "motor_damage",
+      "cause": "gradual_wear_only",
+      "fault": "none",
+      "fixture_id": "gradual-wear-exclusion",
+      "incident_at": "2026-06-18T10:00:00Z",
+      "policy_version": "provisional-v1",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "1000.00",
+      "category": "motor_damage",
+      "cause": "unknown",
+      "fault": "none",
+      "fixture_id": "unknown-cause",
+      "incident_at": "2026-06-18T10:00:00Z",
+      "policy_version": "provisional-v1",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "1000.00",
+      "category": "other",
+      "cause": "impact",
+      "fault": "none",
+      "fixture_id": "unsupported-category",
+      "incident_at": "2026-06-18T10:00:00Z",
+      "policy_version": "provisional-v1",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "7500.00",
+      "category": "motor_damage",
+      "cause": "impact",
+      "fault": "none",
+      "fixture_id": "high-value-threshold",
+      "incident_at": "2026-06-18T10:00:00Z",
+      "policy_version": "provisional-v1",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "7499.99",
+      "category": "motor_damage",
+      "cause": "impact",
+      "fault": "none",
+      "fixture_id": "below-high-value",
+      "incident_at": "2026-06-18T10:00:00Z",
+      "policy_version": "provisional-v1",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "1000.00",
+      "category": "motor_damage",
+      "cause": "impact",
+      "fault": "none",
+      "fixture_id": "wrong-version-at-boundary",
+      "incident_at": "2026-07-01T00:00:00Z",
+      "policy_version": "provisional-v1",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "1000.00",
+      "category": "motor_damage",
+      "cause": "impact",
+      "fault": "none",
+      "fixture_id": "exact-v2-start",
+      "incident_at": "2026-07-01T00:00:00Z",
+      "policy_version": "provisional-v2",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "1000.00",
+      "category": "motor_damage",
+      "cause": "impact",
+      "fault": "quarantined",
+      "fixture_id": "quarantined-documents",
+      "incident_at": "2026-06-18T10:00:00Z",
+      "policy_version": "provisional-v1",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "1000.00",
+      "category": "motor_damage",
+      "cause": "impact",
+      "fault": "unverified",
+      "fixture_id": "unverified-extraction",
+      "incident_at": "2026-06-18T10:00:00Z",
+      "policy_version": "provisional-v1",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "1000.00",
+      "category": "motor_damage",
+      "cause": "impact",
+      "fault": "no_facts",
+      "fixture_id": "missing-human-assertion",
+      "incident_at": "2026-06-18T10:00:00Z",
+      "policy_version": "provisional-v1",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "1000.00",
+      "category": "motor_damage",
+      "cause": "impact",
+      "fault": "ambiguous",
+      "fixture_id": "reported-ambiguity",
+      "incident_at": "2026-06-18T10:00:00Z",
+      "policy_version": "provisional-v1",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "1000.00",
+      "category": "motor_damage",
+      "cause": "impact",
+      "fault": "amount_conflict",
+      "fixture_id": "conflicting-amounts",
+      "incident_at": "2026-06-18T10:00:00Z",
+      "policy_version": "provisional-v1",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "amount": "1000.00",
+      "category": "motor_damage",
+      "cause": "impact",
+      "fault": "simulation_disabled",
+      "fixture_id": "simulation-not-authorized",
+      "incident_at": "2026-06-18T10:00:00Z",
+      "policy_version": "provisional-v1",
+      "schema_version": "1.0",
+      "synthetic": true
+    }
+  ],
+  "schema_version": "1.0",
+  "synthetic": true,
+  "version": "motor-rules-fixtures-v1"
+}

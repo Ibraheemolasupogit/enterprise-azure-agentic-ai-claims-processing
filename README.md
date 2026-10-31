@@ -6,13 +6,15 @@ Greenfield Azure portfolio project for **fictional Northstar Insurance Group**, 
 
 **IMPLEMENTED AND LOCALLY TESTED:** the `claims_ai` Python foundation, Milestone 4 synthetic dataset tools and Milestone 5 offline extraction benchmark. The foundation supplies Pydantic v2 contracts, deterministic state-transition guards, local configuration, redacted JSON logging and typed protocols. The [motor-v1 corpus](data/synthetic/motor/README.md) supplies 12 development scenarios and source-linked labels; policies/coverage interpretations remain unapproved. The [benchmark](docs/quality/document-intelligence-benchmark.md) has typed interfaces and deterministic scoring; **all fixture extraction results are SIMULATED ground-truth echoes**, not OCR/vision/provider performance results.
 
-The end-to-end application and all live Azure/Mistral/GPT integrations, coverage rules, durable persistence/audit, authentication, UI, held-out model evaluation and OpenTelemetry remain **PLANNED**. No live service comparison or cloud deployment is claimed. Domain role checks require a trusted caller context; they do not authenticate a human or persist an approval. Dataset labels and simulated responses are not model-produced facts or approved case outcomes.
+The end-to-end application and all live Azure/Mistral/GPT integrations, approved operational coverage rules, durable persistence/audit, authentication, UI, held-out model evaluation and OpenTelemetry remain **PLANNED**. No live service comparison or cloud deployment is claimed. Domain role checks require a trusted caller context; they do not authenticate a human or persist an approval. Dataset labels and simulated responses are not model-produced facts or approved case outcomes.
 
 **Milestone 6 implements the [structured evidence boundary](docs/architecture/structured-evidence-processing.md):** deterministic field normalization, identity/hash/source validation, actionable holds/rejections, immutable local history, idempotent retries and guarded case admission. It preserves M4 data and M5 benchmark semantics. The CLI maps SIMULATED fixture proposals while keeping original documents quarantined; no scanner or operational ingestion is claimed.
 
 **Milestone 7 implements [draft-policy knowledge ingestion and lexical retrieval](docs/architecture/policy-knowledge-retrieval.md):** verified fixture parsing, deterministic source-linked chunks, exact claim/policy/version/date/snapshot filters and fail-closed abstentions. Token overlap is real local code over unapproved synthetic text; no semantic search, hybrid RAG, Azure AI Search implementation, retrieval-accuracy result or coverage decision is claimed.
 
 **Milestone 8 implements [offline lexical retrieval evaluation](docs/quality/policy-retrieval-evaluation.md):** 30 versioned authored queries, independent source/citation checks, precision/recall/MRR/nDCG at declared cutoffs, policy-scope and abstention diagnostics, and reproducible reports with failures retained. Labels are **authored, not independently adjudicated or held out**. These measurements do not evaluate semantic/hybrid RAG or approve insurance policies.
+
+**Milestone 9 implements [deterministic provisional motor rules](docs/architecture/deterministic-provisional-rules.md):** exact policy/version/date and evidence gates, explicit fictional excess/cap parameters, source-linked four-state findings and mandatory human/supervisor review requirements. The new [specification](data/rules/motor/README.md) is **unapproved**; calculations are non-binding illustrations on SIMULATED inputs. No claim approval, denial, settlement or payment is authorized. M8's four lexical failures remain unresolved.
 
 **Milestone 3 documentation is complete:** the business process, responsibilities, requirements, traceability, risk register and authority ADR refine the baseline. No runtime files changed. The 115 passing foundation tests and package/typing results remain historical Milestone 2 evidence; they were not rerun or promoted into business-performance results by this documentation milestone.
 
@@ -59,6 +61,9 @@ Only fictional policies, people, identifiers, documents and generated/non-identi
 | [Retrieval evaluation methodology](docs/quality/policy-retrieval-evaluation.md) | Metric definitions, cohort denominators, integrity checks and limitations |
 | [Authored retrieval queries](data/evaluation/policy-retrieval/README.md) | Frozen relevance/citation expectations and provenance |
 | [Milestone 8 record](docs/milestones/milestone-8.md) | Measured offline results, failures and verification |
+| [Provisional rule specification](data/rules/motor/README.md) | Fictional parameters, source provenance and 23 new synthetic scenarios |
+| [Deterministic rule architecture](docs/architecture/deterministic-provisional-rules.md) | Policy/evidence gates, findings, arithmetic and human authority |
+| [Milestone 9 record](docs/milestones/milestone-9.md) | Rule checks, boundaries, reproduction and limitations |
 
 ## Local Python foundation
 
@@ -115,6 +120,14 @@ PYTHONPATH=src .venv/bin/python -m claims_ai.retrieval_eval --output outputs/ret
 
 Use a new output filename. Reports are labeled `OFFLINE_LEXICAL` and separate answerable, no-answer, safety, invalid-query and simulated technical-failure cohorts. Empty relevance sets do not enter ranking averages; outages cannot count as correct no-answers. `make retrieval-eval-check` runs focused metrics, leakage, citation, scope, malformed-label and reproduction tests. See M8 evidence for actual scores and four observed authored-expectation failures; independent relevance review remains outstanding.
 
+Run the separate provisional rule demonstration:
+
+```sh
+PYTHONPATH=src .venv/bin/python -m claims_ai.rules --output outputs/rules/provisional-v1.json
+```
+
+Use a new output filename. Reports label `OFFLINE_PROVISIONAL` findings and SIMULATED evidence/scan/reviewer assertions; they contain no final outcomes or settlement authority. The CLI generates new fixtures in memory and preserves all M4 cases and M7/M8 retrieval behavior. `make rules-check` runs focused binding, provenance, arithmetic and oversight checks. No additional dependency is required.
+
 Domain validation checks synthetic identifiers, object references, document/evidence hash metadata, policy-version metadata and caller-supplied evidence checklists. It does not scan files, resolve policy coverage or approve fictional insurance rules. Dataset validation additionally checks fixture bytes against hashes/source renderings; it is not live upload validation or malware scanning. Structured logging emits approved event names and allowlisted operational fields; arbitrary payloads and exception text are suppressed. Do not send raw model dumps or validation-error payloads to other loggers.
 
-Git setup and all commits/pushes remain manual. **Milestone 9 has not started.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) reflects the approved offline-evaluation Milestone 8.
+Git setup and all commits/pushes remain manual. **Milestone 10 has not started.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) reflects the provisional-rule foundation authorized for Milestone 9.

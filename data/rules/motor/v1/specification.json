@@ -1,0 +1,98 @@
+{
+  "amount_basis": "matching_claim_and_repair_estimate",
+  "currency": "GBP",
+  "engine_version": "motor-rules-v1",
+  "exclusion": "reviewed_gradual_wear_only",
+  "formula": "min(max(estimate_pence - excess_pence, 0), limit_pence)",
+  "operational_use_allowed": false,
+  "required_kinds": [
+    "claim_form",
+    "repair_estimate",
+    "damage_photo"
+  ],
+  "rules": [
+    {
+      "clauses": [
+        "V01"
+      ],
+      "definition": "Require exact case, policy identity/version, incident interval, verified sources and pinned specification before policy-dependent evaluation.",
+      "rule_id": "PR01",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "clauses": [
+        "C02"
+      ],
+      "definition": "Every supplied document must have accepted scan assertions and complete M6 source-replayed evidence admitted to the case. Require claim form, repair estimate and damage image. Claimed and estimated amounts must match.",
+      "rule_id": "PR02",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "clauses": [
+        "C01"
+      ],
+      "definition": "Only source-linked synthetic human category motor_damage is supported; other is FAIL and unknown or conflicting assertions are INDETERMINATE.",
+      "rule_id": "PR03",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "clauses": [
+        "X01"
+      ],
+      "definition": "Only reviewed gradual_wear_only (without impact) is an exclusion FAIL. Reviewed impact is PASS; unknown remains INDETERMINATE. Never infer cause from narrative or image.",
+      "rule_id": "PR04",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "clauses": [
+        "C03",
+        "C04"
+      ],
+      "definition": "Only after PR01\u2013PR04 PASS and without ambiguous/conflicting/injection/unsupported flags, illustrate min(max(estimate_pence - excess_pence, 0), limit_pence). All amounts are GBP integer pence. No rounding, selection of conflicting amounts, settlement or payment authority.",
+      "rule_id": "PR05",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "clauses": [
+        "R01"
+      ],
+      "definition": "Every result requires human review. Any FAIL/INDETERMINATE or risk flag requires a supervisor. Reported claimed amount at or above the version high_value_pence threshold adds high_risk; never removes supplied risk flags.",
+      "rule_id": "PR06",
+      "schema_version": "1.0",
+      "synthetic": true
+    }
+  ],
+  "schema_version": "1.0",
+  "specification_id": "northstar-motor-provisional",
+  "status": "provisional_unapproved",
+  "supported_category": "motor_damage",
+  "synthetic": true,
+  "terms": [
+    {
+      "effective_from": "2026-01-01",
+      "effective_to": "2026-07-01",
+      "excess_pence": 25000,
+      "high_value_pence": 750000,
+      "limit_pence": 1000000,
+      "policy_version": "provisional-v1",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "effective_from": "2026-07-01",
+      "effective_to": "2027-01-01",
+      "excess_pence": 30000,
+      "high_value_pence": 900000,
+      "limit_pence": 1200000,
+      "policy_version": "provisional-v2",
+      "schema_version": "1.0",
+      "synthetic": true
+    }
+  ],
+  "version": "0.1.0"
+}
