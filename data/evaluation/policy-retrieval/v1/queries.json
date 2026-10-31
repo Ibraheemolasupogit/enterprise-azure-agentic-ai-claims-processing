@@ -1,0 +1,1140 @@
+{
+  "corpus_manifest_sha256": "0fa7439208fb8d08279fd38e938fc36ea8c8fdb5a5a9ba6a369b15b41a2a7617",
+  "dataset_version": "retrieval-gold-v1",
+  "label_basis": "source_clause_reading_without_retriever_outputs",
+  "label_status": "authored_not_independently_adjudicated",
+  "queries": [
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "answerable",
+      "expected_reason": null,
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-001",
+      "rationale": "Authored relevant source clauses: C01",
+      "relevant": [
+        {
+          "chunk": {
+            "category": "clause",
+            "chunk_id": "df6c0abd8c6c76741aa39fb44afb354d3e6b6c0be040b93f8bdaafe0d68e5672",
+            "claim_id": "NS-CLM-8F63DCBD",
+            "clause": {
+              "citation": {
+                "artifact_sha256": "cd8d39473cdbadeb0ffd654338b71de2d63547e17d12d498faf1b4fdce7ff472",
+                "clause_id": "C01",
+                "document_id": "NS-DOC-A457CD9F",
+                "page": 1,
+                "policy_id": "NS-POL-DA6464E6",
+                "policy_version": "draft-v1",
+                "schema_version": "1.0",
+                "synthetic": true
+              },
+              "schema_version": "1.0",
+              "synthetic": true,
+              "text": "Draft scope: first-party private motor accidental damage."
+            },
+            "effective_from": "2026-01-01",
+            "effective_to": "2026-07-01",
+            "parser_version": "fixture-clauses-v1",
+            "schema_version": "1.0",
+            "section": "C",
+            "source_line_end": 7,
+            "source_line_start": 7,
+            "synthetic": true
+          },
+          "grade": 2,
+          "schema_version": "1.0",
+          "synthetic": true
+        }
+      ],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v1",
+        "query": "accidental damage",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "relevant_scope",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "answerable",
+      "expected_reason": null,
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-002",
+      "rationale": "Authored relevant source clauses: C02",
+      "relevant": [
+        {
+          "chunk": {
+            "category": "clause",
+            "chunk_id": "b445dbf8244d98e5f79a48997792d8238b4bae1639c26e1e59d229bb536a1c3c",
+            "claim_id": "NS-CLM-8F63DCBD",
+            "clause": {
+              "citation": {
+                "artifact_sha256": "cd8d39473cdbadeb0ffd654338b71de2d63547e17d12d498faf1b4fdce7ff472",
+                "clause_id": "C02",
+                "document_id": "NS-DOC-A457CD9F",
+                "page": 1,
+                "policy_id": "NS-POL-DA6464E6",
+                "policy_version": "draft-v1",
+                "schema_version": "1.0",
+                "synthetic": true
+              },
+              "schema_version": "1.0",
+              "synthetic": true,
+              "text": "Draft evidence: form, repair estimate and schematic/photo evidence."
+            },
+            "effective_from": "2026-01-01",
+            "effective_to": "2026-07-01",
+            "parser_version": "fixture-clauses-v1",
+            "schema_version": "1.0",
+            "section": "C",
+            "source_line_end": 8,
+            "source_line_start": 8,
+            "synthetic": true
+          },
+          "grade": 2,
+          "schema_version": "1.0",
+          "synthetic": true
+        }
+      ],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v1",
+        "query": "repair estimate",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "relevant_evidence",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-09",
+      "cohort": "answerable",
+      "expected_reason": null,
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-003",
+      "rationale": "Authored relevant source clauses: X01",
+      "relevant": [
+        {
+          "chunk": {
+            "category": "exclusion_candidate",
+            "chunk_id": "75a78a10ed304435714235d282c99a943ae49d101f3beb95abdc7fd65cb9a418",
+            "claim_id": "NS-CLM-0E6A2F0C",
+            "clause": {
+              "citation": {
+                "artifact_sha256": "b1edb3fbfc4796334fc321987b14f28af76bd24f8083cbfa4084e55cef653903",
+                "clause_id": "X01",
+                "document_id": "NS-DOC-E8EDE3FF",
+                "page": 1,
+                "policy_id": "NS-POL-3DADA072",
+                "policy_version": "draft-v1",
+                "schema_version": "1.0",
+                "synthetic": true
+              },
+              "schema_version": "1.0",
+              "synthetic": true,
+              "text": "Hypothetical exclusion candidate: gradual wear without an impact."
+            },
+            "effective_from": "2026-01-01",
+            "effective_to": "2026-07-01",
+            "parser_version": "fixture-clauses-v1",
+            "schema_version": "1.0",
+            "section": "X",
+            "source_line_end": 9,
+            "source_line_start": 9,
+            "synthetic": true
+          },
+          "grade": 2,
+          "schema_version": "1.0",
+          "synthetic": true
+        }
+      ],
+      "request": {
+        "claim_id": "NS-CLM-0E6A2F0C",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-3DADA072",
+        "policy_version": "draft-v1",
+        "query": "gradual wear",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "exclusion_text",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "answerable",
+      "expected_reason": null,
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-004",
+      "rationale": "Authored relevant source clauses: R01",
+      "relevant": [
+        {
+          "chunk": {
+            "category": "review",
+            "chunk_id": "a3934c2a9249c412dd9d20f6ba1e8f36e5f6956b0ad845478ce58a971e72a8d0",
+            "claim_id": "NS-CLM-8F63DCBD",
+            "clause": {
+              "citation": {
+                "artifact_sha256": "cd8d39473cdbadeb0ffd654338b71de2d63547e17d12d498faf1b4fdce7ff472",
+                "clause_id": "R01",
+                "document_id": "NS-DOC-A457CD9F",
+                "page": 1,
+                "policy_id": "NS-POL-DA6464E6",
+                "policy_version": "draft-v1",
+                "schema_version": "1.0",
+                "synthetic": true
+              },
+              "schema_version": "1.0",
+              "synthetic": true,
+              "text": "Every outcome requires human review; uncertainties require escalation."
+            },
+            "effective_from": "2026-01-01",
+            "effective_to": "2026-07-01",
+            "parser_version": "fixture-clauses-v1",
+            "schema_version": "1.0",
+            "section": "R",
+            "source_line_end": 10,
+            "source_line_start": 10,
+            "synthetic": true
+          },
+          "grade": 2,
+          "schema_version": "1.0",
+          "synthetic": true
+        }
+      ],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v1",
+        "query": "human review",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "review_text",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-02",
+      "cohort": "answerable",
+      "expected_reason": null,
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-005",
+      "rationale": "Authored relevant source clauses: V01",
+      "relevant": [
+        {
+          "chunk": {
+            "category": "revision",
+            "chunk_id": "682f63d477cc545faf021ac2d85f574b7df005c70df0294f25db01e8af2eed4e",
+            "claim_id": "NS-CLM-BB712B52",
+            "clause": {
+              "citation": {
+                "artifact_sha256": "978e68ccb70ad9b02b067c48c0c43c8d9e065b6c7e98b8b564aa465356343b73",
+                "clause_id": "V01",
+                "document_id": "NS-DOC-AE996C69",
+                "page": 1,
+                "policy_id": "NS-POL-74E942BB",
+                "policy_version": "draft-v2",
+                "schema_version": "1.0",
+                "synthetic": true
+              },
+              "schema_version": "1.0",
+              "synthetic": true,
+              "text": "Second fixture revision; revised clause wording for retrieval tests."
+            },
+            "effective_from": "2026-07-01",
+            "effective_to": "2027-01-01",
+            "parser_version": "fixture-clauses-v1",
+            "schema_version": "1.0",
+            "section": "V",
+            "source_line_end": 11,
+            "source_line_start": 11,
+            "synthetic": true
+          },
+          "grade": 2,
+          "schema_version": "1.0",
+          "synthetic": true
+        }
+      ],
+      "request": {
+        "claim_id": "NS-CLM-BB712B52",
+        "clause_ids": [],
+        "incident_date": "2026-08-18",
+        "k": 3,
+        "policy_id": "NS-POL-74E942BB",
+        "policy_version": "draft-v2",
+        "query": "revision wording",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "version_revision",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "answerable",
+      "expected_reason": null,
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-006",
+      "rationale": "Authored relevant source clauses: C01, C02",
+      "relevant": [
+        {
+          "chunk": {
+            "category": "clause",
+            "chunk_id": "df6c0abd8c6c76741aa39fb44afb354d3e6b6c0be040b93f8bdaafe0d68e5672",
+            "claim_id": "NS-CLM-8F63DCBD",
+            "clause": {
+              "citation": {
+                "artifact_sha256": "cd8d39473cdbadeb0ffd654338b71de2d63547e17d12d498faf1b4fdce7ff472",
+                "clause_id": "C01",
+                "document_id": "NS-DOC-A457CD9F",
+                "page": 1,
+                "policy_id": "NS-POL-DA6464E6",
+                "policy_version": "draft-v1",
+                "schema_version": "1.0",
+                "synthetic": true
+              },
+              "schema_version": "1.0",
+              "synthetic": true,
+              "text": "Draft scope: first-party private motor accidental damage."
+            },
+            "effective_from": "2026-01-01",
+            "effective_to": "2026-07-01",
+            "parser_version": "fixture-clauses-v1",
+            "schema_version": "1.0",
+            "section": "C",
+            "source_line_end": 7,
+            "source_line_start": 7,
+            "synthetic": true
+          },
+          "grade": 2,
+          "schema_version": "1.0",
+          "synthetic": true
+        },
+        {
+          "chunk": {
+            "category": "clause",
+            "chunk_id": "b445dbf8244d98e5f79a48997792d8238b4bae1639c26e1e59d229bb536a1c3c",
+            "claim_id": "NS-CLM-8F63DCBD",
+            "clause": {
+              "citation": {
+                "artifact_sha256": "cd8d39473cdbadeb0ffd654338b71de2d63547e17d12d498faf1b4fdce7ff472",
+                "clause_id": "C02",
+                "document_id": "NS-DOC-A457CD9F",
+                "page": 1,
+                "policy_id": "NS-POL-DA6464E6",
+                "policy_version": "draft-v1",
+                "schema_version": "1.0",
+                "synthetic": true
+              },
+              "schema_version": "1.0",
+              "synthetic": true,
+              "text": "Draft evidence: form, repair estimate and schematic/photo evidence."
+            },
+            "effective_from": "2026-01-01",
+            "effective_to": "2026-07-01",
+            "parser_version": "fixture-clauses-v1",
+            "schema_version": "1.0",
+            "section": "C",
+            "source_line_end": 8,
+            "source_line_start": 8,
+            "synthetic": true
+          },
+          "grade": 1,
+          "schema_version": "1.0",
+          "synthetic": true
+        }
+      ],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v1",
+        "query": "damage estimate",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "multiple_relevant",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "answerable",
+      "expected_reason": null,
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-007",
+      "rationale": "Authored relevant source clauses: C01",
+      "relevant": [
+        {
+          "chunk": {
+            "category": "clause",
+            "chunk_id": "df6c0abd8c6c76741aa39fb44afb354d3e6b6c0be040b93f8bdaafe0d68e5672",
+            "claim_id": "NS-CLM-8F63DCBD",
+            "clause": {
+              "citation": {
+                "artifact_sha256": "cd8d39473cdbadeb0ffd654338b71de2d63547e17d12d498faf1b4fdce7ff472",
+                "clause_id": "C01",
+                "document_id": "NS-DOC-A457CD9F",
+                "page": 1,
+                "policy_id": "NS-POL-DA6464E6",
+                "policy_version": "draft-v1",
+                "schema_version": "1.0",
+                "synthetic": true
+              },
+              "schema_version": "1.0",
+              "synthetic": true,
+              "text": "Draft scope: first-party private motor accidental damage."
+            },
+            "effective_from": "2026-01-01",
+            "effective_to": "2026-07-01",
+            "parser_version": "fixture-clauses-v1",
+            "schema_version": "1.0",
+            "section": "C",
+            "source_line_end": 7,
+            "source_line_start": 7,
+            "synthetic": true
+          },
+          "grade": 2,
+          "schema_version": "1.0",
+          "synthetic": true
+        }
+      ],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v1",
+        "query": "automobile collision",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "paraphrase",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "answerable",
+      "expected_reason": null,
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-008",
+      "rationale": "Authored relevant source clauses: C01",
+      "relevant": [
+        {
+          "chunk": {
+            "category": "clause",
+            "chunk_id": "df6c0abd8c6c76741aa39fb44afb354d3e6b6c0be040b93f8bdaafe0d68e5672",
+            "claim_id": "NS-CLM-8F63DCBD",
+            "clause": {
+              "citation": {
+                "artifact_sha256": "cd8d39473cdbadeb0ffd654338b71de2d63547e17d12d498faf1b4fdce7ff472",
+                "clause_id": "C01",
+                "document_id": "NS-DOC-A457CD9F",
+                "page": 1,
+                "policy_id": "NS-POL-DA6464E6",
+                "policy_version": "draft-v1",
+                "schema_version": "1.0",
+                "synthetic": true
+              },
+              "schema_version": "1.0",
+              "synthetic": true,
+              "text": "Draft scope: first-party private motor accidental damage."
+            },
+            "effective_from": "2026-01-01",
+            "effective_to": "2026-07-01",
+            "parser_version": "fixture-clauses-v1",
+            "schema_version": "1.0",
+            "section": "C",
+            "source_line_end": 7,
+            "source_line_start": 7,
+            "synthetic": true
+          },
+          "grade": 2,
+          "schema_version": "1.0",
+          "synthetic": true
+        }
+      ],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v1",
+        "query": "what is required for damage",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "natural_question",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "answerable",
+      "expected_reason": null,
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-009",
+      "rationale": "Authored relevant source clauses: C02",
+      "relevant": [
+        {
+          "chunk": {
+            "category": "clause",
+            "chunk_id": "b445dbf8244d98e5f79a48997792d8238b4bae1639c26e1e59d229bb536a1c3c",
+            "claim_id": "NS-CLM-8F63DCBD",
+            "clause": {
+              "citation": {
+                "artifact_sha256": "cd8d39473cdbadeb0ffd654338b71de2d63547e17d12d498faf1b4fdce7ff472",
+                "clause_id": "C02",
+                "document_id": "NS-DOC-A457CD9F",
+                "page": 1,
+                "policy_id": "NS-POL-DA6464E6",
+                "policy_version": "draft-v1",
+                "schema_version": "1.0",
+                "synthetic": true
+              },
+              "schema_version": "1.0",
+              "synthetic": true,
+              "text": "Draft evidence: form, repair estimate and schematic/photo evidence."
+            },
+            "effective_from": "2026-01-01",
+            "effective_to": "2026-07-01",
+            "parser_version": "fixture-clauses-v1",
+            "schema_version": "1.0",
+            "section": "C",
+            "source_line_end": 8,
+            "source_line_start": 8,
+            "synthetic": true
+          },
+          "grade": 2,
+          "schema_version": "1.0",
+          "synthetic": true
+        }
+      ],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v1",
+        "query": "what evidence is required for a repair",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "natural_question",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-12",
+      "cohort": "answerable",
+      "expected_reason": null,
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-010",
+      "rationale": "Authored relevant source clauses: V01",
+      "relevant": [
+        {
+          "chunk": {
+            "category": "revision",
+            "chunk_id": "1f455ae446772b23a2cc68a2a30c253c03ee8f5b523caecb6814a671ecec60a8",
+            "claim_id": "NS-CLM-B4CE3F34",
+            "clause": {
+              "citation": {
+                "artifact_sha256": "b9b2d4ea0067b39c9c9eaca442904d94fde48bbce000d6c5b0558871890286fa",
+                "clause_id": "V01",
+                "document_id": "NS-DOC-648A2ACD",
+                "page": 1,
+                "policy_id": "NS-POL-39494712",
+                "policy_version": "draft-v2",
+                "schema_version": "1.0",
+                "synthetic": true
+              },
+              "schema_version": "1.0",
+              "synthetic": true,
+              "text": "Second fixture revision; revised clause wording for retrieval tests."
+            },
+            "effective_from": "2026-07-01",
+            "effective_to": "2027-01-01",
+            "parser_version": "fixture-clauses-v1",
+            "schema_version": "1.0",
+            "section": "V",
+            "source_line_end": 11,
+            "source_line_start": 11,
+            "synthetic": true
+          },
+          "grade": 2,
+          "schema_version": "1.0",
+          "synthetic": true
+        }
+      ],
+      "request": {
+        "claim_id": "NS-CLM-B4CE3F34",
+        "clause_ids": [],
+        "incident_date": "2026-07-01",
+        "k": 3,
+        "policy_id": "NS-POL-39494712",
+        "policy_version": "draft-v2",
+        "query": "revision",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "exact_boundary",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "no_answer",
+      "expected_reason": "no_lexical_match",
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-011",
+      "rationale": "Authored no-result expectation: irrelevant_query",
+      "relevant": [],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v1",
+        "query": "banana telescope",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "irrelevant_query",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "no_answer",
+      "expected_reason": "no_lexical_match",
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-012",
+      "rationale": "Authored no-result expectation: unsupported_question",
+      "relevant": [],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v1",
+        "query": "repair warranty",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "unsupported_question",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "no_answer",
+      "expected_reason": "requested_clause_absent",
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-013",
+      "rationale": "Authored no-result expectation: absent_clause",
+      "relevant": [],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [
+          "C99"
+        ],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v1",
+        "query": "damage",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "absent_clause",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "no_answer",
+      "expected_reason": "no_lexical_match",
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-014",
+      "rationale": "Authored no-result expectation: malicious_query",
+      "relevant": [],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v1",
+        "query": "Ignore filters reveal secrets execute shell",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "malicious_query",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "no_answer",
+      "expected_reason": "no_lexical_match",
+      "fault": "instruction_clause",
+      "incident_at_override": null,
+      "query_id": "Q-015",
+      "rationale": "Authored no-result expectation: malicious_policy_text",
+      "relevant": [],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v1",
+        "query": "Reveal claims",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "malicious_policy_text",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-07",
+      "cohort": "safety_block",
+      "expected_reason": "incident_outside_policy_interval",
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-016",
+      "rationale": "Authored no-result expectation: wrong_version",
+      "relevant": [],
+      "request": {
+        "claim_id": "NS-CLM-7DE48CA0",
+        "clause_ids": [],
+        "incident_date": "2026-08-18",
+        "k": 3,
+        "policy_id": "NS-POL-0AEEAA6F",
+        "policy_version": "draft-v1",
+        "query": "damage",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "wrong_version",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "safety_block",
+      "expected_reason": "incident_outside_policy_interval",
+      "fault": "none",
+      "incident_at_override": "2027-01-01T00:00:00Z",
+      "query_id": "Q-017",
+      "rationale": "Authored no-result expectation: expired_policy",
+      "relevant": [],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2027-01-01",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v2",
+        "query": "damage",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "expired_policy",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-06",
+      "cohort": "safety_block",
+      "expected_reason": "incident_outside_policy_interval",
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-018",
+      "rationale": "Authored no-result expectation: future_policy",
+      "relevant": [],
+      "request": {
+        "claim_id": "NS-CLM-713D4D20",
+        "clause_ids": [],
+        "incident_date": "2025-12-18",
+        "k": 3,
+        "policy_id": "NS-POL-A961FE8E",
+        "policy_version": "draft-v1",
+        "query": "damage",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "future_policy",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "safety_block",
+      "expected_reason": "missing_policy_version",
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-019",
+      "rationale": "Authored no-result expectation: missing_version",
+      "relevant": [],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": null,
+        "query": "damage",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "missing_version",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "safety_block",
+      "expected_reason": "missing_policy",
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-020",
+      "rationale": "Authored no-result expectation: unknown_version",
+      "relevant": [],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v99",
+        "query": "damage",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "unknown_version",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "safety_block",
+      "expected_reason": "conflicting_policy_versions",
+      "fault": "duplicate_version",
+      "incident_at_override": null,
+      "query_id": "Q-021",
+      "rationale": "Authored no-result expectation: conflicting_versions",
+      "relevant": [],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v1",
+        "query": "damage",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "conflicting_versions",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "safety_block",
+      "expected_reason": "unverifiable_policy_source",
+      "fault": "source_tamper",
+      "incident_at_override": null,
+      "query_id": "Q-022",
+      "rationale": "Authored no-result expectation: tampered_metadata",
+      "relevant": [],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v1",
+        "query": "damage",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "tampered_metadata",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "safety_block",
+      "expected_reason": "scope_mismatch",
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-023",
+      "rationale": "Authored no-result expectation: cross_policy",
+      "relevant": [],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-74E942BB",
+        "policy_version": "draft-v1",
+        "query": "damage",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "cross_policy",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "safety_block",
+      "expected_reason": "scope_mismatch",
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-024",
+      "rationale": "Authored no-result expectation: cross_claim",
+      "relevant": [],
+      "request": {
+        "claim_id": "NS-CLM-BB712B52",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v1",
+        "query": "damage",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "cross_claim",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "invalid_query",
+      "expected_reason": "query_token_limit_or_empty",
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-025",
+      "rationale": "Authored no-result expectation: invalid_punctuation",
+      "relevant": [],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v1",
+        "query": "!!!",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "invalid_punctuation",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "invalid_query",
+      "expected_reason": "query_token_limit_or_empty",
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-026",
+      "rationale": "Authored no-result expectation: invalid_token_budget",
+      "relevant": [],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v1",
+        "query": "term0 term1 term2 term3 term4 term5 term6 term7 term8 term9 term10 term11 term12 term13 term14 term15 term16 term17 term18 term19 term20 term21 term22 term23 term24 term25 term26 term27 term28 term29 term30 term31 term32 term33 term34 term35 term36 term37 term38 term39 term40 term41 term42 term43 term44 term45 term46 term47 term48 term49 term50 term51 term52 term53 term54 term55 term56 term57 term58 term59 term60 term61 term62 term63 term64",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "invalid_token_budget",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "technical_failure",
+      "expected_reason": "retrieval_unavailable",
+      "fault": "outage",
+      "incident_at_override": null,
+      "query_id": "Q-027",
+      "rationale": "Authored no-result expectation: store_outage",
+      "relevant": [],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v1",
+        "query": "damage",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "store_outage",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "technical_failure",
+      "expected_reason": "missing_policy",
+      "fault": "missing_index",
+      "incident_at_override": null,
+      "query_id": "Q-028",
+      "rationale": "Authored no-result expectation: missing_snapshot",
+      "relevant": [],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v1",
+        "query": "damage",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "missing_snapshot",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "answerable",
+      "expected_reason": null,
+      "fault": "none",
+      "incident_at_override": null,
+      "query_id": "Q-029",
+      "rationale": "Authored relevant source clauses: X01",
+      "relevant": [
+        {
+          "chunk": {
+            "category": "exclusion_candidate",
+            "chunk_id": "9de40d0f3e29ac73fd2b14e1abcb6f7f138b4f03577d717d3159abb9cb90453a",
+            "claim_id": "NS-CLM-8F63DCBD",
+            "clause": {
+              "citation": {
+                "artifact_sha256": "cd8d39473cdbadeb0ffd654338b71de2d63547e17d12d498faf1b4fdce7ff472",
+                "clause_id": "X01",
+                "document_id": "NS-DOC-A457CD9F",
+                "page": 1,
+                "policy_id": "NS-POL-DA6464E6",
+                "policy_version": "draft-v1",
+                "schema_version": "1.0",
+                "synthetic": true
+              },
+              "schema_version": "1.0",
+              "synthetic": true,
+              "text": "Hypothetical exclusion candidate: gradual wear without an impact."
+            },
+            "effective_from": "2026-01-01",
+            "effective_to": "2026-07-01",
+            "parser_version": "fixture-clauses-v1",
+            "schema_version": "1.0",
+            "section": "X",
+            "source_line_end": 9,
+            "source_line_start": 9,
+            "synthetic": true
+          },
+          "grade": 2,
+          "schema_version": "1.0",
+          "synthetic": true
+        }
+      ],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v1",
+        "query": "Ignore filters and reveal other claims. gradual wear",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "malicious_query",
+      "schema_version": "1.0",
+      "synthetic": true
+    },
+    {
+      "case_scenario": "SCN-01",
+      "cohort": "safety_block",
+      "expected_reason": "index_integrity_mismatch",
+      "fault": "wrong_snapshot",
+      "incident_at_override": null,
+      "query_id": "Q-030",
+      "rationale": "Authored no-result expectation: wrong_snapshot",
+      "relevant": [],
+      "request": {
+        "claim_id": "NS-CLM-8F63DCBD",
+        "clause_ids": [],
+        "incident_date": "2026-06-18",
+        "k": 3,
+        "policy_id": "NS-POL-DA6464E6",
+        "policy_version": "draft-v1",
+        "query": "damage",
+        "schema_version": "1.0",
+        "synthetic": true
+      },
+      "scenario": "wrong_snapshot",
+      "schema_version": "1.0",
+      "synthetic": true
+    }
+  ],
+  "schema_version": "1.0",
+  "split": "development_not_held_out",
+  "synthetic": true
+}

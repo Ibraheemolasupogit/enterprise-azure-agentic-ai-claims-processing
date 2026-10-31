@@ -1,6 +1,6 @@
 PYTHON ?= .venv/bin/python
 
-.PHONY: test lint format format-check typecheck check package dataset-check benchmark-check evidence-check knowledge-check
+.PHONY: test lint format format-check typecheck check package dataset-check benchmark-check evidence-check knowledge-check retrieval-eval-check
 
 test:
 	$(PYTHON) -m pytest
@@ -30,6 +30,9 @@ evidence-check:
 
 knowledge-check:
 	$(PYTHON) -m pytest tests/test_knowledge.py
+
+retrieval-eval-check:
+	$(PYTHON) -m pytest tests/test_retrieval_eval.py
 
 package:
 	$(PYTHON) -m pip wheel --no-index --no-cache-dir --no-deps --no-build-isolation --wheel-dir dist .

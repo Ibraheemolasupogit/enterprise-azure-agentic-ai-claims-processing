@@ -1,0 +1,7 @@
+{
+  "corpus_manifest_sha256": "0fa7439208fb8d08279fd38e938fc36ea8c8fdb5a5a9ba6a369b15b41a2a7617",
+  "dataset_version": "retrieval-gold-v1",
+  "queries_sha256": "91b04bb8b8fd73b0e4ac32a5875e7c7bc4dc78224df1fd5bed4c53a25a9572b0",
+  "schema_version": "1.0",
+  "synthetic": true
+}

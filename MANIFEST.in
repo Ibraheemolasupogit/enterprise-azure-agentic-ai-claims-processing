@@ -2,3 +2,4 @@ include Makefile .env.example .gitignore
 recursive-include tests *.py
 recursive-include docs *.md
 recursive-include data/synthetic/motor *.md *.json *.pdf *.png
+recursive-include data/evaluation/policy-retrieval *.md *.json

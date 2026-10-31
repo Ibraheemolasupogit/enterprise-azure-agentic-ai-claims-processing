@@ -10,6 +10,8 @@ Status: **PLANNED runtime architecture**. [Milestone 2](../milestones/milestone-
 
 [Milestone 7](../milestones/milestone-7.md) implements an offline [draft-policy parser and lexical retriever](policy-knowledge-retrieval.md), composing existing policy/clause/citation contracts. Case-bound indexes retain verified source lines, version/effective dates and deterministic chunk IDs; exact-version/date filters, snapshot/source validation and abstentions precede token scoring. This is an unapproved fixture-authoring path, not approved policy publication/resolution or the hybrid Search component below. The Azure AI Search adapter is a protocol only. No embeddings, case policy activation, agent, coverage authority or lifecycle changes are introduced.
 
+[Milestone 8](../milestones/milestone-8.md) measures that unchanged lexical implementation against [authored, source-pinned query expectations](../quality/policy-retrieval-evaluation.md). The offline evaluator separates engine inputs from labels and reports ranking, citation, version/scope and abstention diagnostics by compatible cohort. Labels are not independently adjudicated, and no hybrid Search, generated-answer or coverage evaluation is claimed. Architectural authority boundaries remain unchanged.
+
 ## Logical components and data flow
 
 ```mermaid
