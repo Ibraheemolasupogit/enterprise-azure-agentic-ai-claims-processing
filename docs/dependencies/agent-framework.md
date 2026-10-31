@@ -49,3 +49,7 @@ The isolated environment uses Pydantic 2.14.2 rather than M2–M9's recorded 2.1
 Initial discovery could not resolve/download PyPI, and the SDK plus `msgspec` were missing. That blocked state is superseded by the installed-package inspection and [M10 evidence](../milestones/milestone-10.md); no previous mock/protocol-only implementation is being relabeled as integration.
 
 Current validation establishes offline framework mechanics and deterministic safety boundaries. It does not establish live provider compatibility, semantic reasoning quality, calibrated token/cost usage, model injection resistance, durable sessions or Azure observability. Provider packages, MCP/APIM, credentials and cloud resources remain outside M10.
+
+## M11 extension evidence
+
+M11 retains every dependency pin and adds no package. Installed SDK signatures and the pinned Microsoft tool source were inspected for `FunctionTool.invoke(arguments=..., skip_parsing=True)`, typed `input_model`, invocation caps and real automatic dispatch. [M11 tests](../../tests/test_agent_tools.py) exercise three actual functions through the supported client extension and parsed Pydantic output; [M11 evidence](../milestones/milestone-11.md) records final checks. This does not add MCP/APIM or any live provider package.

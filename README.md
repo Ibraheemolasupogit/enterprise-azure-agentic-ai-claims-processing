@@ -18,6 +18,8 @@ The end-to-end application and all live Azure/Mistral/GPT integrations, approved
 
 **Milestone 10 implements the [actual Microsoft Agent Framework foundation](docs/architecture/agent-framework-foundation.md):** pinned SDK 1.23.0, a supported offline chat-client extension, one case-bound read-only tool, typed advisory outputs and deterministic host safety guards. Framework construction, function dispatch and structured parsing are real; all model responses are **SIMULATED**. No live reasoning quality or autonomous claim outcome is claimed. The [M10 record](docs/milestones/milestone-10.md) records 422 passing tests and package/reproduction evidence; the [dependency record](docs/dependencies/agent-framework.md) distinguishes exact installed APIs from planned provider integrations.
 
+**Milestone 11 implements [governed internal agent tools](docs/architecture/governed-agent-tools.md):** three typed read-only tools backed by verified evidence, exact-version lexical retrieval and provisional rule findings. Host grants bind every call to one case snapshot; argument/provenance checks, bounded execution and safe failures preserve human/supervisor authority. Real SDK invocation is locally tested; chat responses and identity/fault assertions are **SIMULATED**. No MCP/APIM or authenticated cloud integration is claimed. See the [M11 record](docs/milestones/milestone-11.md).
+
 **Milestone 3 documentation is complete:** the business process, responsibilities, requirements, traceability, risk register and authority ADR refine the baseline. No runtime files changed. The 115 passing foundation tests and package/typing results remain historical Milestone 2 evidence; they were not rerun or promoted into business-performance results by this documentation milestone.
 
 The original Microsoft Claims Processing Hackathon source was not located. This is independently engineered, informed by lessons from that context; it does not continue the hackathon challenge roadmap. It is separate from the Agentic SDLC portfolio repository. No reference application was imported, and no further source search is planned.
@@ -69,6 +71,8 @@ Only fictional policies, people, identifiers, documents and generated/non-identi
 | [Agent Framework foundation](docs/architecture/agent-framework-foundation.md) | Actual SDK execution, host boundaries, typed tools and simulated client limitations |
 | [Agent Framework dependencies](docs/dependencies/agent-framework.md) | Verified SDK APIs and exact tested runtime versions |
 | [Milestone 10 record](docs/milestones/milestone-10.md) | Bounded offline integration, checks and remaining live-model limitations |
+| [Governed agent tools](docs/architecture/governed-agent-tools.md) | Typed internal reads, host grants, scope/provenance checks and bounded SDK dispatch |
+| [Milestone 11 record](docs/milestones/milestone-11.md) | Tool contract/security checks, offline reproduction and limitations |
 
 ## Local Python foundation
 
@@ -141,6 +145,14 @@ PYTHONPATH=src .venv/bin/python -m claims_ai.agents --output outputs/agents/offl
 
 Use a new output filename. The six-case report includes review, adverse escalation, missing evidence, injected data, unsupported requests and a forbidden tool. Only validated case-bound packets can be read; outputs must preserve deterministic findings, citations and human/supervisor authority. `make agents-check` runs the focused SDK and safety tests. See the architecture guide for cooperative timeout limits and the distinction between tested framework mechanics and untested live model behavior.
 
+Exercise the same assessment role with governed service-backed internal tools:
+
+```sh
+PYTHONPATH=src .venv/bin/python -m claims_ai.agent_tools --output outputs/agent-tools/offline-v1.json
+```
+
+Use a new output filename. This ten-case demonstration covers authorized reads, adverse review, missing evidence, unauthorized/cross-case requests, wrong versions, malformed/forbidden calls, injected notes and a simulated retrieval outage. Host grants are synthetic assertions, not authentication tokens. `make agent-tools-check` runs focused real-SDK tool contract and security checks.
+
 Domain validation checks synthetic identifiers, object references, document/evidence hash metadata, policy-version metadata and caller-supplied evidence checklists. It does not scan files, resolve policy coverage or approve fictional insurance rules. Dataset validation additionally checks fixture bytes against hashes/source renderings; it is not live upload validation or malware scanning. Structured logging emits approved event names and allowlisted operational fields; arbitrary payloads and exception text are suppressed. Do not send raw model dumps or validation-error payloads to other loggers.
 
-Git setup and all commits/pushes remain manual. **Milestone 10 is complete within its bounded offline scope; Milestone 11 has not started.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) records M1–M10 delivery and planned later work.
+Git setup and all commits/pushes remain manual. **Milestones 10–11 are complete within their bounded offline scopes; Milestone 12 has not started.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) records M1–M11 delivery and planned later work.

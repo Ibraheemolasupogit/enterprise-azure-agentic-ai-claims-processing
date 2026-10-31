@@ -1,6 +1,6 @@
 # Security and governance baseline
 
-Status: **PLANNED requirements**, not implemented controls or certification. Only synthetic data is allowed. Follow the [architecture](target-architecture.md); prove controls with negative tests before claiming security.
+Status: **PLANNED service/cloud requirements**, with the narrow locally tested M11 boundary described below; no certification is claimed. Only synthetic data is allowed. Follow the [architecture](target-architecture.md); prove controls with negative tests before claiming security.
 
 ## Trust boundaries and identity
 
@@ -21,6 +21,12 @@ No cloud identity or role assignments exist yet. Avoid shared API keys; any unav
 - APIM validates Entra tokens and applies operation allowlists, input limits, throttles and audit correlation. Backends also authorize the caller/case and restrict direct ingress. MCP discovery advertises only approved tools; no remote tool descriptions may change agent policy. [APIM MCP support](https://learn.microsoft.com/en-us/azure/api-management/mcp-server-overview) must be verified for the selected tier.
 - Every initial case outcome needs an authorized human; supervisor review is mandatory for ambiguous/high-risk/adverse recommendations. Corrections and overrides require reasons and preserve prior snapshots. A reviewer cannot approve a stale assessment.
 - Policy/rule changes require owner approval, versioning, regression evaluation and an activation record. Store concise decision evidence and reviewer actions in an append-only application audit ledger; restricted audit export and tamper-evident/immutable retention are release requirements, not current guarantees.
+
+## Implemented local internal-tool boundary — M11
+
+[Governed agent tools](governed-agent-tools.md) implement case-fingerprint grants, exact policy/version/date/index arguments, one read per allowed tool, output-provenance checks, correlated sanitized failures and mandatory human/supervisor routing. The grant comes only from a trusted host; synthetic demonstrations do not authenticate a principal. Model-supplied IDs or permissions cannot expand it. Returned policy/document content is untrusted data, and no mutation or outcome tool exists. [Negative tests](../../tests/test_agent_tools.py) exercise real SDK dispatch, cross-case denial, argument/provenance tampering, outages and bounded failure.
+
+Entra tokens, assignment/role resolution, managed identity, signed/expiring grants and revocation, network enforcement, distributed audit and MCP/APIM remain planned. Do not expose the trusted-grant constructor directly to a public API. SDK/debug payload capture must remain disabled for sensitive data; no telemetry exporter is configured in this offline milestone.
 
 ## Responsible AI and privacy
 

@@ -18,6 +18,8 @@ Status: **PLANNED runtime architecture**. [Milestone 2](../milestones/milestone-
 
 [Milestone 10](../milestones/milestone-10.md) implements a genuine [Microsoft Agent Framework review foundation](agent-framework-foundation.md) using installed core SDK 1.23.0 and a supported SIMULATED offline client. One argument-free, read-only tool exposes a single host-validated packet; the real framework dispatches it and parses typed output. Host code rechecks M6/M9 evidence/findings and exact M7 citations before execution, then enforces output provenance, bounded execution and human/supervisor routing. This assistant occupies the existing policy-explanation responsibility; rules, version resolution, authorization and lifecycle changes remain outside it. Live reasoning, evidence reconciliation, providers and durable orchestration remain planned. The [dependency record](../dependencies/agent-framework.md) records actual APIs/versions. The diagram below remains the target service architecture, not a deployed system.
 
+[Milestone 11](../milestones/milestone-11.md) extends the same assessment responsibility with [governed internal tools](governed-agent-tools.md), not another agent. Real SDK functions read verified evidence, exact-version clauses and provisional deterministic findings through local service methods. A trusted host grant binds case/fingerprint/correlation and permissions; each tool validates scope before reads and validates result provenance before release. Final drafts retain M10 validation and human/supervisor controls. These internal controls do not implement authentication, MCP/APIM or the target cloud tool gateway.
+
 ```mermaid
 flowchart TD
     User[Authenticated intake and reviewer UI] --> API[FastAPI case API]
