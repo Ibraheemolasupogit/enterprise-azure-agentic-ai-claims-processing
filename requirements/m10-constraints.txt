@@ -1,0 +1,13 @@
+# Tested Python 3.12 runtime closure for .[agents]; no model/provider extras.
+agent-framework-core==1.23.0
+msgspec==0.22.0
+pydantic==2.14.2
+pydantic-core==2.50.2
+pydantic-settings==2.16.2
+annotated-types==0.8.0
+typing-extensions==4.16.0
+typing-inspection==0.4.4
+python-dotenv==1.2.4
+opentelemetry-api==1.45.2
+PyYAML==6.0.3
+regex==2026.9.29

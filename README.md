@@ -16,6 +16,8 @@ The end-to-end application and all live Azure/Mistral/GPT integrations, approved
 
 **Milestone 9 implements [deterministic provisional motor rules](docs/architecture/deterministic-provisional-rules.md):** exact policy/version/date and evidence gates, explicit fictional excess/cap parameters, source-linked four-state findings and mandatory human/supervisor review requirements. The new [specification](data/rules/motor/README.md) is **unapproved**; calculations are non-binding illustrations on SIMULATED inputs. No claim approval, denial, settlement or payment is authorized. M8's four lexical failures remain unresolved.
 
+**Milestone 10 implements the [actual Microsoft Agent Framework foundation](docs/architecture/agent-framework-foundation.md):** pinned SDK 1.23.0, a supported offline chat-client extension, one case-bound read-only tool, typed advisory outputs and deterministic host safety guards. Framework construction, function dispatch and structured parsing are real; all model responses are **SIMULATED**. No live reasoning quality or autonomous claim outcome is claimed. The [M10 record](docs/milestones/milestone-10.md) records 422 passing tests and package/reproduction evidence; the [dependency record](docs/dependencies/agent-framework.md) distinguishes exact installed APIs from planned provider integrations.
+
 **Milestone 3 documentation is complete:** the business process, responsibilities, requirements, traceability, risk register and authority ADR refine the baseline. No runtime files changed. The 115 passing foundation tests and package/typing results remain historical Milestone 2 evidence; they were not rerun or promoted into business-performance results by this documentation milestone.
 
 The original Microsoft Claims Processing Hackathon source was not located. This is independently engineered, informed by lessons from that context; it does not continue the hackathon challenge roadmap. It is separate from the Agentic SDLC portfolio repository. No reference application was imported, and no further source search is planned.
@@ -64,14 +66,17 @@ Only fictional policies, people, identifiers, documents and generated/non-identi
 | [Provisional rule specification](data/rules/motor/README.md) | Fictional parameters, source provenance and 23 new synthetic scenarios |
 | [Deterministic rule architecture](docs/architecture/deterministic-provisional-rules.md) | Policy/evidence gates, findings, arithmetic and human authority |
 | [Milestone 9 record](docs/milestones/milestone-9.md) | Rule checks, boundaries, reproduction and limitations |
+| [Agent Framework foundation](docs/architecture/agent-framework-foundation.md) | Actual SDK execution, host boundaries, typed tools and simulated client limitations |
+| [Agent Framework dependencies](docs/dependencies/agent-framework.md) | Verified SDK APIs and exact tested runtime versions |
+| [Milestone 10 record](docs/milestones/milestone-10.md) | Bounded offline integration, checks and remaining live-model limitations |
 
 ## Local Python foundation
 
-Python **3.12** is the initial supported minor version (`>=3.12,<3.13`); broader support requires testing. Runtime dependencies are Pydantic v2 and pydantic-settings only. There is no API server or service entry point yet.
+Python **3.12** is the initial supported minor version (`>=3.12,<3.13`); broader support requires testing. Base runtime dependencies are Pydantic v2 and pydantic-settings; the optional `agents` extra adds the pinned framework core and msgspec. No live provider extra is included. There is no API server or service entry point yet.
 
 ```sh
 python3.12 -m venv .venv
-.venv/bin/python -m pip install '.[dev]'
+.venv/bin/python -m pip install -c requirements/m10-constraints.txt '.[dev,agents]'
 make check
 make package
 ```
@@ -128,6 +133,14 @@ PYTHONPATH=src .venv/bin/python -m claims_ai.rules --output outputs/rules/provis
 
 Use a new output filename. Reports label `OFFLINE_PROVISIONAL` findings and SIMULATED evidence/scan/reviewer assertions; they contain no final outcomes or settlement authority. The CLI generates new fixtures in memory and preserves all M4 cases and M7/M8 retrieval behavior. `make rules-check` runs focused binding, provenance, arithmetic and oversight checks. No additional dependency is required.
 
+Run the genuine framework with its explicitly simulated offline client:
+
+```sh
+PYTHONPATH=src .venv/bin/python -m claims_ai.agents --output outputs/agents/offline-v1.json
+```
+
+Use a new output filename. The six-case report includes review, adverse escalation, missing evidence, injected data, unsupported requests and a forbidden tool. Only validated case-bound packets can be read; outputs must preserve deterministic findings, citations and human/supervisor authority. `make agents-check` runs the focused SDK and safety tests. See the architecture guide for cooperative timeout limits and the distinction between tested framework mechanics and untested live model behavior.
+
 Domain validation checks synthetic identifiers, object references, document/evidence hash metadata, policy-version metadata and caller-supplied evidence checklists. It does not scan files, resolve policy coverage or approve fictional insurance rules. Dataset validation additionally checks fixture bytes against hashes/source renderings; it is not live upload validation or malware scanning. Structured logging emits approved event names and allowlisted operational fields; arbitrary payloads and exception text are suppressed. Do not send raw model dumps or validation-error payloads to other loggers.
 
-Git setup and all commits/pushes remain manual. **Milestone 10 has not started.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) reflects the provisional-rule foundation authorized for Milestone 9.
+Git setup and all commits/pushes remain manual. **Milestone 10 is complete within its bounded offline scope; Milestone 11 has not started.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) records M1–M10 delivery and planned later work.

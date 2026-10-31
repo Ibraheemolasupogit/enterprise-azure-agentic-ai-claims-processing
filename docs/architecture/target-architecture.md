@@ -1,6 +1,6 @@
 # Target architecture
 
-Status: **PLANNED runtime architecture**. [Milestone 2](../milestones/milestone-2.md) implements and locally tests domain contracts, in-memory transition guards, configuration, redacted logging and typed protocols. [Milestone 3 requirements](../business/requirements.md) refine business acceptance/traceability without changing contracts or this design. Azure services, agents, API/UI, persistence/audit and approved operational coverage rules remain unimplemented. This is an independent greenfield design for the [charter](../business/project-charter.md).
+Status: **PLANNED runtime architecture**. [Milestone 2](../milestones/milestone-2.md) implements and locally tests domain contracts, in-memory transition guards, configuration, redacted logging and typed protocols. [Milestone 3 requirements](../business/requirements.md) refine business acceptance/traceability without changing contracts or this design. Azure services, live model workflows, API/UI, persistence/audit and approved operational coverage rules remain unimplemented. This is an independent greenfield design for the [charter](../business/project-charter.md).
 
 [Milestone 4](../milestones/milestone-4.md) adds offline synthetic artifact authoring, source-linked annotations and byte/reproduction validation. These tools do not implement any processing component below: intake remains quarantined, and authored labels are not extracted facts, approved policies or operational decisions.
 
@@ -15,6 +15,8 @@ Status: **PLANNED runtime architecture**. [Milestone 2](../milestones/milestone-
 [Milestone 9](../milestones/milestone-9.md) adds a separate [provisional rule foundation](deterministic-provisional-rules.md) with exact version/source/evidence checks and explicitly fictional financial parameters. Four-state findings and non-binding integer-pence illustrations do not populate operational `Assessment`/`RuleResult` outcomes, change a case or authorize settlement. New in-memory fixtures use explicit SIMULATED scan/reviewer assertions; original M4 policies remain unapproved and unchanged. This is the user-authorized offline exception for provisional experimentation; the approved-policy/rule publication gate, human/supervisor guards and operational deployment boundaries below remain intact. M8's four lexical failures remain unresolved.
 
 ## Logical components and data flow
+
+[Milestone 10](../milestones/milestone-10.md) implements a genuine [Microsoft Agent Framework review foundation](agent-framework-foundation.md) using installed core SDK 1.23.0 and a supported SIMULATED offline client. One argument-free, read-only tool exposes a single host-validated packet; the real framework dispatches it and parses typed output. Host code rechecks M6/M9 evidence/findings and exact M7 citations before execution, then enforces output provenance, bounded execution and human/supervisor routing. This assistant occupies the existing policy-explanation responsibility; rules, version resolution, authorization and lifecycle changes remain outside it. Live reasoning, evidence reconciliation, providers and durable orchestration remain planned. The [dependency record](../dependencies/agent-framework.md) records actual APIs/versions. The diagram below remains the target service architecture, not a deployed system.
 
 ```mermaid
 flowchart TD
