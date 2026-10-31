@@ -22,6 +22,8 @@ The end-to-end application and all live Azure/Mistral/GPT integrations, approved
 
 **Milestone 12 implements the [deterministic offline claims workflow](docs/architecture/deterministic-claims-workflow.md):** intake, evidence, exact-version policy retrieval, provisional findings, existing governed agent synthesis and mandatory human/supervisor routing. Bounded retries, immutable correlated records and validated caller-held checkpoints support offline replay/recovery. Chat and scan/identity/reviewer assertions remain **SIMULATED**. Successful advisory processing leaves the operational case ASSESSING; no approved assessment, claim outcome or durable cloud workflow is created. See the [M12 record](docs/milestones/milestone-12.md).
 
+**Milestone 13 implements the [governed local MCP server](docs/architecture/governed-mcp-server.md):** genuine MCP SDK stdio initialization/discovery/invocation over the three existing read-only tools. A private host-provided startup context binds one process to one case; RPC arguments/metadata never grant access. Native and Microsoft Agent Framework MCP clients execute real protocol calls with typed results. No model, network listener, APIM, production authentication or claim decision is supplied. See the [M13 record](docs/milestones/milestone-13.md).
+
 **Milestone 3 documentation is complete:** the business process, responsibilities, requirements, traceability, risk register and authority ADR refine the baseline. No runtime files changed. The 115 passing foundation tests and package/typing results remain historical Milestone 2 evidence; they were not rerun or promoted into business-performance results by this documentation milestone.
 
 The original Microsoft Claims Processing Hackathon source was not located. This is independently engineered, informed by lessons from that context; it does not continue the hackathon challenge roadmap. It is separate from the Agentic SDLC portfolio repository. No reference application was imported, and no further source search is planned.
@@ -77,14 +79,17 @@ Only fictional policies, people, identifiers, documents and generated/non-identi
 | [Milestone 11 record](docs/milestones/milestone-11.md) | Tool contract/security checks, offline reproduction and limitations |
 | [Deterministic workflow](docs/architecture/deterministic-claims-workflow.md) | Six-stage orchestration, immutable records, bounded retry and checkpoint recovery |
 | [Milestone 12 record](docs/milestones/milestone-12.md) | Workflow safety/integration checks, offline reproduction and limitations |
+| [Governed MCP server](docs/architecture/governed-mcp-server.md) | Genuine stdio protocol, three read-only tools and trusted host context |
+| [MCP dependencies](docs/dependencies/mcp.md) | Verified compatible APIs, exact runtime pins and official wheel provenance |
+| [Milestone 13 record](docs/milestones/milestone-13.md) | Client/server tests, framework MCP execution and residual limitations |
 
 ## Local Python foundation
 
-Python **3.12** is the initial supported minor version (`>=3.12,<3.13`); broader support requires testing. Base runtime dependencies are Pydantic v2 and pydantic-settings; the optional `agents` extra adds the pinned framework core and msgspec. No live provider extra is included. There is no API server or service entry point yet.
+Python **3.12** is the initial supported minor version (`>=3.12,<3.13`); broader support requires testing. Base runtime dependencies are Pydantic v2 and pydantic-settings; the optional `agents` extra adds the pinned framework core and msgspec. The `mcp` extra includes those plus the genuine MCP SDK and the framework's required tenacity dependency. No live provider extra is included. There is no API server or service entry point yet.
 
 ```sh
 python3.12 -m venv .venv
-.venv/bin/python -m pip install -c requirements/m10-constraints.txt '.[dev,agents]'
+.venv/bin/python -m pip install -c requirements/m13-constraints.txt '.[dev,mcp]'
 make check
 make package
 ```
@@ -165,6 +170,14 @@ PYTHONPATH=src .venv/bin/python -m claims_ai.workflow --output outputs/workflow/
 
 Use a new output filename. Seven cases cover an advisory draft, missing evidence, a simulated retrieval outage, injected document content, adverse/high-risk escalation and serialized checkpoint resume. JSON includes full synthetic execution records; checkpoints are local caller-held artifacts, not signed or durable audit. `make workflow-check` runs focused workflow tests. The architecture guide documents trusted-input recovery and the separation between advisory tasks and operational outcomes.
 
+Run real local MCP stdio clients against the governed server:
+
+```sh
+PYTHONPATH=src .venv/bin/python -m claims_ai.mcp_server demo --output outputs/mcp/offline-v1.json
+```
+
+Use a new output filename. Native SDK and Agent Framework MCP clients each discover and call all three tools. Negative cases cover missing context, cross-case requests, wrong versions, forged authorization arguments and repeated calls. The host creates private temporary context files; standalone `serve` without context remains denied. `make mcp-check` runs protocol/security tests. APIM is reserved for M14 and has not started.
+
 Domain validation checks synthetic identifiers, object references, document/evidence hash metadata, policy-version metadata and caller-supplied evidence checklists. It does not scan files, resolve policy coverage or approve fictional insurance rules. Dataset validation additionally checks fixture bytes against hashes/source renderings; it is not live upload validation or malware scanning. Structured logging emits approved event names and allowlisted operational fields; arbitrary payloads and exception text are suppressed. Do not send raw model dumps or validation-error payloads to other loggers.
 
-Git setup and all commits/pushes remain manual. **Milestones 10–12 are complete within their bounded offline scopes; Milestone 13 has not started.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) records M1–M12 delivery and planned later work.
+Git setup and all commits/pushes remain manual. **Milestones 10–13 are complete within their bounded offline scopes; Milestone 14 has not started.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) records M1–M13 delivery and planned later work.

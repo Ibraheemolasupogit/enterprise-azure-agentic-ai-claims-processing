@@ -28,6 +28,12 @@ No cloud identity or role assignments exist yet. Avoid shared API keys; any unav
 
 Entra tokens, assignment/role resolution, managed identity, signed/expiring grants and revocation, network enforcement, distributed audit and MCP/APIM remain planned. Do not expose the trusted-grant constructor directly to a public API. SDK/debug payload capture must remain disabled for sensitive data; no telemetry exporter is configured in this offline milestone.
 
+## Implemented local MCP boundary — M13
+
+[The stdio-only server](governed-mcp-server.md) loads one same-owner private startup configuration, pins the fixture manifest/case fingerprint and denies absent/mismatched context. JSON-RPC client information, `_meta`, grant-shaped arguments and requested IDs cannot authorize or widen a read. The server exposes exactly three strict read-only tools, validates outputs, serializes/bounds calls and latches errors; no approval, mutation, command or payment operation is registered. [Real SDK tests](../../tests/test_mcp_server.py) cover native/framework subprocess communication and adversarial boundaries.
+
+This trust model assumes a trusted launcher and OS user. A same-user attacker can forge host files or replace code; permissions are not signed grants, reviewer authentication, service identity or durable audit. SDK pre-handler framing allocations and blocking Python require process isolation before adversarial deployment. No network-accessible MCP endpoint or APIM bypass exists; gateway/identity integration is planned for M14 or later authorized scope. Retrieved source text remains untrusted, and protocol stdout never carries operational logging.
+
 ## Responsible AI and privacy
 
 Prompt injection may arrive in narratives, OCR, photographs, policy text or MCP output. Separate instructions from evidence; prohibit tool execution from document instructions; use scoped retrieval, output schemas, tool allowlists, egress restrictions and citation validation. Evaluate [Prompt Shields](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/jailbreak-detection) for document/user attacks where available. Detection is defense in depth, not a guarantee. Flagged or unverifiable content stops automated assessment and routes to a reviewer.

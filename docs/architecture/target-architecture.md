@@ -22,6 +22,8 @@ Status: **PLANNED runtime architecture**. [Milestone 2](../milestones/milestone-
 
 [Milestone 12](../milestones/milestone-12.md) composes those local components in a [deterministic offline workflow](deterministic-claims-workflow.md). The host controls six stages, prerequisite checks, same-case grant delegation, bounded retry, immutable correlated records and checkpoint replay. M2 transitions and M6 admissions reach ASSESSING; a separate provisional advisory task routes humans/supervisors without fabricating the operational Assessment required for AWAITING_REVIEW. Existing services and agent profiles are unchanged. This is not the intake API, queue/outbox, durable store or deployed worker shown below.
 
+[Milestone 13](../milestones/milestone-13.md) exposes the three unchanged M11 reads through a genuine [local MCP stdio server](governed-mcp-server.md), with typed schemas, case-bound startup grants and server-side quotas. Native SDK and Agent Framework MCP clients perform actual discovery/calls. The local launcher/OS user remains trusted; no HTTP listener, network authentication, APIM gateway or workflow replacement is implemented. Existing authority boundaries and the target deployment diagram remain unchanged.
+
 ```mermaid
 flowchart TD
     User[Authenticated intake and reviewer UI] --> API[FastAPI case API]
