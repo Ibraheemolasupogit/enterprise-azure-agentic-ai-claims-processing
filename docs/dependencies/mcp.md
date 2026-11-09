@@ -2,6 +2,12 @@
 
 Status: real SDK **installed and exercised locally**, not a protocol stub. Python 3.12.8 remains isolated from system site-packages; existing M10 dependency pins are unchanged.
 
+## M14 HTTP reuse
+
+No dependency or pin changed for M14. The existing MCP extra and [M13 constraints](../../requirements/m13-constraints.txt) already provide the exact tested HTTP/auth packages: MCP 2.2.0, Starlette 1.10.0, Uvicorn 0.54.0, httpx2/httpcore2 2.16.0, PyJWT 2.15.1 and cryptography 50.0.2. Install the MCP extra, not just the minimal domain package, to use this optional foundation.
+
+Installed signatures/source were inspected for `mcp.server.streamable_http_manager.StreamableHTTPSessionManager` (`json_response`, `stateless`, `max_request_body_size`, `max_sessions`, `run`, `handle_request`), `TransportSecuritySettings`, `streamable_http_client` and `Client(..., mode="legacy")`. Genuine HTTP execution uses the [official pinned manager](https://github.com/modelcontextprotocol/python-sdk/blob/v2.2.0/src/mcp/server/streamable_http_manager.py) and [HTTP client](https://github.com/modelcontextprotocol/python-sdk/blob/v2.2.0/src/mcp/client/streamable_http.py); no SDK implementation is copied or replaced. JSON mode is a deliberate bounded transport profile. In-process HTTP tests exercise negotiated protocol 2025-11-25 and all three tools; a source-matched external report additionally verifies TCP startup and three successful reads, with shutdown evidence qualified in M14. See [M14 evidence](../milestones/milestone-14.md).
+
 ## Verified sources and APIs
 
 - Official [MCP 2.2.0 release metadata](https://pypi.org/pypi/mcp/2.2.0/json): Python >=3.10, stable v2 API, exact `mcp-types==2.2.0`, Pydantic >=2.12. The existing Pydantic 2.14.2 satisfies it.

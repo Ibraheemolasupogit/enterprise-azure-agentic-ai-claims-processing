@@ -2,6 +2,12 @@
 
 Status: **PLANNED service/cloud requirements**, with the narrow locally tested M11 boundary described below; no certification is claimed. Only synthetic data is allowed. Follow the [architecture](target-architecture.md); prove controls with negative tests before claiming security.
 
+## Local HTTP extension — M14
+
+The [HTTP boundary](mcp-http-and-gateway.md) reuses M13/M11 security and denies requests without both a verified gateway identity and an independent host-selected case grant. Synthetic RS256 signature/issuer/audience/app/role/lifetime checks, malformed/spoofed/cross-case requests, wrong versions, throttling, body limits, injected text and safe backend failures are tested through genuine SDK HTTP/ASGI communication. This is not real Entra authentication. Loopback-only socket hosting is supported by a source-matched external TCP report; shutdown evidence is qualified in the M14 record. The sandbox still denies bind operations; no public endpoint was opened.
+
+[APIM references](../deployment/apim-governance-reference.md) propose separate client JWT and gateway managed-identity authentication, restrictive RPC/tools, request/rate limits and zero-payload diagnostics. Static mutation tests and Bicep compilation do not execute APIM policies. A future backend must verify the real service token and obtain a trusted workflow grant independently of caller headers; gateway identity alone cannot choose a case. Default local verifier denies everything. Production TLS/identity, private ingress, grant signing/revocation, distributed limits and durable audit remain planned. Historical M11/M13 sections below describe those milestones' scope.
+
 ## Trust boundaries and identity
 
 | Boundary | Required control |

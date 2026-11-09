@@ -24,6 +24,8 @@ Status: **PLANNED runtime architecture**. [Milestone 2](../milestones/milestone-
 
 [Milestone 13](../milestones/milestone-13.md) exposes the three unchanged M11 reads through a genuine [local MCP stdio server](governed-mcp-server.md), with typed schemas, case-bound startup grants and server-side quotas. Native SDK and Agent Framework MCP clients perform actual discovery/calls. The local launcher/OS user remains trusted; no HTTP listener, network authentication, APIM gateway or workflow replacement is implemented. Existing authority boundaries and the target deployment diagram remain unchanged.
 
+[Milestone 14](../milestones/milestone-14.md) adds a separate [loopback HTTP profile](mcp-http-and-gateway.md) over the same M13 server/M11 authorization. Real SDK Streamable HTTP is tested through ASGI and a source-matched external loopback TCP report, with shutdown-evidence limits recorded in M14; sandbox binding remains restricted. Synthetic signed service credentials and independently host-selected case grants gate access; default configuration denies reads. [APIM XML/Bicep references](../deployment/apim-governance-reference.md) separate client Entra validation from backend managed identity, but no real Entra/gateway enforcement is implemented. No existing agent, workflow, business rule or human authority changes.
+
 ```mermaid
 flowchart TD
     User[Authenticated intake and reviewer UI] --> API[FastAPI case API]

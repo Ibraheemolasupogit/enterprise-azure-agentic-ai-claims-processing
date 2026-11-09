@@ -24,6 +24,8 @@ The end-to-end application and all live Azure/Mistral/GPT integrations, approved
 
 **Milestone 13 implements the [governed local MCP server](docs/architecture/governed-mcp-server.md):** genuine MCP SDK stdio initialization/discovery/invocation over the three existing read-only tools. A private host-provided startup context binds one process to one case; RPC arguments/metadata never grant access. Native and Microsoft Agent Framework MCP clients execute real protocol calls with typed results. No model, network listener, APIM, production authentication or claim decision is supplied. See the [M13 record](docs/milestones/milestone-13.md).
 
+**Milestone 14 implements the [local MCP HTTP boundary](docs/architecture/mcp-http-and-gateway.md)** and [APIM governance reference](docs/deployment/apim-governance-reference.md): real SDK Streamable HTTP tested through in-process ASGI, synthetic pinned-key gateway credentials plus independent host case grants, bounded requests and unchanged governed reads. XML policy safeguards and Bicep compilation are checked; Entra/APIM enforcement remains design only. **M14 is complete within its local foundation scope:** the supplied external loopback report records successful real TCP execution; shutdown evidence and its limits are documented. See [M14 evidence](docs/milestones/milestone-14.md). M8's four failures remain unresolved.
+
 **Milestone 3 documentation is complete:** the business process, responsibilities, requirements, traceability, risk register and authority ADR refine the baseline. No runtime files changed. The 115 passing foundation tests and package/typing results remain historical Milestone 2 evidence; they were not rerun or promoted into business-performance results by this documentation milestone.
 
 The original Microsoft Claims Processing Hackathon source was not located. This is independently engineered, informed by lessons from that context; it does not continue the hackathon challenge roadmap. It is separate from the Agentic SDLC portfolio repository. No reference application was imported, and no further source search is planned.
@@ -82,6 +84,7 @@ Only fictional policies, people, identifiers, documents and generated/non-identi
 | [Governed MCP server](docs/architecture/governed-mcp-server.md) | Genuine stdio protocol, three read-only tools and trusted host context |
 | [MCP dependencies](docs/dependencies/mcp.md) | Verified compatible APIs, exact runtime pins and official wheel provenance |
 | [Milestone 13 record](docs/milestones/milestone-13.md) | Client/server tests, framework MCP execution and residual limitations |
+| [Milestone 14 record](docs/milestones/milestone-14.md) | HTTP protocol/security tests, real TCP report and static APIM reference |
 
 ## Local Python foundation
 
@@ -94,7 +97,7 @@ make check
 make package
 ```
 
-`make check` runs Ruff format/lint, strict mypy and pytest. `make format` formats source/tests. Tests explicitly load `src`; package installation is verified separately. `make package` builds a wheel and source distribution in ignored `dist/`, using installed setuptools without downloading build dependencies. Reinstall the package after edits when using the non-editable setup above; unit tests always exercise the current source.
+`make check` runs Ruff format/lint, strict mypy and pytest. `make format` formats source/tests. Tests explicitly load `src`; package installation is verified separately. `make package` builds a wheel and source distribution in ignored `dist/`, using installed setuptools without downloading build dependencies. Reinstall the package after runtime edits when using the non-editable setup above; source tests exercise current source and the packaging regression independently checks installed imports. On this managed macOS filesystem, hidden editable `.pth` files are skipped by Python; use the non-editable installation above rather than relying on editable discovery. See the M14 record for the verified diagnosis.
 
 Verify the checked-in dataset with `make dataset-check`. To generate a fresh copy without installing anything else:
 
@@ -176,8 +179,18 @@ Run real local MCP stdio clients against the governed server:
 PYTHONPATH=src .venv/bin/python -m claims_ai.mcp_server demo --output outputs/mcp/offline-v1.json
 ```
 
-Use a new output filename. Native SDK and Agent Framework MCP clients each discover and call all three tools. Negative cases cover missing context, cross-case requests, wrong versions, forged authorization arguments and repeated calls. The host creates private temporary context files; standalone `serve` without context remains denied. `make mcp-check` runs protocol/security tests. APIM is reserved for M14 and has not started.
+Use a new output filename. Native SDK and Agent Framework MCP clients each discover and call all three tools. Negative cases cover missing context, cross-case requests, wrong versions, forged authorization arguments and repeated calls. The host creates private temporary context files; standalone `serve` without context remains denied. `make mcp-check` runs protocol/security tests.
+
+Run the real SDK HTTP protocol in-process, without a network listener:
+
+```sh
+PYTHONPATH=src .venv/bin/python -m claims_ai.mcp_http demo --mode asgi --output outputs/mcp-http/offline-v1.json
+make mcp-http-check
+make apim-static-check
+```
+
+For a terminal permitting local sockets, replace `--mode asgi` with `--mode loopback` and use a new output filename. The latter binds only `127.0.0.1` on an ephemeral port, issues an in-memory synthetic credential, calls all three tools and stops; it is not a deployable backend. The supplied external report verifies that socket path; this sandbox still restricts binding. Shutdown evidence is qualified in the M14 record. No credential/key is written in either report. [APIM reference commands](infra/apim/README.md) compile templates without deployment.
 
 Domain validation checks synthetic identifiers, object references, document/evidence hash metadata, policy-version metadata and caller-supplied evidence checklists. It does not scan files, resolve policy coverage or approve fictional insurance rules. Dataset validation additionally checks fixture bytes against hashes/source renderings; it is not live upload validation or malware scanning. Structured logging emits approved event names and allowlisted operational fields; arbitrary payloads and exception text are suppressed. Do not send raw model dumps or validation-error payloads to other loggers.
 
-Git setup and all commits/pushes remain manual. **Milestones 10–13 are complete within their bounded offline scopes; Milestone 14 has not started.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) records M1–M13 delivery and planned later work.
+Git setup and all commits/pushes remain manual. **Milestones 10–13 are complete within their bounded offline scopes; M14 is complete within its local HTTP/static APIM foundation scope.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) records delivered capabilities and planned later work. M15 has not started.
