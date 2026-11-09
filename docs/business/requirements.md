@@ -42,7 +42,7 @@ The proposed explanation agent may draft reviewer rationale from validated facts
 
 ### FR-009 Inspectable review packet
 
-The reviewer must see original evidence, normalized candidates/corrections, applicable versions/clauses, rule trace, draft rationale and unresolved flags. Acceptance: a handler can inspect each cited source and reject/correct suggestions; edits invalidate stale assessments before closure. Queue/UI, evidence correction and end-to-end packet generation remain planned.
+The reviewer must see original evidence, normalized candidates/corrections, applicable versions/clauses, rule trace, draft rationale and unresolved flags. Acceptance: a handler can inspect each cited source and reject/correct suggestions; edits invalidate stale assessments before closure. M15 supplies an offline assigned queue/detail view over existing source-linked packets and recommendation actions; UI and evidence correction remain planned.
 
 ### FR-010 Human approval
 
@@ -50,7 +50,7 @@ Every initial outcome must require an explicit human reviewer decision on the cu
 
 ### FR-011 Supervisor escalation
 
-Supervisor handling is mandatory under the following existing guard semantics. This is one decision table for the target workflow and the local implementation; assignment/notifications are still planned.
+Supervisor handling is mandatory under the following existing guard semantics. This is one decision table for the target outcome workflow and M2 guards. M15 separately implements bounded synthetic advisory assignments and supervisor routing; authenticated service assignment/notifications remain planned.
 
 | Condition | Required action/authority |
 | --- | --- |
@@ -62,7 +62,7 @@ Supervisor handling is mandatory under the following existing guard semantics. T
 | `undetermined` outcome | Cannot simply approve closure; supervisor requests evidence or explicitly overrides to a supported final eligible/ineligible outcome. Unresolved facts must not be silently treated as proven. |
 | Closed-case reopening or quarantine release | Supervisor authorizes return to `validating`; release authorizes revalidation, not a scan bypass. |
 
-Acceptance: exercise each condition and deny handler/service bypasses; the future application must assign/notify a supervisor and record a reason before operational routing. `Assessment.requires_supervisor` and transition/decision guards exist; no work queue or verified identity exists. Self-review separation is an unresolved governance choice, not a current two-person control.
+Acceptance: exercise each condition and deny handler/service bypasses; the future application must assign/notify a supervisor and record a reason before operational routing. `Assessment.requires_supervisor` and transition/decision guards exist. M15 adds an advisory-only synthetic queue and prevents the workflow producer and prior reviewed-fact authors from reviewing their own recommendation. This local separation does not verify real identities or implement the operational outcome/notification service.
 
 ### FR-012 Invalidation and recovery
 

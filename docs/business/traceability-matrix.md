@@ -218,3 +218,17 @@ The [HTTP boundary](../architecture/mcp-http-and-gateway.md) preserves M11/M13 a
 | NFR-009; VT-024 | Deterministic HTTP reports without serialized credentials; preserved reference inputs | [test_http_demo_reproduces_without_persisting_credentials](../../tests/test_mcp_http.py); source/wheel verification recorded in [M14 evidence](../milestones/milestone-14.md) |
 
 M4–M9 artifacts and M8's four lexical failures remain unchanged. M14 adds no claim-state/coverage authority; historical whole-package workflow fingerprints naturally change with added modules.
+
+## Milestone 15 governed human-review evidence
+
+[Human-review architecture](../architecture/governed-human-review.md) and [M15 evidence](../milestones/milestone-15.md) describe an offline advisory-only boundary. These tests do not complete operational outcome acceptance under FR-010/FR-013, real identity under NFR-002, or API/UI/notification requirements.
+
+| Requirements / future verification | Implemented local support | Tests / remaining gap |
+| --- | --- | --- |
+| FR-009/FR-015 | Assigned read-only detail view with original M12 evidence/history, policy/index, rule findings and advisory; no new MCP tool | `test_cross_case_review_detail_and_action_are_isolated`, `test_review_processing_never_invokes_models_or_network`; no UI or live-model behavior claim |
+| FR-010/FR-011; NFR-002/NFR-003 | Explicit advisory decisions, host-bound synthetic human roles, producer/fact-author separation and mandatory supervisor routing | `test_nonhuman_principals_never_read_or_decide`, `test_producers_and_fact_reviewers_cannot_review_their_own_advisory`, `test_adverse_ambiguous_risky_and_conflicting_advisories_require_supervisors`; no authentication or claim-outcome commit |
+| FR-012/FR-014 | Exact snapshot/task/version guards, host invalidation, M2 evidence-request transition and preserved source history | `test_every_exact_review_binding_field_is_checked_before_commit`, `test_host_reported_changes_invalidate_pending_actions_and_prior_duplicate_receipts`, `test_explicit_human_actions_are_advisory_only_and_duplicates_are_receipts`; replacement processing/notifications remain planned |
+| FR-013; NFR-004/NFR-005 | Immutable reasoned actor/correlation events, hash and semantic replay, memory head, process-local CAS and duplicate receipts | `test_audit_replay_and_private_head_detect_tampering`, `test_concurrent_incompatible_actions_have_one_atomic_winner`, `test_concurrent_identical_actions_return_one_receipt`; no durable atomic outcome/store or restart authenticity |
+| NFR-008/NFR-009 | Bounded queue/events/action sizes; pure source replay; deterministic synthetic CLI; unchanged historical data | `test_queue_entry_and_event_capacity_fail_before_state_changes`, `test_rehashed_but_forged_m12_advisory_task_is_not_trusted`, `test_untrusted_source_grants_and_changed_workflow_bytes_fail_before_enqueue`, `test_offline_cli_reproduces_review_evidence_and_protects_reference_data`; M8 failures and M12 timing sensitivity remain |
+
+All named tests are in [test_human_review.py](../../tests/test_human_review.py). Model/agent/MCP callers gain no review authority; recommendation rejection does not deny an insurance claim.

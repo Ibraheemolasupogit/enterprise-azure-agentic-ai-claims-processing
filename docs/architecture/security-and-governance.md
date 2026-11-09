@@ -1,6 +1,14 @@
 # Security and governance baseline
 
-Status: **PLANNED service/cloud requirements**, with the narrow locally tested M11 boundary described below; no certification is claimed. Only synthetic data is allowed. Follow the [architecture](target-architecture.md); prove controls with negative tests before claiming security.
+Status: **PLANNED service/cloud requirements**, with the narrow locally tested M11–M15 boundaries described below; no certification is claimed. Only synthetic data is allowed. Follow the [architecture](target-architecture.md); prove controls with negative tests before claiming security.
+
+## Offline human-review boundary — M15
+
+[Governed recommendation review](governed-human-review.md) verifies original M12 prerequisites and binds all decisions to the exact case/revision, evidence, policy, rule and advisory task. Only canonical host-registered synthetic human sessions with an explicit case/task assignment can inspect or act. Agents, MCP clients and model/host principals cannot perform review actions. Serialized role claims and copied sessions do not grant access; the trusted local host still controls session delivery and can compromise its own process. No real reviewer authentication is claimed.
+
+The workflow producer and prior reviewed-fact authors cannot review their own advisory, even as supervisor. Adverse/indeterminate findings, ambiguous/high-risk/conflicting flags and manual escalations require an assigned supervisor. Missing advisory drafts permit supervisor evidence triage only. Approve/reject actions concern a recommendation; they create no final claim decision, denial, closure, payment or settlement. Explicit evidence requests reuse M2's guarded transition.
+
+Nonblank rationales, source-linked references, host-checked synthetic times, exact bindings, review revisions and duplicate content are checked before mutation. A process-local lock atomically updates immutable event history, projected review state/current binding and a private audit head. Replay rejects tested semantic/hash/actor tampering and rollback. Host-reported upstream changes invalidate actions and prior duplicate receipts. This requires a trusted host to report changes; there is no automatic durable repository watcher. Unsigned hashes and memory heads do not provide durable audit, identity proof, WORM retention or distributed concurrency. Rejected attempts do not consume accepted-action audit entries; operational denial telemetry/retention remains planned.
 
 ## Local HTTP extension — M14
 

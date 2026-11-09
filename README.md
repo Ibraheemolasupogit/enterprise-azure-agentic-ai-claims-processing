@@ -26,6 +26,8 @@ The end-to-end application and all live Azure/Mistral/GPT integrations, approved
 
 **Milestone 14 implements the [local MCP HTTP boundary](docs/architecture/mcp-http-and-gateway.md)** and [APIM governance reference](docs/deployment/apim-governance-reference.md): real SDK Streamable HTTP tested through in-process ASGI, synthetic pinned-key gateway credentials plus independent host case grants, bounded requests and unchanged governed reads. XML policy safeguards and Bicep compilation are checked; Entra/APIM enforcement remains design only. **M14 is complete within its local foundation scope:** the supplied external loopback report records successful real TCP execution; shutdown evidence and its limits are documented. See [M14 evidence](docs/milestones/milestone-14.md). M8's four failures remain unresolved.
 
+**Milestone 15 implements [governed synthetic human review](docs/architecture/governed-human-review.md):** an assigned case/task queue and read-only detail view over semantically verified M12 checkpoints, explicit recommendation approval/rejection, evidence requests and supervisor escalation. Host-registered human sessions, producer/fact-author separation, exact snapshot/version guards, process-local CAS and immutable audit events protect the offline boundary. Approving a recommendation creates no insurance outcome or settlement authority. Missing recommendations cannot be approved; adverse/ambiguous/high-risk/conflicting work requires an assigned supervisor. See [M15 evidence](docs/milestones/milestone-15.md). Authentication, durable audit, M16 API and M17 UI remain planned; M12's timing-dependent retry limitation is preserved.
+
 **Milestone 3 documentation is complete:** the business process, responsibilities, requirements, traceability, risk register and authority ADR refine the baseline. No runtime files changed. The 115 passing foundation tests and package/typing results remain historical Milestone 2 evidence; they were not rerun or promoted into business-performance results by this documentation milestone.
 
 The original Microsoft Claims Processing Hackathon source was not located. This is independently engineered, informed by lessons from that context; it does not continue the hackathon challenge roadmap. It is separate from the Agentic SDLC portfolio repository. No reference application was imported, and no further source search is planned.
@@ -85,6 +87,8 @@ Only fictional policies, people, identifiers, documents and generated/non-identi
 | [MCP dependencies](docs/dependencies/mcp.md) | Verified compatible APIs, exact runtime pins and official wheel provenance |
 | [Milestone 13 record](docs/milestones/milestone-13.md) | Client/server tests, framework MCP execution and residual limitations |
 | [Milestone 14 record](docs/milestones/milestone-14.md) | HTTP protocol/security tests, real TCP report and static APIM reference |
+| [Governed human review](docs/architecture/governed-human-review.md) | Synthetic assignments, advisory-only actions, exact snapshot binding and immutable local audit |
+| [Milestone 15 record](docs/milestones/milestone-15.md) | Human-review security, concurrency, packaging and reproduction evidence |
 
 ## Local Python foundation
 
@@ -193,4 +197,13 @@ For a terminal permitting local sockets, replace `--mode asgi` with `--mode loop
 
 Domain validation checks synthetic identifiers, object references, document/evidence hash metadata, policy-version metadata and caller-supplied evidence checklists. It does not scan files, resolve policy coverage or approve fictional insurance rules. Dataset validation additionally checks fixture bytes against hashes/source renderings; it is not live upload validation or malware scanning. Structured logging emits approved event names and allowlisted operational fields; arbitrary payloads and exception text are suppressed. Do not send raw model dumps or validation-error payloads to other loggers.
 
-Git setup and all commits/pushes remain manual. **Milestones 10–13 are complete within their bounded offline scopes; M14 is complete within its local HTTP/static APIM foundation scope.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) records delivered capabilities and planned later work. M15 has not started.
+Run the synthetic human-review demonstration with a new output filename:
+
+```sh
+PYTHONPATH=src .venv/bin/python -m claims_ai.human_review --output outputs/review/offline-v1.json
+make review-check
+```
+
+Six cases cover recommendation approval, rejection, supervisor escalation/handling, evidence request, stale evidence and unauthorized access. Existing M12 simulated advisory preparation runs once; review admission/actions make no model calls. Storage and synthetic identities are explicitly local and non-durable. Evidence requests reuse M2; recommendation actions never close or settle a claim.
+
+Git setup and all commits/pushes remain manual. **Milestones 1–15 are delivered within their recorded local/reference scopes.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) records delivered capabilities and planned later work. M16 API and M17 UI have not started.
