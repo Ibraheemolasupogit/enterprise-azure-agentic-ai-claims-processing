@@ -232,3 +232,17 @@ M4–M9 artifacts and M8's four lexical failures remain unchanged. M14 adds no c
 | NFR-008/NFR-009 | Bounded queue/events/action sizes; pure source replay; deterministic synthetic CLI; unchanged historical data | `test_queue_entry_and_event_capacity_fail_before_state_changes`, `test_rehashed_but_forged_m12_advisory_task_is_not_trusted`, `test_untrusted_source_grants_and_changed_workflow_bytes_fail_before_enqueue`, `test_offline_cli_reproduces_review_evidence_and_protects_reference_data`; M8 failures and M12 timing sensitivity remain |
 
 All named tests are in [test_human_review.py](../../tests/test_human_review.py). Model/agent/MCP callers gain no review authority; recommendation rejection does not deny an insurance claim.
+
+## Milestone 16 offline FastAPI evidence
+
+[API architecture](../architecture/governed-fastapi-application.md) and [M16 evidence](../milestones/milestone-16.md) describe genuine typed HTTP/ASGI execution over existing services. This does not complete operational upload/scanning, verified identity, durable outcomes, UI or deployment requirements.
+
+| Requirements | Implemented local support | Tests / remaining limit |
+| --- | --- | --- |
+| FR-001/FR-003/FR-006/FR-009 | Registered-bundle intake, M12 processing and verified status/advisory/detail | `test_genuine_fastapi_processing_and_assigned_advisory_detail`, `test_intake_cannot_supply_trusted_scan_policy_or_authorization_assertions`; no arbitrary uploads/scanning or policy publication |
+| FR-010/FR-011/FR-015; NFR-002/NFR-003 | Synthetic host identity, API scope intersected with actual M15 assignment, unchanged supervisor/separation rules | `test_case_scope_is_checked_even_when_m15_assigned_the_same_human`, `test_supervisor_routing_cannot_be_bypassed_through_http`, `test_nonhuman_credentials_never_reach_protected_api_operations`; no Entra or outcome endpoint |
+| FR-012/FR-013; NFR-004 | Exact bindings/revisions, idempotent receipts, failure tombstones and process-local CAS | `test_review_replay_delegates_freshness_and_revocation_instead_of_http_cache`, `test_cancelled_processing_keeps_a_failure_tombstone_instead_of_restarting`, `test_concurrent_processing_duplicates_execute_one_real_workflow`, `test_concurrent_incompatible_http_review_actions_have_one_winner`; no durable/restart/distributed guarantee |
+| NFR-001/NFR-005/NFR-008 | Body/response/header/concurrency bounds, sanitized correlated errors/logs and honest local readiness | `test_actual_body_validation_and_sanitized_errors`, `test_request_concurrency_and_response_capacity_are_bounded`, `test_redacted_structured_api_logs_never_include_credentials_payloads_or_errors`, `test_health_readiness_and_default_deny_do_not_claim_azure_or_prestartup_readiness`; external Azure remains unprobed/not ready |
+| NFR-009 | Generated OpenAPI, real TestClient integration, pinned minimal dependencies and package/reproduction checks | `test_openapi_models_security_headers_references_and_actual_response_contracts`, `test_api_evidence_reproduces_from_other_cwd_without_socket_or_reference_changes`; no TCP/TLS or live APIM evidence implied |
+
+All named tests are in [test_api.py](../../tests/test_api.py). M8 retrieval failures, M12 timing sensitivity and M15 volatile audit/identity limitations remain unchanged.

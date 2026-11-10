@@ -1,6 +1,14 @@
 # Security and governance baseline
 
-Status: **PLANNED service/cloud requirements**, with the narrow locally tested M11–M15 boundaries described below; no certification is claimed. Only synthetic data is allowed. Follow the [architecture](target-architecture.md); prove controls with negative tests before claiming security.
+Status: **PLANNED service/cloud requirements**, with the narrow locally tested M11–M16 boundaries described below; no certification is claimed. Only synthetic data is allowed. Follow the [architecture](target-architecture.md); prove controls with negative tests before claiming security.
+
+## Offline FastAPI boundary — M16
+
+[The API foundation](governed-fastapi-application.md) resolves ephemeral synthetic capabilities through a finite host registry, with deny-all defaults and explicit case scope. Intake/processing require host permission; human review additionally requires the actual canonical M15 session/assignment. Serialized roles, grant-shaped inputs, copied sessions, agents and MCP clients cannot acquire human authority. Real Entra identity and trusted deployment remain planned.
+
+The API independently replays M12 checkpoints and delegates review actions/duplicates to M15. No outcome, settlement, assignment or credential-issuance endpoint exists. UUID idempotency keys and revision preconditions protect writes; cancellation/failures retain bounded volatile tombstones. Partially prepared M15 entries are not published through API readers/actions. There is no durable transaction, restart guarantee, distributed CAS or operational audit retention.
+
+Exact local peer/Host/Origin checks, spoof/proxy rejection, actual-byte JSON limits, response buffering and in-flight bounds precede typed routes. Responses use request UUID correlation, no-store and nosniff; host-bound workflow correlation remains independent. Existing structured logging records only approved API event/status fields, excluding raw URLs/queries, headers, tokens, bodies and exception/validation details. Local readiness requires startup/services/synthetic authentication; Azure is explicitly unconfigured/unprobed. ASGI and static APIM tests establish no live identity or gateway enforcement.
 
 ## Offline human-review boundary — M15
 

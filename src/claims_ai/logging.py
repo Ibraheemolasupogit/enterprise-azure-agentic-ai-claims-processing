@@ -17,6 +17,7 @@ REDACTED = "[REDACTED]"
 
 
 class LogEvent(StrEnum):
+    API_REQUEST = "api_request"
     CASE_TRANSITION = "case_transition"
     DOCUMENT_VALIDATED = "document_validated"
     VALIDATION_FAILED = "validation_failed"

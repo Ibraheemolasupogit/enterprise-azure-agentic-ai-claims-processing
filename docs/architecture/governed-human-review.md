@@ -2,6 +2,8 @@
 
 Status: implemented offline synthetic recommendation review. There is no API, UI, real authentication, durable storage or claim-outcome commit. See [M15 evidence](../milestones/milestone-15.md).
 
+[M16](governed-fastapi-application.md) now exposes this module through a separate typed API adapter with host-verified synthetic capabilities. The M15 layer itself gains no endpoint or broader authority; its identity, invalidation and persistence limitations remain.
+
 ## Authority and data flow
 
 M12 deliberately ends with an ASSESSING case and an advisory task, not the operational M2 Assessment needed for AWAITING_REVIEW/CLOSED. M15 therefore introduces a separate recommendation-review state machine. Approval means a synthetic human accepts an advisory recommendation for later work; rejection means the recommendation is unsuitable. Neither creates a `ReviewerDecision`, populates a final outcome, closes a case, denies coverage or authorizes settlement/payment.

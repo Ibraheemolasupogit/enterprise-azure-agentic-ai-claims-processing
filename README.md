@@ -6,7 +6,7 @@ Greenfield Azure portfolio project for **fictional Northstar Insurance Group**, 
 
 **IMPLEMENTED AND LOCALLY TESTED:** the `claims_ai` Python foundation, Milestone 4 synthetic dataset tools and Milestone 5 offline extraction benchmark. The foundation supplies Pydantic v2 contracts, deterministic state-transition guards, local configuration, redacted JSON logging and typed protocols. The [motor-v1 corpus](data/synthetic/motor/README.md) supplies 12 development scenarios and source-linked labels; policies/coverage interpretations remain unapproved. The [benchmark](docs/quality/document-intelligence-benchmark.md) has typed interfaces and deterministic scoring; **all fixture extraction results are SIMULATED ground-truth echoes**, not OCR/vision/provider performance results.
 
-The end-to-end application and all live Azure/Mistral/GPT integrations, approved operational coverage rules, durable persistence/audit, authentication, UI, held-out model evaluation and OpenTelemetry remain **PLANNED**. No live service comparison or cloud deployment is claimed. Domain role checks require a trusted caller context; they do not authenticate a human or persist an approval. Dataset labels and simulated responses are not model-produced facts or approved case outcomes.
+The bounded offline workflow, human-review service and FastAPI adapter are implemented through M16. Production deployment, live Azure/Mistral/GPT integrations, approved operational coverage rules, durable persistence/audit, real authentication, UI, held-out model evaluation and OpenTelemetry remain **PLANNED**. No live service comparison or cloud deployment is claimed. Synthetic host capabilities and domain role checks do not authenticate a real human or durably persist an approval. Dataset labels and simulated responses are not model-produced facts or approved case outcomes.
 
 **Milestone 6 implements the [structured evidence boundary](docs/architecture/structured-evidence-processing.md):** deterministic field normalization, identity/hash/source validation, actionable holds/rejections, immutable local history, idempotent retries and guarded case admission. It preserves M4 data and M5 benchmark semantics. The CLI maps SIMULATED fixture proposals while keeping original documents quarantined; no scanner or operational ingestion is claimed.
 
@@ -26,7 +26,9 @@ The end-to-end application and all live Azure/Mistral/GPT integrations, approved
 
 **Milestone 14 implements the [local MCP HTTP boundary](docs/architecture/mcp-http-and-gateway.md)** and [APIM governance reference](docs/deployment/apim-governance-reference.md): real SDK Streamable HTTP tested through in-process ASGI, synthetic pinned-key gateway credentials plus independent host case grants, bounded requests and unchanged governed reads. XML policy safeguards and Bicep compilation are checked; Entra/APIM enforcement remains design only. **M14 is complete within its local foundation scope:** the supplied external loopback report records successful real TCP execution; shutdown evidence and its limits are documented. See [M14 evidence](docs/milestones/milestone-14.md). M8's four failures remain unresolved.
 
-**Milestone 15 implements [governed synthetic human review](docs/architecture/governed-human-review.md):** an assigned case/task queue and read-only detail view over semantically verified M12 checkpoints, explicit recommendation approval/rejection, evidence requests and supervisor escalation. Host-registered human sessions, producer/fact-author separation, exact snapshot/version guards, process-local CAS and immutable audit events protect the offline boundary. Approving a recommendation creates no insurance outcome or settlement authority. Missing recommendations cannot be approved; adverse/ambiguous/high-risk/conflicting work requires an assigned supervisor. See [M15 evidence](docs/milestones/milestone-15.md). Authentication, durable audit, M16 API and M17 UI remain planned; M12's timing-dependent retry limitation is preserved.
+**Milestone 15 implements [governed synthetic human review](docs/architecture/governed-human-review.md):** an assigned case/task queue and read-only detail view over semantically verified M12 checkpoints, explicit recommendation approval/rejection, evidence requests and supervisor escalation. Host-registered human sessions, producer/fact-author separation, exact snapshot/version guards, process-local CAS and immutable audit events protect the offline boundary. Approving a recommendation creates no insurance outcome or settlement authority. Missing recommendations cannot be approved; adverse/ambiguous/high-risk/conflicting work requires an assigned supervisor. See [M15 evidence](docs/milestones/milestone-15.md). Real authentication, durable audit and M17 UI remain planned; the M16 adapter is described below. M12's timing-dependent retry limitation is preserved.
+
+**Milestone 16 implements the [offline FastAPI application](docs/architecture/governed-fastapi-application.md):** registered-bundle intake, existing M12 processing, status/advisory reads and assigned M15 review endpoints. Typed contracts, ephemeral synthetic host capabilities, exact case scope, idempotency/revision preconditions, bounded bodies/responses/concurrency and redacted correlated errors protect the adapter. Local readiness is separate from unconfigured Azure dependencies. Genuine TestClient/OpenAPI evidence establishes ASGI execution; no TCP hosting, real Entra, arbitrary uploads, durable outcome commit or M17 UI is claimed. See [M16 evidence](docs/milestones/milestone-16.md) and [dependency provenance](docs/dependencies/fastapi.md).
 
 **Milestone 3 documentation is complete:** the business process, responsibilities, requirements, traceability, risk register and authority ADR refine the baseline. No runtime files changed. The 115 passing foundation tests and package/typing results remain historical Milestone 2 evidence; they were not rerun or promoted into business-performance results by this documentation milestone.
 
@@ -89,14 +91,16 @@ Only fictional policies, people, identifiers, documents and generated/non-identi
 | [Milestone 14 record](docs/milestones/milestone-14.md) | HTTP protocol/security tests, real TCP report and static APIM reference |
 | [Governed human review](docs/architecture/governed-human-review.md) | Synthetic assignments, advisory-only actions, exact snapshot binding and immutable local audit |
 | [Milestone 15 record](docs/milestones/milestone-15.md) | Human-review security, concurrency, packaging and reproduction evidence |
+| [FastAPI application](docs/architecture/governed-fastapi-application.md) | Versioned endpoints, host scope, idempotency and HTTP safety |
+| [Milestone 16 record](docs/milestones/milestone-16.md) | API/OpenAPI security, packaging and production limitations |
 
 ## Local Python foundation
 
-Python **3.12** is the initial supported minor version (`>=3.12,<3.13`); broader support requires testing. Base runtime dependencies are Pydantic v2 and pydantic-settings; the optional `agents` extra adds the pinned framework core and msgspec. The `mcp` extra includes those plus the genuine MCP SDK and the framework's required tenacity dependency. No live provider extra is included. There is no API server or service entry point yet.
+Python **3.12** is the initial supported minor version (`>=3.12,<3.13`); broader support requires testing. Base runtime dependencies are Pydantic v2 and pydantic-settings; the optional `agents` extra adds the pinned framework core and msgspec. The `mcp` extra includes those plus the genuine MCP SDK and the framework's required tenacity dependency. The optional `api` extra adds minimal pinned FastAPI support. No live provider extra is included. `claims_ai.api.app.create_app` is an offline ASGI factory with deny-all defaults; hosting and real authentication remain future work.
 
 ```sh
 python3.12 -m venv .venv
-.venv/bin/python -m pip install -c requirements/m13-constraints.txt '.[dev,mcp]'
+.venv/bin/python -m pip install -c requirements/m16-constraints.txt '.[dev,mcp,api]'
 make check
 make package
 ```
@@ -206,4 +210,13 @@ make review-check
 
 Six cases cover recommendation approval, rejection, supervisor escalation/handling, evidence request, stale evidence and unauthorized access. Existing M12 simulated advisory preparation runs once; review admission/actions make no model calls. Storage and synthetic identities are explicitly local and non-durable. Evidence requests reuse M2; recommendation actions never close or settle a claim.
 
-Git setup and all commits/pushes remain manual. **Milestones 1–15 are delivered within their recorded local/reference scopes.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) records delivered capabilities and planned later work. M16 API and M17 UI have not started.
+Run the genuine offline API/OpenAPI demonstration with two new output filenames:
+
+```sh
+PYTHONPATH=src .venv/bin/python -m claims_ai.api --output outputs/api/offline-v1.json --openapi-output outputs/api/openapi-v1.json
+make api-check
+```
+
+The host explicitly registers original synthetic bundles and human assignments. Clients cannot publish policies/grants, select reviewers, upload arbitrary documents or finalize claims. Failed or cancelled processing retains a volatile failure receipt instead of restarting uncertain work. M8's four failures, M12 timing sensitivity and M15 persistence limitations remain.
+
+Git setup and all commits/pushes remain manual. **Milestones 1–16 are delivered within their recorded local/reference scopes.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) records delivered capabilities and planned later work. M17 UI has not started.
