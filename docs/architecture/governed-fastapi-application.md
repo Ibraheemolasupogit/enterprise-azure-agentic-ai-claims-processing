@@ -1,6 +1,6 @@
 # Governed FastAPI application — M16
 
-Status: implemented offline ASGI application and genuine FastAPI TestClient integration. No socket hosting, Entra authentication, Azure dependency readiness or operational claim outcome is established. See [M16 evidence](../milestones/milestone-16.md) and [dependency provenance](../dependencies/fastapi.md).
+Status: implemented offline ASGI application and genuine FastAPI TestClient integration. No socket hosting, Entra authentication, Azure dependency readiness or operational claim outcome is established by M16. [M17](governed-reviewer-ui.md) separately supplies an offline browser presentation over these unchanged contracts. See [M16 evidence](../milestones/milestone-16.md) and [dependency provenance](../dependencies/fastapi.md).
 
 ## Existing authority behind a typed adapter
 
@@ -49,7 +49,7 @@ Intake/process receipts are bounded and scoped to canonical principal, operation
 
 A review entry is exposed only after M15 admission and every host assignment succeeds. If preparation fails partway, the M15 memory journal may retain an orphan audit entry, but API queue/detail/action routes cannot expose it. This is conservative publication control, not a cross-store durable transaction or rollback guarantee. M15 remains the owner of review CAS/audit. Host changes outside this adapter still require M15 invalidation; the API status is its last local projection, not a live shared-store subscription.
 
-All records, receipt tombstones, sessions and audit heads disappear on process exit. Multiple worker processes, cross-event-loop sharing, durable denial/audit retention, outbox/recovery, real identity, trusted ingress/TLS, file scanning, arbitrary uploads and operational outcomes remain planned. M17 UI is not implemented. M8's four lexical failures and M12's timing-dependent retry/reproduction limitation remain unresolved; neither timeouts nor expected history are weakened.
+All records, receipt tombstones, sessions and audit heads disappear on process exit. Multiple worker processes, cross-event-loop sharing, durable denial/audit retention, outbox/recovery, real identity, trusted ingress/TLS, file scanning, arbitrary uploads and operational outcomes remain planned. This API layer contains no UI; the separate M17 presentation consumes these contracts. M8's four lexical failures and M12's timing-dependent retry/reproduction limitation remain unresolved; neither timeouts nor expected history are weakened.
 
 ## Reproduction
 

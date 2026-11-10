@@ -1,6 +1,14 @@
 # Security and governance baseline
 
-Status: **PLANNED service/cloud requirements**, with the narrow locally tested M11–M16 boundaries described below; no certification is claimed. Only synthetic data is allowed. Follow the [architecture](target-architecture.md); prove controls with negative tests before claiming security.
+Status: **PLANNED service/cloud requirements**, with the narrow locally tested M11–M17 boundaries described below; no certification is claimed. Only synthetic data is allowed. Follow the [architecture](target-architecture.md); prove controls with negative tests before claiming security.
+
+## Offline reviewer browser boundary — M17
+
+[The reviewer UI](governed-reviewer-ui.md) consumes the unchanged API through actual TestClient ASGI requests. Host-delivered one-use codes select fixed synthetic capabilities; callers cannot edit role/case authorization or backend URLs. API tokens, full bindings and pending decisions remain server-side. Absolute bounded sessions, cookie rotation, HttpOnly/SameSite cookies, same-origin CSRF and loopback checks protect this local profile. Session possession is not proof of human identity; local HTTP cookies are not production TLS/secure-cookie evidence.
+
+Every action and exact retry delegates to M16/M15 with its original UUID/revision/snapshot. Supervisor, separation-of-duties, stale binding and forbidden-state checks remain authoritative there. The UI never silently rebinds a stale form. Typed event validation precedes success rendering; uncertain transport failures do not assert non-execution. Host revocation is rechecked at the API; UI logout/expiry only ends the browser session.
+
+Untrusted content is escaped as text; no Markdown, scripts, remote assets or artifact downloads execute. CSP permits only the fixed stylesheet and same-origin forms. Body/header/in-flight/response budgets, buffered safe failures, no-store/no-referrer and suppressed raw access/exception logging bound the presentation. Browser pixels, live TCP/TLS, durable audit/denial telemetry, real identity and WCAG/screen-reader certification remain unverified. Sanitized HTML evidence redacts nonces/tickets and disables submissions.
 
 ## Offline FastAPI boundary — M16
 

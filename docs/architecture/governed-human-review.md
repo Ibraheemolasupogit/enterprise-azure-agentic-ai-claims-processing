@@ -1,8 +1,8 @@
 # Governed human review — M15
 
-Status: implemented offline synthetic recommendation review. There is no API, UI, real authentication, durable storage or claim-outcome commit. See [M15 evidence](../milestones/milestone-15.md).
+Status: implemented offline synthetic recommendation review. This layer supplies no API, UI, real authentication, durable storage or claim-outcome commit. See [M15 evidence](../milestones/milestone-15.md).
 
-[M16](governed-fastapi-application.md) now exposes this module through a separate typed API adapter with host-verified synthetic capabilities. The M15 layer itself gains no endpoint or broader authority; its identity, invalidation and persistence limitations remain.
+[M16](governed-fastapi-application.md) now exposes this module through a separate typed API adapter with host-verified synthetic capabilities. [M17](governed-reviewer-ui.md) adds a separate offline presentation. The M15 layer itself gains no endpoint or broader authority; its identity, invalidation and persistence limitations remain.
 
 ## Authority and data flow
 
