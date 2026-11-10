@@ -2,6 +2,8 @@
 
 Status: implemented offline ASGI application and genuine FastAPI TestClient integration. No socket hosting, Entra authentication, Azure dependency readiness or operational claim outcome is established by M16. [M17](governed-reviewer-ui.md) separately supplies an offline browser presentation over these unchanged contracts. See [M16 evidence](../milestones/milestone-16.md) and [dependency provenance](../dependencies/fastapi.md).
 
+[M18](identity-and-security-foundation.md) adds absolute expiry to the default host capabilities and a separate signed-identity-to-opaque-capability adapter. Existing routes, Authorization length/body limits, request/response contracts and M15 authorizations are unchanged. Signed identity still requires independently supplied canonical host access.
+
 ## Existing authority behind a typed adapter
 
 The factory `claims_ai.api.app.create_app` supplies a version-one application with deny-all authentication and no cases/services by default. The CLI explicitly constructs a synthetic host configuration and uses FastAPI's actual TestClient; importing the package never starts a listener, loads fixtures or issues credentials.

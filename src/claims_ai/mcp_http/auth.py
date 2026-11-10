@@ -35,6 +35,11 @@ class SyntheticVerifier:
 
     def verify(self, credential: str) -> VerifiedGateway | None:
         try:
+            if len(credential) > 8192:
+                return None
+            header = jwt.get_unverified_header(credential)
+            if set(header) != {"alg", "typ"} or header != {"alg": "RS256", "typ": "JWT"}:
+                return None
             claims = jwt.decode(
                 credential,
                 self.public_key,
@@ -42,7 +47,8 @@ class SyntheticVerifier:
                 issuer=ISSUER,
                 audience=AUDIENCE,
                 options={
-                    "require": ["iss", "aud", "sub", "azp", "roles", "exp", "nbf", "iat", "jti"]
+                    "require": ["iss", "aud", "sub", "azp", "roles", "exp", "nbf", "iat", "jti"],
+                    "strict_aud": True,
                 },
             )
             subject, application = UUID(claims["sub"]), UUID(claims["azp"])
@@ -51,6 +57,8 @@ class SyntheticVerifier:
                 subject != self.expected_subject
                 or application != self.expected_application
                 or claims["roles"] != [ROLE]
+                or any(type(claims[name]) is not int for name in ("exp", "nbf", "iat"))
+                or claims["nbf"] != claims["iat"]
                 or claims["exp"] - claims["iat"] > 60
                 or claims["exp"] <= claims["iat"]
             ):

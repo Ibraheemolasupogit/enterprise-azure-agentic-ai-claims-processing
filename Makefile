@@ -1,6 +1,6 @@
 PYTHON ?= .venv/bin/python
 
-.PHONY: test lint format format-check typecheck check package dataset-check benchmark-check evidence-check knowledge-check retrieval-eval-check rules-check agents-check agent-tools-check workflow-check mcp-check mcp-http-check apim-static-check apim-compile review-check api-check ui-check
+.PHONY: test lint format format-check typecheck check package dataset-check benchmark-check evidence-check knowledge-check retrieval-eval-check rules-check agents-check agent-tools-check workflow-check mcp-check mcp-http-check apim-static-check apim-compile review-check api-check ui-check identity-check adversarial-check
 
 test:
 	$(PYTHON) -m pytest
@@ -54,6 +54,12 @@ api-check:
 
 ui-check:
 	$(PYTHON) -m pytest tests/test_reviewer_ui.py
+
+identity-check:
+	$(PYTHON) -m pytest tests/test_identity.py
+
+adversarial-check:
+	$(PYTHON) -m pytest tests/test_adversarial.py
 
 mcp-check:
 	$(PYTHON) -m pytest tests/test_mcp_server.py

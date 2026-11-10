@@ -29,11 +29,11 @@ class UiHost:
     codes: dict[str, str] = field(repr=False)
 
 
-def seed(client: TestClient, fixture: ApiFixture) -> None:
+def seed(client: TestClient, fixture: ApiFixture, *, host_token: str | None = None) -> None:
     for bundle in fixture.bundles:
         claim = bundle.request.intake.claim
         headers = {
-            "Authorization": "Bearer " + fixture.tokens["host"],
+            "Authorization": "Bearer " + (host_token or fixture.tokens["host"]),
             "Idempotency-Key": str(uuid5(NAMESPACE, bundle.bundle_id + "/intake")),
             "If-None-Match": "*",
         }
@@ -73,7 +73,10 @@ def demo_host(root: Path, *, port: int = 8767) -> Iterator[UiHost]:
     ) as transport:
         seed(transport, fixture)
         api = ApiClient(transport)
-        sessions = Sessions(clock=lambda: NOW + timedelta(seconds=10))
+        sessions = Sessions(
+            clock=lambda: NOW + timedelta(seconds=10),
+            credential_valid=lambda token: fixture.authenticator.verify(token) is not None,
+        )
         codes = {
             name: sessions.provision(Profile("Synthetic " + name, fixture.tokens[name]))
             for name in ("reviewer", "supervisor")

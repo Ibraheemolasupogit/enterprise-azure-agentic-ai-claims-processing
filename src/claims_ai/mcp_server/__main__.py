@@ -99,13 +99,15 @@ async def offline_report(root: Path) -> dict[str, object]:
                     elif name == "extra-authorization":
                         request["grant"] = {"permissions": ["settle_claim"]}
                     replies = [
-                        checked(await client.call_tool(tool.value, request)).model_dump(mode="json")
+                        checked(
+                            await client.call_tool(tool.value, request), value=value, tool=tool
+                        ).model_dump(mode="json")
                     ]
                     if name == "repeat-abuse":
                         replies.append(
-                            checked(await client.call_tool(tool.value, request)).model_dump(
-                                mode="json"
-                            )
+                            checked(
+                                await client.call_tool(tool.value, request), value=value, tool=tool
+                            ).model_dump(mode="json")
                         )
                     result = {"client": "mcp.Client", "replies": replies}
             cases.append({"scenario": name, **result})

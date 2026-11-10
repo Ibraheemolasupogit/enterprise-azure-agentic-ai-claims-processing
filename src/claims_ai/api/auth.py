@@ -1,13 +1,13 @@
 """Opaque ephemeral synthetic credentials; this module performs no Entra/OAuth/JWT work."""
 
-import re
-import secrets
+from collections.abc import Callable
 from dataclasses import dataclass
-from hashlib import sha256
+from time import monotonic
 from typing import Protocol
 
 from claims_ai.api.contracts import ApiScope
 from claims_ai.human_review.contracts import PrincipalKind, ReviewSession
+from claims_ai.identity.capabilities import Capabilities
 
 
 @dataclass(frozen=True, eq=False)
@@ -36,20 +36,14 @@ class DenyAll:
 class SyntheticAuthenticator:
     """Host-only issuance, finite hash registry and explicit revocation; never an API endpoint."""
 
-    def __init__(self) -> None:
-        self._tokens: dict[str, ApiAccess] = {}
+    def __init__(self, *, timer: Callable[[], float] = monotonic) -> None:
+        self._store: Capabilities[ApiAccess] = Capabilities(timer=timer)
 
     def issue(self, access: ApiAccess) -> str:
-        if len(self._tokens) >= 64:
-            raise ValueError("synthetic credential capacity exceeded")
-        token = secrets.token_urlsafe(32)
-        self._tokens[sha256(token.encode()).hexdigest()] = access
-        return token
+        return self._store.issue(access)
 
     def revoke(self, token: str) -> None:
-        self._tokens.pop(sha256(token.encode()).hexdigest(), None)
+        self._store.revoke(token)
 
     def verify(self, token: str) -> ApiAccess | None:
-        if re.fullmatch(r"[A-Za-z0-9_-]{43}", token) is None:
-            return None
-        return self._tokens.get(sha256(token.encode()).hexdigest())
+        return self._store.resolve(token)

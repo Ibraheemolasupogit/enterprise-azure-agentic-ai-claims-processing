@@ -2,6 +2,8 @@
 
 Status: implemented offline presentation over the existing M16 HTTP contracts. See [M17 evidence](../milestones/milestone-17.md), [M16 API](governed-fastapi-application.md), [M15 authority](governed-human-review.md) and [ADR-0001](decisions/0001-decision-authority.md). No insurance-outcome authority is added.
 
+[M18](identity-and-security-foundation.md) adds underlying credential checks in the demo host and host-only termination of cookies/profile sessions/codes. The existing screens, CSRF, HTTP/cookie profile and M15 authority stay intact. UI expiry/logout does not revoke an API identity; explicit API/token/principal revocation is separate. Identity or API expiry can end a UI session earlier than 15 minutes.
+
 ## Technology and service reuse
 
 The UI uses the already installed FastAPI 0.162.2, Starlette 1.10.0 and Uvicorn 0.54.0, with standard-library HTML escaping and server-rendered HTML/CSS. Streamlit is absent from the existing environment; adding its dependency and session/runtime stack is unnecessary for a queue, source detail and explicit form submissions. No new distribution, JavaScript framework, template engine, remote asset, browser storage or client-side model call is needed. The optional `ui` extra declares the existing minimal API dependencies plus the existing Uvicorn pin; [M17 constraints](../../requirements/m17-constraints.txt) retain the M16/M13/M10 closure.

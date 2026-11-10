@@ -1,0 +1,4 @@
+# Preserve the tested M13/M10 closure; minimal FastAPI additions only.
+-c m13-constraints.txt
+fastapi==0.162.2
+annotated-doc==0.0.5

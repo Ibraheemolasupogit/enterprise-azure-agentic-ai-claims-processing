@@ -49,8 +49,10 @@ class Sessions:
         *,
         timer: Callable[[], float] = monotonic,
         clock: Callable[[], datetime],
+        credential_valid: Callable[[str], bool] | None = None,
     ) -> None:
         self._timer, self._clock = timer, clock
+        self._credential_valid = credential_valid
         self._sessions: dict[str, Session] = {}
         self._codes: dict[str, tuple[Profile, float]] = {}
         self._attempts = 0
@@ -64,11 +66,36 @@ class Sessions:
     def provision(self, profile: Profile) -> str:
         with self._lock:
             self._purge()
+            self._check_profile(profile)
             if len(self._codes) >= 8:
                 raise UiError(429)
             code = secrets.token_urlsafe(32)
             self._codes[sha256(code.encode()).hexdigest()] = (profile, self._timer() + 300)
             return code
+
+    def _check_profile(self, profile: Profile) -> None:
+        if self._credential_valid is not None:
+            try:
+                valid = self._credential_valid(profile.api_token)
+            except Exception:
+                valid = False
+            if valid is not True:
+                self.revoke_profile(profile.api_token)
+                raise UiError(401)
+
+    def revoke(self, cookie: str) -> None:
+        """Host-only revocation; no browser or administrative endpoint is introduced."""
+        with self._lock:
+            self._sessions.pop(sha256(cookie.encode()).hexdigest(), None)
+
+    def revoke_profile(self, api_token: str) -> None:
+        with self._lock:
+            self._sessions = {
+                k: v
+                for k, v in self._sessions.items()
+                if v.profile is None or v.profile.api_token != api_token
+            }
+            self._codes = {k: v for k, v in self._codes.items() if v[0].api_token != api_token}
 
     def anonymous(self) -> tuple[str, Session]:
         with self._lock:
@@ -86,6 +113,8 @@ class Sessions:
             session = self._sessions.get(sha256(cookie.encode()).hexdigest())
             if session is None or human and session.profile is None:
                 raise UiError(401)
+            if session.profile is not None:
+                self._check_profile(session.profile)
             if csrf is not None and not secrets.compare_digest(session.csrf, csrf):
                 raise UiError(403)
             return session
@@ -99,6 +128,7 @@ class Sessions:
             enrollment = self._codes.pop(sha256(code.encode()).hexdigest(), None)
             if enrollment is None:
                 raise UiError(401)
+            self._check_profile(enrollment[0])
             self._sessions.pop(sha256(cookie.encode()).hexdigest())
             rotated, session = self.anonymous()
             session.profile, session.expires = enrollment[0], self._timer() + 900

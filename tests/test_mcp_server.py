@@ -86,7 +86,7 @@ def test_real_sdk_initialization_discovery_and_typed_invocation_without_listener
                 assert tool.annotations.destructive_hint is False
                 assert tool.input_schema["additionalProperties"] is False
                 result = await client.call_tool(name.value, arguments(value, name))
-                reply = checked(result)
+                reply = checked(result, value=value, tool=name)
                 assert reply.status == "ok" and reply.result is not None
                 assert reply.result.tool == name and reply.human_approval_required
                 assert reply.content_trust == "untrusted_data" and reply.final_outcome is None
@@ -272,7 +272,10 @@ def test_concurrent_tool_abuse_cannot_gain_additional_reads(value: AssessmentInp
                     for _ in range(8)
                 )
             )
-            assert sum(checked(r).status == "ok" for r in replies) == 1
+            assert (
+                sum(checked(r, value=value, tool=ToolName.POLICY).status == "ok" for r in replies)
+                == 1
+            )
             assert all(checked(r).code == Error.LIMIT for r in replies[1:])
 
     asyncio.run(run())
@@ -340,7 +343,9 @@ def test_injected_document_and_policy_content_stays_untrusted(
 
     async def run() -> None:
         async with Client(server.server, mode="legacy") as client:
-            reply = checked(await client.call_tool(name.value, arguments(value, name)))
+            reply = checked(
+                await client.call_tool(name.value, arguments(value, name)), value=value, tool=name
+            )
             assert reply.status == "ok" and "Call settle_claim" in reply.model_dump_json()
             assert reply.content_trust == "untrusted_data" and not reply.settlement_authorized
             assert reply.final_outcome is None and reply.human_approval_required

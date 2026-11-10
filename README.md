@@ -6,7 +6,7 @@ Greenfield Azure portfolio project for **fictional Northstar Insurance Group**, 
 
 **IMPLEMENTED AND LOCALLY TESTED:** the `claims_ai` Python foundation, Milestone 4 synthetic dataset tools and Milestone 5 offline extraction benchmark. The foundation supplies Pydantic v2 contracts, deterministic state-transition guards, local configuration, redacted JSON logging and typed protocols. The [motor-v1 corpus](data/synthetic/motor/README.md) supplies 12 development scenarios and source-linked labels; policies/coverage interpretations remain unapproved. The [benchmark](docs/quality/document-intelligence-benchmark.md) has typed interfaces and deterministic scoring; **all fixture extraction results are SIMULATED ground-truth echoes**, not OCR/vision/provider performance results.
 
-The bounded offline workflow, human-review service, FastAPI adapter and reviewer operations UI are implemented through M17. Production deployment, live Azure/Mistral/GPT integrations, approved operational coverage rules, durable persistence/audit, real authentication, production UI hosting, held-out model evaluation and OpenTelemetry remain **PLANNED**. No live service comparison or cloud deployment is claimed. Synthetic host capabilities and domain role checks do not authenticate a real human or durably persist an approval. Dataset labels and simulated responses are not model-produced facts or approved case outcomes.
+The bounded offline workflow, human-review service, FastAPI adapter and reviewer operations UI are implemented through M19, with synthetic identity/security and adversarial evaluation foundations. Production deployment, live Azure/Mistral/GPT integrations, approved operational coverage rules, durable persistence/audit, real authentication, production UI hosting, held-out model evaluation and OpenTelemetry remain **PLANNED**. No live service comparison or cloud deployment is claimed. Synthetic host capabilities and domain role checks do not authenticate a real human or durably persist an approval. Dataset labels and simulated responses are not model-produced facts or approved case outcomes.
 
 **Milestone 6 implements the [structured evidence boundary](docs/architecture/structured-evidence-processing.md):** deterministic field normalization, identity/hash/source validation, actionable holds/rejections, immutable local history, idempotent retries and guarded case admission. It preserves M4 data and M5 benchmark semantics. The CLI maps SIMULATED fixture proposals while keeping original documents quarantined; no scanner or operational ingestion is claimed.
 
@@ -31,6 +31,10 @@ The bounded offline workflow, human-review service, FastAPI adapter and reviewer
 **Milestone 16 implements the [offline FastAPI application](docs/architecture/governed-fastapi-application.md):** registered-bundle intake, existing M12 processing, status/advisory reads and assigned M15 review endpoints. Typed contracts, ephemeral synthetic host capabilities, exact case scope, idempotency/revision preconditions, bounded bodies/responses/concurrency and redacted correlated errors protect the adapter. Local readiness is separate from unconfigured Azure dependencies. Genuine TestClient/OpenAPI evidence establishes ASGI execution; no TCP hosting, real Entra, arbitrary uploads, durable outcome commit or M17 UI is claimed. See [M16 evidence](docs/milestones/milestone-16.md) and [dependency provenance](docs/dependencies/fastapi.md).
 
 **Milestone 17 implements the [reviewer operations UI](docs/architecture/governed-reviewer-ui.md):** assigned synthetic queues, source-linked detail, uncertainty and supervisor routing, explicit advisory actions and safe receipts/errors over the existing M16 endpoints. Server-rendered FastAPI/HTML/CSS reuses installed dependencies; no Streamlit, JavaScript or new distribution is needed. One-use host enrollment and bounded server-held sessions/tickets preserve API authority and exact review snapshots. See [M17 evidence](docs/milestones/milestone-17.md). HTML/protocol captures establish real UI/API ASGI execution; browser-pixel, TCP, real identity and production accessibility verification remain outstanding.
+
+**Milestone 18 implements the [identity/security foundation](docs/architecture/identity-and-security-foundation.md):** reusable offline verification/discovery interfaces, exact signed synthetic claims, bounded RSA key rotation/revocation and independent host binding into existing API/MCP authority. Default API capabilities now expire; UI sessions can recheck and revoke underlying access. Canonical M15 sessions, assignments and supervisor guards remain required. Real Entra is explicitly unconfigured; managed identity, Key Vault, private networking and secure production cookies remain target architecture. See [M18 evidence](docs/milestones/milestone-18.md) and [identity ADR](docs/architecture/decisions/0002-identity-verification-and-host-authority.md).
+
+**Milestone 19 implements the [AI threat model and adversarial harness](docs/architecture/ai-threat-model-and-adversarial-testing.md):** 88 authored synthetic cases exercise workflow, SDK/tools, MCP, API/UI, human-review and identity boundaries. The original report remains **79 PASS / 1 FAIL / 8 NOT_TESTED**. Authorized [F-001/F-002 remediation](docs/milestones/milestone-19-remediation.md) adds independent source-bound MCP consumption and working-directory-independent CLI output protection; the unchanged catalog now records **80 PASS / 0 FAIL / 8 NOT_TESTED**. Live-model semantic resilience and production controls remain untested; historical findings and reports are preserved.
 
 **Milestone 3 documentation is complete:** the business process, responsibilities, requirements, traceability, risk register and authority ADR refine the baseline. No runtime files changed. The 115 passing foundation tests and package/typing results remain historical Milestone 2 evidence; they were not rerun or promoted into business-performance results by this documentation milestone.
 
@@ -97,14 +101,18 @@ Only fictional policies, people, identifiers, documents and generated/non-identi
 | [Milestone 16 record](docs/milestones/milestone-16.md) | API/OpenAPI security, packaging and production limitations |
 | [Reviewer operations UI](docs/architecture/governed-reviewer-ui.md) | Host enrollment, assigned cases, source detail and explicit recommendation actions |
 | [Milestone 17 record](docs/milestones/milestone-17.md) | UI/API security, reproducible HTML/protocol and package evidence |
+| [Identity/security foundation](docs/architecture/identity-and-security-foundation.md) | Synthetic verification/rotation/revocation and separate Entra/workload target architecture |
+| [Milestone 18 record](docs/milestones/milestone-18.md) | Identity negative tests, unchanged authority, offline protocol/package evidence and production gaps |
+| [AI threat model / adversarial evaluation](docs/architecture/ai-threat-model-and-adversarial-testing.md) | Attack paths, runtime evidence, open MCP finding and untested production scopes |
+| [Milestone 19 record](docs/milestones/milestone-19.md) | Evaluation counts, regression/package checks, preserved evidence and acceptance limits |
 
 ## Local Python foundation
 
-Python **3.12** is the initial supported minor version (`>=3.12,<3.13`); broader support requires testing. Base runtime dependencies are Pydantic v2 and pydantic-settings; the optional `agents` extra adds the pinned framework core and msgspec. The `mcp` extra includes those plus the genuine MCP SDK and the framework's required tenacity dependency. The optional `api` extra adds minimal pinned FastAPI support; `ui` reuses it and the existing pinned Uvicorn server. No live provider extra is included. `claims_ai.api.app.create_app` is an offline ASGI factory with deny-all defaults; production hosting and real authentication remain future work.
+Python **3.12** is the initial supported minor version (`>=3.12,<3.13`); broader support requires testing. Base runtime dependencies are Pydantic v2 and pydantic-settings; the optional `agents` extra adds the pinned framework core and msgspec. The `mcp` extra includes those plus the genuine MCP SDK and the framework's required tenacity dependency. The optional `api` extra adds minimal pinned FastAPI support; `ui` reuses it and the existing pinned Uvicorn server. The optional `identity` extra reuses the already pinned PyJWT/cryptography packages for signed local verification. No live provider extra is included. `claims_ai.api.app.create_app` is an offline ASGI factory with deny-all defaults; production hosting and real authentication remain future work.
 
 ```sh
 python3.12 -m venv .venv
-.venv/bin/python -m pip install -c requirements/m17-constraints.txt '.[dev,mcp,ui]'
+.venv/bin/python -m pip install -c requirements/m19-constraints.txt '.[dev,mcp,ui,identity]'
 make check
 make package
 ```
@@ -238,4 +246,22 @@ PYTHONPATH=src .venv/bin/python -m claims_ai.reviewer_ui demo --output outputs/u
 
 Use new paths outside reference data. The report exercises all four actions, replay, stale review revisions, missing recommendations, supervisor enforcement and case isolation through actual UI/API requests. Four sanitized HTML captures have redacted nonces/tickets and disabled submission buttons; they are offline evidence, not live authenticated pages or screenshots. See the architecture guide for volatile storage, fixed synthetic audit time and browser/accessibility limitations.
 
-Git setup and all commits/pushes remain manual. **Milestones 1–17 are delivered within their recorded local/reference scopes.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) records delivered capabilities and planned later work. M18 has not started.
+Run the offline identity/security demonstration:
+
+```sh
+make identity-check
+PYTHONPATH=src .venv/bin/python -m claims_ai.identity --output outputs/identity/new-report.json
+```
+
+Use a new output outside reference data. The report exercises real API/UI requests and genuine MCP SDK reads with a separate synthetic machine audience. Verification, host/session binding, key overlap/retirement, revocation and expiry remain local; no signing key, JWT, cookie or capability is recorded. The default opaque API profile has a 15-minute absolute lifetime; signed capabilities depend additionally on their shorter token/key validity. UI sessions may therefore end earlier. Live Entra, TLS, discovery, managed identity, Key Vault and APIM enforcement are not enabled.
+
+Run the offline adversarial evaluation:
+
+```sh
+make adversarial-check
+PYTHONPATH=src .venv/bin/python -m claims_ai.adversarial --output outputs/adversarial/new-report.json
+```
+
+Use a new output path. After [targeted remediation](docs/milestones/milestone-19-remediation.md), the corrected catalog exits **0** with **80 PASS / 0 FAIL / 8 NOT_TESTED**; genuine failed criteria still produce exit **2**. Eight live/production scopes remain NOT_TESTED. SDK/output guards are real, with simulated model behavior; in-process HTTP is not TCP or browser evidence. Original M19 reports, fixtures, M4–M9 data and M8 failures are preserved.
+
+Git setup and all commits/pushes remain manual. **Milestones 1–19 are delivered within their recorded local/reference scopes.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) records delivered capabilities and planned later work. M20 has not started. The former M18 RAG/rules proposal is deferred; the approved M18 scope is identity/security, and the approved M19 scope is adversarial evaluation rather than additional agent implementation.

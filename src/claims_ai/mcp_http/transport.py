@@ -281,7 +281,7 @@ async def protocol_roundtrip(
                 result = await client.call_tool(name.value, arguments(value, name))
                 if result.is_error:
                     raise ValueError("HTTP tool invocation failed")
-                reply = checked(result)
+                reply = checked(result, value=value, tool=name)
                 if reply.status != "ok" or reply.result is None or reply.result.tool != name:
                     raise ValueError("unexpected HTTP tool result")
                 replies.append(reply.model_dump(mode="json"))

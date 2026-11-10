@@ -1,0 +1,2 @@
+# Offline identity reuses the existing PyJWT/cryptography pins; zero new distributions.
+-c m17-constraints.txt

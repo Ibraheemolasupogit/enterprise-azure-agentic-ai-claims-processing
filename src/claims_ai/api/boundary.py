@@ -129,7 +129,8 @@ class ApiBoundary:
                 identity = None
                 if authorization.startswith(b"Bearer ") and len(authorization) <= 256:
                     try:
-                        identity = self.authenticator.verify(authorization[7:].decode("ascii"))
+                        with correlation_scope(correlation_id):
+                            identity = self.authenticator.verify(authorization[7:].decode("ascii"))
                     except Exception:
                         identity = None
                 if identity is None:

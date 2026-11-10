@@ -1,6 +1,22 @@
 # Security and governance baseline
 
-Status: **PLANNED service/cloud requirements**, with the narrow locally tested M11–M17 boundaries described below; no certification is claimed. Only synthetic data is allowed. Follow the [architecture](target-architecture.md); prove controls with negative tests before claiming security.
+Status: **PLANNED service/cloud requirements**, with the narrow locally tested M11–M19 boundaries described below; no certification is claimed. Only synthetic data is allowed. Follow the [architecture](target-architecture.md); prove controls with negative tests before claiming security.
+
+## AI threat model and adversarial evaluation — M19
+
+[The system-specific threat model](ai-threat-model-and-adversarial-testing.md) maps attacks to source/provenance, SDK/tool, MCP, API/UI, identity and human-review controls. The original M19 result remains 79 PASS / 1 FAIL / 8 NOT_TESTED. The explicitly authorized [targeted remediation](../milestones/milestone-19-remediation.md) now produces **80 PASS / 0 FAIL / 8 NOT_TESTED** over the unchanged catalog. Model behavior remains scripted; privileged injected faults and unavailable production evidence are labeled.
+
+F-001/R-008 is corrected at the consumer boundary: every successful MCP read requires the independently loaded host snapshot and requested tool. Existing source/policy/evidence/rule/retrieval replay rebuilds the expected packet and full typed content. Both representations, expected tool, snapshot and all source-derived data must agree. Rehashed/copy-hash forgeries, stale/foreign context and absent or corrupt local artifacts fail closed. Safe data-free errors do not grant authority. Native, framework and HTTP consumers use this check; current M12 still uses local M11 services.
+
+F-002/R-009 is corrected in the legacy rules CLI: exclusions derive from the explicit specification path and its conventional data ancestry, including lexical/canonical symlink paths. Supply repeated absolute `--protected-data-root` arguments for separate/nonstandard trusted trees. Roots must be existing directories; canonical overlap/traversal/alias checks precede evaluation and writing, and exclusive creation preserves existing evidence. A host must configure all independent reference roots. This is not a defense against malicious concurrent filesystem replacement or host compromise. Original reports, data and the historical findings remain preserved.
+
+Synthetic identity, finite memory/audit and network/provider/browser/resource-isolation gaps remain. The offline guard is limited Python socket connect/bind instrumentation; a guard rejection makes a case untested/incomplete, not protected. The [risk register](../business/risk-register.md) keeps all risks open. M8 failures and M12 timing sensitivity remain unchanged.
+
+## Identity and security foundation — M18
+
+[Identity architecture/threat assumptions](identity-and-security-foundation.md) separate signed synthetic verification from independent host authorization. Exact issuer/audience/tenant/application/subject/role, type/lifetime/scope and local key checks precede host binding. Unknown/weak/retired keys, duplicate JWT members, algorithm/key-URL confusion and unavailable/unconfigured providers fail closed. Default API capabilities now expire; signed capability use reverifies identity, while M15 canonical session/assignment and all existing supervisor/snapshot guards remain authoritative. No JWT or header constructs a review session.
+
+Rotation/revocation stores are finite and process-local; exhaustion closes verification. UI credential validation and host-only current-session termination strengthen existing cookie/CSRF controls. Verification audit emits only status and request correlation, with no tokens/claims/raw exceptions. Existing loopback HTTP/cookies remain the runtime profile; secure-cookie/TLS constraints are target-only. Live Entra discovery, conditional access, managed identity, Key Vault, private networking, durable revocation/audit and APIM enforcement remain unimplemented. See [ADR-0002](decisions/0002-identity-verification-and-host-authority.md); the local host/OS remains trusted.
 
 ## Offline reviewer browser boundary — M17
 
