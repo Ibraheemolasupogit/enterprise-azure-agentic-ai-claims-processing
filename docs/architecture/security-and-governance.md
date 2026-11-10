@@ -1,6 +1,6 @@
 # Security and governance baseline
 
-Status: **PLANNED service/cloud requirements**, with the narrow locally tested M11–M19 boundaries described below; no certification is claimed. Only synthetic data is allowed. Follow the [architecture](target-architecture.md); prove controls with negative tests before claiming security.
+Status: **PLANNED service/cloud requirements**, with the narrow locally tested M11–M20 boundaries described below; no certification is claimed. Only synthetic data is allowed. Follow the [architecture](target-architecture.md); prove controls with negative tests before claiming security.
 
 ## AI threat model and adversarial evaluation — M19
 
@@ -93,3 +93,11 @@ Provisional retention: evidence/case content 30 days in dev/test; minimized audi
 ## Governance exit requirements
 
 Before cloud release: approve a threat model, data-flow inventory, role matrix, data-residency decision, retention/deletion procedure, model/tool inventory and incident runbook. Exercise prompt injection, access bypass, stale approvals, malicious uploads and exfiltration attempts. Record dependency/model limitations and preview-feature exceptions; do not claim regulatory compliance or production readiness from this portfolio baseline.
+
+## Durable synthetic outcome boundary — M20
+
+[The local outcome service](governed-durable-outcomes.md) requires independent explicit source-bound approval and an opaque host publication permit. Supplied synthetic Assessment outcomes are not inferred from M9 rules or M15 recommendation approval. No real insurance or financial authority exists. Each action re-verifies the existing capability, case scope, canonical human session, durable assignment, separation of duties and exact snapshot/revision. M18 signed revocation is rechecked even before duplicate receipts. No credential/session is restored from SQLite or a claimed stored role.
+
+Private SQLite storage atomically commits case/assessment/decision/assignment/audit/receipt/outbox changes. Schema/runtime checks, independent source equality, full semantic replay, immutable-table triggers and optional external head anchors reject tested corruption/rollback; they do not establish WORM retention or host-compromise protection. Original evidence bytes are preserved explicitly. Recovery requires matching code/runtime and independent approval/principal context; no automatic migration/repair or silent authority fallback exists. Normal SQLite rollback of an interrupted uncommitted transaction is distinct from accepting corrupt committed projections.
+
+Correction clears assessment authority and admitted evidence, increments revisions and requires actual source validation before separate publication and reassignment. A supervisor alone can reopen a closed case. The bounded local outbox sends nothing externally: its sink is a transactional metadata receipt. Real process SIGKILL and independent writer tests prove local boundaries only; power failure, PostgreSQL/cloud durability, shared real identity/revocation and distributed delivery remain unproved. M8 failures, M12 timing sensitivity and all eight M19 NOT_TESTED production scopes remain unchanged. M16/M17 still expose advisory services, not M20 outcome endpoints.

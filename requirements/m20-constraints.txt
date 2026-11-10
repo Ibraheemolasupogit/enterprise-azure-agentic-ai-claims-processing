@@ -1,0 +1,2 @@
+# Local SQLite is standard library; retain the existing dependency closure unchanged.
+-c m19-constraints.txt

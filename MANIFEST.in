@@ -4,6 +4,7 @@ include requirements/m16-constraints.txt requirements/m16-wheel-manifest.json
 include requirements/m17-constraints.txt
 include requirements/m18-constraints.txt
 include requirements/m19-constraints.txt
+include requirements/m20-constraints.txt
 recursive-include tests *.py
 recursive-include docs *.md
 recursive-include data/synthetic/motor *.md *.json *.pdf *.png

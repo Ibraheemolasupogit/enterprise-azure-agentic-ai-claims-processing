@@ -1,6 +1,6 @@
 # Requirements traceability
 
-Status: **Requirements baselined in M3; dataset, evidence, policy-knowledge, evaluation, provisional-rule, bounded-framework, governed-tool, workflow and local-MCP mappings added in M4–M19**. Every row maps requirements to business parents, actual symbols, planned capability and verification. **PARTIAL** means a narrow contract/local guard is tested, not that the end-to-end requirement is satisfied. **PLANNED** means no enforcing adapter/workflow exists. Original foundation results remain in [M2](../milestones/milestone-2.md#verification); current [M13 checks](../milestones/milestone-13.md#verification) rerun prior tests and add local evidence/retrieval/evaluation/provisional-rule/framework checks, not live-service evidence.
+Status: **Requirements baselined in M3; dataset, evidence, policy-knowledge, evaluation, provisional-rule, bounded-framework, governed-tool, workflow and local-MCP mappings added in M4–M20**. Every row maps requirements to business parents, actual symbols, planned capability and verification. **PARTIAL** means a narrow contract/local guard is tested, not that the end-to-end requirement is satisfied. **PLANNED** means no enforcing adapter/workflow exists. Original foundation results remain in [M2](../milestones/milestone-2.md#verification); current [M13 checks](../milestones/milestone-13.md#verification) rerun prior tests and add local evidence/retrieval/evaluation/provisional-rule/framework checks, not live-service evidence.
 
 Milestone 4 adds the [dataset evidence mapping](#milestone-4-dataset-evidence) below. The original requirement IDs/acceptance criteria and future VT specifications remain unchanged; dataset validation alone does not satisfy their planned runtime behavior. The 115-test count in historical rows is the M2 baseline, not the current expanded suite.
 
@@ -36,6 +36,8 @@ Definitions: [business requirements](project-charter.md#business-requirements), 
 ## Planned verification specifications
 
 These specifications inherit the corresponding requirement's acceptance criterion. Implementations must attach actual test paths, manifests, environment and results before changing status; never rename a planned VT into historical evidence without a run.
+
+The initial foundation mappings are supplemented by the milestone-specific sections below, including M18 synthetic identity and M20 local SQLite durability. Planned production controls remain unproved.
 
 | ID | Requirement | Required synthetic scenario/evidence |
 | --- | --- | --- |
@@ -304,3 +306,17 @@ Ancillary evidence-integrity finding **F-002/R-009** came from launching the exi
 | FR-013; NFR-001/NFR-004; F-002/R-009 | Specification/data-root exclusions use host-selected paths; canonical traversal/alias/overlap checks, explicit separate roots and exclusive-create | `test_real_cli_outside_repository_rejects_protected_aliases_without_writes`, `test_real_cli_outside_repository_accepts_new_nonprotected_output`, `test_invalid_explicit_data_roots_fail_closed` |
 
 Tests are in [test_m19_remediation.py](../../tests/test_m19_remediation.py). Existing [adversarial tests](../../tests/test_adversarial.py) now assert corrected runtime observations while retaining a genuine failed-criterion/CLI exit-2 regression. No live-model, identity-provider, cloud, hostile-OS or durable-storage control is promoted by these local corrections.
+
+## M20 durable synthetic outcomes and recovery
+
+[M20 evidence](../milestones/milestone-20.md) and [architecture](../architecture/governed-durable-outcomes.md) implement a separate bounded local SQLite outcome service. The generic async CaseRepository port is not exposed as an unguarded save API. M15/M16/M17 advisory contracts remain unchanged; no real insurance authority or automatic M9 promotion is implied.
+
+| Requirements / verification | Implemented local evidence | Named tests and remaining boundary |
+| --- | --- | --- |
+| FR-006/FR-010; VT-006/VT-010 | Independent explicitly supplied synthetic assessment approval, publication permit, exact source/policy/version and human decision | `test_publication_requires_independent_explicit_approval`, `test_approved_inputs_are_not_unverified_or_provisional_promotions`, `test_explicit_human_decisions_preserve_assessment_and_durable_receipts`; no approved operational policy engine |
+| FR-011; NFR-002; VT-011/VT-017 | Canonical sessions/assignments, source/approver separation, fresh scope/expiry/revocation, supervisor override/reopening | `test_only_canonical_assigned_humans_can_decide`, `test_fresh_identity_and_case_scope_before_duplicate_lookup`, `test_separation_of_duties_including_publication_approver`, `test_adverse_and_ambiguous_assessments_require_supervisor`, `test_existing_m18_signed_verification_is_rechecked_before_durable_duplicate`; synthetic host identity only |
+| FR-012; VT-009/VT-012 | Explicit correction revisions, immutable old sources, byte-bearing revalidation, separate publication and reassignment | `test_correction_reopening_and_actual_revalidation_are_separate`, `test_changed_document_bytes_require_fresh_m12_verification_before_publication`, `test_supervisor_reopening_and_external_rollback_anchor`; same-runtime scope |
+| FR-013/NFR-004; VT-013/VT-019 | Atomic SQL case/audit/receipt/outbox, real SIGKILL and independent connection/process CAS, idempotent local sink | `test_real_sigkill_before_and_after_business_commit`, `test_real_sigkill_outbox_replay_has_one_local_effect`, `test_independent_connections_and_processes_cannot_both_win`, `test_retry_budget_is_not_reset_by_fresh_host_and_connections`; not cloud, external delivery or hardware-loss proof |
+| NFR-001/NFR-003/NFR-009 | Private bounded store, exact schema/runtime, source/semantic replay and append-only guards; no silent repair or restored role authority | `test_corrupted_projections_and_runtime_are_rejected_without_repair`, `test_schema_and_file_compatibility_fail_closed`, `test_append_only_tables_block_update_and_delete`, `test_coherently_rehashed_root_forgery_is_rejected_against_independent_approval`, `test_bundle_roundtrip_preserves_original_bytes_and_never_credentials`; not signed/WORM audit or host-compromise protection |
+
+Tests are in [test_outcomes.py](../../tests/test_outcomes.py). No M8 failure, M12 timing limit, M19 historical report or NOT_TESTED production scope is erased or promoted. New package source changes future workflow fingerprints; old artifacts retain their original runtime context.
