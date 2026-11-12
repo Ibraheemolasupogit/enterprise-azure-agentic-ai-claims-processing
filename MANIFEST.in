@@ -12,3 +12,5 @@ recursive-include data/evaluation/policy-retrieval *.md *.json
 recursive-include data/rules/motor *.md *.json
 recursive-include data/security/adversarial *.md *.json
 recursive-include infra/apim *.bicep *.bicepparam *.xml *.md
+include requirements/m21-constraints.txt
+recursive-include data/security/identity *.md *.json

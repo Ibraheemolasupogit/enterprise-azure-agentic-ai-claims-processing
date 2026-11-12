@@ -320,3 +320,17 @@ Tests are in [test_m19_remediation.py](../../tests/test_m19_remediation.py). Exi
 | NFR-001/NFR-003/NFR-009 | Private bounded store, exact schema/runtime, source/semantic replay and append-only guards; no silent repair or restored role authority | `test_corrupted_projections_and_runtime_are_rejected_without_repair`, `test_schema_and_file_compatibility_fail_closed`, `test_append_only_tables_block_update_and_delete`, `test_coherently_rehashed_root_forgery_is_rejected_against_independent_approval`, `test_bundle_roundtrip_preserves_original_bytes_and_never_credentials`; not signed/WORM audit or host-compromise protection |
 
 Tests are in [test_outcomes.py](../../tests/test_outcomes.py). No M8 failure, M12 timing limit, M19 historical report or NOT_TESTED production scope is erased or promoted. New package source changes future workflow fingerprints; old artifacts retain their original runtime context.
+
+## M21 identity, least privilege and durable grant lifecycle
+
+[Architecture](../architecture/security-and-identity-hardening.md), [ADR-0004](../architecture/decisions/0004-offline-identity-and-durable-grant-lifecycle.md), [milestone evidence](../milestones/milestone-21.md) and [focused tests](../../tests/test_security_hardening.py) add offline evidence only. They do not fulfill future live Entra/APIM/private-ingress verification specifications or change original M19 NOT_TESTED classifications.
+
+| Requirement | Implemented boundary | Named runtime evidence / remaining scope |
+| --- | --- | --- |
+| FR-010 / NFR-002 | Isolated profiles; no fixture-to-human authority conversion; canonical sessions/assignments/permits retained | `test_fixture_success_is_not_synthetic_access_authority`, `test_existing_outcome_authority_survives_lifecycle_composition`; real human identity remains unconfigured |
+| FR-011 / NFR-009 | Durable local authenticated lifecycle chain; disabled current authority distinct from independent historical principal evidence | `test_revoked_outcome_duplicate_and_disabled_actor_history`, `test_append_only_capacity_and_concurrent_revocation`; no WORM/host-compromise proof |
+| FR-013 / NFR-004 | Fixed-context fresh-process revocation/expiry/corruption/rollback denial; no fallback/recovery credentials | `test_actual_restart_preserves_trusted_key_and_independent_revocation`, `test_unanchored_reopen_and_create_over_existing_fail_closed`; current independent anchor custody and shared propagation remain requirements |
+| NFR-002 | Exact signed roles/tenant/issuer/audience/keys/flow, bounded grant matrix and fail-closed target deployment configuration | `test_correctly_signed_wrong_claims_fail_closed`, `test_permission_matrix_denies_other_identity_authority`, `test_unsafe_deployment_combinations_fail`; no live provider or network enforcement |
+| FR-009 / NFR-002 | Existing UI/API, canonical profile and MCP gateway check current grant lifecycle | `test_real_api_ui_revocation_and_duplicate_receipts`, `test_gateway_lifecycle_rechecked_on_genuine_sdk_requests`; ASGI evidence only, no new TCP/browser claim |
+| NFR-009 | Allowlisted status-only security events; safe fixed errors | `test_verification_logs_are_redacted`, `test_failing_safe_logging_denies_fixture_verification`; acknowledged retained denial telemetry remains future work |
+| NFR-004 / NFR-009 | Separate M19-compatible supplemental evidence and unchanged historical catalog | `test_supplemental_attack_catalog_and_runtime_evidence`; preserve eight NOT_TESTED, M8 failures and M12 timing limitation |

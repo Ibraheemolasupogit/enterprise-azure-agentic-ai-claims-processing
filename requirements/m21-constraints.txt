@@ -1,0 +1,2 @@
+# No new dependencies. SQLite/HMAC use the Python standard library.
+-c m20-constraints.txt

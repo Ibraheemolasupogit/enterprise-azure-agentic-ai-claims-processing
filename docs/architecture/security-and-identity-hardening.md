@@ -1,0 +1,52 @@
+# Security and identity hardening — M21
+
+Implemented as an **opt-in offline host composition**, not an enabled Entra/deployment profile. Existing M14–M20 application, lifecycle and human-authority contracts remain intact. Hosts explicitly configure the new gates; old demonstrations retain their historical synthetic profiles and do not gain global durable revocation automatically. [ADR-0004](decisions/0004-offline-identity-and-durable-grant-lifecycle.md), [M21 evidence](../milestones/milestone-21.md).
+
+## Profiles and least privilege
+
+`SyntheticProviderProfile` versions the unchanged M18 verification policy and hashes its host-loaded public verification key. `ProviderProfile` is a separate `entra_offline_fixture_v1` contract with a fixed simulated label and `live_enabled=false`. Its verifier intentionally does **not** implement `IdentityVerifier`; `FixtureIdentity` provides no Principal or session conversion. Even a valid Entra-shaped fixture cannot enter `VerifiedCapabilities` or `GatewayIdentityAdapter`. `UnconfiguredEntraVerifier` still denies everything. No discovery, token acquisition, network call, tenant/application registration or fallback is implemented.
+
+Pinned profiles require exact tenant-specific issuer, tenant/object/client UUIDs, resource audience, singleton exact role, v2 marker, strict RS256 JWT/kid headers, host-loaded RSA public keys >=2048 bits, integer bounded dates, exact unique JSON members and canonical jti. Human profiles require explicit user marker and exact delegated fixture scope; workloads require app marker and exclude delegated scope. This is a deliberately constrained test profile, not a declaration that these fields alone prove a real Entra human flow. Future integration must validate selected provider/token-flow semantics independently. No external provider documentation was fetched as implementation evidence.
+
+| Identity class | Maximum explicit permissions | Independent authority still required |
+| --- | --- | --- |
+| Human reviewer | API recommendation review; synthetic human case outcome | Canonical ReviewSession, current case/task assignment, exact bindings, source/approver separation |
+| Human supervisor | Reviewer permissions plus explicit supervisor override/reopen permission | Independently configured canonical supervisor and existing M15/M20 guards |
+| Intake workload | API intake and processing only | Existing registered bundles, host scope and application validation |
+| Assessment publisher | Supplied synthetic assessment publication/host administration | Independent approved-source registry, exact original proof and nonserialized PublicationPermit |
+| MCP gateway | Three governed read-only MCP tools | Independent verified service subject/application and exact host ToolGrant digest/case |
+| MCP backend | Backend execution permission contract only | Deployment target; no backend execution or machine-to-human adapter is implemented |
+
+Permissions are a maximum, not an assignment. `Grant` bounds case scope, exact binding, unique permissions, principal and lifetime (1–900 seconds). API/outcome gates use distinct target binding hashes and required permission sets. An API review grant cannot authorize M20 publication or outcomes; publication cannot grant intake rights. Human/machine and supervisor class mismatches fail. Existing tools never acquire write authority. Claims, source content, model output and database principal records cannot issue grants, sessions or permits.
+
+## Durable local lifecycle
+
+`Lifecycle` uses a separate SQLite schema `m21-lifecycle-v1`, user_version=1. M20's eleven-table case schema is **unchanged**. Two tables hold one exact format/context row and up to 256 append-only authenticated lifecycle events. Maximum 64 total grants and 64 disabled principals, database <=1 MiB, event <=8 KiB, private owned directory 0700/file 0600; symlink/hardlink leaves and public permissions fail. There is no eviction, re-enable, automatic repair or migration. Duplicate grant IDs/revocations fail rather than silently change history.
+
+Every check opens an explicit existing read/write database, uses BEGIN IMMEDIATE, FULL synchronous DELETE journal, verifies exact schema, integrity, context, sequence, canonical DTO/JSON, event semantics and HMAC-SHA256 chain. The 32-byte integrity key and public verification/profile context are independently host-provisioned and are never stored in this database. No token, cookie, signing key, canonical session or recovered role authority is persisted. Expiry uses a trusted epoch clock; backward clock movement latches the instance closed. Event times cannot regress. No distributed clock agreement is claimed.
+
+Explicit `create=True` uses exclusive file creation; missing/corrupt/incompatible storage on reopen cannot create fresh authority. Reopening requires an **independently retained Anchor**. Each verified operation advances its in-memory rollback floor; a current external checkpoint detects coherent restoration of an older valid database. The host must retain/distribute the latest checkpoint independently: a stale anchor cannot prove the absence of later revocations. HMAC/anchors do not defend against a trusted OS/host rewriting code, keys and every anchor. Checkpoints and integrity keys require separate future operational custody; no cloud secret store is enabled.
+
+`LifecycleAuthenticator` wraps the existing Authenticator, hashes the fresh inner capability only in volatile memory, and binds the exact ApiAccess object and explicit grant. Every verification rechecks inner identity/expiry/revocation and durable lifecycle before returning access. Existing API authentication and M20 `Authority.actor` execute before duplicate-receipt lookup. M17's existing `credential_valid` hook invalidates enrollment and current UI sessions when that underlying gate denies. Cookie values remain volatile and are not resurrected after restart. Grant revocation disables bound API/UI access; principal disablement denies every current/future grant for that principal in this ledger.
+
+`LifecycleGateway` wraps existing gateway verification, pins service subject/application and the exact host ToolGrant/case digest, and requires a live read grant on every request. The HTTP service's current loopback/origin/header/body/rate/tool controls remain unchanged. Genuine SDK Streamable HTTP is tested over ASGI, including post-revocation refusal; no additional TCP or live APIM assurance is inferred. M14 stateless `max_sessions` remains ineffective and bounded tool/server lifetime remains relevant.
+
+Admission checks are local request-start checks, not atomic cross-database identity/outcome commits or cancellation of already admitted operations. Separate processes serialize lifecycle writes through SQLite; unavailable/locked/corrupt state denies access. No cross-host propagation service, directory disable integration or storage hardware/power-loss guarantee exists.
+
+## Recovery and historical principals
+
+Same-version recovery independently reprovisions verification public keys/profile, integrity key, latest anchor, approved assessment/source registry, canonical sessions and new opaque capabilities. Persisted grants are necessary but never sufficient to bind fresh authority. A child verifies the original signature before attempting lifecycle binding. Positive-before/negative-after tests hold that trusted signing context fixed, so denial is not explained by generating new keys.
+
+Disabled historical actors remain in the independent host principal registry for M20 semantic audit replay; current authorization is denied by the gate. The database does not provide that registry. Removing a historic principal/source from trusted host configuration still rejects recovery; no history rewrite or authorization from stored claims occurs. Public-key/profile rotation changes the bound context and requires a deliberate new context/ledger; neither lifecycle nor case database is silently migrated. Offline fixture rotation tests exercise explicit overlapping pinned key sets and retirement. M18 local key retirement/revocation remain enforced independently.
+
+Adding M21 runtime code changes the M12/M20 whole-package fingerprint. Existing M20 databases/checkpoints from the M20 runtime remain incompatible and fail closed, as designed. Use a newly prepared same-M21-runtime synthetic store; preserve old artifacts and execute them only with their pinned historical runtime. There is no automated source/assessment rehash or upgrade migration.
+
+## Gateway and deployment contracts
+
+`DeploymentContract` is unconditionally disabled. It validates distinct gateway/backend applications and fixed distinct audiences, managed-identity target authentication, no public direct backend ingress, no forwarded identity trust, TLS/private ingress, Key Vault reference syntax and M18 strict secure-cookie requirements. Unsafe combinations and literal secrets fail. These are typed static requirements, **not** TLS, cookie, managed identity, Key Vault, APIM or private-network enforcement. Existing loopback HTTP cookies are not changed to a misleading Secure mode.
+
+A future deployment must independently validate gateway user authentication, backend service authentication, resource-specific least privilege, delegated human identity preservation, ingress restrictions, rotation/discovery cache age, revocation propagation, Key Vault custody and approved budget/region/SKU choices. No actual provider, cloud credential chain or enabled deployment factory is supplied. Static APIM XML remains a reference, not live enforcement. Explicit authorization is needed before any external identity/cloud action, even if no charge is expected.
+
+Verification logs use the existing allowlisted status-only event and omit tokens/claims/exception details; logging exceptions deny fixture verification. Lifecycle errors expose one fixed code. Successful M20 audits remain domain evidence, not retained security-denial telemetry. Reliable security-event delivery, retention/WORM, global revocation, incident operations and general observability remain future requirements.
+
+M8's four retrieval failures, M12 timing-dependent retries, M15/M17 volatile state outside this opt-in gate, M20 recovery/host assumptions, M19 semantic/production residual risks and all eight NOT_TESTED cases remain. No new agent, model call, insurance authority, settlement, Azure service or M22 implementation is introduced.

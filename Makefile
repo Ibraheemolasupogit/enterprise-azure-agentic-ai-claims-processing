@@ -82,3 +82,7 @@ apim-compile:
 package:
 	$(PYTHON) -m pip wheel --no-index --no-cache-dir --no-deps --no-build-isolation --wheel-dir dist .
 	$(PYTHON) -c 'from setuptools.build_meta import build_sdist; build_sdist("dist")'
+
+.PHONY: security-hardening-check
+security-hardening-check:
+	$(PYTHON) -m pytest tests/test_security_hardening.py

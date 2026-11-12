@@ -1,0 +1,7 @@
+# M21 pinned offline identity fixtures
+
+These six profiles and public JWT examples are **simulated fixtures**, never real Entra credentials. They use synthetic UUIDs, reserved `.invalid` resource audiences and a fixed synthetic clock. The RSA private fixture-authoring key was discarded; only public keys/tokens are retained. They cannot be exchanged through the existing synthetic authority adapters or create canonical sessions, assignments or publication permits.
+
+`manifest.json` binds all six profile files and the separate 25-scenario attack catalog. Eighteen signed negative scenarios use a fresh in-memory test signing key plus the independently configured matching public key: wrong claims are not merely invalid signatures. Seven lifecycle scenarios execute two actual subprocesses each, retaining the same synthetic token/public key/policy while testing revocation, disablement, expiry, corruption, missing state, rollback and wrong integrity context. The private RSA key is never passed to either child. Runtime credentials/context travel through private stdin, never evidence, argv, environment or SQLite.
+
+These cases supplement the original M19 catalog. They do not change its eight NOT_TESTED production boundaries or establish live Entra semantics, discovery, sign-in, managed identity or production-security acceptance. The approved host, pinned configuration, wall clock, independent rollback anchor and OS remain trusted. [Architecture](../../../../docs/architecture/security-and-identity-hardening.md).

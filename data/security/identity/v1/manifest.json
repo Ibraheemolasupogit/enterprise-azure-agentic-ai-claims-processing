@@ -1,0 +1,12 @@
+{
+  "format": "m21-fixtures-v1",
+  "files": {
+    "assessment_publisher.json": "e2287709f4698099c9beac6f791e50641d2e1d00fc5cd70a1df93aab5d24cc8b",
+    "attacks.json": "f2e2104807eb1e1579097264a055c257e408ee31b3c0a34d3b6dd3bf72883ea5",
+    "human_reviewer.json": "9d2c9e0ec819007e7f74f1d554dfcc3beb19aa6ed7ed8b1b2ca5560568041872",
+    "human_supervisor.json": "4875e43053642817910d555231510d6ca9b5fd832bbae4acf85460e9c8ac4494",
+    "intake_workload.json": "3d8464dc95020474840e428468f89295e41ff904022a2265859ebddb44cd04df",
+    "mcp_backend.json": "854ac686415d53e3ee902c36f5c40179715591f27f55619f3c639ff5fb65c3c3",
+    "mcp_gateway.json": "ec52030a43c96d51c0c65abf4c3104857be40d8fbe94f9b06100b05698716c5e"
+  }
+}

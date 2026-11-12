@@ -1,0 +1,24 @@
+{
+  "fixture_version": "m21-public-offline-fixture-v1",
+  "simulated": true,
+  "epoch": 1800000000,
+  "profile": {
+    "schema_version": "1.0",
+    "synthetic": true,
+    "format": "m21-provider-v1",
+    "provider": "entra_offline_fixture_v1",
+    "simulated": true,
+    "live_enabled": false,
+    "tenant_id": "91024b71-f35a-50e1-a266-2781eda6961d",
+    "application_id": "5f39d30e-08c9-5612-ab90-3d8c7b870d3d",
+    "object_id": "eb80d8cc-6f28-5479-a8f4-939ee53623f7",
+    "identity_class": "human_supervisor",
+    "issuer": "https://login.microsoftonline.com/91024b71-f35a-50e1-a266-2781eda6961d/v2.0",
+    "audience": "api://northstar.invalid/claims-api-v1",
+    "role": "Claims.Supervisor",
+    "algorithms": "RS256",
+    "max_lifetime_seconds": 300
+  },
+  "public_key": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtzzT2mjMig22RAr1T7Zq\nwBedQohmnhlKnqioVZIvNlxWf8ld3Ajjp3lnl0Fd28z3ezT3JCJEuMz4Nx9aJWV6\nIr03ur3T62IT9lNxznjpRJ8fdJS9J4J3cPR68ENNyeUzzgysFxHyt3I2/ANPIMzy\ndN4/gMySW9n9BULJ+dD2gQZgYKmWlU+gsB+KJkUMCjhryzAMWiS+uGS2Ab5U13ZA\nYT1NCoIfEdJDXGHimkV5OWJQw5is01C1ONktzAWBggOd9fnMQUhNf8gmpMPO7lee\n3BWlsSDJ0Leb5zh6Tcpg2T7gN2BjB9r/8x9MrzL96D5LvKcJjRxsYg0EOFIYtMJR\npwIDAQAB\n-----END PUBLIC KEY-----\n",
+  "token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImZpeHR1cmUtMDAwMSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xvZ2luLm1pY3Jvc29mdG9ubGluZS5jb20vOTEwMjRiNzEtZjM1YS01MGUxLWEyNjYtMjc4MWVkYTY5NjFkL3YyLjAiLCJhdWQiOiJhcGk6Ly9ub3J0aHN0YXIuaW52YWxpZC9jbGFpbXMtYXBpLXYxIiwidGlkIjoiOTEwMjRiNzEtZjM1YS01MGUxLWEyNjYtMjc4MWVkYTY5NjFkIiwiYXpwIjoiNWYzOWQzMGUtMDhjOS01NjEyLWFiOTAtM2Q4YzdiODcwZDNkIiwib2lkIjoiZWI4MGQ4Y2MtNmYyOC01NDc5LWE4ZjQtOTM5ZWU1MzYyM2Y3IiwidmVyIjoiMi4wIiwicm9sZXMiOlsiQ2xhaW1zLlN1cGVydmlzb3IiXSwiaWR0eXAiOiJ1c2VyIiwiaWF0IjoxODAwMDAwMDAwLCJuYmYiOjE4MDAwMDAwMDAsImV4cCI6MTgwMDAwMDMwMCwianRpIjoiYTIxMjg4YmItODliMi01ZmFmLWE1MGUtZjAwYzkwNjZiMzc0Iiwic2NwIjoiQ2xhaW1zLlJldmlldyJ9.tdxeAjdhzXYFtC7bSH7MIDuXlSjB2P4pq3f1hZaYIHuFRZX3GrZXVQaI2MhjhP1IJXtSfNaeVIHGF1XgModwUg8pqjLwKvtNW8W2ZyRQeFfzYor9EeXw3E9nsC8aFPz_1KAlZpaRYPGn9PBS_fqoWLuFy0p95ofIhWZ7U6910dLE7w17xiB76iRJl85NnSk8y1shQQfhP8tcfKwrOJATaEuvkJCaxS7deJa3_8L-OxQtad2eLQBUIbagbj0xDV_2uztN-aYTW6mvGnd7XL84USl-RXA_WCR1zt3rh-UarwRPMPLzZqRr9kL9jJWuDEDk80XR4vGYD-qxhTAsxgo-Dg"
+}

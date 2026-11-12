@@ -1,0 +1,867 @@
+{
+  "schema_version": "1.0",
+  "synthetic": true,
+  "catalog_version": "claims-adversarial-v1",
+  "label_status": "authored_security_expectations_not_independently_adjudicated",
+  "cases": [
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-WRONG-ISSUER",
+      "target": "identity",
+      "attack": "signed_profile_mutation",
+      "payload": "{\"changes\": {\"iss\": \"https://northstar.invalid/identity/v1\"}, \"variant\": \"wrong-issuer\"}",
+      "entry_point": "OfflineFixtureVerifier.verify; signed same-profile negative except explicit rogue key/algorithm",
+      "trust_boundary": "Pinned offline provider; fixture success cannot create runtime authority",
+      "expected_behavior": "Reject the malicious fixture and accept the legitimate control",
+      "control": "Exact provider profile, type/flow/role and signature validation",
+      "residual_risk": "No live provider semantics or tenant integration demonstrated",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "accepted",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "legitimate_control",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-WRONG-TENANT",
+      "target": "identity",
+      "attack": "signed_profile_mutation",
+      "payload": "{\"changes\": {\"tid\": \"00000000-0000-4000-8000-000000000099\"}, \"variant\": \"wrong-tenant\"}",
+      "entry_point": "OfflineFixtureVerifier.verify; signed same-profile negative except explicit rogue key/algorithm",
+      "trust_boundary": "Pinned offline provider; fixture success cannot create runtime authority",
+      "expected_behavior": "Reject the malicious fixture and accept the legitimate control",
+      "control": "Exact provider profile, type/flow/role and signature validation",
+      "residual_risk": "No live provider semantics or tenant integration demonstrated",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "accepted",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "legitimate_control",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-WRONG-AUDIENCE",
+      "target": "identity",
+      "attack": "signed_profile_mutation",
+      "payload": "{\"changes\": {\"aud\": \"api://wrong.invalid/resource\"}, \"variant\": \"wrong-audience\"}",
+      "entry_point": "OfflineFixtureVerifier.verify; signed same-profile negative except explicit rogue key/algorithm",
+      "trust_boundary": "Pinned offline provider; fixture success cannot create runtime authority",
+      "expected_behavior": "Reject the malicious fixture and accept the legitimate control",
+      "control": "Exact provider profile, type/flow/role and signature validation",
+      "residual_risk": "No live provider semantics or tenant integration demonstrated",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "accepted",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "legitimate_control",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-WRONG-CLIENT",
+      "target": "identity",
+      "attack": "signed_profile_mutation",
+      "payload": "{\"changes\": {\"azp\": \"00000000-0000-4000-8000-000000000099\"}, \"variant\": \"wrong-client\"}",
+      "entry_point": "OfflineFixtureVerifier.verify; signed same-profile negative except explicit rogue key/algorithm",
+      "trust_boundary": "Pinned offline provider; fixture success cannot create runtime authority",
+      "expected_behavior": "Reject the malicious fixture and accept the legitimate control",
+      "control": "Exact provider profile, type/flow/role and signature validation",
+      "residual_risk": "No live provider semantics or tenant integration demonstrated",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "accepted",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "legitimate_control",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-WRONG-OBJECT",
+      "target": "identity",
+      "attack": "signed_profile_mutation",
+      "payload": "{\"changes\": {\"oid\": \"00000000-0000-4000-8000-000000000099\"}, \"variant\": \"wrong-object\"}",
+      "entry_point": "OfflineFixtureVerifier.verify; signed same-profile negative except explicit rogue key/algorithm",
+      "trust_boundary": "Pinned offline provider; fixture success cannot create runtime authority",
+      "expected_behavior": "Reject the malicious fixture and accept the legitimate control",
+      "control": "Exact provider profile, type/flow/role and signature validation",
+      "residual_risk": "No live provider semantics or tenant integration demonstrated",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "accepted",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "legitimate_control",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-SUPERVISOR-ROLE",
+      "target": "identity",
+      "attack": "signed_profile_mutation",
+      "payload": "{\"changes\": {\"roles\": [\"Claims.Supervisor\"]}, \"variant\": \"supervisor-role\"}",
+      "entry_point": "OfflineFixtureVerifier.verify; signed same-profile negative except explicit rogue key/algorithm",
+      "trust_boundary": "Pinned offline provider; fixture success cannot create runtime authority",
+      "expected_behavior": "Reject the malicious fixture and accept the legitimate control",
+      "control": "Exact provider profile, type/flow/role and signature validation",
+      "residual_risk": "No live provider semantics or tenant integration demonstrated",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "accepted",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "legitimate_control",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-EXTRA-ROLE",
+      "target": "identity",
+      "attack": "signed_profile_mutation",
+      "payload": "{\"changes\": {\"roles\": [\"Claims.Reviewer\", \"Claims.Supervisor\"]}, \"variant\": \"extra-role\"}",
+      "entry_point": "OfflineFixtureVerifier.verify; signed same-profile negative except explicit rogue key/algorithm",
+      "trust_boundary": "Pinned offline provider; fixture success cannot create runtime authority",
+      "expected_behavior": "Reject the malicious fixture and accept the legitimate control",
+      "control": "Exact provider profile, type/flow/role and signature validation",
+      "residual_risk": "No live provider semantics or tenant integration demonstrated",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "accepted",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "legitimate_control",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-WORKLOAD-CONFUSION",
+      "target": "identity",
+      "attack": "signed_profile_mutation",
+      "payload": "{\"changes\": {\"idtyp\": \"app\"}, \"variant\": \"workload-confusion\"}",
+      "entry_point": "OfflineFixtureVerifier.verify; signed same-profile negative except explicit rogue key/algorithm",
+      "trust_boundary": "Pinned offline provider; fixture success cannot create runtime authority",
+      "expected_behavior": "Reject the malicious fixture and accept the legitimate control",
+      "control": "Exact provider profile, type/flow/role and signature validation",
+      "residual_risk": "No live provider semantics or tenant integration demonstrated",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "accepted",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "legitimate_control",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-MISSING-FLOW",
+      "target": "identity",
+      "attack": "signed_profile_mutation",
+      "payload": "{\"changes\": {\"scp\": \"\"}, \"variant\": \"missing-flow\"}",
+      "entry_point": "OfflineFixtureVerifier.verify; signed same-profile negative except explicit rogue key/algorithm",
+      "trust_boundary": "Pinned offline provider; fixture success cannot create runtime authority",
+      "expected_behavior": "Reject the malicious fixture and accept the legitimate control",
+      "control": "Exact provider profile, type/flow/role and signature validation",
+      "residual_risk": "No live provider semantics or tenant integration demonstrated",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "accepted",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "legitimate_control",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-SCOPE-ESCALATION",
+      "target": "identity",
+      "attack": "signed_profile_mutation",
+      "payload": "{\"changes\": {\"scp\": \"Claims.Review Claims.Admin\"}, \"variant\": \"scope-escalation\"}",
+      "entry_point": "OfflineFixtureVerifier.verify; signed same-profile negative except explicit rogue key/algorithm",
+      "trust_boundary": "Pinned offline provider; fixture success cannot create runtime authority",
+      "expected_behavior": "Reject the malicious fixture and accept the legitimate control",
+      "control": "Exact provider profile, type/flow/role and signature validation",
+      "residual_risk": "No live provider semantics or tenant integration demonstrated",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "accepted",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "legitimate_control",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-PROVIDER-CONFUSION",
+      "target": "identity",
+      "attack": "signed_profile_mutation",
+      "payload": "{\"changes\": {\"provider\": \"local_synthetic_authority\"}, \"variant\": \"provider-confusion\"}",
+      "entry_point": "OfflineFixtureVerifier.verify; signed same-profile negative except explicit rogue key/algorithm",
+      "trust_boundary": "Pinned offline provider; fixture success cannot create runtime authority",
+      "expected_behavior": "Reject the malicious fixture and accept the legitimate control",
+      "control": "Exact provider profile, type/flow/role and signature validation",
+      "residual_risk": "No live provider semantics or tenant integration demonstrated",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "accepted",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "legitimate_control",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-CASE-CLAIMS",
+      "target": "identity",
+      "attack": "signed_profile_mutation",
+      "payload": "{\"changes\": {\"case_ids\": [\"NS-CLM-87654321\"]}, \"variant\": \"case-claims\"}",
+      "entry_point": "OfflineFixtureVerifier.verify; signed same-profile negative except explicit rogue key/algorithm",
+      "trust_boundary": "Pinned offline provider; fixture success cannot create runtime authority",
+      "expected_behavior": "Reject the malicious fixture and accept the legitimate control",
+      "control": "Exact provider profile, type/flow/role and signature validation",
+      "residual_risk": "No live provider semantics or tenant integration demonstrated",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "accepted",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "legitimate_control",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-EXPIRED",
+      "target": "identity",
+      "attack": "signed_profile_mutation",
+      "payload": "{\"changes\": {\"exp\": 1800000000}, \"variant\": \"expired\"}",
+      "entry_point": "OfflineFixtureVerifier.verify; signed same-profile negative except explicit rogue key/algorithm",
+      "trust_boundary": "Pinned offline provider; fixture success cannot create runtime authority",
+      "expected_behavior": "Reject the malicious fixture and accept the legitimate control",
+      "control": "Exact provider profile, type/flow/role and signature validation",
+      "residual_risk": "No live provider semantics or tenant integration demonstrated",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "accepted",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "legitimate_control",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-LONG-LIFETIME",
+      "target": "identity",
+      "attack": "signed_profile_mutation",
+      "payload": "{\"changes\": {\"exp\": 1800000301}, \"variant\": \"long-lifetime\"}",
+      "entry_point": "OfflineFixtureVerifier.verify; signed same-profile negative except explicit rogue key/algorithm",
+      "trust_boundary": "Pinned offline provider; fixture success cannot create runtime authority",
+      "expected_behavior": "Reject the malicious fixture and accept the legitimate control",
+      "control": "Exact provider profile, type/flow/role and signature validation",
+      "residual_risk": "No live provider semantics or tenant integration demonstrated",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "accepted",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "legitimate_control",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-FUTURE",
+      "target": "identity",
+      "attack": "signed_profile_mutation",
+      "payload": "{\"changes\": {\"iat\": 1800000001}, \"variant\": \"future\"}",
+      "entry_point": "OfflineFixtureVerifier.verify; signed same-profile negative except explicit rogue key/algorithm",
+      "trust_boundary": "Pinned offline provider; fixture success cannot create runtime authority",
+      "expected_behavior": "Reject the malicious fixture and accept the legitimate control",
+      "control": "Exact provider profile, type/flow/role and signature validation",
+      "residual_risk": "No live provider semantics or tenant integration demonstrated",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "accepted",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "legitimate_control",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-WRONG-KEY",
+      "target": "identity",
+      "attack": "signed_profile_mutation",
+      "payload": "{\"changes\": {}, \"variant\": \"wrong-key\"}",
+      "entry_point": "OfflineFixtureVerifier.verify; signed same-profile negative except explicit rogue key/algorithm",
+      "trust_boundary": "Pinned offline provider; fixture success cannot create runtime authority",
+      "expected_behavior": "Reject the malicious fixture and accept the legitimate control",
+      "control": "Exact provider profile, type/flow/role and signature validation",
+      "residual_risk": "No live provider semantics or tenant integration demonstrated",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "accepted",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "legitimate_control",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-KEY-URL",
+      "target": "identity",
+      "attack": "signed_profile_mutation",
+      "payload": "{\"changes\": {}, \"variant\": \"key-url\"}",
+      "entry_point": "OfflineFixtureVerifier.verify; signed same-profile negative except explicit rogue key/algorithm",
+      "trust_boundary": "Pinned offline provider; fixture success cannot create runtime authority",
+      "expected_behavior": "Reject the malicious fixture and accept the legitimate control",
+      "control": "Exact provider profile, type/flow/role and signature validation",
+      "residual_risk": "No live provider semantics or tenant integration demonstrated",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "accepted",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "legitimate_control",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-ALGORITHM-CONFUSION",
+      "target": "identity",
+      "attack": "signed_profile_mutation",
+      "payload": "{\"changes\": {}, \"variant\": \"algorithm-confusion\"}",
+      "entry_point": "OfflineFixtureVerifier.verify; signed same-profile negative except explicit rogue key/algorithm",
+      "trust_boundary": "Pinned offline provider; fixture success cannot create runtime authority",
+      "expected_behavior": "Reject the malicious fixture and accept the legitimate control",
+      "control": "Exact provider profile, type/flow/role and signature validation",
+      "residual_risk": "No live provider semantics or tenant integration demonstrated",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "accepted",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "legitimate_control",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-RESTART-REVOKED",
+      "target": "identity",
+      "attack": "restart_lifecycle",
+      "payload": "revoked",
+      "entry_point": "Fresh subprocess M18 verifier + lifecycle + independent fresh capability/session binding",
+      "trust_boundary": "Current durable lifecycle before canonical API authority",
+      "expected_behavior": "Independent signature remains valid; new process refuses stale/disabled authority",
+      "control": "Authenticated SQLite lifecycle, preserved public key and independent rollback anchor",
+      "residual_risk": "Trusted host/context and local SQLite; no distributed propagation or OS-compromise claim",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "positive_before",
+          "expected": true
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "signature_valid_after",
+          "expected": true
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "allowed_after",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "preserved_context",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-RESTART-DISABLED",
+      "target": "identity",
+      "attack": "restart_lifecycle",
+      "payload": "disabled",
+      "entry_point": "Fresh subprocess M18 verifier + lifecycle + independent fresh capability/session binding",
+      "trust_boundary": "Current durable lifecycle before canonical API authority",
+      "expected_behavior": "Independent signature remains valid; new process refuses stale/disabled authority",
+      "control": "Authenticated SQLite lifecycle, preserved public key and independent rollback anchor",
+      "residual_risk": "Trusted host/context and local SQLite; no distributed propagation or OS-compromise claim",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "positive_before",
+          "expected": true
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "signature_valid_after",
+          "expected": true
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "allowed_after",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "preserved_context",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-RESTART-CORRUPT",
+      "target": "identity",
+      "attack": "restart_lifecycle",
+      "payload": "corrupt",
+      "entry_point": "Fresh subprocess M18 verifier + lifecycle + independent fresh capability/session binding",
+      "trust_boundary": "Current durable lifecycle before canonical API authority",
+      "expected_behavior": "Independent signature remains valid; new process refuses stale/disabled authority",
+      "control": "Authenticated SQLite lifecycle, preserved public key and independent rollback anchor",
+      "residual_risk": "Trusted host/context and local SQLite; no distributed propagation or OS-compromise claim",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "positive_before",
+          "expected": true
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "signature_valid_after",
+          "expected": true
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "allowed_after",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "preserved_context",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-RESTART-MISSING",
+      "target": "identity",
+      "attack": "restart_lifecycle",
+      "payload": "missing",
+      "entry_point": "Fresh subprocess M18 verifier + lifecycle + independent fresh capability/session binding",
+      "trust_boundary": "Current durable lifecycle before canonical API authority",
+      "expected_behavior": "Independent signature remains valid; new process refuses stale/disabled authority",
+      "control": "Authenticated SQLite lifecycle, preserved public key and independent rollback anchor",
+      "residual_risk": "Trusted host/context and local SQLite; no distributed propagation or OS-compromise claim",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "positive_before",
+          "expected": true
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "signature_valid_after",
+          "expected": true
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "allowed_after",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "preserved_context",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-RESTART-EXPIRED",
+      "target": "identity",
+      "attack": "restart_lifecycle",
+      "payload": "expired",
+      "entry_point": "Fresh subprocess M18 verifier + lifecycle + independent fresh capability/session binding",
+      "trust_boundary": "Current durable lifecycle before canonical API authority",
+      "expected_behavior": "Independent signature remains valid; new process refuses stale/disabled authority",
+      "control": "Authenticated SQLite lifecycle, preserved public key and independent rollback anchor",
+      "residual_risk": "Trusted host/context and local SQLite; no distributed propagation or OS-compromise claim",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "positive_before",
+          "expected": true
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "signature_valid_after",
+          "expected": true
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "allowed_after",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "preserved_context",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-RESTART-ROLLBACK",
+      "target": "identity",
+      "attack": "restart_lifecycle",
+      "payload": "rollback",
+      "entry_point": "Fresh subprocess M18 verifier + lifecycle + independent fresh capability/session binding",
+      "trust_boundary": "Current durable lifecycle before canonical API authority",
+      "expected_behavior": "Independent signature remains valid; new process refuses stale/disabled authority",
+      "control": "Authenticated SQLite lifecycle, preserved public key and independent rollback anchor",
+      "residual_risk": "Trusted host/context and local SQLite; no distributed propagation or OS-compromise claim",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "positive_before",
+          "expected": true
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "signature_valid_after",
+          "expected": true
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "allowed_after",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "preserved_context",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "synthetic": true,
+      "case_id": "M21-RESTART-WRONG-CONTEXT",
+      "target": "identity",
+      "attack": "restart_lifecycle",
+      "payload": "wrong_context",
+      "entry_point": "Fresh subprocess M18 verifier + lifecycle + independent fresh capability/session binding",
+      "trust_boundary": "Current durable lifecycle before canonical API authority",
+      "expected_behavior": "Independent signature remains valid; new process refuses stale/disabled authority",
+      "control": "Authenticated SQLite lifecycle, preserved public key and independent rollback anchor",
+      "residual_risk": "Trusted host/context and local SQLite; no distributed propagation or OS-compromise claim",
+      "owasp_2025": [
+        "LLM06_EXCESSIVE_AGENCY"
+      ],
+      "atlas_5_6": [],
+      "criteria": [
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "positive_before",
+          "expected": true
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "signature_valid_after",
+          "expected": true
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "allowed_after",
+          "expected": false
+        },
+        {
+          "schema_version": "1.0",
+          "synthetic": true,
+          "fact": "preserved_context",
+          "expected": true
+        }
+      ]
+    }
+  ]
+}

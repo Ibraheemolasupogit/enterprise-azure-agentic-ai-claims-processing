@@ -6,7 +6,7 @@ Greenfield Azure portfolio project for **fictional Northstar Insurance Group**, 
 
 **IMPLEMENTED AND LOCALLY TESTED:** the `claims_ai` Python foundation, Milestone 4 synthetic dataset tools and Milestone 5 offline extraction benchmark. The foundation supplies Pydantic v2 contracts, deterministic state-transition guards, local configuration, redacted JSON logging and typed protocols. The [motor-v1 corpus](data/synthetic/motor/README.md) supplies 12 development scenarios and source-linked labels; policies/coverage interpretations remain unapproved. The [benchmark](docs/quality/document-intelligence-benchmark.md) has typed interfaces and deterministic scoring; **all fixture extraction results are SIMULATED ground-truth echoes**, not OCR/vision/provider performance results.
 
-The bounded offline workflow, human-review service, FastAPI adapter and reviewer operations UI are implemented through M20, with synthetic identity/security and adversarial evaluation foundations. Production deployment, live Azure/Mistral/GPT integrations, approved operational coverage rules, cloud persistence/audit, real authentication, production UI hosting, held-out model evaluation and OpenTelemetry remain **PLANNED**. No live service comparison or cloud deployment is claimed. Synthetic host capabilities and domain role checks do not authenticate a real human or durably persist an approval. Dataset labels and simulated responses are not model-produced facts or approved case outcomes.
+The bounded offline workflow, human-review service, FastAPI adapter and reviewer operations UI are implemented through M21, with offline identity/security hardening and adversarial evaluation foundations. Production deployment, live Azure/Mistral/GPT integrations, approved operational coverage rules, cloud persistence/audit, real authentication, production UI hosting, held-out model evaluation and OpenTelemetry remain **PLANNED**. No live service comparison or cloud deployment is claimed. Synthetic host capabilities and domain role checks do not authenticate a real human; M20 separately persists supplied synthetic decisions and M21 adds opt-in local grant lifecycle checks. Dataset labels and simulated responses are not model-produced facts or approved case outcomes.
 
 **Milestone 6 implements the [structured evidence boundary](docs/architecture/structured-evidence-processing.md):** deterministic field normalization, identity/hash/source validation, actionable holds/rejections, immutable local history, idempotent retries and guarded case admission. It preserves M4 data and M5 benchmark semantics. The CLI maps SIMULATED fixture proposals while keeping original documents quarantined; no scanner or operational ingestion is claimed.
 
@@ -266,7 +266,7 @@ PYTHONPATH=src .venv/bin/python -m claims_ai.adversarial --output outputs/advers
 
 Use a new output path. After [targeted remediation](docs/milestones/milestone-19-remediation.md), the corrected catalog exits **0** with **80 PASS / 0 FAIL / 8 NOT_TESTED**; genuine failed criteria still produce exit **2**. Eight live/production scopes remain NOT_TESTED. SDK/output guards are real, with simulated model behavior; in-process HTTP is not TCP or browser evidence. Original M19 reports, fixtures, M4–M9 data and M8 failures are preserved.
 
-Git setup and all commits/pushes remain manual. **Milestones 1–20 are delivered within their recorded local/reference scopes.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) records delivered capabilities and planned later work. M21 has not started. The former M18 RAG/rules proposal is deferred; the approved M18 scope is identity/security, and the approved M19 scope is adversarial evaluation rather than additional agent implementation.
+Git setup and all commits/pushes remain manual. **Milestones 1–21 are delivered within their recorded local/reference scopes.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) records delivered capabilities and planned later work. M22 has not started. The former M18 RAG/rules proposal is deferred; the approved M18 scope is identity/security, and the approved M19 scope is adversarial evaluation rather than additional agent implementation.
 
 Run the bounded SQLite outcome/recovery demonstration (real child-process SIGKILL probes):
 
@@ -276,3 +276,14 @@ PYTHONPATH=src .venv/bin/python -m claims_ai.outcomes --output outputs/outcomes/
 ```
 
 Use a new output path and existing extras with `requirements/m20-constraints.txt`; no dependency is added. Store operations require a private owned local directory and fresh independently configured authority. No new endpoint or real claim authority is exposed.
+
+## M21 offline identity hardening
+
+[M21 evidence](docs/milestones/milestone-21.md), [architecture](docs/architecture/security-and-identity-hardening.md) and [ADR-0004](docs/architecture/decisions/0004-offline-identity-and-durable-grant-lifecycle.md) add versioned isolated identity fixtures, six least-privilege classes, a bounded authenticated SQLite grant lifecycle and opt-in gates over existing API/UI/MCP/outcome services. Live Entra/discovery, Azure integrations and deployment stay disabled. Historical demos retain their documented authority profiles; no token claim creates a canonical session, assignment or publication permit.
+
+```sh
+make security-hardening-check
+PYTHONPATH=src .venv/bin/python -m claims_ai.security_hardening --output outputs/security/new-m21-report.json
+```
+
+Use a new output outside reference data. No new dependencies; [M21 constraints](requirements/m21-constraints.txt) retain the existing closure. Reopening lifecycle storage needs independently retained verification context, integrity key and current rollback anchor. Runtime additions intentionally make older M12/M20 fingerprints incompatible: preserve old evidence, prepare same-runtime synthetic stores, and do not silently migrate/rehash historical state. M8's four failures, M12 timing sensitivity and previous production/security limits remain. M22 is not implemented.
