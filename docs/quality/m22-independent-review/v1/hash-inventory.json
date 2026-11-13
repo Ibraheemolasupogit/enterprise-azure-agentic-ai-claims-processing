@@ -1,0 +1,44 @@
+{
+  "approval": null,
+  "candidate_manifest_sha256": "42e0eb827c26cbd3202c127f777aef6cd17c59e543548ff5b368f1008a361d8b",
+  "files": {
+    "README.md": {
+      "bytes": 9865,
+      "sha256": "d855277ecc02ec4417924ae5ffee36c93e8cde1670d63d5bfdf5165db8bb68e4"
+    },
+    "adjudication-template.json": {
+      "bytes": 63402,
+      "sha256": "bcea21da26a80200aee730059c1027afdeda62c3ee59c5c6d4bff6d1e52525e7"
+    },
+    "case-inventory.md": {
+      "bytes": 7968,
+      "sha256": "1e2bf16414b10c27a99e2899e3b9197286ba9bc587dbb6f2aaa316b1c07aaa79"
+    },
+    "case-notes.md": {
+      "bytes": 156175,
+      "sha256": "814ef79cb3140b18c3877e6fd223391aa466f86e77bab7cbe413a711047e858c"
+    },
+    "checklist.md": {
+      "bytes": 5763,
+      "sha256": "4ef864eeb373129c28730092561d789522d9b0d5e082021d4197d003cfb837fe"
+    },
+    "release-approval-template.json": {
+      "bytes": 10613,
+      "sha256": "7fbc5a99171cd1fe996bb529eeae01099d06b8ef865429f232fa3d4a8d148a8b"
+    },
+    "submission-manifest.json": {
+      "bytes": 129209,
+      "sha256": "2797cc4d4b826fc33adff3312c7ed0f5b100e60c2646a4c5044267f255f928b2"
+    },
+    "verification.json": {
+      "bytes": 2139,
+      "sha256": "b05daff90778d6f9f78892e879ced8830d9b47e6670ed3141ab2cd4c40cb8dca"
+    }
+  },
+  "format": "m22-review-packet-hash-inventory-v1",
+  "hash_algorithm": "sha256_original_file_bytes",
+  "packet_version": "v1",
+  "review_status": "PENDING_REVIEW",
+  "self_hash": "EXCLUDED; independent SHA-256 retained in M22 milestone evidence addendum",
+  "signature": null
+}

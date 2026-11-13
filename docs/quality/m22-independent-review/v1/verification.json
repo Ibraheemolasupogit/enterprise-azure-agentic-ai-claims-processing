@@ -1,0 +1,51 @@
+{
+  "all_new_review_decisions_identities_approvals_and_signatures_null": true,
+  "all_original_reviews_and_labels_pending": true,
+  "blindness_or_training_contamination_verified": false,
+  "candidate_manifest_sha256": "42e0eb827c26cbd3202c127f777aef6cd17c59e543548ff5b368f1008a361d8b",
+  "case_adjudication_templates": 60,
+  "cases_verified": 60,
+  "classification": "PREPARATION_INTEGRITY_NOT_INDEPENDENT_APPROVAL",
+  "cloud_or_model_calls": 0,
+  "cohorts": {
+    "evidence_problems": 10,
+    "exclusions_and_dates": 10,
+    "ordinary_damage": 15,
+    "policy_boundaries": 10,
+    "recovery": 5,
+    "security": 10
+  },
+  "expected_existing_file_changes": [
+    "docs/milestones/milestone-22-stage-b.md"
+  ],
+  "explicit_null_field_proposals_verified": 10,
+  "focused_source_guard_tests": {
+    "elapsed_seconds": 0.13,
+    "full_stage_b_suites_rerun": false,
+    "passed": 11,
+    "scope": "Read-only frozen candidate verification, rejected reference/approval input fields, independent-scoring denial and pending/non-scored case reporting"
+  },
+  "format": "m22-review-packet-verification-v1",
+  "independent_correctness_review_performed": false,
+  "independent_scoring_claims_rejected": 4,
+  "markdown_file_links_checked": 310,
+  "monitored_prediction_files_opened": [
+    "data/evaluation/m22/v1/inputs/manifest.json",
+    "data/evaluation/m22/v1/inputs/cases.json"
+  ],
+  "notes": [
+    "Semantic input hints and prior author exposure remain disclosed; structural access checks do not establish blindness.",
+    "Current source/wheel 1436-test and 17-control Stage B results are historical, not rerun or golden-suite scores."
+  ],
+  "original_file_hashes_preserved_before_evidence_addendum": 687,
+  "packet_is_read_only_after_publication": true,
+  "per_case_review_questions": 180,
+  "policy_clause_references_verified": 106,
+  "prediction_files_opened_count": 2,
+  "release_metric_proposals_verified": 12,
+  "reviewer_cards_verified_against_all_author_proposals": 60,
+  "runtime_packet_references": 0,
+  "scored_heldout_evaluation_performed": false,
+  "source_assets_verified": 178,
+  "source_quoted_field_proposals_verified": 290
+}

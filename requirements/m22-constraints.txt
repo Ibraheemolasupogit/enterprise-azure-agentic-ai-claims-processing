@@ -1,0 +1,4 @@
+# Reviewed Stage B local SDK additions only; retain the complete M21 closure.
+-c m21-constraints.txt
+opentelemetry-sdk==1.45.2
+opentelemetry-semantic-conventions==0.66b2

@@ -1,0 +1,31 @@
+[
+  {
+    "file": "opentelemetry_sdk-1.45.2-py3-none-any.whl",
+    "sha256": "ff974ea70ee4f1d51e2ec152db37c2b626c7bf82bb3f7d86114fd8704e7199c6",
+    "name": "opentelemetry-sdk",
+    "version": "1.45.2",
+    "license": "Apache-2.0",
+    "requires": [
+      "opentelemetry-api==1.45.2",
+      "opentelemetry-semantic-conventions==0.66b2",
+      "typing-extensions>=4.5.0"
+    ],
+    "licence_hashes": {
+      "opentelemetry_sdk-1.45.2.dist-info/licenses/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    }
+  },
+  {
+    "file": "opentelemetry_semantic_conventions-0.66b2-py3-none-any.whl",
+    "sha256": "4cbe61e5f9275d57ab31708446e7938ef4291ebbe6a7fca6f7a629c5acae87d8",
+    "name": "opentelemetry-semantic-conventions",
+    "version": "0.66b2",
+    "license": "Apache-2.0",
+    "requires": [
+      "opentelemetry-api==1.45.2",
+      "typing-extensions>=4.5.0"
+    ],
+    "licence_hashes": {
+      "opentelemetry_semantic_conventions-0.66b2.dist-info/licenses/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    }
+  }
+]

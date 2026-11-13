@@ -266,7 +266,7 @@ PYTHONPATH=src .venv/bin/python -m claims_ai.adversarial --output outputs/advers
 
 Use a new output path. After [targeted remediation](docs/milestones/milestone-19-remediation.md), the corrected catalog exits **0** with **80 PASS / 0 FAIL / 8 NOT_TESTED**; genuine failed criteria still produce exit **2**. Eight live/production scopes remain NOT_TESTED. SDK/output guards are real, with simulated model behavior; in-process HTTP is not TCP or browser evidence. Original M19 reports, fixtures, M4–M9 data and M8 failures are preserved.
 
-Git setup and all commits/pushes remain manual. **Milestones 1–21 are delivered within their recorded local/reference scopes.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) records delivered capabilities and planned later work. M22 has not started. The former M18 RAG/rules proposal is deferred; the approved M18 scope is identity/security, and the approved M19 scope is adversarial evaluation rather than additional agent implementation.
+Git setup and all commits/pushes remain manual. **Milestones 1–21 are delivered within their recorded local/reference scopes.** Historical milestone records preserve their original scope; the current [roadmap](docs/milestones/roadmap.md) records delivered capabilities and planned later work. M22 Stage B supplies offline engineering infrastructure; independent benchmark review remains pending. The former M18 RAG/rules proposal is deferred; the approved M18 scope is identity/security, and the approved M19 scope is adversarial evaluation rather than additional agent implementation.
 
 Run the bounded SQLite outcome/recovery demonstration (real child-process SIGKILL probes):
 
@@ -286,4 +286,21 @@ make security-hardening-check
 PYTHONPATH=src .venv/bin/python -m claims_ai.security_hardening --output outputs/security/new-m21-report.json
 ```
 
-Use a new output outside reference data. No new dependencies; [M21 constraints](requirements/m21-constraints.txt) retain the existing closure. Reopening lifecycle storage needs independently retained verification context, integrity key and current rollback anchor. Runtime additions intentionally make older M12/M20 fingerprints incompatible: preserve old evidence, prepare same-runtime synthetic stores, and do not silently migrate/rehash historical state. M8's four failures, M12 timing sensitivity and previous production/security limits remain. M22 is not implemented.
+Use a new output outside reference data. No new dependencies; [M21 constraints](requirements/m21-constraints.txt) retain the existing closure. Reopening lifecycle storage needs independently retained verification context, integrity key and current rollback anchor. Runtime additions intentionally make older M12/M20 fingerprints incompatible: preserve old evidence, prepare same-runtime synthetic stores, and do not silently migrate/rehash historical state. M8's four failures, M12 timing sensitivity and previous production/security limits remain. See the separately recorded M22 Stage B offline engineering work below.
+
+## M22 Stage A — pending review
+
+[Stage A](docs/milestones/milestone-22.md) supplies versioned contracts and a [60-case candidate suite](data/evaluation/m22/README.md), frozen proposed gates, blank independent-review templates and an [OpenTelemetry dependency proposal](docs/dependencies/m22-opentelemetry-proposal.md). Every candidate is **PENDING_REVIEW**; the author-visible native-text/control set is not an independently approved blind benchmark. The preserved Stage A record predates the separately authorised Stage B implementation below. Its labels, proposed gates and review templates remain unchanged; independent quality remains unaccepted.
+
+## M22 Stage B — offline evaluation and operations
+
+[Stage B evidence](docs/milestones/milestone-22-stage-b.md), [evaluation and telemetry design](docs/architecture/offline-quality-and-operations.md) and [exercised runbooks](docs/operations/m22-runbooks.md) add a deterministic runner, private genuine OpenTelemetry SDK providers, bounded safe local evidence, dashboard/alert checks and fault/recovery probes. Every candidate remains **PENDING_REVIEW**; all independent/live-model quality metrics remain **NOT_TESTED**. Six separate development fixtures exercise native-text parsing and are explicitly **SIMULATED**, with no independent accuracy claim.
+
+The reviewed local environment uses API/SDK **1.45.2** and semantic-conventions **0.66b2**. Only the SDK and semantic-conventions distributions were added, in the project `.venv`; [M22 constraints](requirements/m22-constraints.txt) retain all previous pins and [wheel evidence](requirements/m22-wheel-manifest.json) records hashes and Apache-2.0 licences. No exporter/cloud package is included.
+
+```sh
+make quality-ops-check
+PYTHONPATH=src .venv/bin/python -m claims_ai.quality_ops --output outputs/quality/new-report.json --telemetry-output outputs/quality/new-telemetry.json
+```
+
+Use two new paths outside reference data. The command runs real local SDK/ASGI and disposable SQLite/child-process fault probes, including SIGKILL. Outputs contain allowlisted operational metadata, not claim narratives or credentials. Canonical reports omit random trace IDs and timings; separate telemetry retains measured spans. Neither telemetry nor trace context authorises an action or replaces M20 audit. Runtime additions intentionally invalidate older workflow/store fingerprints: retain historical stores/evidence, use fresh same-runtime approved synthetic contexts, and never silently migrate or rehash old state. No live model, external identity, Azure export, spending, autonomous outcome or M23 work is enabled.

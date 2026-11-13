@@ -47,3 +47,19 @@ R-001/R-002/R-004 remain OPEN: M9 policy/rules are still unapproved, models rema
 | R-007 | Zero new dependencies or external integrations; deployment contracts always disabled | OPEN; sponsor/operator. No cloud budget/capacity/cost assurance inferred |
 
 R-008/F-001 and R-009/F-002 remain closed only for their demonstrated offline paths. No production-risk owner acceptance, cloud/WORM/shared identity claim or reclassification of M19's eight NOT_TESTED cases. M8's four failures, M12 timing limitation and M20 trusted-host/local-recovery limits remain.
+
+## M22 offline evaluation and operations reassessment
+
+[Stage B](../milestones/milestone-22-stage-b.md) adds actual bounded SDK traces/metrics, allowlisted safe local evidence, owned snapshot alerts and [exercised recovery runbooks](../operations/m22-runbooks.md). It supplies engineering evidence, not production risk-owner acceptance. All 60 candidates remain PENDING_REVIEW and every independent/live-quality gate remains NOT_TESTED.
+
+| Risk | Demonstrated local change | Residual status / owner |
+| --- | --- | --- |
+| R-001/R-002/R-004 | Separate SIMULATED development conformance, frozen candidate verification and unconditional denial of unconfigured independent scoring | OPEN; policy/security/reviewer. Author-visible native text is not blind multimodal quality; genuine independent review and live-capability evidence remain unavailable |
+| R-005 | Allowlisted SDK retention, bounded series/span/output budgets, baggage/credential/narrative omission and exception-log leakage checks | OPEN; compliance/security. No real-data privacy, retention/deletion, production telemetry or host-compromise assurance |
+| R-005/R-006 | Export failure and zero sampling preserve unsampled audit; simultaneous SQL/export failure cannot acknowledge a partial result; fresh process/SIGKILL probes retain one decision and deny revoked duplicates | OPEN; operator/security. M20/M21 trusted sources, current anchors/key custody, admission races, same-runtime compatibility and non-cloud durability limits persist |
+| R-006 | Local timeout/outage/retry, finite outbox budget across restart, current-anchor rollback denial and eight executable owned alert thresholds | OPEN; operator/supervisor. Snapshot alerts and synthetic boundary controls are not continuous monitoring, delivered notifications, calibrated production SLOs or hard resource isolation |
+| R-007 | Exactly two reviewed Apache-2.0 SDK additions with hashes/licences, private project install and no remote exporter | OPEN; sponsor/operator. No Azure capacity, ingestion, budget or live-cost evidence; production spending remains unauthorised |
+
+R-008/F-001 and R-009/F-002 retain their prior bounded closure. M8 failures, M12 timing limits and historical M19 evidence remain unchanged. No production risk is silently closed by engineering test totals.
+
+Observed additional limitation: the unchanged Stage A authoring guard does not protect a repository whose `data` root itself aliases another directory. Two wheel-test checks exposed that topology; original historical files remained unchanged, and only the two newly generated test directories were moved to private scratch. Stage B's evaluator/output guard uses canonical configured roots; authoring through aliased roots is not accepted. Operator/security must keep real authoring roots and require a separately reviewed correction before supporting aliases. This does not reopen the distinct M19 F-002 consumer-output remediation.

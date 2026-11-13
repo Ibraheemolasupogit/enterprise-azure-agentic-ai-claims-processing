@@ -1,0 +1,14 @@
+{
+  "format": "m22-alerts-v1",
+  "classification": "LOCAL_SYNTHETIC_NOT_PRODUCTION_SLO",
+  "rules": [
+    {"alert_id":"OPS-DEPENDENCY","signal":"dependency_failures","threshold":1,"owner":"operator","severity":"warning","runbook":"docs/operations/m22-runbooks.md#dependency-failure"},
+    {"alert_id":"OPS-STORAGE","signal":"storage_failures","threshold":1,"owner":"operator","severity":"critical","runbook":"docs/operations/m22-runbooks.md#storage-and-audit"},
+    {"alert_id":"OPS-STALE","signal":"stale_denials","threshold":1,"owner":"security_reviewer","severity":"warning","runbook":"docs/operations/m22-runbooks.md#identity-and-stale-requests"},
+    {"alert_id":"OPS-OUTBOX","signal":"outbox_dead","threshold":1,"owner":"operator","severity":"critical","runbook":"docs/operations/m22-runbooks.md#outbox-and-process-recovery"},
+    {"alert_id":"OPS-EXPORT","signal":"export_failures","threshold":1,"owner":"operator","severity":"warning","runbook":"docs/operations/m22-runbooks.md#telemetry-failure"},
+    {"alert_id":"OPS-DROP","signal":"telemetry_drops","threshold":1,"owner":"operator","severity":"warning","runbook":"docs/operations/m22-runbooks.md#telemetry-failure"},
+    {"alert_id":"OPS-TOOL","signal":"tool_denials","threshold":1,"owner":"security_reviewer","severity":"warning","runbook":"docs/operations/m22-runbooks.md#identity-and-stale-requests"},
+    {"alert_id":"OPS-REVIEW","signal":"review_backlog","threshold":2,"owner":"supervisor","severity":"warning","runbook":"docs/operations/m22-runbooks.md#review-backlog"}
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "case_count": 60,
+  "file": "cases.json",
+  "format": "m22-input-manifest-v1",
+  "maximum_bytes": 1048576,
+  "schema_version": "1.0",
+  "sha256": "39613c9782979e9d0a7804486d769f4fc48a306e36fa7985883e1f15a65607c1",
+  "synthetic": true
+}

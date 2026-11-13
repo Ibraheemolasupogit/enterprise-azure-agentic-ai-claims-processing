@@ -1,0 +1,29 @@
+{
+  "files": {
+    "gates.json": {
+      "bytes": 6118,
+      "sha256": "ef366a34c75b44dce2c784d40210a1db81c16e94bf664dc8fc89dd8745915264"
+    },
+    "inputs/cases.json": {
+      "bytes": 147110,
+      "sha256": "39613c9782979e9d0a7804486d769f4fc48a306e36fa7985883e1f15a65607c1"
+    },
+    "inputs/manifest.json": {
+      "bytes": 240,
+      "sha256": "05a8829d55e86bd8d6ee23aadbcb7a87b9a75e2473c5b3bc393ec99bc7791988"
+    },
+    "references/guide.md": {
+      "bytes": 1523,
+      "sha256": "9729fe3b55e6785a9e6636dea136514f1dfe7815eae713bf47cd2fba3b764309"
+    },
+    "references/labels.json": {
+      "bytes": 159319,
+      "sha256": "5bb4f12245e0032c2db9188df2280c2263e109f3c3f89e5bb2acd680b417d955"
+    },
+    "reviews/templates.json": {
+      "bytes": 52249,
+      "sha256": "a3f2b771ec8d6cf268959af1acedef5588817cfa0d53788485085024c3a8fd68"
+    }
+  },
+  "format": "m22-file-inventory-v1"
+}

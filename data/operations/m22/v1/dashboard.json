@@ -1,0 +1,14 @@
+{
+  "format":"m22-dashboard-v1",
+  "unavailable":"null_not_zero",
+  "panels":[
+    {"panel_id":"dependency-errors","signal":"dependency_failures"},
+    {"panel_id":"storage-errors","signal":"storage_failures"},
+    {"panel_id":"stale-access-denials","signal":"stale_denials"},
+    {"panel_id":"dead-outbox","signal":"outbox_dead"},
+    {"panel_id":"export-errors","signal":"export_failures"},
+    {"panel_id":"telemetry-loss","signal":"telemetry_drops"},
+    {"panel_id":"tool-denials","signal":"tool_denials"},
+    {"panel_id":"review-backlog","signal":"review_backlog"}
+  ]
+}

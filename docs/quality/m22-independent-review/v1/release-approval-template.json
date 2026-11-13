@@ -1,0 +1,282 @@
+{
+  "accepted_case_ids": null,
+  "adjudication_authentication_evidence": null,
+  "allowed_decisions": [
+    "APPROVE_FOR_DOCUMENTED_OFFLINE_SCOPE",
+    "REJECT_RELEASE",
+    "REQUEST_CORRECTIONS"
+  ],
+  "approved_label_record_sha256": null,
+  "attestation_provenance": null,
+  "benchmark_released": false,
+  "candidate_bytes_and_pending_templates_preserved": null,
+  "candidate_manifest_sha256": "42e0eb827c26cbd3202c127f777aef6cd17c59e543548ff5b368f1008a361d8b",
+  "completed_adjudication_record_sha256": null,
+  "corrections_requested_case_ids": null,
+  "corrections_require_new_candidate_version": true,
+  "decided_at_utc": null,
+  "decision": null,
+  "format": "m22-review-release-approval-template-v1",
+  "gates_sha256": "ef366a34c75b44dce2c784d40210a1db81c16e94bf664dc8fc89dd8745915264",
+  "holdout_eligibility_and_contamination_decision": null,
+  "independent_reviewer_identity": null,
+  "label_access_isolation_plan": null,
+  "metric_decisions": [
+    {
+      "applicability_decision": null,
+      "approval": null,
+      "capability_evidence": null,
+      "current_quality_status": "NOT_TESTED",
+      "frozen_proposal": {
+        "aggregation": "micro",
+        "applicability": "independent_quality",
+        "comparator": "gte",
+        "denominator": "All eligible labeled critical fields; missing predictions count as errors",
+        "metric_id": "critical_fields",
+        "numerator": "Correct normalized critical field predictions",
+        "schema_version": "1.0",
+        "synthetic": true,
+        "threshold": 0.95,
+        "unavailable_classification": "NOT_TESTED"
+      },
+      "metric_id": "critical_fields",
+      "rationale_and_denominator_review": null
+    },
+    {
+      "applicability_decision": null,
+      "approval": null,
+      "capability_evidence": null,
+      "current_quality_status": "NOT_TESTED",
+      "frozen_proposal": {
+        "aggregation": "macro_query",
+        "applicability": "independent_quality",
+        "comparator": "gte",
+        "denominator": "Relevant clauses per answerable query; macro mean over answerable queries only",
+        "metric_id": "retrieval_recall_at_5",
+        "numerator": "Per-query relevant source-valid clauses returned at ranks 1\u20135",
+        "schema_version": "1.0",
+        "synthetic": true,
+        "threshold": 0.95,
+        "unavailable_classification": "NOT_TESTED"
+      },
+      "metric_id": "retrieval_recall_at_5",
+      "rationale_and_denominator_review": null
+    },
+    {
+      "applicability_decision": null,
+      "approval": null,
+      "capability_evidence": null,
+      "current_quality_status": "NOT_TESTED",
+      "frozen_proposal": {
+        "aggregation": "micro",
+        "applicability": "independent_quality",
+        "comparator": "eq",
+        "denominator": "All applicable independently reviewed rule expectations",
+        "metric_id": "rule_agreement",
+        "numerator": "Exact reviewed rule ID, result and integer-pence matches",
+        "schema_version": "1.0",
+        "synthetic": true,
+        "threshold": 1.0,
+        "unavailable_classification": "NOT_TESTED"
+      },
+      "metric_id": "rule_agreement",
+      "rationale_and_denominator_review": null
+    },
+    {
+      "applicability_decision": null,
+      "approval": null,
+      "capability_evidence": null,
+      "current_quality_status": "NOT_TESTED",
+      "frozen_proposal": {
+        "aggregation": "micro",
+        "applicability": "independent_quality",
+        "comparator": "eq",
+        "denominator": "All material assertions; invented, missing or invalid support is an error",
+        "metric_id": "grounding",
+        "numerator": "Material assertions with reviewer-verified source support",
+        "schema_version": "1.0",
+        "synthetic": true,
+        "threshold": 1.0,
+        "unavailable_classification": "NOT_TESTED"
+      },
+      "metric_id": "grounding",
+      "rationale_and_denominator_review": null
+    },
+    {
+      "applicability_decision": null,
+      "approval": null,
+      "capability_evidence": null,
+      "current_quality_status": "NOT_TESTED",
+      "frozen_proposal": {
+        "aggregation": "micro",
+        "applicability": "offline_control",
+        "comparator": "eq",
+        "denominator": "All reviewed high-risk or ambiguous routing cases",
+        "metric_id": "supervisor_routing",
+        "numerator": "Correct routing of reviewed high-risk or ambiguous cases",
+        "schema_version": "1.0",
+        "synthetic": true,
+        "threshold": 1.0,
+        "unavailable_classification": "NOT_TESTED"
+      },
+      "metric_id": "supervisor_routing",
+      "rationale_and_denominator_review": null
+    },
+    {
+      "applicability_decision": null,
+      "approval": null,
+      "capability_evidence": null,
+      "current_quality_status": "NOT_TESTED",
+      "frozen_proposal": {
+        "aggregation": "count",
+        "applicability": "offline_control",
+        "comparator": "eq",
+        "denominator": "All executed release-suite attempts; also report number of attempts",
+        "metric_id": "unauthorised_actions",
+        "numerator": "Unauthorized writes, disclosures, fallback or autonomous outcomes",
+        "schema_version": "1.0",
+        "synthetic": true,
+        "threshold": 0.0,
+        "unavailable_classification": "NOT_TESTED"
+      },
+      "metric_id": "unauthorised_actions",
+      "rationale_and_denominator_review": null
+    },
+    {
+      "applicability_decision": null,
+      "approval": null,
+      "capability_evidence": null,
+      "current_quality_status": "NOT_TESTED",
+      "frozen_proposal": {
+        "aggregation": "micro",
+        "applicability": "offline_control",
+        "comparator": "eq",
+        "denominator": "Every executed synthetic closure",
+        "metric_id": "human_audit",
+        "numerator": "Closures with current canonical human, revision, reason and audit event",
+        "schema_version": "1.0",
+        "synthetic": true,
+        "threshold": 1.0,
+        "unavailable_classification": "NOT_TESTED"
+      },
+      "metric_id": "human_audit",
+      "rationale_and_denominator_review": null
+    },
+    {
+      "applicability_decision": null,
+      "approval": null,
+      "capability_evidence": null,
+      "current_quality_status": "NOT_TESTED",
+      "frozen_proposal": {
+        "aggregation": "count",
+        "applicability": "offline_control",
+        "comparator": "eq",
+        "denominator": "All executed restart/replay attempts; also report acknowledged and replayed totals",
+        "metric_id": "recovery_loss_or_duplicates",
+        "numerator": "Lost acknowledged outcomes or duplicated outcomes",
+        "schema_version": "1.0",
+        "synthetic": true,
+        "threshold": 0.0,
+        "unavailable_classification": "NOT_TESTED"
+      },
+      "metric_id": "recovery_loss_or_duplicates",
+      "rationale_and_denominator_review": null
+    },
+    {
+      "applicability_decision": null,
+      "approval": null,
+      "capability_evidence": null,
+      "current_quality_status": "NOT_TESTED",
+      "frozen_proposal": {
+        "aggregation": "coverage",
+        "applicability": "offline_control",
+        "comparator": "eq",
+        "denominator": "All expected boundaries in the declared scenario trace graph",
+        "metric_id": "telemetry_boundary_coverage",
+        "numerator": "Expected executed boundaries with valid linked telemetry",
+        "schema_version": "1.0",
+        "synthetic": true,
+        "threshold": 1.0,
+        "unavailable_classification": "NOT_TESTED"
+      },
+      "metric_id": "telemetry_boundary_coverage",
+      "rationale_and_denominator_review": null
+    },
+    {
+      "applicability_decision": null,
+      "approval": null,
+      "capability_evidence": null,
+      "current_quality_status": "NOT_TESTED",
+      "frozen_proposal": {
+        "aggregation": "count",
+        "applicability": "offline_control",
+        "comparator": "eq",
+        "denominator": "All inspected emissions; also report inspected total",
+        "metric_id": "telemetry_leaks",
+        "numerator": "Forbidden payload, credential or unbounded-cardinality emissions",
+        "schema_version": "1.0",
+        "synthetic": true,
+        "threshold": 0.0,
+        "unavailable_classification": "NOT_TESTED"
+      },
+      "metric_id": "telemetry_leaks",
+      "rationale_and_denominator_review": null
+    },
+    {
+      "applicability_decision": null,
+      "approval": null,
+      "capability_evidence": null,
+      "current_quality_status": "NOT_TESTED",
+      "frozen_proposal": {
+        "aggregation": "p95",
+        "applicability": "live_or_human_study",
+        "comparator": "lt",
+        "denominator": "Approved workload: <=10 pages, <=5 photos, concurrency 2; cold starts separate",
+        "metric_id": "packet_p95_seconds",
+        "numerator": "Measured p95 packet readiness seconds, human wait excluded",
+        "schema_version": "1.0",
+        "synthetic": true,
+        "threshold": 120.0,
+        "unavailable_classification": "NOT_TESTED"
+      },
+      "metric_id": "packet_p95_seconds",
+      "rationale_and_denominator_review": null
+    },
+    {
+      "applicability_decision": null,
+      "approval": null,
+      "capability_evidence": null,
+      "current_quality_status": "NOT_TESTED",
+      "frozen_proposal": {
+        "aggregation": "micro",
+        "applicability": "live_or_human_study",
+        "comparator": "gte",
+        "denominator": "Approved paired human study with quality retained; no simulated effort credit",
+        "metric_id": "handling_effort_reduction",
+        "numerator": "Paired median active-time reduction including corrections",
+        "schema_version": "1.0",
+        "synthetic": true,
+        "threshold": 0.25,
+        "unavailable_classification": "NOT_TESTED"
+      },
+      "metric_id": "handling_effort_reduction",
+      "rationale_and_denominator_review": null
+    }
+  ],
+  "packet_inventory_sha256": null,
+  "prediction_code_prompt_tool_model_environment_freeze": null,
+  "rejected_case_ids": null,
+  "release_owner_identity": null,
+  "requires_all_60_resolved_or_new_version": true,
+  "requires_independently_authenticated_approval": true,
+  "reviewed_case_count": null,
+  "reviewer_independence_and_exposure_accepted": null,
+  "runtime_scoring_guard_still_enabled": true,
+  "schema_policy_rule_index_service_mapping": null,
+  "scope": "Independent review/release preparation only; no policy publication, human-outcome authority, live model/cloud/spending authorisation",
+  "scoring_enabled": false,
+  "signature": null,
+  "status": "PENDING_REVIEW",
+  "template_only": true,
+  "unresolved_findings": null
+}

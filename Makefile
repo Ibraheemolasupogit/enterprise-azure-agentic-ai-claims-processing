@@ -86,3 +86,7 @@ package:
 .PHONY: security-hardening-check
 security-hardening-check:
 	$(PYTHON) -m pytest tests/test_security_hardening.py
+
+.PHONY: quality-ops-check
+quality-ops-check:
+	$(PYTHON) -m pytest tests/test_quality_ops_stage_a.py tests/test_quality_ops_stage_b.py tests/test_quality_ops_operational.py
