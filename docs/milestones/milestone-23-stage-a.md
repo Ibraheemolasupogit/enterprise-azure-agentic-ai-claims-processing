@@ -1,0 +1,74 @@
+# Milestone 23 — Stage A: offline Azure deployment foundation
+
+Baseline: `902644fe4e84be2ed0bacb8af852660b6227bc49`, clean at task entry. Official title remains **Governed Azure deployment**. This stage implements disabled local definitions/contracts only; it is not the roadmap's Azure deployment acceptance. M1–M21 remain accepted within their scopes; M22 offline engineering remains conditionally accepted, all 60 candidates PENDING_REVIEW and all 12 independent-quality metrics NOT_TESTED.
+
+## Delivered foundation
+
+- [Main/eight modular Bicep definitions](../../infra/azure/README.md) and separate false-only dev/test/prod parameter sets. All new resources/modules are conditional and every new template permits only `deploymentEnabled=false`, including direct module invocation.
+- Private internal Container Apps API/UI and MCP definitions, immutable-image input slots, bounded replicas and future health contracts. Default entrypoint always refuses hosting and health with exit 78; no real cloud host or adapter is invented.
+- Network/NSG, identities/Key Vault, private registry, PostgreSQL/Blob/Service Bus, gateway and private endpoint/DNS/monitoring candidates. Current M14 reference artifacts remain byte-identical and disabled. No Entra registration, federation, role assignment, live model resource or cloud export is performed.
+- [Locked Linux build contract](../../deployment/README.md): non-root multi-stage Dockerfile, offline/hash-required installation of the existing 39 runtime versions, separately pinned artifact manifest, local-daemon/cached-base requirement, allowlisted build context and bounded no-network smoke by image ID. Actual base/wheel inputs are pending; no image has been pulled, built or pushed.
+- Credential-free static validation workflow and separate manual deployment workflow definition. Deployment has a refusing preflight, literal false job condition and no login/deploy action. Actual GitHub protected-environment/federation settings remain UNVERIFIED, not configured by YAML.
+- [Dated compatibility/API/quota and cost matrices](../deployment/m23/README.md), [unimplemented adapter requirements](../deployment/m23/adapter-requirements.md), [exact approval/migration/restore/rollback/teardown gates](../deployment/m23/lifecycle-and-approvals.md), [architecture](../architecture/offline-azure-deployment-foundation.md), README/roadmap/risk/traceability/build updates. No new dependency is declared or installed.
+
+The smallest future slice is one synthetic dev environment with registered fixtures, advisory human review, three read-only MCP tools and simulated model behaviour. Required cloud data/auth/session/telemetry adapters remain NOT_IMPLEMENTED. Test/prod are isolated reference parameter sets, not deployment approvals. Foundry, Document Intelligence, AI Search, Content Safety and live models remain absent/disabled. No new outcome endpoint, autonomous decision, arbitrary upload or M24 implementation is added.
+
+## Verification interpretation
+
+Local compilation checks the installed compiler's type/schema model, not real provider acceptance, capacity, cost or network behaviour. Targeted static/mutation checks are not a complete ARM policy interpreter or independent security approval. Dockerfile scanner checks do not establish image CVE/licence status or successful Linux execution. Host ASGI smoke is not Docker, TCP, TLS, Entra, APIM or Azure execution.
+
+The full application wheel still contains public reference-authoring modules from M22; it is a general service artifact, **not a sealed predictor environment**. The build context excludes frozen M22 candidate/reviewer JSON and unrelated evidence/credentials. No prediction input/runtime path is changed. Future held-out prediction must use a separately approved input-only filesystem/access boundary, never the general repository/service image as proof of blindness.
+
+## Remaining Azure prerequisites
+
+Real owner/scope/tenant/subscription/region/residency/capacity and positive budget/lifetime approvals; Linux base/wheel/SBOM/vulnerability/build evidence; cloud hosts, Entra/canonical sessions and data/export adapters; protected GitHub/OIDC/RBAC; current key/anchor custody; internal CA/private Monitor DNS/egress and APIM sequencing; compatible migration/restore/rollback; separately authorised ARM validation/what-if/provisioning/deployment/teardown and actual integration/cost evidence remain required.
+
+No price, current quota, real reviewer/approval identity or completed production adapter is invented. Budgets are notifications, not spending stops. SQLite/local memory cannot be promoted to cloud durability by max-one-replica or a file-share mount. Current identity checks before duplicates, canonical assignments, human/supervisor/publication separation, M20 audit/outbox atomicity, M21 independent current anchors and M22 scoring denial remain requirements rather than claims of new cloud enforcement.
+
+Historical M8 four failures, M12 timing limitations, M19 **80 PASS / 0 FAIL / 8 NOT_TESTED**, M20/M21 same-runtime/trusted-host/admission-race limitations and the M22 authoring-alias finding remain. Existing data, source runtime, prior tests, package/report evidence and M22 packet are preserved. No Azure login/query/ARM validation/what-if, IAM/app/federation change, provisioning, spending, image push, cloud export, model call, commit or push occurs. Stop after Stage A.
+
+## Initial Stage A validation record (preserved)
+
+Environment: Python **3.12.8**, macOS arm64; existing pinned dependencies only. No Azure or live identity/model service was contacted. Public schema/action release documentation was read; a previously retained verified Bicep binary was used locally.
+
+| Check | Actual result |
+| --- | --- |
+| Bicep compilation | **12 passed without diagnostics**: main, eight modules and dev/test/prod parameters; Bicep **0.48.1 (cec7951cf6)**, SHA-256 `62cd5958c62fa1b738e9b69f24799fabddb90ed83fdb7d6d2563dde376ce479d`; local modules, no restore |
+| Compiled template guards | All **nine** resource templates have false-only defaults/allowed values and guarded resources; **zero enabled resources**. Main's eight nested modules explicitly receive false |
+| Focused source tests | **90 passed**: 70 new foundation/security/build/smoke checks plus 20 unchanged APIM reference tests |
+| Complete source pytest | **1,506 passed**, 548.82 seconds; historical 1,436 plus 70 new cases |
+| Independent installed-wheel regressions | **299 passed**, 50.55 seconds: foundation/APIM/M21/M22; byte-identical copied tests and real reference data outside the original checkout, application imports verified under wheel site-packages. This is a focused wheel run, not a new full 1,506-test wheel claim |
+| Ruff / formatting / strict mypy | PASS across **180** Python files; no new stub/dependency installed |
+| Dependencies | `pip check` PASS; all **39** runtime versions and complete **52**-distribution installed environment unchanged |
+| Application compatibility evidence | All **145** prior runtime files unchanged; the complete Python application fingerprint equals the accepted M22 runtime. This is source preservation, not proof of Linux/database upgrade compatibility |
+| Host ASGI smoke | Real API live 200, missing identity 401, readiness 503; anonymous UI only; three genuine governed MCP SDK reads; zero model/cloud calls. **Not Docker/TCP/Azure execution** |
+| Dockerfile static scan | Embedded offline Trivy checks: **27 success / 0 findings**; no update/download/telemetry |
+| ARM static scan | Embedded checks recognized only data/identity/network: **21 success / 5 findings**, retained in full and [triaged](../deployment/m23/security-review.md), not represented as a clean IaC/security result |
+| Actual Linux image build/run/CVE scan | **NOT_TESTED / BLOCKED_INPUTS**. Local Docker 28.3.3 server is available on arm64, but no cached Python base or approved Linux amd64 wheel/hash inventory exists; no pull/build/push occurred |
+| Packaging | Project wheel has all **144** Python runtime files byte-identical plus `py.typed`; completed source archive verifies all **488** nonignored source/data/docs/test/infra/workflow files, including frozen reviewer JSON and hidden Docker/workflow definitions |
+| Historical preservation | All **244** prior output files, **184** data files, **145** runtime files, **30** old test files and **12** existing requirement files unchanged. Of **696** initial files, only nine intended documentation/build/type configuration files changed; **687** remain byte-identical |
+| Git | HEAD remains `902644fe4e84be2ed0bacb8af852660b6227bc49`; no staging, commit or push |
+
+[Exact changed-file inventory](../../outputs/deployment/m23-stage-a/files.json): **36 new files / 9 modified existing files**. [Local validation evidence](../../outputs/deployment/m23-stage-a/) retains compilation/source hashes, compiled definitions, selected guard results, dependency/source-fingerprint proof, host ASGI smoke, raw scans/triage, source test log, quality checks and preservation hashes. [New package/wheel evidence](../../outputs/packages/m23-stage-a/) retains package artifacts, build log, independent-wheel test log and module origins. Earlier reports/packages and historical failure evidence were not regenerated or overwritten. The first broad source run was stopped while adapting the static checker to canonical Bicep formatting; `source-final.txt` is the complete passing run.
+
+The five ARM findings include an intentional no-trusted-services Storage bypass conflict, a disputed default-deny Key Vault result reproduced with a synthetic offline fixture, possible blob child-resource soft-delete resolution, actual missing Storage diagnostic logging, and the explicitly unapproved LRS redundancy candidate. No checker ignore file or false production closure is added. Private Monitor/DNS, effective ACLs/permissions and provider behaviour need separately authorised evidence.
+
+**Recommendation: CONDITIONAL ACCEPT for Stage A offline preparation.** Definitions, gates, tooling, source/package regression and plans are reviewable and locally validated. Actual Linux artifacts/container execution, applicable scanner findings and all real identity/network/data/telemetry/approval integration remain open. Azure execution stays prohibited; M23's full deployment acceptance and production/M24 readiness are not granted.
+
+## Infrastructure security closeout — 2026-11-13
+
+The [updated security review](../deployment/m23/security-review.md) classifies all five original findings with direct compiled evidence and controlled synthetic scanner probes: **AZU-0010 FALSE_POSITIVE** for the narrower private-only/no-trusted-services design; **AZU-0013 FALSE_POSITIVE** for the explicitly declared Key Vault deny ACL; **AZU-0056 FALSE_POSITIVE** for soft delete already declared on the blob child; **AZU-0057 VALID**, corrected in the offline definition; **AZU-0058 UNRESOLVED**, awaiting a genuine redundancy/residency/recovery/cost decision. No owner risk acceptance or live enforcement result is invented.
+
+Minimal corrections add a conditional blob diagnostic setting for StorageRead/StorageWrite/StorageDelete to the same-environment Log Analytics workspace, a required destination parameter and explicit monitoring-module dependency. Every resource/module retains its false-only disabled gate; both original M14 nested flags remain false. Static checks and twelve negative security mutations now cover diagnostic scope/categories/destination, retention, TLS and deny controls. No application runtime, dependency, workflow or adapter changes.
+
+New evidence is retained separately under [outputs/deployment/m23-closeout](../../outputs/deployment/m23-closeout/); the initial Stage A receipts and all historical outputs above are unchanged. **12 Bicep compilations pass without diagnostics**, all **nine** compiled guard checks pass with zero enabled resources, and emitted diagnostic bindings/private/TLS/identity controls pass local assertions. Embedded offline Trivy **0.72.0** still records **21 successful ARM checks / five raw findings** across only three recognized configurations; modern diagnostic and child-resource coverage limitations are documented, with no suppression. Dockerfile scan remains **27 successes / zero findings**.
+
+Focused source validation passes **311 tests in 53.72s** (82 foundation, 20 APIM, 111 M21, 98 M22). Ruff lint and formatting pass; strict mypy passes **180 source files**. `pip check` passes; **39** pinned runtime versions, all **52** installed distributions and the M22 application fingerprint are unchanged. An initial selection error and lint failures are retained alongside the corrected passing receipts. The historical **1,506 full-source** and **299 focused installed-wheel** runs are preserved, not claimed rerun here. Existing package archives are historical artifacts, not rebuilt closeout packages.
+
+Linux build/run remains **NOT_TESTED / BLOCKED_INPUTS**. The [exact inventory](../../outputs/deployment/m23-closeout/linux-prerequisites.json) identifies seven unpopulated manifest fields: base image/digest and review, 39 compatible dependency wheels with hashes, source fingerprint binding, project-wheel binding, build epoch and licence/vulnerability review. The existing candidate project wheel is present and all 144 runtime Python members still match; its reviewed Linux-manifest binding is missing. No Docker/image/registry query, pull/build/run/push, dependency installation or cloud call occurred. Current daemon/cache availability is not newly verified.
+
+Native blob diagnostics can expose object URIs, IPs and identity metadata: no ingestion transform is implemented, so privacy/access/retention approval remains mandatory before activation. Private Monitor routing/DNS/delivery, APIM TLS/network sequencing, default VNet lateral access, effective managed identity/Entra/RBAC, cloud adapters and restore evidence remain unresolved or NOT_TESTED. Stage A definitions are not production controls or independent approval.
+
+Closeout preservation verifies **763 of 769** baseline files byte-identical; only six intended IaC/check/test/review/evidence-document files changed. All **281** existing outputs, **184** data files, **145** runtime files, **13** requirements files and **four** M14 reference files are unchanged. HEAD remains `902644f` and the index is empty. See [preservation receipt](../../outputs/deployment/m23-closeout/preservation.json).
+
+**Closeout recommendation: CONDITIONAL ACCEPT for offline Stage A only.** The missing diagnostic definition is corrected and the scanner interpretations are documented. The unresolved LRS recovery decision, Linux artifacts/execution and all authorised cloud security/integration evidence remain prerequisites. Azure execution stays prohibited; no M24 work, staging, commit or push.

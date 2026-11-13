@@ -63,3 +63,19 @@ R-008/F-001 and R-009/F-002 remain closed only for their demonstrated offline pa
 R-008/F-001 and R-009/F-002 retain their prior bounded closure. M8 failures, M12 timing limits and historical M19 evidence remain unchanged. No production risk is silently closed by engineering test totals.
 
 Observed additional limitation: the unchanged Stage A authoring guard does not protect a repository whose `data` root itself aliases another directory. Two wheel-test checks exposed that topology; original historical files remained unchanged, and only the two newly generated test directories were moved to private scratch. Stage B's evaluator/output guard uses canonical configured roots; authoring through aliased roots is not accepted. Operator/security must keep real authoring roots and require a separately reviewed correction before supporting aliases. This does not reopen the distinct M19 F-002 consumer-output remediation.
+
+## M23 Stage A deployment-foundation reassessment
+
+[Offline evidence](../milestones/milestone-23-stage-a.md) and [architecture](../architecture/offline-azure-deployment-foundation.md) add disabled resource/build/workflow definitions, not live security or owner risk acceptance. R-001–R-007 remain OPEN; R-008/F-001 and R-009/F-002 retain only their demonstrated local closure.
+
+| Risk | Stage A control/evidence | Remaining requirement / owner |
+| --- | --- | --- |
+| R-001/R-002/R-003/R-004 | Existing application/rule/model/holdout behaviour unchanged; AI resource definitions absent and calls/export disabled | Policy/quality/security owners: provisional rules and 60 pending author-visible labels remain unapproved; no OCR, live model or new attack-resistance/quality claim |
+| R-005 | Private resource candidates, separate identities, strict module gates, credential-free static CI and no live deployment action | Security/operator: real Entra/session binding, RBAC/consent, protected GitHub environments, private ingress/DNS/egress and actual redaction/deletion enforcement remain UNVERIFIED |
+| R-006 | Bounded replicas, refusal to start missing hosts/adapters, explicit migration/restore/rollback and audit/outbox contracts | Operator/security: no cloud database/queue/session/export adapter, independent anchor custody, cross-store revocation solution or cloud recovery evidence; max-one-replica does not fix volatile state |
+| R-007 | Null/unapproved spend ceilings block progression; dated candidate cost matrix, finite limits and expiry/teardown requirements | Sponsor/operator: actual regional fixed/variable quotes, capacity, currency/retention, stop procedure and residual costs require approval; alerts alone do not stop spending |
+| R-005/R-006/R-007 | Base digest and Linux wheel hashes intentionally absent; builder rejects pending/unpinned artifacts before Docker, context excludes credentials and reviewer labels | Operator/security: actual cached Linux images/wheels, licences/SBOM/vulnerability review, target build and container smoke remain NOT_TESTED; no fake hashes or macOS-to-Linux compatibility claim |
+
+Bicep/policy/scanner success is not live provider acceptance, complete IAM/network enforcement or an independent security approval. Current M8 failures, M12 timing sensitivity, M19 80/0/8, M20/M21 trusted-host/current-anchor/same-runtime limits and the M22 authoring-alias limitation remain. No cloud operation, spending or production-risk closure is recorded.
+
+The [offline security review](../deployment/m23/security-review.md) retains five embedded ARM-scanner findings (including a disputed critical Key Vault ACL result despite explicit default deny). Missing Storage logging/private Monitor integration and unapproved redundancy remain open; Dockerfile checks passing does not resolve those findings or provide image CVE evidence. No ignore/suppression or production-risk acceptance is recorded.

@@ -6,13 +6,13 @@ test:
 	$(PYTHON) -m pytest
 
 lint:
-	$(PYTHON) -m ruff check src tests
+	$(PYTHON) -m ruff check src tests deployment
 
 format:
-	$(PYTHON) -m ruff format src tests
+	$(PYTHON) -m ruff format src tests deployment
 
 format-check:
-	$(PYTHON) -m ruff format --check src tests
+	$(PYTHON) -m ruff format --check src tests deployment
 
 typecheck:
 	$(PYTHON) -m mypy
@@ -90,3 +90,11 @@ security-hardening-check:
 .PHONY: quality-ops-check
 quality-ops-check:
 	$(PYTHON) -m pytest tests/test_quality_ops_stage_a.py tests/test_quality_ops_stage_b.py tests/test_quality_ops_operational.py
+
+.PHONY: deployment-foundation-check deployment-static-check
+# No Azure commands. Bicep output is local, never ARM validation/what-if.
+deployment-foundation-check:
+	$(PYTHON) -m pytest tests/test_deployment_foundation.py tests/test_apim_reference.py
+
+deployment-static-check:
+	$(PYTHON) -I -B deployment/foundation.py --root .

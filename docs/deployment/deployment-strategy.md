@@ -1,6 +1,6 @@
 # Deployment strategy
 
-Status: **PLANNED**. No Azure account/subscription access, quota checks, infrastructure files, workflows, resources or spending have occurred. All service/SKU choices require later verification. See the [target architecture](../architecture/target-architecture.md).
+Status: **M23 Stage A offline definitions implemented; Azure execution remains unapproved.** Gated Bicep, container/build contracts and workflow definitions now exist. No Azure account/subscription access, live quota checks, resources, deployments or spending have occurred. All service/SKU choices require later verification. See the [target architecture](../architecture/target-architecture.md).
 
 ## Proposed service mapping
 
@@ -46,3 +46,9 @@ Approve a GBP monthly budget and per-run model/page caps before paid work; no am
 Use budget alerts at proposed 50/80/100% thresholds plus application usage limits and a model-work kill switch. [Azure budgets](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-acm-create-budgets) notify; they do not stop consumption. Pricing estimates must include fixed service charges, inference, extraction, storage, telemetry and network traffic; no cost figure is claimed here.
 
 Cloud entry requires approved region/quota matrix, spend ceiling, identity/network design, synthetic dataset and release tests. Cloud exit requires smoke/security/recovery evidence, restore exercise, operational owner and reviewed cost/retention records. There is no multi-region availability or recovery-time claim until demonstrated.
+
+## M23 Stage A implementation boundary
+
+[The offline foundation](../milestones/milestone-23-stage-a.md) supplies [modular Bicep](../../infra/azure/README.md), separate disabled dev/test/prod parameters, private API/UI/MCP targets, permanently disabled deployment workflow, local static/build/smoke contracts and [dated unverified matrices](m23/README.md). Required data/identity/telemetry adapters, Linux artifact review, actual GitHub environment protection/OIDC, Monitor private link and private-network interoperability remain missing. The templates cannot be enabled by their parameters; Stage B requires a separately reviewed change and explicit Azure/spending authorisation.
+
+The smallest future slice is synthetic-only dev, registered fixtures, advisory human review and three read-only MCP tools. It does not enable arbitrary uploads, operational policy rules, new outcome endpoints or live Foundry/Document Intelligence/Search/model services. [Adapter requirements](m23/adapter-requirements.md) preserve current human authority and atomic audit/outbox. [Lifecycle gates](m23/lifecycle-and-approvals.md) separately govern cloud validation, provisioning, deployment, migration/restore/rollback and teardown. Local Bicep compilation and static checks are not the roadmap's actual Azure integration/cost exit evidence. M24 remains unstarted.

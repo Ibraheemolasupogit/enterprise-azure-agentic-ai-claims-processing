@@ -6,7 +6,7 @@ include requirements/m18-constraints.txt
 include requirements/m19-constraints.txt
 include requirements/m20-constraints.txt
 recursive-include tests *.py
-recursive-include docs *.md
+recursive-include docs *.md *.json
 recursive-include data/synthetic/motor *.md *.json *.pdf *.png
 recursive-include data/evaluation/policy-retrieval *.md *.json
 recursive-include data/rules/motor *.md *.json
@@ -17,3 +17,7 @@ recursive-include data/security/identity *.md *.json
 recursive-include data/evaluation/m22 *.md *.json
 include requirements/m22-constraints.txt requirements/m22-wheel-manifest.json
 recursive-include data/operations/m22 *.md *.json
+include requirements/m23-constraints.txt
+recursive-include infra/azure *.bicep *.bicepparam *.md *.json
+recursive-include deployment *.py *.json *.md Dockerfile .dockerignore
+recursive-include .github/workflows m23-*.yml

@@ -1,0 +1,206 @@
+{
+  "adapter_status": {
+    "blob": "NOT_IMPLEMENTED",
+    "canonical_session_store": "NOT_IMPLEMENTED",
+    "cloud_host": "NOT_IMPLEMENTED",
+    "cloud_telemetry": "NOT_IMPLEMENTED",
+    "entra": "NOT_IMPLEMENTED",
+    "postgres": "NOT_IMPLEMENTED",
+    "service_bus": "NOT_IMPLEMENTED"
+  },
+  "baseline_revision": "902644fe4e84be2ed0bacb8af852660b6227bc49",
+  "benchmark_released": false,
+  "candidate_status": "PENDING_REVIEW",
+  "cloud_execution_allowed": false,
+  "cloud_export_allowed": false,
+  "environments": {
+    "dev": {
+      "data_boundary": "ISOLATED_DEV",
+      "deployment_enabled": false,
+      "experiment_budget_gbp": null,
+      "expiry_utc": null,
+      "github_environment": "m23-dev",
+      "max_concurrency": 1,
+      "max_replicas": 1,
+      "monthly_budget_gbp": null,
+      "owner": null,
+      "purpose": "synthetic_dev_candidate",
+      "region": "uksouth",
+      "region_status": "UNVERIFIED",
+      "resource_group": null,
+      "runtime_hours": null,
+      "subscription_id": null,
+      "tenant_id": null
+    },
+    "prod": {
+      "data_boundary": "ISOLATED_PROD",
+      "deployment_enabled": false,
+      "experiment_budget_gbp": null,
+      "expiry_utc": null,
+      "github_environment": "m23-prod",
+      "max_concurrency": 1,
+      "max_replicas": 1,
+      "monthly_budget_gbp": null,
+      "owner": null,
+      "purpose": "REFERENCE_ONLY_NOT_AUTHORISED",
+      "region": "uksouth",
+      "region_status": "UNVERIFIED",
+      "resource_group": null,
+      "runtime_hours": null,
+      "subscription_id": null,
+      "tenant_id": null
+    },
+    "test": {
+      "data_boundary": "ISOLATED_TEST",
+      "deployment_enabled": false,
+      "experiment_budget_gbp": null,
+      "expiry_utc": null,
+      "github_environment": "m23-test",
+      "max_concurrency": 1,
+      "max_replicas": 1,
+      "monthly_budget_gbp": null,
+      "owner": null,
+      "purpose": "REFERENCE_ONLY_NOT_AUTHORISED",
+      "region": "uksouth",
+      "region_status": "UNVERIFIED",
+      "resource_group": null,
+      "runtime_hours": null,
+      "subscription_id": null,
+      "tenant_id": null
+    }
+  },
+  "format": "m23-offline-deployment-contract-v1",
+  "independent_quality_status": "NOT_TESTED",
+  "mandatory_gates": {
+    "budget": {
+      "approval_identity": null,
+      "approval_time": null,
+      "evidence_sha256": null,
+      "status": "PENDING_REVIEW"
+    },
+    "cloud_adapters": {
+      "approval_identity": null,
+      "approval_time": null,
+      "evidence_sha256": null,
+      "status": "PENDING_REVIEW"
+    },
+    "cloud_validation": {
+      "approval_identity": null,
+      "approval_time": null,
+      "evidence_sha256": null,
+      "status": "PENDING_REVIEW"
+    },
+    "deployment": {
+      "approval_identity": null,
+      "approval_time": null,
+      "evidence_sha256": null,
+      "status": "PENDING_REVIEW"
+    },
+    "github_environment_protection": {
+      "approval_identity": null,
+      "approval_time": null,
+      "evidence_sha256": null,
+      "status": "PENDING_REVIEW"
+    },
+    "identity_rbac": {
+      "approval_identity": null,
+      "approval_time": null,
+      "evidence_sha256": null,
+      "status": "PENDING_REVIEW"
+    },
+    "independent_quality_scope_exception": {
+      "approval_identity": null,
+      "approval_time": null,
+      "evidence_sha256": null,
+      "status": "PENDING_REVIEW"
+    },
+    "linux_artifacts": {
+      "approval_identity": null,
+      "approval_time": null,
+      "evidence_sha256": null,
+      "status": "PENDING_REVIEW"
+    },
+    "migration_restore_rollback": {
+      "approval_identity": null,
+      "approval_time": null,
+      "evidence_sha256": null,
+      "status": "PENDING_REVIEW"
+    },
+    "private_network_dns": {
+      "approval_identity": null,
+      "approval_time": null,
+      "evidence_sha256": null,
+      "status": "PENDING_REVIEW"
+    },
+    "provisioning": {
+      "approval_identity": null,
+      "approval_time": null,
+      "evidence_sha256": null,
+      "status": "PENDING_REVIEW"
+    },
+    "region_residency_capacity": {
+      "approval_identity": null,
+      "approval_time": null,
+      "evidence_sha256": null,
+      "status": "PENDING_REVIEW"
+    },
+    "scope": {
+      "approval_identity": null,
+      "approval_time": null,
+      "evidence_sha256": null,
+      "status": "PENDING_REVIEW"
+    },
+    "teardown": {
+      "approval_identity": null,
+      "approval_time": null,
+      "evidence_sha256": null,
+      "status": "PENDING_REVIEW"
+    }
+  },
+  "model_calls_allowed": 0,
+  "optional_services": {
+    "ai_search": {
+      "enabled": false,
+      "resources": "NOT_DEFINED"
+    },
+    "content_safety": {
+      "enabled": false,
+      "resources": "NOT_DEFINED"
+    },
+    "document_intelligence": {
+      "enabled": false,
+      "resources": "NOT_DEFINED"
+    },
+    "foundry": {
+      "enabled": false,
+      "resources": "NOT_DEFINED"
+    },
+    "live_models": {
+      "enabled": false,
+      "resources": "NOT_DEFINED"
+    }
+  },
+  "prepared_on": "2026-11-13",
+  "required_resources": [
+    "network_private_dns",
+    "registry",
+    "container_environment",
+    "api_ui",
+    "mcp",
+    "managed_identities_key_vault",
+    "apim",
+    "postgres",
+    "blob",
+    "service_bus",
+    "monitoring_budgets"
+  ],
+  "runtime_invariants": [
+    "No fixture identity becomes canonical human authority",
+    "Current canonical assignment and supervisor checks precede outcome/duplicate access",
+    "M20 audit/receipt/outbox commit atomically; telemetry is not audit",
+    "M21 current revocation and independent anchors remain authoritative",
+    "M22 held-out scoring remains denied; author-visible labels stay pending",
+    "Historical runtime/schema/source evidence is never rehashed or silently migrated"
+  ],
+  "stage": "A"
+}

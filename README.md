@@ -304,3 +304,16 @@ PYTHONPATH=src .venv/bin/python -m claims_ai.quality_ops --output outputs/qualit
 ```
 
 Use two new paths outside reference data. The command runs real local SDK/ASGI and disposable SQLite/child-process fault probes, including SIGKILL. Outputs contain allowlisted operational metadata, not claim narratives or credentials. Canonical reports omit random trace IDs and timings; separate telemetry retains measured spans. Neither telemetry nor trace context authorises an action or replaces M20 audit. Runtime additions intentionally invalidate older workflow/store fingerprints: retain historical stores/evidence, use fresh same-runtime approved synthetic contexts, and never silently migrate or rehash old state. No live model, external identity, Azure export, spending, autonomous outcome or M23 work is enabled.
+
+## M23 Stage A — offline Azure deployment foundation
+
+[Stage A evidence](docs/milestones/milestone-23-stage-a.md), [architecture](docs/architecture/offline-azure-deployment-foundation.md), [disabled Bicep](infra/azure/README.md) and [tooling/build contracts](deployment/README.md) prepare a synthetic-only private dev slice. API/UI and MCP Container Apps, identities/networking/APIM and data/monitoring targets are definitions, not deployed or cloud-ready services. Every new module permits only `deploymentEnabled=false`; the manual deployment workflow is permanently skipped and has no login/deploy action.
+
+```sh
+make deployment-static-check
+make deployment-foundation-check
+```
+
+All 39 existing runtime pins are retained through `requirements/m23-constraints.txt`; no dependency is added. Linux builds require an independently pinned cached Python base and complete reviewed wheel/hash inputs. These inputs are still pending, so no image was pulled, built or pushed. The non-root image/health/smoke definitions do not enable hosting: the Stage A entrypoint always exits 78 until real hosts/identity/persistence adapters are separately implemented and approved. A host ASGI smoke is labelled separately from container or Azure execution.
+
+[Compatibility/quota/cost matrices](docs/deployment/m23/README.md) leave subscription facts UNVERIFIED and prices/approvals null. [Missing adapters](docs/deployment/m23/adapter-requirements.md) and [migration/restore/rollback/teardown gates](docs/deployment/m23/lifecycle-and-approvals.md) preserve canonical human assignments, M20 audit/outbox and M21 current revocation/independent anchors. M22 candidates remain PENDING_REVIEW and independent quality remains NOT_TESTED; frozen reviewer JSON is excluded from the image context, while public authoring modules in the general service wheel remain an explicitly disclosed exposure limitation. No Azure query/login/ARM validation/what-if, Entra/IAM change, cloud export, live model, autonomous outcome, M24 work or Git commit/push is authorised by Stage A.

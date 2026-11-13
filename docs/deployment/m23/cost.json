@@ -1,0 +1,155 @@
+{
+  "approval_identity": null,
+  "approval_time": null,
+  "controls": {
+    "alerts_stop_spending": false,
+    "cloud_export_enabled": false,
+    "deployment_when_budget_missing": "DENY",
+    "max_concurrency_candidate": 1,
+    "max_replicas_per_app": 1,
+    "model_calls": 0,
+    "operator_stop_and_expiry_action_required": true,
+    "owner_environment_expiry_tags_required": true,
+    "proposed_alert_percentages": [
+      50,
+      80,
+      100
+    ],
+    "remaining_billable_resources_must_be_checked": true
+  },
+  "currency": "GBP_PLANNING_ONLY_BILLING_CURRENCY_UNVERIFIED",
+  "experiment_ceiling_gbp": null,
+  "format": "m23-cost-matrix-v1",
+  "monthly_ceiling_gbp": null,
+  "notes": [
+    "No price or positive spending ceiling is invented. Null is unknown, not zero.",
+    "Budgets are delayed notifications, not hard spending stops. Fixed services continue charging when compute scales to zero.",
+    "Billing currency/GBP conversion, tax, idle provisioning duration, backups and retained recovery artifacts require owner review."
+  ],
+  "prepared_on": "2026-11-13",
+  "rows": [
+    {
+      "basis": "gateway units, requests, private endpoint and traffic",
+      "component": "APIM",
+      "estimated_total_gbp": null,
+      "idle_cost_risk": true,
+      "quantity": null,
+      "quote_date": null,
+      "quote_source": null,
+      "status": "UNVERIFIED",
+      "unit_price_gbp": null
+    },
+    {
+      "basis": "Premium registry, retained images and private endpoint",
+      "component": "ACR",
+      "estimated_total_gbp": null,
+      "idle_cost_risk": true,
+      "quantity": null,
+      "quote_date": null,
+      "quote_source": null,
+      "status": "UNVERIFIED",
+      "unit_price_gbp": null
+    },
+    {
+      "basis": "vCPU/memory execution, requests and platform logging",
+      "component": "Container Apps",
+      "estimated_total_gbp": null,
+      "idle_cost_risk": true,
+      "quantity": null,
+      "quote_date": null,
+      "quote_source": null,
+      "status": "UNVERIFIED",
+      "unit_price_gbp": null
+    },
+    {
+      "basis": "compute, provisioned storage, backups and private endpoint",
+      "component": "PostgreSQL",
+      "estimated_total_gbp": null,
+      "idle_cost_risk": true,
+      "quantity": null,
+      "quote_date": null,
+      "quote_source": null,
+      "status": "UNVERIFIED",
+      "unit_price_gbp": null
+    },
+    {
+      "basis": "Premium messaging units, operations and private endpoint",
+      "component": "Service Bus",
+      "estimated_total_gbp": null,
+      "idle_cost_risk": true,
+      "quantity": null,
+      "quote_date": null,
+      "quote_source": null,
+      "status": "UNVERIFIED",
+      "unit_price_gbp": null
+    },
+    {
+      "basis": "capacity, operations, versions, soft delete and transfer",
+      "component": "Blob",
+      "estimated_total_gbp": null,
+      "idle_cost_risk": true,
+      "quantity": null,
+      "quote_date": null,
+      "quote_source": null,
+      "status": "UNVERIFIED",
+      "unit_price_gbp": null
+    },
+    {
+      "basis": "operations, private endpoint and retained protected vault",
+      "component": "Key Vault",
+      "estimated_total_gbp": null,
+      "idle_cost_risk": true,
+      "quantity": null,
+      "quote_date": null,
+      "quote_source": null,
+      "status": "UNVERIFIED",
+      "unit_price_gbp": null
+    },
+    {
+      "basis": "private endpoints, DNS, traffic and any separately approved egress control",
+      "component": "Network/DNS",
+      "estimated_total_gbp": null,
+      "idle_cost_risk": true,
+      "quantity": null,
+      "quote_date": null,
+      "quote_source": null,
+      "status": "UNVERIFIED",
+      "unit_price_gbp": null
+    },
+    {
+      "basis": "ingestion, retention, queries, alerts and future private link",
+      "component": "Monitor",
+      "estimated_total_gbp": null,
+      "idle_cost_risk": true,
+      "quantity": null,
+      "quote_date": null,
+      "quote_source": null,
+      "status": "UNVERIFIED",
+      "unit_price_gbp": null
+    },
+    {
+      "basis": "runner usage, image storage and artifact retention",
+      "component": "Build/CI",
+      "estimated_total_gbp": null,
+      "idle_cost_risk": true,
+      "quantity": null,
+      "quote_date": null,
+      "quote_source": null,
+      "status": "UNVERIFIED",
+      "unit_price_gbp": null
+    },
+    {
+      "basis": "disabled; zero model calls permitted",
+      "component": "AI services",
+      "estimated_total_gbp": null,
+      "idle_cost_risk": false,
+      "quantity": null,
+      "quote_date": null,
+      "quote_source": null,
+      "status": "UNVERIFIED",
+      "unit_price_gbp": null
+    }
+  ],
+  "runtime_hours": null,
+  "status": "UNAPPROVED_DEPLOYMENT_BLOCKED"
+}

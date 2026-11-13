@@ -1,0 +1,9 @@
+# Build tooling creates an isolated allowlisted context; checkout builds cannot supply artifacts.
+**
+!Dockerfile
+!entrypoint.py
+!smoke.py
+!artifacts/
+!artifacts/**
+!fixtures/
+!fixtures/**

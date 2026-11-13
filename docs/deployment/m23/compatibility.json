@@ -1,0 +1,332 @@
+{
+  "alternative_region": "westeurope",
+  "automatic_region_fallback": false,
+  "candidate_region": "uksouth",
+  "disabled_services": [
+    "Foundry",
+    "Document Intelligence",
+    "AI Search",
+    "Content Safety",
+    "live models"
+  ],
+  "format": "m23-compatibility-matrix-v1",
+  "live_model_quota": "NOT_REQUESTED_NOT_REQUIRED_FOR_STAGE_A",
+  "notes": [
+    "API existence and local compilation do not prove provider acceptance, regional support, capacity or integration.",
+    "All values are design candidates, not approved purchases. Test/prod are separate disabled references.",
+    "Current Python environment is macOS arm64; Linux amd64 base/wheels have no approved hash inventory yet."
+  ],
+  "prepared_on": "2026-11-13",
+  "rows": [
+    {
+      "actual_network_compatibility": "UNVERIFIED",
+      "allocated_limit": null,
+      "api_version": "2025-07-01",
+      "approved": false,
+      "candidate_sku_or_limit": "Consumption workload profile",
+      "current_usage": null,
+      "network_notes": "internal VNet; public access disabled; dedicated subnet; internal DNS pending",
+      "price_quote_gbp": null,
+      "public_schema_reference": "https://learn.microsoft.com/en-us/azure/templates/microsoft.app/2025-07-01/managedenvironments",
+      "public_schema_status": "PINNED_REFERENCE_LOCAL_TYPE_COMPILATION_NOT_CLOUD_VALIDATION",
+      "quota_allocation": "UNVERIFIED",
+      "quota_checks": [
+        "subscription-region managed environments and cores",
+        "environment workload-profile cores",
+        "dedicated subnet capacity and private DNS"
+      ],
+      "regional_capacity": "UNVERIFIED",
+      "resource_type": "Microsoft.App/managedEnvironments",
+      "service": "Container Apps environment",
+      "subscription_availability": "UNVERIFIED"
+    },
+    {
+      "actual_network_compatibility": "UNVERIFIED",
+      "allocated_limit": null,
+      "api_version": "2025-01-01",
+      "approved": false,
+      "candidate_sku_or_limit": "0.5 vCPU / 1 GiB; max 1 replica per app",
+      "current_usage": null,
+      "network_notes": "TLS ingress through private environment; cloud entrypoint refuses serving",
+      "price_quote_gbp": null,
+      "public_schema_reference": "https://learn.microsoft.com/en-us/azure/templates/microsoft.app/2025-01-01/containerapps",
+      "public_schema_status": "PINNED_REFERENCE_LOCAL_TYPE_COMPILATION_NOT_CLOUD_VALIDATION",
+      "quota_allocation": "UNVERIFIED",
+      "quota_checks": [
+        "per-environment cores",
+        "per-app replicas and concurrency",
+        "image architecture and ingress probe behaviour"
+      ],
+      "regional_capacity": "UNVERIFIED",
+      "resource_type": "Microsoft.App/containerApps",
+      "service": "Container Apps API/UI and MCP",
+      "subscription_availability": "UNVERIFIED"
+    },
+    {
+      "actual_network_compatibility": "UNVERIFIED",
+      "allocated_limit": null,
+      "api_version": "2025-04-01",
+      "approved": false,
+      "candidate_sku_or_limit": "Premium candidate for private endpoint",
+      "current_usage": null,
+      "network_notes": "Admin/anonymous/public access disabled; no push or pull role assigned",
+      "price_quote_gbp": null,
+      "public_schema_reference": "https://learn.microsoft.com/en-us/azure/templates/microsoft.containerregistry/2025-04-01/registries",
+      "public_schema_status": "PINNED_REFERENCE_LOCAL_TYPE_COMPILATION_NOT_CLOUD_VALIDATION",
+      "quota_allocation": "UNVERIFIED",
+      "quota_checks": [
+        "subscription-region resource/SKU availability",
+        "resource/operation/storage limits for selected workload",
+        "private endpoint/DNS and scoped permissions"
+      ],
+      "regional_capacity": "UNVERIFIED",
+      "resource_type": "Microsoft.ContainerRegistry/registries",
+      "service": "Container Registry",
+      "subscription_availability": "UNVERIFIED"
+    },
+    {
+      "actual_network_compatibility": "UNVERIFIED",
+      "allocated_limit": null,
+      "api_version": "2023-07-01",
+      "approved": false,
+      "candidate_sku_or_limit": "standard",
+      "current_usage": null,
+      "network_notes": "RBAC/private link; purge protection; no secret or access grant created",
+      "price_quote_gbp": null,
+      "public_schema_reference": "https://learn.microsoft.com/en-us/azure/templates/microsoft.keyvault/2023-07-01/vaults",
+      "public_schema_status": "PINNED_REFERENCE_LOCAL_TYPE_COMPILATION_NOT_CLOUD_VALIDATION",
+      "quota_allocation": "UNVERIFIED",
+      "quota_checks": [
+        "subscription-region resource/SKU availability",
+        "resource/operation/storage limits for selected workload",
+        "private endpoint/DNS and scoped permissions"
+      ],
+      "regional_capacity": "UNVERIFIED",
+      "resource_type": "Microsoft.KeyVault/vaults",
+      "service": "Key Vault",
+      "subscription_availability": "UNVERIFIED"
+    },
+    {
+      "actual_network_compatibility": "UNVERIFIED",
+      "allocated_limit": null,
+      "api_version": "2023-01-31",
+      "approved": false,
+      "candidate_sku_or_limit": "two separate runtime identities",
+      "current_usage": null,
+      "network_notes": "No federated credentials or role assignments; no human authority",
+      "price_quote_gbp": null,
+      "public_schema_reference": "https://learn.microsoft.com/en-us/azure/templates/microsoft.managedidentity/2023-01-31/userassignedidentities",
+      "public_schema_status": "PINNED_REFERENCE_LOCAL_TYPE_COMPILATION_NOT_CLOUD_VALIDATION",
+      "quota_allocation": "UNVERIFIED",
+      "quota_checks": [
+        "subscription-region resource/SKU availability",
+        "resource/operation/storage limits for selected workload",
+        "private endpoint/DNS and scoped permissions"
+      ],
+      "regional_capacity": "UNVERIFIED",
+      "resource_type": "Microsoft.ManagedIdentity/userAssignedIdentities",
+      "service": "Managed identities",
+      "subscription_availability": "UNVERIFIED"
+    },
+    {
+      "actual_network_compatibility": "UNVERIFIED",
+      "allocated_limit": null,
+      "api_version": "2024-08-01",
+      "approved": false,
+      "candidate_sku_or_limit": "PostgreSQL 16 / Standard_B1ms / 32 GiB candidate",
+      "current_usage": null,
+      "network_notes": "AAD only; no administrator/migration/adapter assigned; private endpoint model unverified",
+      "price_quote_gbp": null,
+      "public_schema_reference": "https://learn.microsoft.com/en-us/azure/templates/microsoft.dbforpostgresql/2024-08-01/flexibleservers",
+      "public_schema_status": "PINNED_REFERENCE_LOCAL_TYPE_COMPILATION_NOT_CLOUD_VALIDATION",
+      "quota_allocation": "UNVERIFIED",
+      "quota_checks": [
+        "regional vCores/SKU supply",
+        "storage/backup limits",
+        "Entra administrator and selected private endpoint support"
+      ],
+      "regional_capacity": "UNVERIFIED",
+      "resource_type": "Microsoft.DBforPostgreSQL/flexibleServers",
+      "service": "PostgreSQL Flexible Server",
+      "subscription_availability": "UNVERIFIED"
+    },
+    {
+      "actual_network_compatibility": "UNVERIFIED",
+      "allocated_limit": null,
+      "api_version": "2023-05-01",
+      "approved": false,
+      "candidate_sku_or_limit": "Standard_LRS",
+      "current_usage": null,
+      "network_notes": "HTTPS only, no shared key/public blob; versioning; private link",
+      "price_quote_gbp": null,
+      "public_schema_reference": "https://learn.microsoft.com/en-us/azure/templates/microsoft.storage/2023-05-01/storageaccounts",
+      "public_schema_status": "PINNED_REFERENCE_LOCAL_TYPE_COMPILATION_NOT_CLOUD_VALIDATION",
+      "quota_allocation": "UNVERIFIED",
+      "quota_checks": [
+        "subscription-region resource/SKU availability",
+        "resource/operation/storage limits for selected workload",
+        "private endpoint/DNS and scoped permissions"
+      ],
+      "regional_capacity": "UNVERIFIED",
+      "resource_type": "Microsoft.Storage/storageAccounts",
+      "service": "Blob Storage",
+      "subscription_availability": "UNVERIFIED"
+    },
+    {
+      "actual_network_compatibility": "UNVERIFIED",
+      "allocated_limit": null,
+      "api_version": "2024-01-01",
+      "approved": false,
+      "candidate_sku_or_limit": "Premium capacity 1 candidate for private link",
+      "current_usage": null,
+      "network_notes": "AAD only; 3 broker deliveries; application retry budget must persist separately",
+      "price_quote_gbp": null,
+      "public_schema_reference": "https://learn.microsoft.com/en-us/azure/templates/microsoft.servicebus/2024-01-01/namespaces",
+      "public_schema_status": "PINNED_REFERENCE_LOCAL_TYPE_COMPILATION_NOT_CLOUD_VALIDATION",
+      "quota_allocation": "UNVERIFIED",
+      "quota_checks": [
+        "regional Premium messaging units",
+        "namespace/queue count",
+        "private endpoint and message size/throughput"
+      ],
+      "regional_capacity": "UNVERIFIED",
+      "resource_type": "Microsoft.ServiceBus/namespaces",
+      "service": "Service Bus",
+      "subscription_availability": "UNVERIFIED"
+    },
+    {
+      "actual_network_compatibility": "UNVERIFIED",
+      "allocated_limit": null,
+      "api_version": "2024-05-01",
+      "approved": false,
+      "candidate_sku_or_limit": "StandardV2 capacity 1 candidate",
+      "current_usage": null,
+      "network_notes": "MI, VNet integration and private endpoint; disable-public sequencing unverified",
+      "price_quote_gbp": null,
+      "public_schema_reference": "https://learn.microsoft.com/en-us/azure/templates/microsoft.apimanagement/2024-05-01/service",
+      "public_schema_status": "PINNED_REFERENCE_LOCAL_TYPE_COMPILATION_NOT_CLOUD_VALIDATION",
+      "quota_allocation": "UNVERIFIED",
+      "quota_checks": [
+        "regional SKU units and allocation",
+        "MCP API version and streaming policy support",
+        "private endpoint/VNet integration sequencing"
+      ],
+      "regional_capacity": "UNVERIFIED",
+      "resource_type": "Microsoft.ApiManagement/service",
+      "service": "API Management",
+      "subscription_availability": "UNVERIFIED"
+    },
+    {
+      "actual_network_compatibility": "UNVERIFIED",
+      "allocated_limit": null,
+      "api_version": "2025-09-01-preview",
+      "approved": false,
+      "candidate_sku_or_limit": "three tools only",
+      "current_usage": null,
+      "network_notes": "Unchanged M14 module remains disabled; actual policy/preview integration not executed",
+      "price_quote_gbp": null,
+      "public_schema_reference": "https://learn.microsoft.com/en-us/azure/templates/microsoft.apimanagement/2025-09-01-preview/service/apis",
+      "public_schema_status": "PINNED_REFERENCE_LOCAL_TYPE_COMPILATION_NOT_CLOUD_VALIDATION",
+      "quota_allocation": "UNVERIFIED",
+      "quota_checks": [
+        "regional SKU units and allocation",
+        "MCP API version and streaming policy support",
+        "private endpoint/VNet integration sequencing"
+      ],
+      "regional_capacity": "UNVERIFIED",
+      "resource_type": "Microsoft.ApiManagement/service/apis",
+      "service": "APIM MCP passthrough reference",
+      "subscription_availability": "UNVERIFIED"
+    },
+    {
+      "actual_network_compatibility": "UNVERIFIED",
+      "allocated_limit": null,
+      "api_version": "2024-05-01",
+      "approved": false,
+      "candidate_sku_or_limit": "10.70.0.0/16 candidate",
+      "current_usage": null,
+      "network_notes": "Platform egress/DNS and private access require live validation; no peering",
+      "price_quote_gbp": null,
+      "public_schema_reference": "https://learn.microsoft.com/en-us/azure/templates/microsoft.network/2024-05-01/virtualnetworks",
+      "public_schema_status": "PINNED_REFERENCE_LOCAL_TYPE_COMPILATION_NOT_CLOUD_VALIDATION",
+      "quota_allocation": "UNVERIFIED",
+      "quota_checks": [
+        "subscription-region resource/SKU availability",
+        "resource/operation/storage limits for selected workload",
+        "private endpoint/DNS and scoped permissions"
+      ],
+      "regional_capacity": "UNVERIFIED",
+      "resource_type": "Microsoft.Network/virtualNetworks",
+      "service": "VNet/NSG/private endpoints",
+      "subscription_availability": "UNVERIFIED"
+    },
+    {
+      "actual_network_compatibility": "UNVERIFIED",
+      "allocated_limit": null,
+      "api_version": "2024-06-01",
+      "approved": false,
+      "candidate_sku_or_limit": "environment-isolated zones",
+      "current_usage": null,
+      "network_notes": "Private endpoint DNS links declared; internal CA and Monitor DNS still need integration",
+      "price_quote_gbp": null,
+      "public_schema_reference": "https://learn.microsoft.com/en-us/azure/templates/microsoft.network/2024-06-01/privatednszones",
+      "public_schema_status": "PINNED_REFERENCE_LOCAL_TYPE_COMPILATION_NOT_CLOUD_VALIDATION",
+      "quota_allocation": "UNVERIFIED",
+      "quota_checks": [
+        "subscription-region resource/SKU availability",
+        "resource/operation/storage limits for selected workload",
+        "private endpoint/DNS and scoped permissions"
+      ],
+      "regional_capacity": "UNVERIFIED",
+      "resource_type": "Microsoft.Network/privateDnsZones",
+      "service": "Private DNS",
+      "subscription_availability": "UNVERIFIED"
+    },
+    {
+      "actual_network_compatibility": "UNVERIFIED",
+      "allocated_limit": null,
+      "api_version": "2023-09-01",
+      "approved": false,
+      "candidate_sku_or_limit": "PerGB2018 / candidate 1 GiB daily cap / 30 days",
+      "current_usage": null,
+      "network_notes": "Local auth and public ingest/query disabled; Monitor private link integration missing",
+      "price_quote_gbp": null,
+      "public_schema_reference": "https://learn.microsoft.com/en-us/azure/templates/microsoft.operationalinsights/2023-09-01/workspaces",
+      "public_schema_status": "PINNED_REFERENCE_LOCAL_TYPE_COMPILATION_NOT_CLOUD_VALIDATION",
+      "quota_allocation": "UNVERIFIED",
+      "quota_checks": [
+        "subscription-region resource/SKU availability",
+        "resource/operation/storage limits for selected workload",
+        "private endpoint/DNS and scoped permissions"
+      ],
+      "regional_capacity": "UNVERIFIED",
+      "resource_type": "Microsoft.OperationalInsights/workspaces",
+      "service": "Log Analytics",
+      "subscription_availability": "UNVERIFIED"
+    },
+    {
+      "actual_network_compatibility": "UNVERIFIED",
+      "allocated_limit": null,
+      "api_version": "2020-02-02",
+      "approved": false,
+      "candidate_sku_or_limit": "workspace-based",
+      "current_usage": null,
+      "network_notes": "No connection string exposed; no cloud exporter or delivered alert configured",
+      "price_quote_gbp": null,
+      "public_schema_reference": "https://learn.microsoft.com/en-us/azure/templates/microsoft.insights/2020-02-02/components",
+      "public_schema_status": "PINNED_REFERENCE_LOCAL_TYPE_COMPILATION_NOT_CLOUD_VALIDATION",
+      "quota_allocation": "UNVERIFIED",
+      "quota_checks": [
+        "subscription-region resource/SKU availability",
+        "resource/operation/storage limits for selected workload",
+        "private endpoint/DNS and scoped permissions"
+      ],
+      "regional_capacity": "UNVERIFIED",
+      "resource_type": "Microsoft.Insights/components",
+      "service": "Application Insights",
+      "subscription_availability": "UNVERIFIED"
+    }
+  ],
+  "scope": "OFFLINE_PUBLIC_SCHEMA_REVIEW_NOT_SUBSCRIPTION_VALIDATION",
+  "subscription_id": null
+}

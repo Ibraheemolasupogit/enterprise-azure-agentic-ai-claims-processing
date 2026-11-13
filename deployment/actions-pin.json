@@ -1,0 +1,13 @@
+{
+  "action": "actions/checkout",
+  "checked_on": "2026-11-13",
+  "commit": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+  "environment_protection_configuration": "UNVERIFIED",
+  "format": "m23-action-pin-v1",
+  "live_workflow_execution": "NOT_TESTED",
+  "persist_credentials": false,
+  "release": "https://github.com/actions/checkout/releases/tag/v7.0.1",
+  "runner": "ubuntu-24.04",
+  "source": "https://github.com/actions/checkout/commit/3d3c42e5aac5ba805825da76410c181273ba90b1",
+  "version": "v7.0.1"
+}

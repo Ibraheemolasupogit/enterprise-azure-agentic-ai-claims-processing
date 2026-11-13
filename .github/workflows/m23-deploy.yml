@@ -1,0 +1,66 @@
+{
+  "name": "M23 deployment definition \u2014 permanently disabled in Stage A",
+  "on": {
+    "workflow_dispatch": {
+      "inputs": {
+        "environment": {
+          "description": "Reference target only; Stage A always blocks execution",
+          "type": "choice",
+          "options": [
+            "dev",
+            "test",
+            "prod"
+          ],
+          "default": "dev",
+          "required": true
+        }
+      }
+    }
+  },
+  "permissions": {
+    "contents": "read"
+  },
+  "concurrency": {
+    "group": "m23-gated-${{ inputs.environment }}",
+    "cancel-in-progress": false
+  },
+  "jobs": {
+    "preflight": {
+      "runs-on": "ubuntu-24.04",
+      "timeout-minutes": 5,
+      "steps": [
+        {
+          "name": "Checkout pinned reviewed source",
+          "uses": "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "with": {
+            "persist-credentials": false,
+            "fetch-depth": 1
+          }
+        },
+        {
+          "name": "Refuse deployment in Stage A",
+          "run": "python3 -I -B deployment/foundation.py --root . --check-deployment"
+        }
+      ]
+    },
+    "deploy": {
+      "if": "${{ false }}",
+      "needs": [
+        "preflight"
+      ],
+      "runs-on": "ubuntu-24.04",
+      "timeout-minutes": 10,
+      "environment": "m23-${{ inputs.environment }}",
+      "permissions": {
+        "contents": "read",
+        "id-token": "write"
+      },
+      "steps": [
+        {
+          "name": "Stage A refuses cloud execution",
+          "run": "exit 78"
+        }
+      ]
+    }
+  }
+}

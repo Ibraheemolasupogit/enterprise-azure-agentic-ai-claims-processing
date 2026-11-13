@@ -1,0 +1,41 @@
+{
+  "name": "M23 offline definitions only",
+  "on": {
+    "pull_request": {
+      "paths": [
+        "infra/azure/**",
+        "deployment/**",
+        ".github/workflows/m23-*.yml",
+        "requirements/m23-constraints.txt"
+      ]
+    },
+    "workflow_dispatch": {}
+  },
+  "permissions": {
+    "contents": "read"
+  },
+  "concurrency": {
+    "group": "m23-offline-${{ github.ref }}",
+    "cancel-in-progress": true
+  },
+  "jobs": {
+    "static": {
+      "runs-on": "ubuntu-24.04",
+      "timeout-minutes": 10,
+      "steps": [
+        {
+          "name": "Checkout pinned reviewed source",
+          "uses": "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "with": {
+            "persist-credentials": false,
+            "fetch-depth": 1
+          }
+        },
+        {
+          "name": "Read-only offline contracts; no installation or Azure access",
+          "run": "python3 -I -B deployment/foundation.py --root ."
+        }
+      ]
+    }
+  }
+}
