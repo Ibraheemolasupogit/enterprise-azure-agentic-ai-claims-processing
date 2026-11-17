@@ -1,0 +1,22 @@
+{
+  "artifact_sha256s": [],
+  "details": {
+    "comparisons": [
+      "source",
+      "wheels",
+      "sbom",
+      "image_config",
+      "oci_manifest"
+    ],
+    "independent_clean_builds": 2,
+    "plan": {
+      "file": null,
+      "sha256": null
+    },
+    "result": "NOT_TESTED"
+  },
+  "format": "m23-reproducibility-evidence-v1",
+  "observed_at": null,
+  "status": "PENDING_REVIEW",
+  "subject_sha256": null
+}

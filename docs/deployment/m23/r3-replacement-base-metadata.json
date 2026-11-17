@@ -1,0 +1,4811 @@
+{
+  "acquisition_allowed": false,
+  "advisories": [
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2023-45853",
+      "response_sha256": "24df6de445f2e58617ae2a19e0c92f029e0f41bd93774752f2a946e9cc3fa847",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2023-45853",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "minizip (PTS)",
+          "bookworm",
+          "1.1-8+deb12u1",
+          "fixed"
+        ],
+        [
+          "zlib (PTS)",
+          "bookworm",
+          "1:1.2.13.dfsg-1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie",
+          "1:1.3.dfsg+really1.3.1-1",
+          "fixed"
+        ],
+        [
+          "",
+          "trixie (security)",
+          "1:1.3.dfsg+really1.3.1-1+deb13u1",
+          "fixed"
+        ],
+        [
+          "",
+          "forky, sid",
+          "1:1.3.dfsg+really1.3.2-4",
+          "fixed"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2025-69720",
+      "response_sha256": "3542be519daaef8f60a0fd662f4a6129a238f59ef9b86155869d49cfd2b3af78",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2025-69720",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "ncurses (PTS)",
+          "bookworm",
+          "6.4-4",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie",
+          "6.5+20250216-2",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky, sid",
+          "6.6+20260608-2",
+          "fixed"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2025-7458",
+      "response_sha256": "b3ceee96b7c069f53e914d3e798cbcf55f5cb704c29c40bb97fd609612b64a26",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2025-7458",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "sqlite3 (PTS)",
+          "bookworm",
+          "3.40.1-2+deb12u2",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie",
+          "3.46.1-7+deb13u2",
+          "fixed"
+        ],
+        [
+          "",
+          "forky, sid",
+          "3.54.1-2",
+          "fixed"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-107364",
+      "response_sha256": "06ac1a7953a2b3903a568467ec61bd4e10f99bae02acb8ce527d84452571d26c",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-107364",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "krb5 (PTS)",
+          "bookworm, bookworm (security)",
+          "1.20.1-2+deb12u5",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie (security), trixie",
+          "1.21.3-5+deb13u1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky, sid",
+          "1.22.1-3",
+          "vulnerable"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-112315",
+      "response_sha256": "fc5d320cb7bb71c4db8451ea6fd05b7f79ae1c2e8a31281d2ec09b88a4062e4e",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-112315",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "krb5 (PTS)",
+          "bookworm, bookworm (security)",
+          "1.20.1-2+deb12u5",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie (security), trixie",
+          "1.21.3-5+deb13u1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky, sid",
+          "1.22.1-3",
+          "vulnerable"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-112316",
+      "response_sha256": "ba64046f5e704152bca7c6908ffe1835ab15e9d1982bb2f490b6c6ffe6ea3cb7",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-112316",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "krb5 (PTS)",
+          "bookworm, bookworm (security)",
+          "1.20.1-2+deb12u5",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie (security), trixie",
+          "1.21.3-5+deb13u1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky, sid",
+          "1.22.1-3",
+          "vulnerable"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-112317",
+      "response_sha256": "4508e1573c95f5d0ef49f2d5ab5a941e988be2d97db9a4248b2d72a8f89a7f30",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-112317",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "krb5 (PTS)",
+          "bookworm, bookworm (security)",
+          "1.20.1-2+deb12u5",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie (security), trixie",
+          "1.21.3-5+deb13u1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky, sid",
+          "1.22.1-3",
+          "vulnerable"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-112318",
+      "response_sha256": "acc9d3da6d0bdb520140e46e4d907cd6d53e8438d73e080fdab8fe35f8eb65f6",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-112318",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "krb5 (PTS)",
+          "bookworm, bookworm (security)",
+          "1.20.1-2+deb12u5",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie (security), trixie",
+          "1.21.3-5+deb13u1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky, sid",
+          "1.22.1-3",
+          "vulnerable"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-112319",
+      "response_sha256": "87a335ff9650ddfb1f53b99806a4981f5d6c84afe00ed770299112c072e68e6a",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-112319",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "krb5 (PTS)",
+          "bookworm, bookworm (security)",
+          "1.20.1-2+deb12u5",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie (security), trixie",
+          "1.21.3-5+deb13u1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky, sid",
+          "1.22.1-3",
+          "vulnerable"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-112320",
+      "response_sha256": "464a18f2a88323c9c832d2ef35f1cded1c750686f23ef62c117df908abe9ca0e",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-112320",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "krb5 (PTS)",
+          "bookworm, bookworm (security)",
+          "1.20.1-2+deb12u5",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie (security), trixie",
+          "1.21.3-5+deb13u1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky, sid",
+          "1.22.1-3",
+          "vulnerable"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-112321",
+      "response_sha256": "d1be8a98949bae4639f156c5b71099d77cadf731aa618d998703513783dd19ad",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-112321",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "krb5 (PTS)",
+          "bookworm, bookworm (security)",
+          "1.20.1-2+deb12u5",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie (security), trixie",
+          "1.21.3-5+deb13u1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky, sid",
+          "1.22.1-3",
+          "vulnerable"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-112322",
+      "response_sha256": "a2d63e888c206329cf519d346dee77cb3239fe3278cf6a254a5c9eb003a6c87f",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-112322",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "krb5 (PTS)",
+          "bookworm, bookworm (security)",
+          "1.20.1-2+deb12u5",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie (security), trixie",
+          "1.21.3-5+deb13u1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky, sid",
+          "1.22.1-3",
+          "vulnerable"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-112323",
+      "response_sha256": "8c70bb85b73422193f2dc717fbfb6e82cbfc300a58df98a05adbbfddc4ffec52",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-112323",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "krb5 (PTS)",
+          "bookworm, bookworm (security)",
+          "1.20.1-2+deb12u5",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie (security), trixie",
+          "1.21.3-5+deb13u1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky, sid",
+          "1.22.1-3",
+          "vulnerable"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-11822",
+      "response_sha256": "c7c24e4c052223ecfe5f82bdbb536ed98fb8e0649fdd58cb68f01651faaddbb3",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-11822",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "sqlite3 (PTS)",
+          "bookworm",
+          "3.40.1-2+deb12u2",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie",
+          "3.46.1-7+deb13u2",
+          "fixed"
+        ],
+        [
+          "",
+          "forky, sid",
+          "3.54.1-2",
+          "fixed"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-11824",
+      "response_sha256": "dff1dc247b70083bc550de4a35cbbce817289a01c1dd1dece9fd7d121efa87e3",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-11824",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "sqlite3 (PTS)",
+          "bookworm",
+          "3.40.1-2+deb12u2",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie",
+          "3.46.1-7+deb13u2",
+          "fixed"
+        ],
+        [
+          "",
+          "forky, sid",
+          "3.54.1-2",
+          "fixed"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-118380",
+      "response_sha256": "06fabf715ee72a47a5e4ec554f7c4e0abb497c9ad44291065e1fc878b4c38dcc",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-118380",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "krb5 (PTS)",
+          "bookworm, bookworm (security)",
+          "1.20.1-2+deb12u5",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie (security), trixie",
+          "1.21.3-5+deb13u1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky, sid",
+          "1.22.1-3",
+          "vulnerable"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-119079",
+      "response_sha256": "d83f24be45252604d09ba1047acfe44bd83c96a19f75ccb154a5751f490eb79e",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-119079",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "krb5 (PTS)",
+          "bookworm, bookworm (security)",
+          "1.20.1-2+deb12u5",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie (security), trixie",
+          "1.21.3-5+deb13u1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky, sid",
+          "1.22.1-3",
+          "vulnerable"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-119373",
+      "response_sha256": "caa306ace78626cf4c28044f3d1053a2d7a5785ebe88d42504218e5ffa23aaee",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-119373",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "sqlite3 (PTS)",
+          "bookworm",
+          "3.40.1-2+deb12u2",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie",
+          "3.46.1-7+deb13u2",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky, sid",
+          "3.54.1-2",
+          "fixed"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-119374",
+      "response_sha256": "08ee3a28b1be9e9dfcbad161a79731b08cc08a6b54caef90098da46bfc574cdc",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-119374",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "sqlite3 (PTS)",
+          "bookworm",
+          "3.40.1-2+deb12u2",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie",
+          "3.46.1-7+deb13u2",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky, sid",
+          "3.54.1-2",
+          "fixed"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-119379",
+      "response_sha256": "d7171e070be82e7ea297bad3ab3d2ca5aee54a70b198c5a2bec2b762ac942679",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-119379",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "sqlite3 (PTS)",
+          "bookworm",
+          "3.40.1-2+deb12u2",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie",
+          "3.46.1-7+deb13u2",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky, sid",
+          "3.54.1-2",
+          "fixed"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-16742",
+      "response_sha256": "c02e61ecf8255bb8874419ddb4ea555e32daf30163b919e3d88234d8d8b1c43a",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-16742",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "systemd (PTS)",
+          "bookworm",
+          "252.39-1~deb12u2",
+          "vulnerable"
+        ],
+        [
+          "",
+          "bookworm (security)",
+          "252.38-1~deb12u1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie",
+          "257.13-1~deb13u1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky",
+          "262-1",
+          "fixed"
+        ],
+        [
+          "",
+          "sid",
+          "262.2-1",
+          "fixed"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-41992",
+      "response_sha256": "23c64845212bf6eafcc398c596b4cbeed977de4ce5acfbb0afa6bbae07016132",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-41992",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "gzip (PTS)",
+          "bookworm",
+          "1.12-1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie",
+          "1.13-1+deb13u1",
+          "fixed"
+        ],
+        [
+          "",
+          "forky, sid",
+          "1.14-1",
+          "fixed"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-53613",
+      "response_sha256": "fb99059a6d0ea60bca86c49a817f4298a09bfeaa5893ae788221739307412320",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-53613",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "util-linux (PTS)",
+          "bookworm",
+          "2.38.1-5+deb12u3",
+          "vulnerable"
+        ],
+        [
+          "",
+          "bookworm (security)",
+          "2.38.1-5+deb12u1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie (security), trixie",
+          "2.41.5-0+deb13u1",
+          "fixed"
+        ],
+        [
+          "",
+          "forky, sid",
+          "2.42.4-1",
+          "fixed"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-53615",
+      "response_sha256": "c2d7d74d4d1cd7f56939745b493e57b286477cf35862d8f74bc84b26a1c34354",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-53615",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "util-linux (PTS)",
+          "bookworm",
+          "2.38.1-5+deb12u3",
+          "vulnerable"
+        ],
+        [
+          "",
+          "bookworm (security)",
+          "2.38.1-5+deb12u1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie (security), trixie",
+          "2.41.5-0+deb13u1",
+          "fixed"
+        ],
+        [
+          "",
+          "forky, sid",
+          "2.42.4-1",
+          "fixed"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-54369",
+      "response_sha256": "4677cdb2b848eca7bc76f57dd54e5d01e309f438bba58d892550db432fbde5ca",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-54369",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "acl (PTS)",
+          "bookworm",
+          "2.3.1-3",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie",
+          "2.3.2-2",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky, sid",
+          "2.4.0-1",
+          "fixed"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-71199",
+      "response_sha256": "f0c8bcc0ecce9578c9a5d1aead6c11fc635f826a831141dbc230c47ae35d4893",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-71199",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "krb5 (PTS)",
+          "bookworm, bookworm (security)",
+          "1.20.1-2+deb12u5",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie (security), trixie",
+          "1.21.3-5+deb13u1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky, sid",
+          "1.22.1-3",
+          "vulnerable"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-71200",
+      "response_sha256": "77a1c1d87c25c4fff8233b725251c76b217d42bb7c0d2c3886493e0d22d3f197",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-71200",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "krb5 (PTS)",
+          "bookworm, bookworm (security)",
+          "1.20.1-2+deb12u5",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie (security), trixie",
+          "1.21.3-5+deb13u1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky, sid",
+          "1.22.1-3",
+          "vulnerable"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-76844",
+      "response_sha256": "089f82b8c9fcca107156a0bb86e050cd4a73a3e44cb5aa6b2dff873ca041a8e2",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-76844",
+      "vendor_source_package_rows": []
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-78410",
+      "response_sha256": "370b52136365d440004d915421bd2b2529393511c802bdc04f3e3a873241621b",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-78410",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "util-linux (PTS)",
+          "bookworm",
+          "2.38.1-5+deb12u3",
+          "vulnerable"
+        ],
+        [
+          "",
+          "bookworm (security)",
+          "2.38.1-5+deb12u1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie (security), trixie",
+          "2.41.5-0+deb13u1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky, sid",
+          "2.42.4-1",
+          "fixed"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-85091",
+      "response_sha256": "8befe16c18c63a7ba5e979b7d6b7f852b34b3083a329bba835cedcd15a6b7252",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-85091",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "zlib (PTS)",
+          "bookworm",
+          "1:1.2.13.dfsg-1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie",
+          "1:1.3.dfsg+really1.3.1-1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie (security)",
+          "1:1.3.dfsg+really1.3.1-1+deb13u1",
+          "fixed"
+        ],
+        [
+          "",
+          "forky, sid",
+          "1:1.3.dfsg+really1.3.2-4",
+          "fixed"
+        ]
+      ]
+    },
+    {
+      "comparison": "SOURCE_PACKAGE_METADATA_NOT_NEW_IMAGE_SCAN",
+      "id": "CVE-2026-9538",
+      "response_sha256": "f9466371b6a5bd0094c5a53028d43144ca3115918fb37ca7ae0d48eb9dc350b1",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-9538",
+      "vendor_source_package_rows": [
+        [
+          "Source Package",
+          "Release",
+          "Version",
+          "Status"
+        ],
+        [
+          "perl (PTS)",
+          "bookworm",
+          "5.36.0-7+deb12u3",
+          "vulnerable"
+        ],
+        [
+          "",
+          "bookworm (security)",
+          "5.36.0-7+deb12u4",
+          "vulnerable"
+        ],
+        [
+          "",
+          "trixie",
+          "5.40.1-6+deb13u1",
+          "vulnerable"
+        ],
+        [
+          "",
+          "forky, sid",
+          "5.44.0-3",
+          "fixed"
+        ]
+      ]
+    }
+  ],
+  "binary_downloads": 0,
+  "build_allowed": false,
+  "contacted_hosts": [
+    "api.github.com",
+    "auth.docker.io",
+    "ghcr.io",
+    "production.cloudfront.docker.com",
+    "raw.githubusercontent.com",
+    "registry-1.docker.io",
+    "security-tracker.debian.org",
+    "trivy.dev",
+    "www.debian.org"
+  ],
+  "database": {
+    "manifest": {
+      "annotations": {
+        "org.opencontainers.image.created": "2026-11-17T07:07:29Z"
+      },
+      "artifactType": "application/vnd.aquasec.trivy.config.v1+json",
+      "config": {
+        "data": "e30=",
+        "digest": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "mediaType": "application/vnd.oci.empty.v1+json",
+        "size": 2
+      },
+      "layers": [
+        {
+          "annotations": {
+            "org.opencontainers.image.title": "db.tar.gz"
+          },
+          "digest": "sha256:e759b1b3171c69fffe995d047d8385662298573dcc2c8d3fe64b6dead8b69d4f",
+          "mediaType": "application/vnd.aquasec.trivy.db.layer.v1.tar+gzip",
+          "size": 140196293
+        }
+      ],
+      "mediaType": "application/vnd.oci.image.manifest.v1+json",
+      "schemaVersion": 2
+    },
+    "manifest_digest": "sha256:28c258aa558d97b8a9aa6afdc452747dcd41ddea7fda6367fd4735296f284b59",
+    "source_commit": "6748d2315661109443d7b1eb20d616b5f303242a",
+    "source_files": [
+      "README.md",
+      "Makefile",
+      ".github/workflows/cla.yml",
+      ".github/workflows/cron.yml",
+      ".github/workflows/go.yml"
+    ]
+  },
+  "database_authenticity": "TLS_ORIGIN_AND_MANIFEST_DIGEST_ONLY_NO_PUBLISHER_SIGNATURE_VERIFIED",
+  "database_cap_compatibility": "NOT_ESTABLISHED_EXPANDED_DATABASE_NOT_ACQUIRED",
+  "format": "m23-b2d-r3-replacement-base-metadata-v1",
+  "image_scan": "NOT_TESTED",
+  "images": [
+    {
+      "annotations": {
+        "com.docker.official-images.bashbrew.arch": "amd64",
+        "org.opencontainers.image.base.digest": "sha256:7378260c0a098d27ac206225db5e7d92b8c7c84ea7afccc86eeb513756bbd392",
+        "org.opencontainers.image.base.name": "debian:trixie-slim",
+        "org.opencontainers.image.created": "2026-11-05T07:52:11Z",
+        "org.opencontainers.image.revision": "3d7e95597e56a415d9e4abc0f15877e005d2cb2e",
+        "org.opencontainers.image.source": "https://github.com/docker-library/python.git#3d7e95597e56a415d9e4abc0f15877e005d2cb2e:3.12/slim-trixie",
+        "org.opencontainers.image.url": "https://hub.docker.com/_/python",
+        "org.opencontainers.image.version": "3.12.16-slim-trixie"
+      },
+      "config_sha256": "78976a69c067520ef8be34cde307ef9f6fea6dcefa50edb57039773d241ca0db",
+      "declared_os": "Debian 13 / trixie",
+      "declared_python": "3.12.16",
+      "filesystem_layers_NOT_DOWNLOADED": [
+        {
+          "digest": "sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "size": 29856132
+        },
+        {
+          "digest": "sha256:68bced9e0afa4479df17c3646e27c7c7e9ce9ba70c0e6c73b6826487b89037d9",
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "size": 1289792
+        },
+        {
+          "digest": "sha256:2dc99d2d0a39fce31e37615eb4c932e16dcc4c2b0ce9993714280081b5dbe085",
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "size": 12122550
+        },
+        {
+          "digest": "sha256:05e0eee5572e9c9f50408a2132590133b830a668a1cf2ff2b150f19c57707e2b",
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "size": 248
+        }
+      ],
+      "image": "docker.io/library/python@sha256:05a994d2344eb364cc186910f4fc8786a38215f39f00d0acc25bff33a08f4177",
+      "manifest_sha256": "05a994d2344eb364cc186910f4fc8786a38215f39f00d0acc25bff33a08f4177",
+      "publisher_declared_packages": [
+        {
+          "externalRefs": null,
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "NOASSERTION",
+          "name": "sbom",
+          "versionInfo": null
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/acl@2.3.2-2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.0-or-later OR LGPL-2.1-only",
+          "name": "acl",
+          "versionInfo": "2.3.2-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/adduser@3.152?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "adduser",
+          "versionInfo": "3.152"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/apt@3.0.4?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR curl",
+          "name": "apt",
+          "versionInfo": "3.0.4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/attr@1%3A2.5.2-3?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.0-or-later OR LGPL-2.1-only",
+          "name": "attr",
+          "versionInfo": "1:2.5.2-3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/audit@1%3A4.0.2-2%2Bdeb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-1.0-only OR GPL-2.0-only OR LGPL-2.1-only",
+          "name": "audit",
+          "versionInfo": "1:4.0.2-2+deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/base-files@13.8%2Bdeb13u7?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "base-files",
+          "versionInfo": "13.8+deb13u7"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/base-passwd@3.6.7?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only",
+          "name": "base-passwd",
+          "versionInfo": "3.6.7"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/bash@5.2.37-2%2Bb10?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-4-Clause-UC OR GFDL-1.3-only OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR Latex2e",
+          "name": "bash",
+          "versionInfo": "5.2.37-2+b10"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/bsdutils@1%3A2.41.5-0%2Bdeb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSD-3-Clause OR BSD-4-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR ISC OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later",
+          "name": "bsdutils",
+          "versionInfo": "1:2.41.5-0+deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/bzip2@1.0.8-6?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only",
+          "name": "bzip2",
+          "versionInfo": "1.0.8-6"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/ca-certificates@20250419%2Bdeb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR MPL-2.0",
+          "name": "ca-certificates",
+          "versionInfo": "20250419+deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/cdebconf@0.280?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "cdebconf",
+          "versionInfo": "0.280"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/coreutils@9.7-3?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-4-Clause-UC OR FSFULLR OR GFDL-1.3-only OR GPL-3.0-only OR GPL-3.0-or-later OR ISC",
+          "name": "coreutils",
+          "versionInfo": "9.7-3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/dash@0.5.12-12?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "dash",
+          "versionInfo": "0.5.12-12"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/db5.3@5.3.28%2Bdfsg2-9?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-3.0-only OR MS-PL OR Sleepycat OR X11 OR Zlib",
+          "name": "db5.3",
+          "versionInfo": "5.3.28+dfsg2-9"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/debconf@1.5.91?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause",
+          "name": "debconf",
+          "versionInfo": "1.5.91"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/debian-archive-keyring@2025.1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": null,
+          "name": "debian-archive-keyring",
+          "versionInfo": "2025.1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/debianutils@5.23.2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR SMAIL-GPL",
+          "name": "debianutils",
+          "versionInfo": "5.23.2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/diffutils@1%3A3.10-4?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "FSFAP OR FSFULLR OR GFDL-1.3-only OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later OR X11",
+          "name": "diffutils",
+          "versionInfo": "1:3.10-4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/dpkg@1.22.22?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "dpkg",
+          "versionInfo": "1.22.22"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/findutils@4.10.0-3?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR FSFAP OR FSFULLR OR GFDL-1.3-only OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR ISC OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later OR X11",
+          "name": "findutils",
+          "versionInfo": "4.10.0-3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/gcc-14-base@14.2.0-19?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GFDL-1.2-only OR GPL-3.0-only",
+          "name": "gcc-14-base",
+          "versionInfo": "14.2.0-19"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/gcc-14@14.2.0-19?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GFDL-1.2-only OR GPL-3.0-only",
+          "name": "gcc-14",
+          "versionInfo": "14.2.0-19"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/gdbm@1.24-2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later",
+          "name": "gdbm",
+          "versionInfo": "1.24-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/glibc@2.41-12%2Bdeb13u4?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSL-1.0 OR FSFAP OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR ISC OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later OR SunPro OR Unicode-DFS-2016",
+          "name": "glibc",
+          "versionInfo": "2.41-12+deb13u4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/gmp@2%3A6.3.0%2Bdfsg-3?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later",
+          "name": "gmp",
+          "versionInfo": "2:6.3.0+dfsg-3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/grep@3.11-4?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-3.0-only OR GPL-3.0-or-later",
+          "name": "grep",
+          "versionInfo": "3.11-4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/gzip@1.13-1%2Bdeb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-3.0-only OR GPL-3.0-or-later",
+          "name": "gzip",
+          "versionInfo": "1.13-1+deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/hostname@3.25?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only",
+          "name": "hostname",
+          "versionInfo": "3.25"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/init-system-helpers@1.69~deb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "init-system-helpers",
+          "versionInfo": "1.69~deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libacl1@2.3.2-2%2Bb1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.0-or-later OR LGPL-2.1-only",
+          "name": "libacl1",
+          "versionInfo": "2.3.2-2+b1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libapt-pkg7.0@3.0.4?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR curl",
+          "name": "libapt-pkg7.0",
+          "versionInfo": "3.0.4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libattr1@1%3A2.5.2-3?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.0-or-later OR LGPL-2.1-only",
+          "name": "libattr1",
+          "versionInfo": "1:2.5.2-3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libaudit-common@1%3A4.0.2-2%2Bdeb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-1.0-only OR GPL-2.0-only OR LGPL-2.1-only",
+          "name": "libaudit-common",
+          "versionInfo": "1:4.0.2-2+deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libaudit1@1%3A4.0.2-2%2Bdeb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-1.0-only OR GPL-2.0-only OR LGPL-2.1-only",
+          "name": "libaudit1",
+          "versionInfo": "1:4.0.2-2+deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libblkid1@2.41.5-0%2Bdeb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSD-3-Clause OR BSD-4-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR ISC OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later",
+          "name": "libblkid1",
+          "versionInfo": "2.41.5-0+deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libbsd0@0.12.2-2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSD-3-Clause OR Beerware OR ISC",
+          "name": "libbsd0",
+          "versionInfo": "0.12.2-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libbsd@0.12.2-2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSD-3-Clause OR Beerware OR ISC",
+          "name": "libbsd",
+          "versionInfo": "0.12.2-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libbz2-1.0@1.0.8-6?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only",
+          "name": "libbz2-1.0",
+          "versionInfo": "1.0.8-6"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libc-bin@2.41-12%2Bdeb13u4?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSL-1.0 OR FSFAP OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR ISC OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later OR SunPro OR Unicode-DFS-2016",
+          "name": "libc-bin",
+          "versionInfo": "2.41-12+deb13u4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libc6@2.41-12%2Bdeb13u4?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSL-1.0 OR FSFAP OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR ISC OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later OR SunPro OR Unicode-DFS-2016",
+          "name": "libc6",
+          "versionInfo": "2.41-12+deb13u4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libcap-ng0@0.8.5-4%2Bb1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "libcap-ng0",
+          "versionInfo": "0.8.5-4+b1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libcap-ng@0.8.5-4?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "libcap-ng",
+          "versionInfo": "0.8.5-4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libcap2@1%3A2.75-10%2Bdeb13u1%2Bb3?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "libcap2",
+          "versionInfo": "1:2.75-10+deb13u1+b3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libcrypt1@1%3A4.4.38-1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": null,
+          "name": "libcrypt1",
+          "versionInfo": "1:4.4.38-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libdb5.3t64@5.3.28%2Bdfsg2-9?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-3.0-only OR MS-PL OR Sleepycat OR X11 OR Zlib",
+          "name": "libdb5.3t64",
+          "versionInfo": "5.3.28+dfsg2-9"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libdebconfclient0@0.280?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "libdebconfclient0",
+          "versionInfo": "0.280"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libffi8@3.4.8-2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-or-later OR GPL-3.0-or-later OR MPL-1.1 OR X11",
+          "name": "libffi8",
+          "versionInfo": "3.4.8-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libffi@3.4.8-2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-or-later OR GPL-3.0-or-later OR MPL-1.1 OR X11",
+          "name": "libffi",
+          "versionInfo": "3.4.8-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libgcc-s1@14.2.0-19?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GFDL-1.2-only OR GPL-3.0-only",
+          "name": "libgcc-s1",
+          "versionInfo": "14.2.0-19"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libgdbm6t64@1.24-2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later",
+          "name": "libgdbm6t64",
+          "versionInfo": "1.24-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libgmp10@2%3A6.3.0%2Bdfsg-3?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later",
+          "name": "libgmp10",
+          "versionInfo": "2:6.3.0+dfsg-3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libhogweed6t64@3.10.1-1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-3.0-or-later",
+          "name": "libhogweed6t64",
+          "versionInfo": "3.10.1-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/liblastlog2-2@2.41.5-0%2Bdeb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSD-3-Clause OR BSD-4-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR ISC OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later",
+          "name": "liblastlog2-2",
+          "versionInfo": "2.41.5-0+deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/liblz4-1@1.10.0-4?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "liblz4-1",
+          "versionInfo": "1.10.0-4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/liblzma5@5.8.1-1%2Bdeb13u2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "0BSD OR FSFUL OR FSFULLR OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "liblzma5",
+          "versionInfo": "5.8.1-1+deb13u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libmd0@1.1.0-2%2Bb1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSD-3-Clause OR Beerware OR ISC",
+          "name": "libmd0",
+          "versionInfo": "1.1.0-2+b1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libmd@1.1.0-2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSD-3-Clause OR Beerware OR ISC",
+          "name": "libmd",
+          "versionInfo": "1.1.0-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libmount1@2.41.5-0%2Bdeb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSD-3-Clause OR BSD-4-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR ISC OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later",
+          "name": "libmount1",
+          "versionInfo": "2.41.5-0+deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libncursesw6@6.5%2B20250216-2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR X11",
+          "name": "libncursesw6",
+          "versionInfo": "6.5+20250216-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libnettle8t64@3.10.1-1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-3.0-or-later",
+          "name": "libnettle8t64",
+          "versionInfo": "3.10.1-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libpam-modules-bin@1.7.0-5?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR Beerware OR GPL-1.0-only OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later",
+          "name": "libpam-modules-bin",
+          "versionInfo": "1.7.0-5"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libpam-modules@1.7.0-5?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR Beerware OR GPL-1.0-only OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later",
+          "name": "libpam-modules",
+          "versionInfo": "1.7.0-5"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libpam-runtime@1.7.0-5?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR Beerware OR GPL-1.0-only OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later",
+          "name": "libpam-runtime",
+          "versionInfo": "1.7.0-5"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libpam0g@1.7.0-5?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR Beerware OR GPL-1.0-only OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later",
+          "name": "libpam0g",
+          "versionInfo": "1.7.0-5"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libpcre2-8-0@10.46-1~deb13u3?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSD-3-Clause OR X11",
+          "name": "libpcre2-8-0",
+          "versionInfo": "10.46-1~deb13u3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libreadline8t64@8.2-6?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later",
+          "name": "libreadline8t64",
+          "versionInfo": "8.2-6"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libseccomp2@2.6.0-2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "LGPL-2.1-only",
+          "name": "libseccomp2",
+          "versionInfo": "2.6.0-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libseccomp@2.6.0-2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "LGPL-2.1-only",
+          "name": "libseccomp",
+          "versionInfo": "2.6.0-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libselinux1@3.8.1-1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only",
+          "name": "libselinux1",
+          "versionInfo": "3.8.1-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libselinux@3.8.1-1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only",
+          "name": "libselinux",
+          "versionInfo": "3.8.1-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libsemanage-common@3.8.1-1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "libsemanage-common",
+          "versionInfo": "3.8.1-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libsemanage2@3.8.1-1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "libsemanage2",
+          "versionInfo": "3.8.1-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libsemanage@3.8.1-1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "libsemanage",
+          "versionInfo": "3.8.1-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libsepol2@3.8.1-1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR Zlib",
+          "name": "libsepol2",
+          "versionInfo": "3.8.1-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libsepol@3.8.1-1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR Zlib",
+          "name": "libsepol",
+          "versionInfo": "3.8.1-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libsmartcols1@2.41.5-0%2Bdeb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSD-3-Clause OR BSD-4-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR ISC OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later",
+          "name": "libsmartcols1",
+          "versionInfo": "2.41.5-0+deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libsqlite3-0@3.46.1-7%2Bdeb13u2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "libsqlite3-0",
+          "versionInfo": "3.46.1-7+deb13u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libssl3t64@3.5.7-1~deb13u3?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Apache-2.0 OR GPL-1.0-only OR GPL-1.0-or-later",
+          "name": "libssl3t64",
+          "versionInfo": "3.5.7-1~deb13u3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libstdc%2B%2B6@14.2.0-19?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GFDL-1.2-only OR GPL-3.0-only",
+          "name": "libstdc++6",
+          "versionInfo": "14.2.0-19"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libsystemd0@257.13-1~deb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "CC0-1.0 OR GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "libsystemd0",
+          "versionInfo": "257.13-1~deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libtinfo6@6.5%2B20250216-2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR X11",
+          "name": "libtinfo6",
+          "versionInfo": "6.5+20250216-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libudev1@257.13-1~deb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "CC0-1.0 OR GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "libudev1",
+          "versionInfo": "257.13-1~deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libuuid1@2.41.5-0%2Bdeb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSD-3-Clause OR BSD-4-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR ISC OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later",
+          "name": "libuuid1",
+          "versionInfo": "2.41.5-0+deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libxcrypt@1%3A4.4.38-1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": null,
+          "name": "libxcrypt",
+          "versionInfo": "1:4.4.38-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libxxhash0@0.8.3-2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "libxxhash0",
+          "versionInfo": "0.8.3-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libzstd1@1.5.7%2Bdfsg-1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-2.0-only OR Zlib",
+          "name": "libzstd1",
+          "versionInfo": "1.5.7+dfsg-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libzstd@1.5.7%2Bdfsg-1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-2.0-only OR Zlib",
+          "name": "libzstd",
+          "versionInfo": "1.5.7+dfsg-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/login.defs@1%3A4.17.4-2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-1.0-only OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "login.defs",
+          "versionInfo": "1:4.17.4-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/login@1%3A4.16.0-2%2Breally2.41.5-0%2Bdeb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSD-3-Clause OR BSD-4-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR ISC OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later",
+          "name": "login",
+          "versionInfo": "1:4.16.0-2+really2.41.5-0+deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/lz4@1.10.0-4?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "lz4",
+          "versionInfo": "1.10.0-4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/mawk@1.3.4.20250131-1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "CC-BY-3.0 OR GPL-2.0-only OR X11",
+          "name": "mawk",
+          "versionInfo": "1.3.4.20250131-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/mount@2.41.5-0%2Bdeb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSD-3-Clause OR BSD-4-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR ISC OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later",
+          "name": "mount",
+          "versionInfo": "2.41.5-0+deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/ncurses-base@6.5%2B20250216-2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR X11",
+          "name": "ncurses-base",
+          "versionInfo": "6.5+20250216-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/ncurses-bin@6.5%2B20250216-2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR X11",
+          "name": "ncurses-bin",
+          "versionInfo": "6.5+20250216-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/ncurses@6.5%2B20250216-2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR X11",
+          "name": "ncurses",
+          "versionInfo": "6.5+20250216-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/netbase@6.5?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only",
+          "name": "netbase",
+          "versionInfo": "6.5"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/nettle@3.10.1-1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-3.0-or-later",
+          "name": "nettle",
+          "versionInfo": "3.10.1-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/openssl-provider-legacy@3.5.7-1~deb13u3?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Apache-2.0 OR GPL-1.0-only OR GPL-1.0-or-later",
+          "name": "openssl-provider-legacy",
+          "versionInfo": "3.5.7-1~deb13u3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/openssl@3.5.7-1~deb13u3?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Apache-2.0 OR GPL-1.0-only OR GPL-1.0-or-later",
+          "name": "openssl",
+          "versionInfo": "3.5.7-1~deb13u3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/pam@1.7.0-5?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR Beerware OR GPL-1.0-only OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later",
+          "name": "pam",
+          "versionInfo": "1.7.0-5"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/passwd@1%3A4.17.4-2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-1.0-only OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "passwd",
+          "versionInfo": "1:4.17.4-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/pcre2@10.46-1~deb13u3?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSD-3-Clause OR X11",
+          "name": "pcre2",
+          "versionInfo": "10.46-1~deb13u3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/perl-base@5.40.1-6%2Bdeb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Artistic-2.0 OR BSD-3-Clause OR FSFAP OR GPL-1.0-only OR GPL-1.0-or-later OR GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.1-only OR Zlib",
+          "name": "perl-base",
+          "versionInfo": "5.40.1-6+deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/perl@5.40.1-6%2Bdeb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Artistic-2.0 OR BSD-3-Clause OR FSFAP OR GPL-1.0-only OR GPL-1.0-or-later OR GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.1-only OR Zlib",
+          "name": "perl",
+          "versionInfo": "5.40.1-6+deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/readline-common@8.2-6?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later",
+          "name": "readline-common",
+          "versionInfo": "8.2-6"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/readline@8.2-6?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later",
+          "name": "readline",
+          "versionInfo": "8.2-6"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/rust-sequoia-sqv@1.3.0-3?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "LGPL-2.0-only OR LGPL-2.0-or-later",
+          "name": "rust-sequoia-sqv",
+          "versionInfo": "1.3.0-3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/sed@4.9-2%2Bdeb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-4-Clause-UC OR BSL-1.0 OR GFDL-1.3-only OR GPL-3.0-only OR GPL-3.0-or-later OR ISC OR X11",
+          "name": "sed",
+          "versionInfo": "4.9-2+deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/shadow@1%3A4.17.4-2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-1.0-only OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "shadow",
+          "versionInfo": "1:4.17.4-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/sqlite3@3.46.1-7%2Bdeb13u2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "sqlite3",
+          "versionInfo": "3.46.1-7+deb13u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/sqv@1.3.0-3%2Bb2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "LGPL-2.0-only OR LGPL-2.0-or-later",
+          "name": "sqv",
+          "versionInfo": "1.3.0-3+b2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/systemd@257.13-1~deb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "CC0-1.0 OR GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "systemd",
+          "versionInfo": "257.13-1~deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/sysvinit-utils@3.14-4?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "sysvinit-utils",
+          "versionInfo": "3.14-4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/sysvinit@3.14-4?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "sysvinit",
+          "versionInfo": "3.14-4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/tar@1.35%2Bdfsg-3.1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later",
+          "name": "tar",
+          "versionInfo": "1.35+dfsg-3.1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/tzdata@2026f-0%2Bdeb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": null,
+          "name": "tzdata",
+          "versionInfo": "2026f-0+deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/util-linux@2.41.5-0%2Bdeb13u1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSD-3-Clause OR BSD-4-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR ISC OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later",
+          "name": "util-linux",
+          "versionInfo": "2.41.5-0+deb13u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/xxhash@0.8.3-2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "xxhash",
+          "versionInfo": "0.8.3-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/xz-utils@5.8.1-1%2Bdeb13u2?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "0BSD OR FSFUL OR FSFULLR OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "xz-utils",
+          "versionInfo": "5.8.1-1+deb13u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/zlib1g@1%3A1.3.dfsg%2Breally1.3.1-1%2Bb1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Zlib",
+          "name": "zlib1g",
+          "versionInfo": "1:1.3.dfsg+really1.3.1-1+b1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/zlib@1%3A1.3.dfsg%2Breally1.3.1-1?os_distro=trixie&os_name=debian&os_version=13",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Zlib",
+          "name": "zlib",
+          "versionInfo": "1:1.3.dfsg+really1.3.1-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:pypi/pip@25.0.1",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "MIT",
+          "name": "pip",
+          "versionInfo": "25.0.1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:generic/python@3.12.16",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": null,
+          "name": "python",
+          "versionInfo": "3.12.16"
+        }
+      ],
+      "role": "PRIMARY_INSPECTION_CANDIDATE",
+      "runtime_observation": "NOT_TESTED",
+      "statements": [
+        {
+          "file": "outputs/deployment/m23-b2d-r3/attempt-4/raw/3.12-slim-trixie-statement-0.json",
+          "predicate_type": "https://spdx.dev/Document",
+          "sha256": "f26199dfe4a6040c0d22d4f1926484ec6f9f245003b687689b31d2273739f28f"
+        },
+        {
+          "file": "outputs/deployment/m23-b2d-r3/attempt-4/raw/3.12-slim-trixie-statement-1.json",
+          "predicate_type": "https://slsa.dev/provenance/v0.2",
+          "sha256": "e0a5f9afcd02da7b2aa868ff3179fcb7402d86ccf0cc4ecb2ecb0bc34bf893c6"
+        }
+      ],
+      "tag": "3.12-slim-trixie",
+      "total_compressed_layer_bytes": 43268722,
+      "upstream_signer_verification": "NOT_VERIFIED"
+    },
+    {
+      "annotations": {
+        "com.docker.official-images.bashbrew.arch": "amd64",
+        "org.opencontainers.image.base.digest": "sha256:c67e92c8099ba22853ab4cfda7cfb494d253d6012ca82dee98ba8976772af018",
+        "org.opencontainers.image.base.name": "debian:bookworm-slim",
+        "org.opencontainers.image.created": "2026-11-05T07:52:18Z",
+        "org.opencontainers.image.revision": "3d7e95597e56a415d9e4abc0f15877e005d2cb2e",
+        "org.opencontainers.image.source": "https://github.com/docker-library/python.git#3d7e95597e56a415d9e4abc0f15877e005d2cb2e:3.12/slim-bookworm",
+        "org.opencontainers.image.url": "https://hub.docker.com/_/python",
+        "org.opencontainers.image.version": "3.12.16-slim-bookworm"
+      },
+      "config_sha256": "313cf8f190a1abab00472c1f0c950c10486c22114bcd8aef2a8198fb587a6d18",
+      "declared_os": "Debian 12 / bookworm",
+      "declared_python": "3.12.16",
+      "filesystem_layers_NOT_DOWNLOADED": [
+        {
+          "digest": "sha256:dd051e1b8c92ff101fa3071ab97ea4924885942f15644e01c3dc095764e863e3",
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "size": 28247982
+        },
+        {
+          "digest": "sha256:a47be7bff94f52aefb243d8b245b01c74976150bb88de60875c5eb7ac964f91e",
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "size": 3341518
+        },
+        {
+          "digest": "sha256:8691b22c22a3e005c632ab6bc07b085b98dae9cc02d1d84de175849f997439c7",
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "size": 13679755
+        },
+        {
+          "digest": "sha256:88d15687540999237909e04714b1393c610db9dc2e13d82acd6356fa9bf8f092",
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "size": 249
+        }
+      ],
+      "image": "docker.io/library/python@sha256:0f086103b026048cc50cb5da25ec435c023c5241a83fc44daea593377abc61c4",
+      "manifest_sha256": "0f086103b026048cc50cb5da25ec435c023c5241a83fc44daea593377abc61c4",
+      "publisher_declared_packages": [
+        {
+          "externalRefs": null,
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "NOASSERTION",
+          "name": "sbom",
+          "versionInfo": null
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/acl@2.3.1-3?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.0-or-later OR LGPL-2.1-only",
+          "name": "acl",
+          "versionInfo": "2.3.1-3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/adduser@3.134?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "adduser",
+          "versionInfo": "3.134"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/apt@2.6.2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "apt",
+          "versionInfo": "2.6.2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/attr@1%3A2.5.1-4?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.0-or-later OR LGPL-2.1-only",
+          "name": "attr",
+          "versionInfo": "1:2.5.1-4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/audit@1%3A3.0.9-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-1.0-only OR GPL-2.0-only OR LGPL-2.1-only",
+          "name": "audit",
+          "versionInfo": "1:3.0.9-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/base-files@12.4%2Bdeb12u15?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": null,
+          "name": "base-files",
+          "versionInfo": "12.4+deb12u15"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/base-passwd@3.6.1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only",
+          "name": "base-passwd",
+          "versionInfo": "3.6.1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/bash@5.2.15-2%2Bb13?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-4-Clause-UC OR GFDL-1.3-only OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR Latex2e",
+          "name": "bash",
+          "versionInfo": "5.2.15-2+b13"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/bsdutils@1%3A2.38.1-5%2Bdeb12u3?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR BSD-4-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later OR MIT",
+          "name": "bsdutils",
+          "versionInfo": "1:2.38.1-5+deb12u3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/bzip2@1.0.8-5?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only",
+          "name": "bzip2",
+          "versionInfo": "1.0.8-5"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/ca-certificates@20250419~deb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR MPL-2.0",
+          "name": "ca-certificates",
+          "versionInfo": "20250419~deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/cdebconf@0.270?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "cdebconf",
+          "versionInfo": "0.270"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/coreutils@9.1-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-4-Clause-UC OR FSFULLR OR GFDL-1.3-only OR GPL-3.0-only OR GPL-3.0-or-later OR ISC",
+          "name": "coreutils",
+          "versionInfo": "9.1-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/dash@0.5.12-2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "dash",
+          "versionInfo": "0.5.12-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/db5.3@5.3.28%2Bdfsg2-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-3.0-only OR MS-PL OR Sleepycat OR X11 OR Zlib",
+          "name": "db5.3",
+          "versionInfo": "5.3.28+dfsg2-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/debconf@1.5.82?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause",
+          "name": "debconf",
+          "versionInfo": "1.5.82"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/debian-archive-keyring@2023.3%2Bdeb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": null,
+          "name": "debian-archive-keyring",
+          "versionInfo": "2023.3+deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/debianutils@5.7-0.5~deb12u1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR SMAIL-GPL",
+          "name": "debianutils",
+          "versionInfo": "5.7-0.5~deb12u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/diffutils@1%3A3.8-4?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "FSFAP OR FSFULLR OR GFDL-1.3-only OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later OR X11",
+          "name": "diffutils",
+          "versionInfo": "1:3.8-4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/dpkg@1.21.23?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "dpkg",
+          "versionInfo": "1.21.23"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/e2fsprogs@1.47.0-2%2Bb2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Apache-2.0 OR BSD-3-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR ISC OR Kazlib OR LGPL-2.0-only OR Latex2e",
+          "name": "e2fsprogs",
+          "versionInfo": "1.47.0-2+b2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/e2fsprogs@1.47.0-2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Apache-2.0 OR BSD-3-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR ISC OR Kazlib OR LGPL-2.0-only OR Latex2e",
+          "name": "e2fsprogs",
+          "versionInfo": "1.47.0-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/findutils@4.9.0-4?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR FSFAP OR FSFULLR OR GFDL-1.3-only OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR ISC OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later OR X11",
+          "name": "findutils",
+          "versionInfo": "4.9.0-4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/gcc-12-base@12.2.0-14%2Bdeb12u1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GFDL-1.2-only OR GPL-2.0-only OR GPL-3.0-only",
+          "name": "gcc-12-base",
+          "versionInfo": "12.2.0-14+deb12u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/gcc-12@12.2.0-14%2Bdeb12u1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GFDL-1.2-only OR GPL-2.0-only OR GPL-3.0-only",
+          "name": "gcc-12",
+          "versionInfo": "12.2.0-14+deb12u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/gdbm@1.23-3?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later",
+          "name": "gdbm",
+          "versionInfo": "1.23-3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/glibc@2.36-9%2Bdeb12u14?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR LGPL-2.1-only",
+          "name": "glibc",
+          "versionInfo": "2.36-9+deb12u14"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/gmp@2%3A6.2.1%2Bdfsg1-1.1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later",
+          "name": "gmp",
+          "versionInfo": "2:6.2.1+dfsg1-1.1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/gnupg2@2.2.40-1.1%2Bdeb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR CC0-1.0 OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later",
+          "name": "gnupg2",
+          "versionInfo": "2.2.40-1.1+deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/gnutls28@3.7.9-2%2Bdeb12u7?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Apache-2.0 OR BSD-3-Clause OR GFDL-1.3-only OR GPL-3.0-only OR LGPL-3.0-only",
+          "name": "gnutls28",
+          "versionInfo": "3.7.9-2+deb12u7"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/gpgv@2.2.40-1.1%2Bdeb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR CC0-1.0 OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later",
+          "name": "gpgv",
+          "versionInfo": "2.2.40-1.1+deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/grep@3.8-5?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-3.0-only OR GPL-3.0-or-later",
+          "name": "grep",
+          "versionInfo": "3.8-5"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/gzip@1.12-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-3.0-only OR GPL-3.0-or-later",
+          "name": "gzip",
+          "versionInfo": "1.12-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/hostname@3.23%2Bnmu1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only",
+          "name": "hostname",
+          "versionInfo": "3.23+nmu1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/init-system-helpers@1.65.2%2Bdeb12u1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "init-system-helpers",
+          "versionInfo": "1.65.2+deb12u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/keyutils@1.6.3-2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later",
+          "name": "keyutils",
+          "versionInfo": "1.6.3-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/krb5@1.20.1-2%2Bdeb12u5?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only",
+          "name": "krb5",
+          "versionInfo": "1.20.1-2+deb12u5"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libacl1@2.3.1-3?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.0-or-later OR LGPL-2.1-only",
+          "name": "libacl1",
+          "versionInfo": "2.3.1-3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libapt-pkg6.0@2.6.2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "libapt-pkg6.0",
+          "versionInfo": "2.6.2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libattr1@1%3A2.5.1-4?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.0-or-later OR LGPL-2.1-only",
+          "name": "libattr1",
+          "versionInfo": "1:2.5.1-4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libaudit-common@1%3A3.0.9-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-1.0-only OR GPL-2.0-only OR LGPL-2.1-only",
+          "name": "libaudit-common",
+          "versionInfo": "1:3.0.9-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libaudit1@1%3A3.0.9-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-1.0-only OR GPL-2.0-only OR LGPL-2.1-only",
+          "name": "libaudit1",
+          "versionInfo": "1:3.0.9-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libblkid1@2.38.1-5%2Bdeb12u3?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR BSD-4-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later OR MIT",
+          "name": "libblkid1",
+          "versionInfo": "2.38.1-5+deb12u3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libbz2-1.0@1.0.8-5%2Bb1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only",
+          "name": "libbz2-1.0",
+          "versionInfo": "1.0.8-5+b1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libc-bin@2.36-9%2Bdeb12u14?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR LGPL-2.1-only",
+          "name": "libc-bin",
+          "versionInfo": "2.36-9+deb12u14"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libc6@2.36-9%2Bdeb12u14?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR LGPL-2.1-only",
+          "name": "libc6",
+          "versionInfo": "2.36-9+deb12u14"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libcap-ng0@0.8.3-1%2Bb3?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "libcap-ng0",
+          "versionInfo": "0.8.3-1+b3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libcap-ng@0.8.3-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "libcap-ng",
+          "versionInfo": "0.8.3-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libcap2@1%3A2.66-4%2Bdeb12u3%2Bb1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "libcap2",
+          "versionInfo": "1:2.66-4+deb12u3+b1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libcom-err2@1.47.0-2%2Bb2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Apache-2.0 OR BSD-3-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR ISC OR Kazlib OR LGPL-2.0-only OR Latex2e",
+          "name": "libcom-err2",
+          "versionInfo": "1.47.0-2+b2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libcrypt1@1%3A4.4.33-2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": null,
+          "name": "libcrypt1",
+          "versionInfo": "1:4.4.33-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libdb5.3@5.3.28%2Bdfsg2-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-3.0-only OR MS-PL OR Sleepycat OR X11 OR Zlib",
+          "name": "libdb5.3",
+          "versionInfo": "5.3.28+dfsg2-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libdebconfclient0@0.270?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "libdebconfclient0",
+          "versionInfo": "0.270"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libext2fs2@1.47.0-2%2Bb2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Apache-2.0 OR BSD-3-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR ISC OR Kazlib OR LGPL-2.0-only OR Latex2e",
+          "name": "libext2fs2",
+          "versionInfo": "1.47.0-2+b2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libffi8@3.4.4-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-or-later OR GPL-3.0-or-later OR MPL-1.1 OR X11",
+          "name": "libffi8",
+          "versionInfo": "3.4.4-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libffi@3.4.4-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-or-later OR GPL-3.0-or-later OR MPL-1.1 OR X11",
+          "name": "libffi",
+          "versionInfo": "3.4.4-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libgcc-s1@12.2.0-14%2Bdeb12u1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GFDL-1.2-only OR GPL-2.0-only OR GPL-3.0-only",
+          "name": "libgcc-s1",
+          "versionInfo": "12.2.0-14+deb12u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libgcrypt20@1.10.1-3%2Bdeb12u1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only",
+          "name": "libgcrypt20",
+          "versionInfo": "1.10.1-3+deb12u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libgdbm6@1.23-3?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later",
+          "name": "libgdbm6",
+          "versionInfo": "1.23-3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libgmp10@2%3A6.2.1%2Bdfsg1-1.1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later",
+          "name": "libgmp10",
+          "versionInfo": "2:6.2.1+dfsg1-1.1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libgnutls30@3.7.9-2%2Bdeb12u7?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Apache-2.0 OR BSD-3-Clause OR GFDL-1.3-only OR GPL-3.0-only OR LGPL-3.0-only",
+          "name": "libgnutls30",
+          "versionInfo": "3.7.9-2+deb12u7"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libgpg-error0@1.46-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "libgpg-error0",
+          "versionInfo": "1.46-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libgpg-error@1.46-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "libgpg-error",
+          "versionInfo": "1.46-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libgssapi-krb5-2@1.20.1-2%2Bdeb12u5?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only",
+          "name": "libgssapi-krb5-2",
+          "versionInfo": "1.20.1-2+deb12u5"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libhogweed6@3.8.1-2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-3.0-or-later",
+          "name": "libhogweed6",
+          "versionInfo": "3.8.1-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libidn2-0@2.3.3-1%2Bb1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later",
+          "name": "libidn2-0",
+          "versionInfo": "2.3.3-1+b1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libidn2@2.3.3-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later",
+          "name": "libidn2",
+          "versionInfo": "2.3.3-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libk5crypto3@1.20.1-2%2Bdeb12u5?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only",
+          "name": "libk5crypto3",
+          "versionInfo": "1.20.1-2+deb12u5"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libkeyutils1@1.6.3-2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later",
+          "name": "libkeyutils1",
+          "versionInfo": "1.6.3-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libkrb5-3@1.20.1-2%2Bdeb12u5?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only",
+          "name": "libkrb5-3",
+          "versionInfo": "1.20.1-2+deb12u5"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libkrb5support0@1.20.1-2%2Bdeb12u5?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only",
+          "name": "libkrb5support0",
+          "versionInfo": "1.20.1-2+deb12u5"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/liblz4-1@1.9.4-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "liblz4-1",
+          "versionInfo": "1.9.4-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/liblzma5@5.4.1-1%2Bdeb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR LGPL-2.0-only OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "liblzma5",
+          "versionInfo": "5.4.1-1+deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libmd0@1.0.4-2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSD-3-Clause OR Beerware OR ISC",
+          "name": "libmd0",
+          "versionInfo": "1.0.4-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libmd@1.0.4-2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSD-3-Clause OR Beerware OR ISC",
+          "name": "libmd",
+          "versionInfo": "1.0.4-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libmount1@2.38.1-5%2Bdeb12u3?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR BSD-4-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later OR MIT",
+          "name": "libmount1",
+          "versionInfo": "2.38.1-5+deb12u3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libncursesw6@6.4-4?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR X11",
+          "name": "libncursesw6",
+          "versionInfo": "6.4-4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libnettle8@3.8.1-2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-3.0-or-later",
+          "name": "libnettle8",
+          "versionInfo": "3.8.1-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libnsl2@1.3.0-2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-2.0-only OR GPL-3.0-only OR LGPL-2.1-only OR LGPL-2.1-or-later OR MIT",
+          "name": "libnsl2",
+          "versionInfo": "1.3.0-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libnsl@1.3.0-2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-2.0-only OR GPL-3.0-only OR LGPL-2.1-only OR LGPL-2.1-or-later OR MIT",
+          "name": "libnsl",
+          "versionInfo": "1.3.0-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libp11-kit0@0.24.1-2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Apache-2.0 OR BSD-3-Clause OR ISC OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "libp11-kit0",
+          "versionInfo": "0.24.1-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libpam-modules-bin@1.5.2-6%2Bdeb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR Beerware OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later",
+          "name": "libpam-modules-bin",
+          "versionInfo": "1.5.2-6+deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libpam-modules@1.5.2-6%2Bdeb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR Beerware OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later",
+          "name": "libpam-modules",
+          "versionInfo": "1.5.2-6+deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libpam-runtime@1.5.2-6%2Bdeb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR Beerware OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later",
+          "name": "libpam-runtime",
+          "versionInfo": "1.5.2-6+deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libpam0g@1.5.2-6%2Bdeb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR Beerware OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later",
+          "name": "libpam0g",
+          "versionInfo": "1.5.2-6+deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libpcre2-8-0@10.42-1%2Bdeb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSD-3-Clause OR X11",
+          "name": "libpcre2-8-0",
+          "versionInfo": "10.42-1+deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libreadline8@8.2-1.3?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later",
+          "name": "libreadline8",
+          "versionInfo": "8.2-1.3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libseccomp2@2.5.4-1%2Bdeb12u1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "LGPL-2.1-only",
+          "name": "libseccomp2",
+          "versionInfo": "2.5.4-1+deb12u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libseccomp@2.5.4-1%2Bdeb12u1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "LGPL-2.1-only",
+          "name": "libseccomp",
+          "versionInfo": "2.5.4-1+deb12u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libselinux1@3.4-1%2Bb6?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR LGPL-2.1-only",
+          "name": "libselinux1",
+          "versionInfo": "3.4-1+b6"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libselinux@3.4-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR LGPL-2.1-only",
+          "name": "libselinux",
+          "versionInfo": "3.4-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libsemanage-common@3.4-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": null,
+          "name": "libsemanage-common",
+          "versionInfo": "3.4-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libsemanage2@3.4-1%2Bb5?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": null,
+          "name": "libsemanage2",
+          "versionInfo": "3.4-1+b5"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libsemanage@3.4-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": null,
+          "name": "libsemanage",
+          "versionInfo": "3.4-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libsepol2@3.4-2.1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR Zlib",
+          "name": "libsepol2",
+          "versionInfo": "3.4-2.1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libsepol@3.4-2.1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR Zlib",
+          "name": "libsepol",
+          "versionInfo": "3.4-2.1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libsmartcols1@2.38.1-5%2Bdeb12u3?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR BSD-4-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later OR MIT",
+          "name": "libsmartcols1",
+          "versionInfo": "2.38.1-5+deb12u3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libsqlite3-0@3.40.1-2%2Bdeb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "libsqlite3-0",
+          "versionInfo": "3.40.1-2+deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libss2@1.47.0-2%2Bb2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Apache-2.0 OR BSD-3-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR ISC OR Kazlib OR LGPL-2.0-only OR Latex2e",
+          "name": "libss2",
+          "versionInfo": "1.47.0-2+b2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libssl3@3.0.22-1~deb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Apache-2.0 OR GPL-1.0-only OR GPL-1.0-or-later",
+          "name": "libssl3",
+          "versionInfo": "3.0.22-1~deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libstdc%2B%2B6@12.2.0-14%2Bdeb12u1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GFDL-1.2-only OR GPL-2.0-only OR GPL-3.0-only",
+          "name": "libstdc++6",
+          "versionInfo": "12.2.0-14+deb12u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libsystemd0@252.39-1~deb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "CC0-1.0 OR GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "libsystemd0",
+          "versionInfo": "252.39-1~deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libtasn1-6@4.19.0-2%2Bdeb12u1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GFDL-1.3-only OR GPL-3.0-only OR LGPL-2.1-only",
+          "name": "libtasn1-6",
+          "versionInfo": "4.19.0-2+deb12u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libtinfo6@6.4-4?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR X11",
+          "name": "libtinfo6",
+          "versionInfo": "6.4-4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libtirpc-common@1.3.3%2Bds-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-2.0-only OR LGPL-2.1-only",
+          "name": "libtirpc-common",
+          "versionInfo": "1.3.3+ds-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libtirpc3@1.3.3%2Bds-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-2.0-only OR LGPL-2.1-only",
+          "name": "libtirpc3",
+          "versionInfo": "1.3.3+ds-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libtirpc@1.3.3%2Bds-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-2.0-only OR LGPL-2.1-only",
+          "name": "libtirpc",
+          "versionInfo": "1.3.3+ds-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libudev1@252.39-1~deb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "CC0-1.0 OR GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "libudev1",
+          "versionInfo": "252.39-1~deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libunistring2@1.0-2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GFDL-1.2-only OR GFDL-1.2-or-later OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later OR MIT",
+          "name": "libunistring2",
+          "versionInfo": "1.0-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libunistring@1.0-2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GFDL-1.2-only OR GFDL-1.2-or-later OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later OR MIT",
+          "name": "libunistring",
+          "versionInfo": "1.0-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libuuid1@2.38.1-5%2Bdeb12u3?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR BSD-4-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later OR MIT",
+          "name": "libuuid1",
+          "versionInfo": "2.38.1-5+deb12u3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libxcrypt@1%3A4.4.33-2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": null,
+          "name": "libxcrypt",
+          "versionInfo": "1:4.4.33-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libxxhash0@0.8.1-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR GPL-2.0-only",
+          "name": "libxxhash0",
+          "versionInfo": "0.8.1-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libzstd1@1.5.4%2Bdfsg2-5?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-2.0-only OR Zlib",
+          "name": "libzstd1",
+          "versionInfo": "1.5.4+dfsg2-5"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/libzstd@1.5.4%2Bdfsg2-5?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-2.0-only OR Zlib",
+          "name": "libzstd",
+          "versionInfo": "1.5.4+dfsg2-5"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/login@1%3A4.13%2Bdfsg1-1%2Bdeb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-1.0-only OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "login",
+          "versionInfo": "1:4.13+dfsg1-1+deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/logsave@1.47.0-2%2Bb2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Apache-2.0 OR BSD-3-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR ISC OR Kazlib OR LGPL-2.0-only OR Latex2e",
+          "name": "logsave",
+          "versionInfo": "1.47.0-2+b2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/lz4@1.9.4-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "lz4",
+          "versionInfo": "1.9.4-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/mawk@1.3.4.20200120-3.1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "CC-BY-3.0 OR GPL-2.0-only OR X11",
+          "name": "mawk",
+          "versionInfo": "1.3.4.20200120-3.1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/mount@2.38.1-5%2Bdeb12u3?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR BSD-4-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later OR MIT",
+          "name": "mount",
+          "versionInfo": "2.38.1-5+deb12u3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/ncurses-base@6.4-4?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR X11",
+          "name": "ncurses-base",
+          "versionInfo": "6.4-4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/ncurses-bin@6.4-4?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR X11",
+          "name": "ncurses-bin",
+          "versionInfo": "6.4-4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/ncurses@6.4-4?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR X11",
+          "name": "ncurses",
+          "versionInfo": "6.4-4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/netbase@6.4?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only",
+          "name": "netbase",
+          "versionInfo": "6.4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/nettle@3.8.1-2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-3.0-or-later",
+          "name": "nettle",
+          "versionInfo": "3.8.1-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/openssl@3.0.22-1~deb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Apache-2.0 OR GPL-1.0-only OR GPL-1.0-or-later",
+          "name": "openssl",
+          "versionInfo": "3.0.22-1~deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/p11-kit@0.24.1-2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Apache-2.0 OR BSD-3-Clause OR ISC OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "p11-kit",
+          "versionInfo": "0.24.1-2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/pam@1.5.2-6%2Bdeb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR Beerware OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later",
+          "name": "pam",
+          "versionInfo": "1.5.2-6+deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/passwd@1%3A4.13%2Bdfsg1-1%2Bdeb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-1.0-only OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "passwd",
+          "versionInfo": "1:4.13+dfsg1-1+deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/pcre2@10.42-1%2Bdeb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR BSD-3-Clause OR X11",
+          "name": "pcre2",
+          "versionInfo": "10.42-1+deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/perl-base@5.36.0-7%2Bdeb12u4?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Artistic-2.0 OR BSD-3-Clause OR GPL-1.0-only OR GPL-1.0-or-later OR GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.1-only OR Zlib",
+          "name": "perl-base",
+          "versionInfo": "5.36.0-7+deb12u4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/perl@5.36.0-7%2Bdeb12u4?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Artistic-2.0 OR BSD-3-Clause OR GPL-1.0-only OR GPL-1.0-or-later OR GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.1-only OR Zlib",
+          "name": "perl",
+          "versionInfo": "5.36.0-7+deb12u4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/readline-common@8.2-1.3?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later",
+          "name": "readline-common",
+          "versionInfo": "8.2-1.3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/readline@8.2-1.3?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later",
+          "name": "readline",
+          "versionInfo": "8.2-1.3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/sed@4.9-1%2Bdeb12u1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-4-Clause-UC OR BSL-1.0 OR GFDL-1.3-only OR GPL-3.0-only OR GPL-3.0-or-later OR ISC OR X11",
+          "name": "sed",
+          "versionInfo": "4.9-1+deb12u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/shadow@1%3A4.13%2Bdfsg1-1%2Bdeb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR GPL-1.0-only OR GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "shadow",
+          "versionInfo": "1:4.13+dfsg1-1+deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/sqlite3@3.40.1-2%2Bdeb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "sqlite3",
+          "versionInfo": "3.40.1-2+deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/systemd@252.39-1~deb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "CC0-1.0 OR GPL-2.0-only OR GPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "systemd",
+          "versionInfo": "252.39-1~deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/sysvinit-utils@3.06-4?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only",
+          "name": "sysvinit-utils",
+          "versionInfo": "3.06-4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/sysvinit@3.06-4?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only",
+          "name": "sysvinit",
+          "versionInfo": "3.06-4"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/tar@1.34%2Bdfsg-1.2%2Bdeb12u1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later",
+          "name": "tar",
+          "versionInfo": "1.34+dfsg-1.2+deb12u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/tzdata@2026f-0%2Bdeb12u1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": null,
+          "name": "tzdata",
+          "versionInfo": "2026f-0+deb12u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/usr-is-merged@37~deb12u1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "usr-is-merged",
+          "versionInfo": "37~deb12u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/usrmerge@37~deb12u1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later",
+          "name": "usrmerge",
+          "versionInfo": "37~deb12u1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/util-linux-extra@2.38.1-5%2Bdeb12u3?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR BSD-4-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later OR MIT",
+          "name": "util-linux-extra",
+          "versionInfo": "2.38.1-5+deb12u3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/util-linux@2.38.1-5%2Bdeb12u3?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-3-Clause OR BSD-4-Clause OR GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR GPL-3.0-or-later OR LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-2.1-or-later OR LGPL-3.0-only OR LGPL-3.0-or-later OR MIT",
+          "name": "util-linux",
+          "versionInfo": "2.38.1-5+deb12u3"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/xxhash@0.8.1-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "BSD-2-Clause OR GPL-2.0-only",
+          "name": "xxhash",
+          "versionInfo": "0.8.1-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/xz-utils@5.4.1-1%2Bdeb12u2?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR LGPL-2.0-only OR LGPL-2.1-only OR LGPL-2.1-or-later",
+          "name": "xz-utils",
+          "versionInfo": "5.4.1-1+deb12u2"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/zlib1g@1%3A1.2.13.dfsg-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Zlib",
+          "name": "zlib1g",
+          "versionInfo": "1:1.2.13.dfsg-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:deb/debian/zlib@1%3A1.2.13.dfsg-1?os_distro=bookworm&os_name=debian&os_version=12",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "Zlib",
+          "name": "zlib",
+          "versionInfo": "1:1.2.13.dfsg-1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:pypi/pip@25.0.1",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": "MIT",
+          "name": "pip",
+          "versionInfo": "25.0.1"
+        },
+        {
+          "externalRefs": [
+            {
+              "referenceCategory": "PACKAGE-MANAGER",
+              "referenceLocator": "pkg:generic/python@3.12.16",
+              "referenceType": "purl"
+            }
+          ],
+          "licenseConcluded": "NOASSERTION",
+          "licenseDeclared": null,
+          "name": "python",
+          "versionInfo": "3.12.16"
+        }
+      ],
+      "role": "FALLBACK_REFERENCE_NOT_REMEDIATED",
+      "runtime_observation": "NOT_TESTED",
+      "statements": [
+        {
+          "file": "outputs/deployment/m23-b2d-r3/attempt-4/raw/3.12-slim-bookworm-statement-0.json",
+          "predicate_type": "https://spdx.dev/Document",
+          "sha256": "301dc9274968489cec5adb85c258cf191b2523750b4b31940d3f84bb2b36c979"
+        },
+        {
+          "file": "outputs/deployment/m23-b2d-r3/attempt-4/raw/3.12-slim-bookworm-statement-1.json",
+          "predicate_type": "https://slsa.dev/provenance/v0.2",
+          "sha256": "637e6ba5bb8bb73ab074035f9baaafaecb6c89c9fdb30ddd0bebff4d20ca00c9"
+        }
+      ],
+      "tag": "3.12-slim-bookworm",
+      "total_compressed_layer_bytes": 45269504,
+      "upstream_signer_verification": "NOT_VERIFIED"
+    }
+  ],
+  "metadata_ledger_requests": 115,
+  "metadata_response_bytes": 6194951,
+  "observed_date": "2026-11-17",
+  "reviewer_approval": null,
+  "runtime_execution": "NOT_TESTED",
+  "status": "FROZEN_METADATA_ONLY_NO_ACQUISITION_APPROVAL",
+  "status_counts": {
+    "200": 98,
+    "307": 12,
+    "404": 2,
+    "ERROR": 3
+  },
+  "unledgered_probe": "One initial bounded curl GET of official Python versions.json succeeded before capture; response was not retained. Web search requests are separately visible in conversation and have no local body hashes."
+}

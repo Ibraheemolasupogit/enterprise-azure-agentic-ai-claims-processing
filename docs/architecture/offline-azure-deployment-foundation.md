@@ -2,6 +2,8 @@
 
 Status: implemented definitions and local contracts only; no Azure access or deployment. Official milestone title remains **Governed Azure deployment**. Stage A is a preparatory subset and cannot satisfy the roadmap's actual Azure integration/identity/smoke/cost exit evidence. [Deployment strategy](../deployment/deployment-strategy.md), [contract](../../deployment/contract.json), [Bicep](../../infra/azure/README.md).
 
+Current M23 container deployment status: **DEFERRED — SECURITY GATE NO-GO**. The [milestone record](../milestones/milestone-23.md) distinguishes retained Stage A/B1 and artifact/static achievements from unresolved findings. Reopening needs supported fixes or independently approved applicability, authenticated package/provenance evidence, complete authenticated database bytes within B1's 1 GiB cap, CPython/OpenSSL/Cargo/native coverage and separate acquisition/build/runtime approvals. This status update changes no resource, runtime or identity boundary.
+
 ## Smallest synthetic dev slice
 
 The candidate slice uses registered synthetic bundles, the existing advisory/review paths and three read-only MCP tools. It exposes no new insurance outcome, assignment/publication or arbitrary upload endpoint. Model behaviour stays simulated; no new agent or autonomous outcome is added. M20's separate explicit synthetic human-outcome service remains separate from M15 recommendation approval and the browser.

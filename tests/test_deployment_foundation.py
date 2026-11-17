@@ -277,10 +277,11 @@ def test_linux_wheel_metadata_and_archive_boundaries(
     passes: bool,
 ) -> None:
     # Synthetic ZIP metadata only; never a real approved dependency or build lock.
-    path = tmp_path / "synthetic.whl"
+    path = tmp_path / f"synthetic_test-0-{tag}.whl"
     with zipfile.ZipFile(path, "w") as archive:
         archive.writestr(
-            "synthetic_test-0.dist-info/METADATA", "Name: synthetic-test\nVersion: 0\n"
+            "synthetic_test-0.dist-info/METADATA",
+            "Name: synthetic-test\nVersion: 0\nRequires-Python: >=3.12,<3.13\n",
         )
         archive.writestr(
             "synthetic_test-0.dist-info/WHEEL", "Wheel-Version: 1.0\nTag: " + tag + "\n"
@@ -288,10 +289,10 @@ def test_linux_wheel_metadata_and_archive_boundaries(
         if extra:
             archive.writestr(extra, "untrusted")
     if passes:
-        assert wheel_metadata(path) == ("synthetic-test", "0")
+        assert wheel_metadata(path, (2, 28)) == ("synthetic-test", "0")
     else:
         with pytest.raises(FoundationError):
-            wheel_metadata(path)
+            wheel_metadata(path, (2, 28))
 
 
 def test_artifact_hash_and_path_mismatch_fail_closed(tmp_path: Path) -> None:

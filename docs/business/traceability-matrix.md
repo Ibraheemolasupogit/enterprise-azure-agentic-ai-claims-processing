@@ -362,3 +362,14 @@ Tests are in [test_outcomes.py](../../tests/test_outcomes.py). No M8 failure, M1
 | NFR-006/NFR-009; VT-021/VT-024 | Pending holdout/quality invariants, no invented adapter/approval completion and preserved source/evidence | `test_cannot_promote_stage_quality_or_external_execution`, `test_required_approval_gates_and_adapter_status_cannot_be_fabricated`; 60 labels PENDING_REVIEW, independent quality NOT_TESTED, historical M8/M12/M19 evidence retained |
 
 New focused tests are in [test_deployment_foundation.py](../../tests/test_deployment_foundation.py). Stage A does not complete M23's authorised Azure integration/cost exit criteria or start M24.
+
+## M23 deployment deferral traceability — 2026-11-17
+
+Current container deployment status: **DEFERRED — SECURITY GATE NO-GO**. The [milestone status/reopening record](../milestones/milestone-23.md) consolidates retained Stage A/B1 and B2D R1–R6 evidence. Historical tests and scans remain scoped results; this documentation update reruns none of them and satisfies no live VT criterion.
+
+| Requirement / verification | Verified support | Remaining acceptance boundary |
+| --- | --- | --- |
+| NFR-002/NFR-009; VT-017/VT-024 | B1 source-bound admission/signature checks and unconditional build refusal; exact acquired wheel/layer hashes, R4 package/file comparisons | Supported fixes or independently approved applicability, authenticated package/build provenance, genuine reviewer enrolment/signatures and licence review |
+| NFR-003/NFR-009; VT-018/VT-024 | Historical Bookworm scan and R6 vendor/repository metadata comparisons preserved | Zero unresolved Critical/High under unchanged thresholds; complete authenticated database within 1 GiB and seven-day admission age; CPython/OpenSSL/Cargo/native coverage |
+| NFR-004/NFR-005/FR-013; VT-013/VT-019/VT-020 | Existing M20/M21/M22 audit, recovery and authority contracts retained; seven native wheels have static dependency candidates | Separate acquisition/build/runtime approvals, physical builder isolation, reproducibility, final-image checks and actual Linux API/UI/MCP/audit/revocation/recovery evidence |
+| NFR-002/NFR-008; VT-017/VT-023 | Disabled IaC/workflows and explicit cloud lifecycle gates preserved | AZU-0058, cloud adapters, real identity/network/restore integration, approved costs and separate Azure authorisation; M23 deployment exit criteria remain unmet |

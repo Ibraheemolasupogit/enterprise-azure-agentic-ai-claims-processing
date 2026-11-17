@@ -1,0 +1,24 @@
+{
+  "artifact_sha256s": [],
+  "details": {
+    "builder_identity": null,
+    "builder_version": null,
+    "daemon_egress": "DENY_ALL",
+    "execution_allowed": false,
+    "frontend_egress": "DENY_ALL",
+    "interfaces": [],
+    "mechanism": "DISCONNECTED_LINUX_VM",
+    "policy": {
+      "file": null,
+      "sha256": null
+    },
+    "preloaded_inputs_only": true,
+    "registry_access": false,
+    "remote_builders": false,
+    "run_egress": "DENY_ALL"
+  },
+  "format": "m23-builder_isolation-evidence-v1",
+  "observed_at": null,
+  "status": "PENDING_REVIEW",
+  "subject_sha256": null
+}

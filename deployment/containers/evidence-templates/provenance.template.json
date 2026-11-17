@@ -1,0 +1,11 @@
+{
+  "artifact_sha256s": [],
+  "details": {
+    "inventory": {},
+    "review_notes": null
+  },
+  "format": "m23-provenance-evidence-v1",
+  "observed_at": null,
+  "status": "PENDING_REVIEW",
+  "subject_sha256": null
+}

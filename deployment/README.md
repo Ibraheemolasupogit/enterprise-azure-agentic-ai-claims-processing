@@ -1,5 +1,7 @@
 # Offline deployment tooling — M23 Stage A
 
+Current container deployment status: **DEFERRED — SECURITY GATE NO-GO**. See the [milestone record](../docs/milestones/milestone-23.md) for verified work, unresolved findings and mandatory reopening criteria. Historical acquisition permissions do not authorise new acquisitions, builds or runtime validation; each phase needs separate approval. B1's unconditional refusal remains in force.
+
 Tooling is outside `src/claims_ai`, has no Azure client/credential chain and grants no application authority. It leaves all existing API/UI/MCP/identity/outcome implementations and their default loopback profiles unchanged.
 
 ```sh
@@ -19,36 +21,18 @@ Validation is credential-free, contents-read-only, bounded to ten minutes and pe
 
 YAML cannot establish GitHub server-side protection. Actual environment reviewers, prevent-self-review policy, protected branches, fork restrictions, exact repository/environment federation subject, issuer/audience, scoped identities and audit retention are UNVERIFIED. No environment, federated credential, service principal, app registration or IAM grant has been created. These prerequisites require separately authorised administration before any future workflow activation.
 
-## Locked local Linux build contract
+## B1 locked supply-chain admission (no build execution)
 
-`containers/build-inputs.pending.json` records the exact existing 39 runtime versions and leaves Linux base/wheel hashes and review evidence absent. It is deliberately **not buildable**. Do not replace absent hashes with invented digests or reuse macOS native wheels as Linux evidence.
+[Stage B1 contract and acquisition/review procedure](../docs/deployment/m23/stage-b1-supply-chain.md) supersedes the original Stage A executor. `build_container.py --validate-only` now requires a complete source-bound v2 manifest, independently pinned manifest and reviewer trust store, current Ed25519 reviewer signature, verified local base manifest/config/layers/runtime report, all 39 compatible wheel/hash records and bound provenance/licence/SBOM/vulnerability evidence. Manylinux glibc floors, filename/metadata/Requires-Python, ELF AMD64 headers and project source bytes are checked. No dependency is added.
 
-A future separately retained, genuinely reviewed input manifest must contain:
+The original `containers/build-inputs.pending.json` is preserved and refused. [Nine new templates](containers/evidence-templates/) remain pending, with absent hashes/signatures and no enrolled keys. A review plan is not a verified physical builder or permission to execute. **All B1 build calls refuse before any subprocess/daemon/network access**, including otherwise valid signed input. There is no automatic download, image pull/build/run/push, signing, or deployment enablement. The future builder requires verified daemon/frontend/RUN isolation beyond `--pull=false`; B1 does not implement or claim that environment.
 
-- `status=REVIEWED_LOCAL_BUILD_INPUTS`, `platform=linux/amd64`, Python minor 3.12 and a positive source-date epoch.
-- An independently retained manifest SHA-256 and a cached official Python base referenced as `docker.io/library/python@sha256:…`, with actual digest/provenance review.
-- Exactly one Linux/Python-compatible wheel for each of the 39 pinned distributions, plus a byte-matching project wheel. Every basename and SHA-256 is bound; native macOS/other-architecture wheels, unsafe ZIP paths, `.pth` injection and mismatched metadata are rejected.
-- Actual base/licence/vulnerability review evidence and the current application-source fingerprint. These records are artifact review inputs, not an authenticated human-identity or cloud-approval mechanism. The trusted operator must obtain the input pin independently.
+The existing Dockerfile, UID/GID 10001, allowlisted context helper and host ASGI smoke remain unchanged. Frozen M22 JSON/credentials/runtime databases stay outside the context; public authoring modules remain in the general wheel, so it is not a sealed predictor. Entry/health always exit 78. Input admission PASS is not image/runtime/SBOM reproducibility or Azure acceptance.
 
-Only after those inputs exist, the local-only command is:
-
-```sh
-.venv/bin/python -B -m deployment.build_container --root . \
-  --manifest /absolute/path/to/reviewed-linux-inputs.json \
-  --artifacts /absolute/path/to/reviewed-wheels \
-  --trusted-manifest-sha256 ACTUAL_INDEPENDENT_MANIFEST_SHA256
-```
-
-The command validates inputs **before invoking Docker**, requires a local Unix-socket daemon and an already cached base, and never downloads/pushes anything. Build steps use no network, no index, no dependency resolution and hash-required wheels. An isolated allowlisted context contains only the Dockerfile/scripts, wheels and the three original provisional M9 fixture files needed for smoke tests. It contains no frozen M22 candidate/reviewer JSON files, `.git`, `.env`, credentials, SQLite state, historical outputs or unrelated data. The general application wheel still includes public reference-authoring modules; it is not a sealed or approved held-out prediction environment. Future predictor isolation must exclude that authoring access separately.
-
-The multi-stage image runs as UID/GID 10001, with no apt/curl installation. The local smoke contract uses the resulting image ID rather than a mutable tag, `--pull=never`, no network, read-only root, bounded tmpfs/CPU/memory/PIDs, dropped capabilities and no-new-privileges. It exercises actual local API/UI ASGI and three governed MCP SDK reads, then checks that default cloud startup still exits 78. No socket hosting, cloud health, live Entra, real model or independent quality is claimed. Repeat builds must compare application/dependency inventories and image digests; byte-identical OCI output is not claimed without an exercised deterministic builder/base/toolchain record.
-
-`containers/entrypoint.py` never starts a demo server, listens publicly or reads credentials. Even an enabling environment variable cannot bypass the refusal. Its Docker health check is intentionally unsuccessful. A cloud-ready entrypoint remains a required future implementation; Stage A must not disguise missing adapters behind healthy probes.
-
-For host-only validation of the same ASGI contract, without building an image:
+For host-only validation without an image:
 
 ```sh
 PYTHONPATH=src .venv/bin/python -B deployment/containers/smoke.py --fixture-root data/rules/motor/v1
 ```
 
-This is explicitly `IN_PROCESS_ASGI_NOT_TCP_NOT_AZURE`; it is not container execution. Under this Stage A run Docker is available but no Python base is cached and no reviewed Linux wheel inventory exists. No image was pulled or built. See [milestone evidence](../docs/milestones/milestone-23-stage-a.md) for actual checks and remaining limits.
+This is `IN_PROCESS_ASGI_NOT_TCP_NOT_AZURE`. It does not authorise container execution or live identity/model calls. Preserve all historical evidence; use new paths for any later authorised packet/reports. See [B1 evidence](../docs/milestones/milestone-23-stage-b1.md) for actual test results and unresolved prerequisites.

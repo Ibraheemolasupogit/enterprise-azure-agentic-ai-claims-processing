@@ -307,6 +307,8 @@ Use two new paths outside reference data. The command runs real local SDK/ASGI a
 
 ## M23 Stage A — offline Azure deployment foundation
 
+**M23 container deployment: DEFERRED — SECURITY GATE NO-GO.** The [current milestone status and reopening criteria](docs/milestones/milestone-23.md) separate completed offline preparation from unresolved security, provenance, database and runtime requirements. M23 deployment acceptance is not granted; M24 remains unstarted.
+
 [Stage A evidence](docs/milestones/milestone-23-stage-a.md), [architecture](docs/architecture/offline-azure-deployment-foundation.md), [disabled Bicep](infra/azure/README.md) and [tooling/build contracts](deployment/README.md) prepare a synthetic-only private dev slice. API/UI and MCP Container Apps, identities/networking/APIM and data/monitoring targets are definitions, not deployed or cloud-ready services. Every new module permits only `deploymentEnabled=false`; the manual deployment workflow is permanently skipped and has no login/deploy action.
 
 ```sh
@@ -314,6 +316,10 @@ make deployment-static-check
 make deployment-foundation-check
 ```
 
-All 39 existing runtime pins are retained through `requirements/m23-constraints.txt`; no dependency is added. Linux builds require an independently pinned cached Python base and complete reviewed wheel/hash inputs. These inputs are still pending, so no image was pulled, built or pushed. The non-root image/health/smoke definitions do not enable hosting: the Stage A entrypoint always exits 78 until real hosts/identity/persistence adapters are separately implemented and approved. A host ASGI smoke is labelled separately from container or Azure execution.
+All 39 existing runtime pins are retained through `requirements/m23-constraints.txt`; no dependency is added. Later authorised stages acquired and statically verified the pinned wheels and Bookworm/Trixie layers, as linked in the [deferral record](docs/milestones/milestone-23.md). Complete authenticated security/admission evidence remains pending; no Linux image has been built or run. The non-root image/health/smoke definitions do not enable hosting: the Stage A entrypoint always exits 78 until real hosts/identity/persistence adapters are separately implemented and approved. A host ASGI smoke is labelled separately from container or Azure execution.
 
 [Compatibility/quota/cost matrices](docs/deployment/m23/README.md) leave subscription facts UNVERIFIED and prices/approvals null. [Missing adapters](docs/deployment/m23/adapter-requirements.md) and [migration/restore/rollback/teardown gates](docs/deployment/m23/lifecycle-and-approvals.md) preserve canonical human assignments, M20 audit/outbox and M21 current revocation/independent anchors. M22 candidates remain PENDING_REVIEW and independent quality remains NOT_TESTED; frozen reviewer JSON is excluded from the image context, while public authoring modules in the general service wheel remain an explicitly disclosed exposure limitation. No Azure query/login/ARM validation/what-if, Entra/IAM change, cloud export, live model, autonomous outcome, M24 work or Git commit/push is authorised by Stage A.
+
+### M23 Stage B1 — offline supply-chain readiness
+
+[B1 contracts](docs/deployment/m23/stage-b1-supply-chain.md) add source-bound Linux AMD64/CPython 3.12 artifact checks, manylinux glibc/ELF validation, independently pinned Ed25519 review trust and pending provenance/licence/SBOM/vulnerability/reproducibility templates. The original pending manifest is preserved. Build execution is unconditionally refused, including valid reviewed inputs. [B1 validation](docs/milestones/milestone-23-stage-b1.md) concerns offline admission only. Later artifact integrity/static evidence does not supply complete security approval, reviewer enrolment, disconnected-builder or Linux runtime evidence; Azure gates remain disabled. Acquisition, builds and runtime validation require separate approvals under the [reopening criteria](docs/milestones/milestone-23.md#explicit-reopening-criteria).

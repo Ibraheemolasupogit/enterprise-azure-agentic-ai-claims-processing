@@ -1,0 +1,21 @@
+{
+  "artifact_sha256s": [],
+  "details": {
+    "coverage": [
+      "os",
+      "python",
+      "native"
+    ],
+    "document_format": null,
+    "report": {
+      "file": null,
+      "sha256": null
+    },
+    "tool": null,
+    "tool_version": null
+  },
+  "format": "m23-sbom-evidence-v1",
+  "observed_at": null,
+  "status": "PENDING_REVIEW",
+  "subject_sha256": null
+}

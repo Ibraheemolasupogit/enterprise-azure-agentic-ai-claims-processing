@@ -1,0 +1,12 @@
+{
+  "architecture": null,
+  "config_sha256": null,
+  "format": "m23-base-runtime-v1",
+  "glibc_version": null,
+  "implementation": null,
+  "manifest_sha256": null,
+  "observed_at": null,
+  "os": null,
+  "python_version": null,
+  "status": "PENDING_VERIFICATION"
+}

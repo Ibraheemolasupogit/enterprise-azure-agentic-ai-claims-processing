@@ -1,0 +1,71 @@
+{
+  "artifact_directory": "/Users/privilege/Desktop/GitHub_repository/enterprise-azure-agentic-ai-claims-processing/artifacts/m23-b2d-r4-_p7rg8ny",
+  "azure_allowed": false,
+  "binary_bytes": 43268722,
+  "build_authorised": false,
+  "dpkg_packages": 87,
+  "format": "m23-b2d-r4-trixie-acquired-artifacts-v1",
+  "licence_review": "PENDING",
+  "new_vulnerability_scan": "NOT_TESTED",
+  "objects": [
+    {
+      "attempts": 1,
+      "bytes": 29856132,
+      "file": "/Users/privilege/Desktop/GitHub_repository/enterprise-azure-agentic-ai-claims-processing/artifacts/m23-b2d-r4-_p7rg8ny/layer-sha256-37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41.tar.gz",
+      "filename": "layer-sha256-37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41.tar.gz",
+      "sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+      "source_url": "https://registry-1.docker.io/v2/library/python/blobs/sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+      "status": "INTEGRITY_VERIFIED_STATIC_INSPECTION_PENDING"
+    },
+    {
+      "attempts": 1,
+      "bytes": 1289792,
+      "file": "/Users/privilege/Desktop/GitHub_repository/enterprise-azure-agentic-ai-claims-processing/artifacts/m23-b2d-r4-_p7rg8ny/layer-sha256-68bced9e0afa4479df17c3646e27c7c7e9ce9ba70c0e6c73b6826487b89037d9.tar.gz",
+      "filename": "layer-sha256-68bced9e0afa4479df17c3646e27c7c7e9ce9ba70c0e6c73b6826487b89037d9.tar.gz",
+      "sha256": "68bced9e0afa4479df17c3646e27c7c7e9ce9ba70c0e6c73b6826487b89037d9",
+      "source_url": "https://registry-1.docker.io/v2/library/python/blobs/sha256:68bced9e0afa4479df17c3646e27c7c7e9ce9ba70c0e6c73b6826487b89037d9",
+      "status": "INTEGRITY_VERIFIED_STATIC_INSPECTION_PENDING"
+    },
+    {
+      "attempts": 1,
+      "bytes": 12122550,
+      "file": "/Users/privilege/Desktop/GitHub_repository/enterprise-azure-agentic-ai-claims-processing/artifacts/m23-b2d-r4-_p7rg8ny/layer-sha256-2dc99d2d0a39fce31e37615eb4c932e16dcc4c2b0ce9993714280081b5dbe085.tar.gz",
+      "filename": "layer-sha256-2dc99d2d0a39fce31e37615eb4c932e16dcc4c2b0ce9993714280081b5dbe085.tar.gz",
+      "sha256": "2dc99d2d0a39fce31e37615eb4c932e16dcc4c2b0ce9993714280081b5dbe085",
+      "source_url": "https://registry-1.docker.io/v2/library/python/blobs/sha256:2dc99d2d0a39fce31e37615eb4c932e16dcc4c2b0ce9993714280081b5dbe085",
+      "status": "INTEGRITY_VERIFIED_STATIC_INSPECTION_PENDING"
+    },
+    {
+      "attempts": 1,
+      "bytes": 248,
+      "file": "/Users/privilege/Desktop/GitHub_repository/enterprise-azure-agentic-ai-claims-processing/artifacts/m23-b2d-r4-_p7rg8ny/layer-sha256-05e0eee5572e9c9f50408a2132590133b830a668a1cf2ff2b150f19c57707e2b.tar.gz",
+      "filename": "layer-sha256-05e0eee5572e9c9f50408a2132590133b830a668a1cf2ff2b150f19c57707e2b.tar.gz",
+      "sha256": "05e0eee5572e9c9f50408a2132590133b830a668a1cf2ff2b150f19c57707e2b",
+      "source_url": "https://registry-1.docker.io/v2/library/python/blobs/sha256:05e0eee5572e9c9f50408a2132590133b830a668a1cf2ff2b150f19c57707e2b",
+      "status": "INTEGRITY_VERIFIED_STATIC_INSPECTION_PENDING"
+    }
+  ],
+  "platform_manifest_sha256": "05a994d2344eb364cc186910f4fc8786a38215f39f00d0acc25bff33a08f4177",
+  "r3_packet_sha256": "c134c3eab5626d3879f460b82642f5fc652802a4dff2514f35c1438669422d96",
+  "receipt": {
+    "file": "outputs/deployment/m23-b2d-r4/attempt-2/acquisition-receipts.json",
+    "sha256": "4a01190627c35ad12592894dbff41b4f2be7cf6e5edc035f42cbd5b1dd77d09b"
+  },
+  "response_body_bytes": 43274211,
+  "reviewer_identity": null,
+  "reviewer_signature": null,
+  "runtime_compatibility": "NOT_TESTED",
+  "sbom_path_addendum": {
+    "file": "outputs/deployment/m23-b2d-r4/sbom-path-addendum.json",
+    "sha256": "696e7490875d5c853c5e65d428c6c06ec278987162bfe93ce5d0a0aa3a89f6ec"
+  },
+  "security_acceptance": "NO_GO",
+  "spdx_file_hash_records_matched": 2653,
+  "spdx_package_versions_matched": 87,
+  "status": "STATIC_VERIFIED_PENDING_SECURITY_REVIEW",
+  "upstream_signatures": "NOT_VERIFIED",
+  "validation": {
+    "file": "outputs/deployment/m23-b2d-r4/validation.json",
+    "sha256": "5df5222ca7771f017c69c4ee9853a70a0096754c596b57837d24984d03c9b107"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "azure_allowed": false,
+  "b1_critical_high_gate": "FAIL_2_CRITICAL_96_HIGH_OCCURRENCES_UNRESOLVED",
+  "build_execution_allowed": false,
+  "container_execution_allowed": false,
+  "critical_findings": [
+    {
+      "DataSource": {
+        "ID": "debian",
+        "Name": "Debian Security Tracker",
+        "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
+      },
+      "FixedVersion": null,
+      "InstalledVersion": "3.40.1-2+deb12u2",
+      "LastModifiedDate": "2026-06-17T10:04:59.89Z",
+      "PkgName": "libsqlite3-0",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-7458",
+      "PublishedDate": "2025-07-29T13:15:28.953Z",
+      "Severity": "CRITICAL",
+      "SeveritySource": "nvd",
+      "Status": "affected",
+      "Title": "sqlite: SQLite integer overflow",
+      "VendorSeverity": {
+        "bitnami": 4,
+        "cbl-mariner": 2,
+        "nvd": 4,
+        "redhat": 2
+      },
+      "VulnerabilityID": "CVE-2025-7458",
+      "applicability": "PENDING_COMPONENT_AND_REACHABILITY_REVIEW",
+      "applicability_note": "Affected SQLite library is inventoried; vulnerable-feature/reachability or mitigation testing was not performed. Requires review; not suppressed.",
+      "risk_acceptance": null,
+      "target": "/Users/privilege/Desktop/GitHub_repository/enterprise-azure-agentic-ai-claims-processing/artifacts/m23-b2d-bhwtbqri/inputs/base-oci (debian 12.15)",
+      "target_type": "debian"
+    },
+    {
+      "DataSource": {
+        "ID": "debian",
+        "Name": "Debian Security Tracker",
+        "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
+      },
+      "FixedVersion": null,
+      "InstalledVersion": "1:1.2.13.dfsg-1",
+      "LastModifiedDate": "2026-10-15T00:16:39.75Z",
+      "PkgName": "zlib1g",
+      "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-45853",
+      "PublishedDate": "2023-10-14T02:15:09.323Z",
+      "Severity": "CRITICAL",
+      "SeveritySource": "nvd",
+      "Status": "will_not_fix",
+      "Title": "zlib: integer overflow and resultant heap-based buffer overflow in zipOpenNewFileInZip4_6",
+      "VendorSeverity": {
+        "amazon": 2,
+        "azure": 3,
+        "cbl-mariner": 4,
+        "ghsa": 4,
+        "julia": 4,
+        "nvd": 4,
+        "photon": 4,
+        "redhat": 2,
+        "ubuntu": 2
+      },
+      "VulnerabilityID": "CVE-2023-45853",
+      "applicability": "PENDING_COMPONENT_AND_REACHABILITY_REVIEW",
+      "applicability_note": "Scanner title concerns minizip zipOpenNewFileInZip functionality; source-package association and will_not_fix status are not proof of runtime reachability. Requires owner/vendor applicability review; not suppressed.",
+      "risk_acceptance": null,
+      "target": "/Users/privilege/Desktop/GitHub_repository/enterprise-azure-agentic-ai-claims-processing/artifacts/m23-b2d-bhwtbqri/inputs/base-oci (debian 12.15)",
+      "target_type": "debian"
+    }
+  ],
+  "cve_occurrences": 355,
+  "database_freshness": "Within B1 seven-day window; no online freshness check/update",
+  "decision": "NO_GO",
+  "engineering_review_status": "COMPLETED_WITH_UNRESOLVED_SECURITY_FINDINGS",
+  "evidence": {
+    "base-local-oci.trivy.json": {
+      "file": "outputs/deployment/m23-b2d/base-local-oci.trivy.json",
+      "sha256": "f76d36d9f65d3cd9bfeda4a05994b1837fdc09aa1760d57716edb3d8ff4864c3"
+    },
+    "coverage.json": {
+      "file": "outputs/deployment/m23-b2d/coverage.json",
+      "sha256": "24f3c226d36cd1cd77d8caab6bdc66fe31c763dfd1a9ed951d096a3ad7772802"
+    },
+    "database-freshness.json": {
+      "file": "outputs/deployment/m23-b2d/database-freshness.json",
+      "sha256": "94f6ef7909922f8be9121a082667ae1f0d96e2c5dfc54cd2231946b4facbf6df"
+    },
+    "licence-assessment.json": {
+      "file": "outputs/deployment/m23-b2d/licence-assessment.json",
+      "sha256": "fdf81b5d370cebd40344114d82935323111043a261bdba517e4c11dc3d5cf45d"
+    },
+    "native-components.trivy.json": {
+      "file": "outputs/deployment/m23-b2d/native-components.trivy.json",
+      "sha256": "788e7e967ecc56871698dadd365073ffa6c437eea18520345c39947bb58b4fbe"
+    },
+    "provenance-local-checks.json": {
+      "file": "outputs/deployment/m23-b2d/provenance-local-checks.json",
+      "sha256": "06b484b6398905693d9fa06fb0c033edd4c7b9a6ff1b4fd7b6745cc6c46981a9"
+    },
+    "vulnerability-assessment.json": {
+      "file": "outputs/deployment/m23-b2d/vulnerability-assessment.json",
+      "sha256": "25947fcd47f02a8f426e4f6cd77cb1b1a4eec6fe0eff48b93412d2d98c2aca5c"
+    },
+    "wheels-sbom.trivy.json": {
+      "file": "outputs/deployment/m23-b2d/wheels-sbom.trivy.json",
+      "sha256": "d572bd8717117f4ca714d1c3f522bac0a2c307c45d96478127e8e2bc6559b379"
+    }
+  },
+  "format": "m23-b2d-security-decision-v1",
+  "independent_approval": "PENDING",
+  "interoperability": "Syft-to-Trivy Debian source mappings lose 118 CVE IDs; Trivy-produced SBOM roundtrip preserves all 355 occurrences",
+  "other_blockers": [
+    "Actual Trivy DB 1764941824 bytes exceeds unchanged B1 database evidence cap 1073741824",
+    "Bundled OpenSSL 4.0.3 and base CPython binary vulnerability coverage NOT_TESTED",
+    "Complete native linkage/transitive inventory and licence/notice approval pending",
+    "Upstream builder/release signatures and independent reviewer trust/signature unverified",
+    "Source-bound genuine base runtime observation and physical BuildKit isolation not exercised"
+  ],
+  "primary_fix_availability": {
+    "all_critical_high_have_no_fixed_version_in_current_db": true,
+    "with_fixed_version": 6,
+    "without_fixed_version": 349
+  },
+  "primary_scan": "base-local-oci.trivy.json",
+  "proposed_corrective_actions": [
+    "Retain frozen candidates; obtain separately authorised base/component remediation or supported applicability dispositions, then rescan with honest coverage",
+    "Do not treat will_not_fix, fixed availability, non-root execution or disabled hosting as automatic risk acceptance",
+    "Use validated source-aware SBOM import or the exact local-image scanner; retain all interoperability diagnostics",
+    "Review/authorise a bounded B1 evidence contract compatible with the real DB; do not truncate or replace the DB with a summary hash",
+    "Complete bundled-native/CPython vulnerability coverage, licences and authenticated provenance/reviewer evidence before acceptance"
+  ],
+  "reviewer_identity": null,
+  "severity_occurrences": {
+    "CRITICAL": 2,
+    "HIGH": 96,
+    "LOW": 109,
+    "MEDIUM": 134,
+    "UNKNOWN": 14
+  },
+  "signature": null,
+  "suppressions": [],
+  "unique_cve_ids": 158,
+  "unique_cve_severity": {
+    "CRITICAL": 2,
+    "HIGH": 29,
+    "LOW": 58,
+    "MEDIUM": 62,
+    "UNKNOWN": 7
+  },
+  "waivers": []
+}

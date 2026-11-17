@@ -1,0 +1,352 @@
+{
+  "coverage": {
+    "b1_format_compatibility": {
+      "native_generated_cyclonedx": "1.6, explicitly labelled merged evidence inventory",
+      "syft_spdx": "SPDX-2.3 supported",
+      "tool_default_cyclonedx": "1.7 outside B1 1.6 enum; retained without relabelling"
+    },
+    "base_cpython_binary_cve_target": "NOT_TESTED_NO_SUPPORTED_TARGET_IN_REPORT",
+    "bundled_openssl_4_0_3_cve_target": "NOT_TESTED_GENERIC_COMPONENT_SKIPPED",
+    "c_native_transitive_inventory": "INCOMPLETE_NO_EMBEDDED_COMPONENT_SBOm_FOR_CFFI_MSGSPEC_PYYAML_REGEX",
+    "complete_library_linkage_or_runtime": "NOT_TESTED",
+    "embedded_sboms": [
+      {
+        "declared_components": 39,
+        "file": "/Users/privilege/Desktop/GitHub_repository/enterprise-azure-agentic-ai-claims-processing/artifacts/m23-b2d-bhwtbqri/inputs/wheel-analysis/cryptography-50.0.2-cp311-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64/cryptography-50.0.2.dist-info/sboms/cryptography-rust.cyclonedx.json",
+        "includes_parent_component": true,
+        "sha256": "0f6d5a1a35917f545a6647066b3d72e6d654b74ac4f2c3f6495d38f036adf20b",
+        "upstream_signature": "NOT_VERIFIED"
+      },
+      {
+        "declared_components": 1,
+        "file": "/Users/privilege/Desktop/GitHub_repository/enterprise-azure-agentic-ai-claims-processing/artifacts/m23-b2d-bhwtbqri/inputs/wheel-analysis/cryptography-50.0.2-cp311-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64/cryptography-50.0.2.dist-info/sboms/sbom.json",
+        "includes_parent_component": false,
+        "sha256": "6191c1fb750c0fd2264e4c5db2aa3bafd32bc33d603f2ee25cbfbe51d66b6d2f",
+        "upstream_signature": "NOT_VERIFIED"
+      },
+      {
+        "declared_components": 101,
+        "file": "/Users/privilege/Desktop/GitHub_repository/enterprise-azure-agentic-ai-claims-processing/artifacts/m23-b2d-bhwtbqri/inputs/wheel-analysis/pydantic_core-2.50.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64/pydantic_core-2.50.2.dist-info/sboms/pydantic-core.cyclonedx.json",
+        "includes_parent_component": true,
+        "sha256": "87202852880e970ca01cad4df2c353bd7f24897dd6e1bd5c17426be70606618b",
+        "upstream_signature": "NOT_VERIFIED"
+      },
+      {
+        "declared_components": 17,
+        "file": "/Users/privilege/Desktop/GitHub_repository/enterprise-azure-agentic-ai-claims-processing/artifacts/m23-b2d-bhwtbqri/inputs/wheel-analysis/rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64/rpds_py-2026.9.1.dist-info/sboms/rpds-py.cyclonedx.json",
+        "includes_parent_component": true,
+        "sha256": "0c8885a9d45f3c9280aeb1e06701077036748b22bd6e3a4201fe09e6b73f99b5",
+        "upstream_signature": "NOT_VERIFIED"
+      }
+    ],
+    "initial_filesystem_python_scan": "NOT_TESTED_ZERO_TARGETS_REPLACED_BY_SBOM_SCAN",
+    "initial_oci_archive_input": "UNSUPPORTED_REPLACED_BY_EXACT_LOCAL_OCI_DIRECTORY",
+    "native_combined_components": 164,
+    "native_combined_types": {
+      "file": 7,
+      "library": 157
+    },
+    "native_file_evidence": [
+      {
+        "elf": {
+          "elfSecurityFeatures": {
+            "cfi": false,
+            "dso": true,
+            "fortify": false,
+            "nx": true,
+            "pie": false,
+            "relRO": "partial",
+            "safeStack": false,
+            "stackCanary": false,
+            "symbolTableStripped": false
+          },
+          "format": "elf",
+          "hasEntrypoint": true,
+          "hasExports": true,
+          "importedLibraries": [
+            "libpthread.so.0",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ]
+        },
+        "file": "/Users/privilege/Desktop/GitHub_repository/enterprise-azure-agentic-ai-claims-processing/artifacts/m23-b2d-bhwtbqri/inputs/wheel-analysis/cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64/_cffi_backend.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "9bc1d08072255a5ec2db10fc75df1dd9e73097a75cd9150cfe875ebd6712f17c",
+        "syft_file_id": "760f86a3b9318d34"
+      },
+      {
+        "elf": {
+          "elfSecurityFeatures": {
+            "cfi": false,
+            "dso": true,
+            "fortify": false,
+            "nx": true,
+            "pie": false,
+            "relRO": "full",
+            "safeStack": false,
+            "stackCanary": false,
+            "symbolTableStripped": false
+          },
+          "format": "elf",
+          "hasEntrypoint": false,
+          "hasExports": true,
+          "importedLibraries": [
+            "libgcc_s.so.1",
+            "librt.so.1",
+            "libpthread.so.0",
+            "libdl.so.2",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ]
+        },
+        "file": "/Users/privilege/Desktop/GitHub_repository/enterprise-azure-agentic-ai-claims-processing/artifacts/m23-b2d-bhwtbqri/inputs/wheel-analysis/cryptography-50.0.2-cp311-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64/cryptography/hazmat/bindings/_rust.abi3.so",
+        "sha256": "a9d379995757480a31a7eebbfb2228af93becdedd205e3af0f60ba9648650404",
+        "syft_file_id": "be93411330d327f2"
+      },
+      {
+        "elf": {
+          "elfSecurityFeatures": {
+            "cfi": false,
+            "dso": true,
+            "fortify": false,
+            "nx": true,
+            "pie": false,
+            "relRO": "partial",
+            "safeStack": false,
+            "stackCanary": false,
+            "symbolTableStripped": false
+          },
+          "format": "elf",
+          "hasEntrypoint": false,
+          "hasExports": true,
+          "importedLibraries": [
+            "libm.so.6",
+            "libpthread.so.0",
+            "libc.so.6"
+          ]
+        },
+        "file": "/Users/privilege/Desktop/GitHub_repository/enterprise-azure-agentic-ai-claims-processing/artifacts/m23-b2d-bhwtbqri/inputs/wheel-analysis/msgspec-0.22.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64/msgspec/_core.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "70c65bcb64ab2aeac86b433147f8cb8572570b0189c2329b028f49fa5cff2c35",
+        "syft_file_id": "65c64d5f2748bcd6"
+      },
+      {
+        "elf": {
+          "elfSecurityFeatures": {
+            "dso": true,
+            "nx": true,
+            "pie": false,
+            "relRO": "full",
+            "safeStack": false,
+            "stackCanary": false,
+            "symbolTableStripped": true
+          },
+          "format": "elf",
+          "hasEntrypoint": false,
+          "hasExports": true,
+          "importedLibraries": [
+            "libgcc_s.so.1",
+            "librt.so.1",
+            "libpthread.so.0",
+            "libdl.so.2",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ]
+        },
+        "file": "/Users/privilege/Desktop/GitHub_repository/enterprise-azure-agentic-ai-claims-processing/artifacts/m23-b2d-bhwtbqri/inputs/wheel-analysis/pydantic_core-2.50.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64/pydantic_core/_pydantic_core.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "e78c853aa73cf86a175f142d37f9bdd29cf7ff8d948bf5270e288e6ede7ebb58",
+        "syft_file_id": "6b69a62d27e1b725"
+      },
+      {
+        "elf": {
+          "elfSecurityFeatures": {
+            "cfi": false,
+            "dso": true,
+            "fortify": false,
+            "nx": true,
+            "pie": false,
+            "relRO": "partial",
+            "safeStack": false,
+            "stackCanary": false,
+            "symbolTableStripped": false
+          },
+          "format": "elf",
+          "hasEntrypoint": false,
+          "hasExports": true,
+          "importedLibraries": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ]
+        },
+        "file": "/Users/privilege/Desktop/GitHub_repository/enterprise-azure-agentic-ai-claims-processing/artifacts/m23-b2d-bhwtbqri/inputs/wheel-analysis/pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64/yaml/_yaml.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "957a099a4521c1f7669306fb6f79ca63fa4b9a0b4c463f7cac833a65a5c5c0cb",
+        "syft_file_id": "fbe5aa9c8d03a06d"
+      },
+      {
+        "elf": {
+          "elfSecurityFeatures": {
+            "cfi": false,
+            "dso": true,
+            "fortify": false,
+            "nx": true,
+            "pie": false,
+            "relRO": "partial",
+            "safeStack": false,
+            "stackCanary": false,
+            "symbolTableStripped": false
+          },
+          "format": "elf",
+          "hasEntrypoint": false,
+          "hasExports": true,
+          "importedLibraries": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ]
+        },
+        "file": "/Users/privilege/Desktop/GitHub_repository/enterprise-azure-agentic-ai-claims-processing/artifacts/m23-b2d-bhwtbqri/inputs/wheel-analysis/regex-2026.9.29-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64/regex/_regex.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "b625e4e77eae0efae30f930eb83fc5a345b0083b0d110a96041983fdab08a405",
+        "syft_file_id": "0389393f1edfbd83"
+      },
+      {
+        "elf": {
+          "elfSecurityFeatures": {
+            "cfi": false,
+            "dso": true,
+            "fortify": false,
+            "nx": true,
+            "pie": false,
+            "relRO": "full",
+            "safeStack": false,
+            "stackCanary": false,
+            "symbolTableStripped": false
+          },
+          "format": "elf",
+          "hasEntrypoint": false,
+          "hasExports": true,
+          "importedLibraries": [
+            "libgcc_s.so.1",
+            "libpthread.so.0",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ]
+        },
+        "file": "/Users/privilege/Desktop/GitHub_repository/enterprise-azure-agentic-ai-claims-processing/artifacts/m23-b2d-bhwtbqri/inputs/wheel-analysis/rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64/rpds/rpds.cpython-312-x86_64-linux-gnu.so",
+        "sha256": "1e3c483ab69b4b0637cbcbf0a7e3989e350f8195388724ce4f7d8efe4b6fe05e",
+        "syft_file_id": "0526328b5a4cb5d6"
+      }
+    ],
+    "native_transitive_completeness": "NOT_PROVEN",
+    "syft_base_debian_packages": 105,
+    "syft_base_package_types": {
+      "binary": 7,
+      "deb": 105,
+      "python": 1
+    },
+    "syft_native_elf_files": 7,
+    "syft_python_pins": 39,
+    "syft_sbom_roundtrip": {
+      "accepted_as_primary": false,
+      "matched_occurrences": 40,
+      "missing_primary_cve_ids": 118
+    },
+    "trivy_base_os_targets": 105,
+    "trivy_base_pip_targets": 1,
+    "trivy_native_cargo_matches": 0,
+    "trivy_native_cargo_targets": 156,
+    "trivy_own_sbom_roundtrip": {
+      "extra": 0,
+      "format": "CycloneDX",
+      "matched_primary_occurrences": 355,
+      "missing": 0,
+      "version": "1.7"
+    },
+    "trivy_pinned_python_matches": 0,
+    "trivy_pinned_python_targets": 39,
+    "unsupported_generic_openssl_vulnerability_scan": "NOT_TESTED_ZERO_TARGETS"
+  },
+  "format": "m23-b2d-sbom-manifest-v1",
+  "frozen_b2b_sha256": "818ec99db7e67488b58b1d01b7a84267e5b607fd6c3324b19b0f4f25f5285d7b",
+  "frozen_b2c_sha256": "becdc3ffadff4f869e78f04c8c0d7491fe7b81c1373e3bfee5f60903533e2ab1",
+  "independent_approval": null,
+  "sboms": [
+    {
+      "b1_format_enum": false,
+      "bytes": 3656383,
+      "file": "outputs/deployment/m23-b2d/base.syft.json",
+      "format": "Syft JSON",
+      "producer": "Syft 1.50.0",
+      "scope": "base",
+      "sha256": "198c33dc2e5ba3b3085f7f62a40045e0ec72e43783725ceffe178b6829f8e9b7",
+      "version": "16.1.10"
+    },
+    {
+      "b1_format_enum": false,
+      "bytes": 909968,
+      "file": "outputs/deployment/m23-b2d/base.cdx.json",
+      "format": "CycloneDX",
+      "producer": "Syft 1.50.0",
+      "scope": "base",
+      "sha256": "bd6135e4416f152c7e8906e955a629fd3d78b7634e7b86f77303be8103cbe24c",
+      "version": "1.7"
+    },
+    {
+      "b1_format_enum": true,
+      "bytes": 2719949,
+      "file": "outputs/deployment/m23-b2d/base.spdx.json",
+      "format": "SPDX-2.3",
+      "producer": "Syft 1.50.0",
+      "scope": "base",
+      "sha256": "8c769661c00fc8f950727eb2bb1b12e35307d453c78b6ab277eb0e192144671a",
+      "version": "SPDX-2.3"
+    },
+    {
+      "b1_format_enum": false,
+      "bytes": 453436,
+      "file": "outputs/deployment/m23-b2d/wheels.syft.json",
+      "format": "Syft JSON",
+      "producer": "Syft 1.50.0",
+      "scope": "39 dependency wheels",
+      "sha256": "a88324f86881f2a47783774a9f13ea69597d61b1f14997a2a534f53b2838b2ed",
+      "version": "16.1.10"
+    },
+    {
+      "b1_format_enum": false,
+      "bytes": 187196,
+      "file": "outputs/deployment/m23-b2d/wheels.cdx.json",
+      "format": "CycloneDX",
+      "producer": "Syft 1.50.0",
+      "scope": "39 dependency wheels",
+      "sha256": "8ab9b8ad757b8db969e1c2f69da40f113b3060acd6b2af6376f5c947bbc4cb00",
+      "version": "1.7"
+    },
+    {
+      "b1_format_enum": true,
+      "bytes": 293475,
+      "file": "outputs/deployment/m23-b2d/wheels.spdx.json",
+      "format": "SPDX-2.3",
+      "producer": "Syft 1.50.0",
+      "scope": "39 dependency wheels",
+      "sha256": "17e9f6cd8c511939881eee86fa7fef023327c5e17b310426779a47c8dfcbf7d7",
+      "version": "SPDX-2.3"
+    },
+    {
+      "b1_format_enum": true,
+      "bytes": 188361,
+      "file": "outputs/deployment/m23-b2d/native-components.cdx.json",
+      "format": "CycloneDX",
+      "producer": "local evidence merge; source declarations labelled",
+      "scope": "native file/component evidence",
+      "sha256": "a8b2e402727c901140e4d0b70e2171e5cc31aae45edc87342a8b8d71b89d0152",
+      "version": "1.6"
+    },
+    {
+      "b1_format_enum": false,
+      "bytes": 775240,
+      "file": "outputs/deployment/m23-b2d/base-native-sbom.trivy.json",
+      "format": "CycloneDX",
+      "producer": "Trivy 0.72.0",
+      "scope": "base, source-aware scan roundtrip",
+      "sha256": "09f97446878ffed50911df40bf48f9e6f66c066855f9c4cba00f9c701f40c96c",
+      "version": "1.7"
+    }
+  ],
+  "security_acceptance": "NO_GO"
+}
