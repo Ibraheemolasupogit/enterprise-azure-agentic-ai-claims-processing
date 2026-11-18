@@ -1,0 +1,481 @@
+{
+  "all_nine_r8_findings": "UNRESOLVED_BLOCKING",
+  "application_or_acquired_code_execution": 0,
+  "approval": null,
+  "assessment_date": "2026-11-18",
+  "b1_limits": {
+    "build_execution": "UNCONDITIONAL_REFUSAL",
+    "database_max_age_seconds": 604800,
+    "database_max_bytes": 1073741824,
+    "max_unresolved_critical": 0,
+    "max_unresolved_high": 0
+  },
+  "baseline_git_commit": "ec39d8d5f28dbe5e854ce9cba39ae14c40b37e36",
+  "compatibility_regression_requirements_not_executed": [
+    "Retain CPython 3.12.16, Linux AMD64 and exact 39 dependency pins",
+    "Authenticate exact Debian patch/build correspondence; version strings alone cannot prove a backport",
+    "Verify complete actual closure, script effects, libz.so.1 loader/symbol/ABI compatibility",
+    "Exercise bounded gz* failed-write/clearerr/retry case including blocking EPIPE and normal compression round trips",
+    "Verify relevant CPython/native imports, existing fail-closed startup and synthetic API/UI/MCP",
+    "Regress M20 atomic audit/lost acknowledgements/recovery, M21 revoked duplicates and M22 telemetry/redaction",
+    "Require complete source-aware final-candidate SBOM/CVE/licence/provenance evidence, zero unresolved Critical/High, complete authenticated DB <=1 GiB and <=7 days, plus separately approved reproducibility/runtime checks"
+  ],
+  "conditional_runbook": {
+    "execution_performed": false,
+    "phase_0": {
+      "additional_prerequisites": [
+        "R6 complete supported Trixie fix/applicability route",
+        "Authenticated complete compatible vulnerability DB within unchanged cap/freshness",
+        "Complete coverage plan and independently authenticated source/reviewer evidence",
+        "Explicit exact-inventory binary acquisition approval"
+      ],
+      "state": "BLOCKED"
+    },
+    "phase_1_acquire_only": {
+      "accepted_payload_bytes_exact": 88720,
+      "allowed_hosts": [
+        "security.debian.org"
+      ],
+      "allowed_payloads": 1,
+      "allowed_urls": [
+        "https://security.debian.org/debian-security/pool/updates/main/z/zlib/zlib1g_1.3.dfsg+really1.3.1-1+deb13u1_amd64.deb"
+      ],
+      "body_budget_is_not_packet_level_traffic_measurement": true,
+      "credentials_cookies_proxies_fallbacks": false,
+      "max_active_transfers": 1,
+      "max_attempt_seconds": 30,
+      "max_get_attempts": 2,
+      "max_phase_seconds": 300,
+      "max_stderr_bytes": 65536,
+      "max_stdout_bytes": 65536,
+      "max_total_application_read_body_bytes": 1048576,
+      "max_transient_transport_retries": 1,
+      "new_exclusive_private_directories_required": true,
+      "read_stop_bytes_per_attempt": 88721,
+      "redirects_allowed": false,
+      "retry_on_integrity_identity_or_tls_failure": false,
+      "state": "NOT_AUTHORIZED_NOT_RUN",
+      "stop_on": [
+        "Unapproved host/redirect/status",
+        "TLS failure",
+        "Size/hash/identity mismatch",
+        "Timeout or budget violation",
+        "Existing or aliased output path",
+        "New or unresolved dependency/maintainer-script effect"
+      ]
+    },
+    "phase_2_data_inspection": {
+      "host_installation_script_execution_or_shared_library_loading": false,
+      "max_archive_members": 20000,
+      "max_expanded_bytes": 8388608,
+      "required_checks": [
+        "Debian ar/control/data structure and exact metadata fields",
+        "Maintainer scripts/triggers reviewed as data, never executed",
+        "Archive traversal/special-file/host-followed-link rejection",
+        "Payload ownership/modes, ELF64 little-endian AMD64, libz.so.1 SONAME/symbol requirements, licence and closure comparison"
+      ],
+      "state": "NOT_RUN",
+      "unsupported_decoder_action": "STOP_NO_INSTALL"
+    },
+    "phase_3_candidate_execution": {
+      "b1_build_refusal": "UNCHANGED_NO_OVERRIDE",
+      "mutate_frozen_layers_or_install_on_mac_host": false,
+      "requires_new_separate_implementation_build_and_linux_execution_approval": true,
+      "state": "NO_GO_NOT_AUTHORIZED"
+    }
+  },
+  "cve_relationship": {
+    "advisory_file": "outputs/deployment/m23-b2d-r6/raw/CVE-2026-85091.html",
+    "advisory_sha256": "8befe16c18c63a7ba5e979b7d6b7f852b34b3083a329bba835cedcd15a6b7252",
+    "blocking": true,
+    "cve": "CVE-2026-85091",
+    "frozen_installed_package": "zlib1g",
+    "frozen_installed_version": "1:1.3.dfsg+really1.3.1-1+b1",
+    "mechanism": "gz* heap overflow after write failure and later write; installed older line includes described gzclearerr sequence",
+    "r8_applicability": "UNKNOWN",
+    "relationship_status": "INTERNAL_RETAINED_EVIDENCE_CORRESPONDENCE_VERIFIED_NOT_INDEPENDENT_PATCH_AUTHENTICATION",
+    "retained_advisory_fixed_trixie_security_version": "1:1.3.dfsg+really1.3.1-1+deb13u1",
+    "security_fix_applied": false
+  },
+  "dependency_closure": {
+    "conflicting_or_broken_package_names_absent_in_retained_baseline": [
+      "libxml2",
+      "texlive-binaries",
+      "zlib1"
+    ],
+    "incremental_packages": [
+      "zlib1g"
+    ],
+    "python_change_required": false,
+    "solver_install_or_maintainer_script_execution": "NOT_TESTED",
+    "status": "RETAINED_METADATA_ONLY_NOT_SOLVER_OR_RUNTIME_PROOF",
+    "unchanged_existing": {
+      "gcc-14-base": {
+        "depends": null,
+        "version": "14.2.0-19"
+      },
+      "libc6": {
+        "depends": "libgcc-s1",
+        "version": "2.41-12+deb13u4"
+      },
+      "libgcc-s1": {
+        "depends": "gcc-14-base (= 14.2.0-19), libc6 (>= 2.35)",
+        "version": "14.2.0-19"
+      }
+    }
+  },
+  "document_binding": {
+    "bytes": 10499,
+    "file": "docs/deployment/m23/stage-b2d-r9-zlib-acquisition-preflight.md",
+    "sha256": "c4895514eab787df71d94f6c566405a93503418046db1df9ad84da849794aa35"
+  },
+  "downloads_installations_docker_builds_scans_cloud_operations": 0,
+  "format": "m23-r9-zlib-acquisition-preflight-v1",
+  "historical_evidence_modifications": false,
+  "independent_review_status": "PENDING_REVIEW",
+  "input_bindings": {
+    "deployment/build_container.py": {
+      "availability": "GIT_TRACKED",
+      "bytes": 8716,
+      "sha256": "be59a34d288eb63bcc60361d28f5375d17f378aeedd20f794bd397919792ee5d"
+    },
+    "deployment/containers/Dockerfile": {
+      "availability": "GIT_TRACKED",
+      "bytes": 1081,
+      "sha256": "a3ed8ac1b6f3db22f3e83324f5f3b275a47caab5ba80e5aa2109453b9a5c4727"
+    },
+    "deployment/containers/entrypoint.py": {
+      "availability": "GIT_TRACKED",
+      "bytes": 783,
+      "sha256": "1d6a6f8ecfd72e67b16a6beae467a4c4f484f4b64de2cc9db3e7861170a34067"
+    },
+    "deployment/supply_chain.py": {
+      "availability": "GIT_TRACKED",
+      "bytes": 22822,
+      "sha256": "512bc09e7c83e2564685e75f6924c0890a0b672115bd5dc9865e017c53fe566f"
+    },
+    "docs/deployment/m23/r3-replacement-base-metadata.json": {
+      "availability": "GIT_TRACKED",
+      "bytes": 177696,
+      "sha256": "c134c3eab5626d3879f460b82642f5fc652802a4dff2514f35c1438669422d96"
+    },
+    "docs/deployment/m23/r4-trixie-artifact-inventory.json": {
+      "availability": "GIT_TRACKED",
+      "bytes": 4182,
+      "sha256": "e9cadab3476480d71652d247b079ebc41757eef867f8c69acc917d64cf73e930"
+    },
+    "docs/deployment/m23/r7-agent-framework-licence-reconciliation.json": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 13082,
+      "sha256": "1d12b56806ff9ff7c700b21c31bbd867153622d26ddb65bc888d9e3df28db216"
+    },
+    "docs/deployment/m23/r8-high-cve-applicability.json": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 39039,
+      "sha256": "cd4c84ba0c15eb74c3ba8977ad77c4b85cd9b55d5ab484b5b11e21f7c5721bc6"
+    },
+    "docs/deployment/m23/stage-b2d-r6-supported-remediation-feasibility.md": {
+      "availability": "GIT_TRACKED",
+      "bytes": 13456,
+      "sha256": "092fb0500ed11cb767cb73b7c778ab212376407bf556d07afcac79cfd80820b5"
+    },
+    "outputs/deployment/m23-b2d-r6/assessment.json": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 6535,
+      "sha256": "c2914abf291ca679b9a67e0438d2b9f12db164454ae47b6e04923da152ea5dd4"
+    },
+    "outputs/deployment/m23-b2d-r6/assessment.sha256": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 82,
+      "sha256": "ce03413a009743e8453f2d8b1853eba65f239b8c021f213db62546385de6392e"
+    },
+    "outputs/deployment/m23-b2d-r6/corrected-package-records.json": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 264006,
+      "sha256": "ca2d0a8a42051db847ab32affb58561638e9fc7a9c259338194b857cc889d284"
+    },
+    "outputs/deployment/m23-b2d-r6/endpoints.json": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 23210,
+      "sha256": "c453f651d956d826b38ed3dd4a582c108efc5dadbc4115f449b8a124e569edb7"
+    },
+    "outputs/deployment/m23-b2d-r6/files.json": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 7086,
+      "sha256": "c63c9c9b07c46b9392bd0bfa5c4f3710a91c6b2bfd7fb2241466fc4fbfd4378e"
+    },
+    "outputs/deployment/m23-b2d-r6/raw/CVE-2026-85091.html": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 5531,
+      "sha256": "8befe16c18c63a7ba5e979b7d6b7f852b34b3083a329bba835cedcd15a6b7252"
+    },
+    "outputs/deployment/m23-b2d-r6/raw/trixie-InRelease.txt": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 140421,
+      "sha256": "0584fba32e13e0ab8285fb16c27adea1ec03a73669c18702821094fd6ca86675"
+    },
+    "outputs/deployment/m23-b2d-r6/raw/trixie-binary.xz": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 9678380,
+      "sha256": "7778d3e3f303b7ddb8ce0fe7c8d57473a076c6bf2e8f241f75421d2396352498"
+    },
+    "outputs/deployment/m23-b2d-r6/raw/trixie-security-InRelease.txt": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 43409,
+      "sha256": "04571365972ce858df6d8e69808899bbd3eb2c9888669eaf3d825e79216a3576"
+    },
+    "outputs/deployment/m23-b2d-r6/raw/trixie-security-binary.xz": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 305616,
+      "sha256": "b94f61d001779ae6a1d468503a1f4f0045307ca8bac17dc58c7eda9cdf42eb59"
+    },
+    "outputs/deployment/m23-b2d-r6/raw/trixie-security-source.xz": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 268324,
+      "sha256": "571f5ca6b5642fdfb615eac2cac590ad8a4a767c0a4ab59a6804ff6487a62191"
+    },
+    "outputs/deployment/m23-b2d-r6/raw/trixie-source.xz": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 10540436,
+      "sha256": "6002f81f463a2d976d84b34170367cc16da2d60bd0ba9ab9d868d6e1c1a935d9"
+    },
+    "outputs/deployment/m23-b2d-r6/raw/trixie-updates-InRelease.txt": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 47340,
+      "sha256": "72859cf437bc59ec21baebaef3838981a68a5beae8d0adf4bfcc8726d1f4158f"
+    },
+    "outputs/deployment/m23-b2d-r6/raw/trixie-updates-binary.xz": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 1108,
+      "sha256": "eea860c5dea11680e64299adb2736c2367c4235763a66f2b70ca61ce1b51978a"
+    },
+    "outputs/deployment/m23-b2d-r6/raw/trixie-updates-source.xz": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 1400,
+      "sha256": "810077786dba4b427b1f8aa18a6a3e72cf3e4226cd1c52dea02e91de020bdf50"
+    },
+    "outputs/deployment/m23-b2d-r6/validation.json": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 550,
+      "sha256": "87d29946c93bc009bce864267fca97913f21679602f987cba2825affeca1526b"
+    },
+    "outputs/deployment/m23-b2d-r6/zlib-update-proposal.json": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 3115,
+      "sha256": "31f850c73923185e23beab80791bed65a64d0f0a890791ad7604bab73b9a5c6a"
+    }
+  },
+  "licensing_or_provenance_approved": false,
+  "m23_security_gate": "NO_GO",
+  "new_files": [
+    "docs/deployment/m23/stage-b2d-r9-zlib-acquisition-preflight.md",
+    "docs/deployment/m23/r9-zlib-acquisition-preflight.json"
+  ],
+  "preservation": {
+    "baseline_file_hashes_checked": 553,
+    "head_unchanged": true,
+    "historical_evidence_application_dependencies_and_security_gates": "UNCHANGED",
+    "mismatches": [],
+    "r7_r8_preexisting_documents": "UNCHANGED",
+    "staged_diff": "EMPTY",
+    "tracked_diff": "EMPTY"
+  },
+  "proposed_acquisition_input": {
+    "acquisition_authorized": false,
+    "actual_binary_bytes": null,
+    "actual_binary_sha256": null,
+    "architecture": "amd64",
+    "binary_downloaded": false,
+    "breaks": "libxml2 (<< 2.7.6.dfsg-2), texlive-binaries (<< 2023.20230311.66589-8)",
+    "conflicts": "zlib1 (<= 1:1.0.4-7)",
+    "current_url_availability": "NOT_CHECKED",
+    "depends": "libc6 (>= 2.14)",
+    "expected_bytes": 88720,
+    "expected_sha256": "8c27c342230503b73dfde629642c3b352e87b554e06d60cf58772f236a305ceb",
+    "filename": "zlib1g_1.3.dfsg+really1.3.1-1+deb13u1_amd64.deb",
+    "package": "zlib1g",
+    "pre_depends": null,
+    "repository_filename": "pool/updates/main/z/zlib/zlib1g_1.3.dfsg+really1.3.1-1+deb13u1_amd64.deb",
+    "source": "zlib",
+    "url": "https://security.debian.org/debian-security/pool/updates/main/z/zlib/zlib1g_1.3.dfsg+really1.3.1-1+deb13u1_amd64.deb",
+    "version": "1:1.3.dfsg+really1.3.1-1+deb13u1"
+  },
+  "provenance_gate": {
+    "decision": "NO_GO_STOP",
+    "independently_trusted_keyring_or_authentic_verification_receipt": "NOT_ESTABLISHED_IN_RETAINED_EVIDENCE",
+    "prospective_fingerprints_not_enrolled": [
+      {
+        "fingerprint": "5E04A1E3223A19A20706E20F9904613D4CCE68C6",
+        "role": "Trixie security archive"
+      },
+      {
+        "fingerprint": "04B54C3CDCA79751B16BC6B5225629DF75B188BD",
+        "role": "Trixie archive"
+      },
+      {
+        "fingerprint": "41587F7DB8C774BCCF131416762F67A0B2C39DE4",
+        "role": "Trixie stable release"
+      }
+    ],
+    "repositories": [
+      {
+        "fields": {
+          "Architectures": "amd64 arm64 armel armhf i386 ppc64el riscv64 s390x",
+          "Codename": "trixie-security",
+          "Date": "Tue, 17 Nov 2026 05:44:28 UTC",
+          "Label": "Debian-Security",
+          "Origin": "Debian",
+          "Suite": "stable-security",
+          "Valid-Until": "Tue, 24 Nov 2026 05:44:28 UTC"
+        },
+        "has_clear_signature_armor": true,
+        "index_bindings": [
+          {
+            "bytes": 305616,
+            "repository_path": "main/binary-amd64/Packages.xz",
+            "retained_file": "outputs/deployment/m23-b2d-r6/raw/trixie-security-binary.xz",
+            "sha256": "b94f61d001779ae6a1d468503a1f4f0045307ca8bac17dc58c7eda9cdf42eb59"
+          },
+          {
+            "bytes": 268324,
+            "repository_path": "main/source/Sources.xz",
+            "retained_file": "outputs/deployment/m23-b2d-r6/raw/trixie-security-source.xz",
+            "sha256": "571f5ca6b5642fdfb615eac2cac590ad8a4a767c0a4ab59a6804ff6487a62191"
+          }
+        ],
+        "inrelease_file": "outputs/deployment/m23-b2d-r6/raw/trixie-security-InRelease.txt",
+        "inrelease_sha256": "04571365972ce858df6d8e69808899bbd3eb2c9888669eaf3d825e79216a3576",
+        "kind": "trixie-security",
+        "metadata_url": "https://security.debian.org/debian-security/dists/trixie-security/InRelease",
+        "signature_status": "NOT_VERIFIED"
+      },
+      {
+        "fields": {
+          "Architectures": "all amd64 arm64 armel armhf i386 ppc64el riscv64 s390x",
+          "Codename": "trixie-updates",
+          "Date": "Tue, 17 Nov 2026 08:11:15 UTC",
+          "Label": "Debian",
+          "Origin": "Debian",
+          "Suite": "stable-updates",
+          "Valid-Until": "Tue, 24 Nov 2026 08:11:15 UTC"
+        },
+        "has_clear_signature_armor": true,
+        "index_bindings": [
+          {
+            "bytes": 1108,
+            "repository_path": "main/binary-amd64/Packages.xz",
+            "retained_file": "outputs/deployment/m23-b2d-r6/raw/trixie-updates-binary.xz",
+            "sha256": "eea860c5dea11680e64299adb2736c2367c4235763a66f2b70ca61ce1b51978a"
+          },
+          {
+            "bytes": 1400,
+            "repository_path": "main/source/Sources.xz",
+            "retained_file": "outputs/deployment/m23-b2d-r6/raw/trixie-updates-source.xz",
+            "sha256": "810077786dba4b427b1f8aa18a6a3e72cf3e4226cd1c52dea02e91de020bdf50"
+          }
+        ],
+        "inrelease_file": "outputs/deployment/m23-b2d-r6/raw/trixie-updates-InRelease.txt",
+        "inrelease_sha256": "72859cf437bc59ec21baebaef3838981a68a5beae8d0adf4bfcc8726d1f4158f",
+        "kind": "trixie-updates",
+        "metadata_url": "https://deb.debian.org/debian/dists/trixie-updates/InRelease",
+        "signature_status": "NOT_VERIFIED"
+      },
+      {
+        "fields": {
+          "Architectures": "all amd64 arm64 armel armhf i386 ppc64el riscv64 s390x",
+          "Codename": "trixie",
+          "Date": "Sat, 12 Sep 2026 07:55:41 UTC",
+          "Label": "Debian",
+          "Origin": "Debian",
+          "Suite": "stable"
+        },
+        "has_clear_signature_armor": true,
+        "index_bindings": [
+          {
+            "bytes": 9678380,
+            "repository_path": "main/binary-amd64/Packages.xz",
+            "retained_file": "outputs/deployment/m23-b2d-r6/raw/trixie-binary.xz",
+            "sha256": "7778d3e3f303b7ddb8ce0fe7c8d57473a076c6bf2e8f241f75421d2396352498"
+          },
+          {
+            "bytes": 10540436,
+            "repository_path": "main/source/Sources.xz",
+            "retained_file": "outputs/deployment/m23-b2d-r6/raw/trixie-source.xz",
+            "sha256": "6002f81f463a2d976d84b34170367cc16da2d60bd0ba9ab9d868d6e1c1a935d9"
+          }
+        ],
+        "inrelease_file": "outputs/deployment/m23-b2d-r6/raw/trixie-InRelease.txt",
+        "inrelease_sha256": "0584fba32e13e0ab8285fb16c27adea1ec03a73669c18702821094fd6ca86675",
+        "kind": "trixie",
+        "metadata_url": "https://deb.debian.org/debian/dists/trixie/InRelease",
+        "signature_status": "NOT_VERIFIED"
+      }
+    ],
+    "repository_signatures": "PRESENT_NOT_VERIFIED",
+    "required_verification": [
+      "Independently establish approved verifier/version and archive keyring or authenticated independent verification receipt",
+      "Cryptographically verify exact retained or separately approved refreshed InRelease envelopes and approved signer primary/subkey roles, expiry and revocation",
+      "Validate signed Origin/Label/Suite/Codename/Architecture and acquisition-time Date/Valid-Until plus independent snapshot/rollback/latest policy",
+      "For main without Valid-Until require explicit independent freshness policy; do not infer PASS",
+      "Bind authenticated payload descriptors to exact Packages.xz/Sources.xz hashes/sizes and exact zlib package/source/closure record",
+      "Obtain independent source-bound review and separate acquisition approval; TLS and internal hashes alone are insufficient"
+    ],
+    "verifier_executed": false,
+    "verifiers_on_inspected_path": {
+      "gpg": null,
+      "gpgv": null,
+      "sq": null,
+      "sqv": null
+    }
+  },
+  "r7_licence_review": "PENDING_REVIEW",
+  "reviewer_identity": null,
+  "rollback_and_preservation": {
+    "cleanup_requires_exact_new_directory_and_review": true,
+    "method": "Stop and reject new disposable candidate; retain frozen baseline as evidence, not as a deployment fallback",
+    "never_in_place_patch_downgrade_repair_or_rekey": true,
+    "no_cloud_rollback_or_deployment_authorized": true,
+    "retain_failures_partials_and_receipts_privately": true
+  },
+  "scope": "RETAINED_EVIDENCE_AND_CONDITIONAL_RUNBOOK_ONLY",
+  "security_gates_passed": false,
+  "self_hash_excluded": true,
+  "signature": null,
+  "source_artifact_references_not_in_binary_allowlist": [
+    {
+      "bytes": 3271,
+      "downloaded": false,
+      "filename": "zlib_1.3.dfsg+really1.3.1-1+deb13u1.dsc",
+      "sha256": "7954224611bd043d62c094abf81cefcf9d97276479fc495767fcbc92cc6552f2",
+      "url": "https://security.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.3.dfsg+really1.3.1-1+deb13u1.dsc"
+    },
+    {
+      "bytes": 1325737,
+      "downloaded": false,
+      "filename": "zlib_1.3.dfsg+really1.3.1.orig.tar.gz",
+      "sha256": "60dd315c07f616887caa029408308a018ace66e3d142726a97db164b3b8f69fb",
+      "url": "https://security.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.3.dfsg+really1.3.1.orig.tar.gz"
+    },
+    {
+      "bytes": 17836,
+      "downloaded": false,
+      "filename": "zlib_1.3.dfsg+really1.3.1-1+deb13u1.debian.tar.xz",
+      "sha256": "4e99de80447700cf16ecf8ed3e77fabb39f085a5fffc66713466ccf07397cc04",
+      "url": "https://security.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.3.dfsg+really1.3.1-1+deb13u1.debian.tar.xz"
+    }
+  ],
+  "staging_commits_pushes": false,
+  "status": "STOP_NO_GO_PROVENANCE_NOT_ESTABLISHED",
+  "stopped_at": "PHASE_0_TRUST_CHAIN",
+  "verification": {
+    "actual_new_binary_inspection": "NOT_PERFORMED",
+    "checks_do_not_establish_independent_repository_authenticity": true,
+    "compressed_index_hash_size_correspondences_match": 6,
+    "exact_proposal_matches_r6_r8_and_retained_advisory": true,
+    "inrelease_envelope_hashes_match": 3,
+    "local_document_links": 4,
+    "retained_record_file_hash_and_size_checks": 15,
+    "runbook_compatibility_regressions": "NOT_TESTED",
+    "signatures_verified": 0
+  }
+}

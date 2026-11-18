@@ -1,0 +1,304 @@
+{
+  "application_acquired_code_or_scanner_execution": 0,
+  "archive_member_hashes": {
+    "agent_framework_core-1.23.0.dist-info/METADATA": "b4a64c0b12515b0313d11c31beec93f911365c0a3101bc14ddc6c7cb18a5202e",
+    "agent_framework_core-1.23.0.dist-info/RECORD": "da74beb735bb650a586b34a803571df5c9395b2c1b93eef24173a7abcf6c3a14",
+    "agent_framework_core-1.23.0.dist-info/WHEEL": "96a37c8d7b7f425a05386731f644adbd66ebca17c45e8236176cfe614466df9d",
+    "agent_framework_core-1.23.0.dist-info/licenses/LICENSE": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+  },
+  "assessment_date": "2026-11-18",
+  "b1_build_refusal": "UNCHANGED",
+  "baseline_git_commit": "ec39d8d5f28dbe5e854ce9cba39ae14c40b37e36",
+  "document_binding": {
+    "bytes": 4910,
+    "path": "docs/deployment/m23/stage-b2d-r7-agent-framework-licence.md",
+    "sha256": "f932fe42449909f9bd8aa1b54097d11ae16ce8b5417b529a58cde5d1da7cfb3e"
+  },
+  "format": "m23-r7-agent-framework-licence-reconciliation-v1",
+  "historical_evidence_modifications": false,
+  "independent_review": {
+    "approval": null,
+    "required_actions": [
+      "Inspect exact hash-bound wheel notice and component scope",
+      "Confirm or reject proposed MIT SPDX expression and notice/redistribution obligations",
+      "Record genuine independent source-bound approval through the established reviewer process; preserve originals"
+    ],
+    "reviewed_at": null,
+    "reviewer_identity": null,
+    "signature": null,
+    "status": "PENDING_REVIEW"
+  },
+  "input_bindings": {
+    "artifacts/m23-b2c-sdnhdt5a/agent_framework_core-1.23.0-py3-none-any.whl": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 829938,
+      "sha256": "b16e8b44c0033e28d339d03d3b6367f0bec2dd8da9d533b8ba6c278d6a72bd01"
+    },
+    "artifacts/m23-b2d-bhwtbqri/inputs/wheel-analysis/agent_framework_core-1.23.0-py3-none-any/agent_framework_core-1.23.0.dist-info/METADATA": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 13146,
+      "sha256": "b4a64c0b12515b0313d11c31beec93f911365c0a3101bc14ddc6c7cb18a5202e"
+    },
+    "artifacts/m23-b2d-bhwtbqri/inputs/wheel-analysis/agent_framework_core-1.23.0-py3-none-any/agent_framework_core-1.23.0.dist-info/RECORD": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 10483,
+      "sha256": "da74beb735bb650a586b34a803571df5c9395b2c1b93eef24173a7abcf6c3a14"
+    },
+    "artifacts/m23-b2d-bhwtbqri/inputs/wheel-analysis/agent_framework_core-1.23.0-py3-none-any/agent_framework_core-1.23.0.dist-info/WHEEL": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 81,
+      "sha256": "96a37c8d7b7f425a05386731f644adbd66ebca17c45e8236176cfe614466df9d"
+    },
+    "artifacts/m23-b2d-bhwtbqri/inputs/wheel-analysis/agent_framework_core-1.23.0-py3-none-any/agent_framework_core-1.23.0.dist-info/licenses/LICENSE": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    "docs/deployment/m23/b2b-acquisition-inventory.json": {
+      "availability": "GIT_TRACKED",
+      "bytes": 72620,
+      "sha256": "818ec99db7e67488b58b1d01b7a84267e5b607fd6c3324b19b0f4f25f5285d7b"
+    },
+    "docs/deployment/m23/b2b-acquisition-inventory.sha256": {
+      "availability": "GIT_TRACKED",
+      "bytes": 117,
+      "sha256": "04b23408eb4b0e88abfe514d5c3d85dabf853cbb80c6cd21d36e18646562e5f5"
+    },
+    "docs/deployment/m23/b2c-artifact-inventory.json": {
+      "availability": "GIT_TRACKED",
+      "bytes": 41197,
+      "sha256": "becdc3ffadff4f869e78f04c8c0d7491fe7b81c1373e3bfee5f60903533e2ab1"
+    },
+    "docs/deployment/m23/b2c-artifact-inventory.sha256": {
+      "availability": "GIT_TRACKED",
+      "bytes": 114,
+      "sha256": "f7dfad98f83ac3faf542513e7ada40e4c2bf05116a0e9988e0217e6c422d07cc"
+    },
+    "docs/deployment/m23/b2d-sbom-manifest.json": {
+      "availability": "GIT_TRACKED",
+      "bytes": 13988,
+      "sha256": "dde0eb8961183812b3c189cf8caa225e03442950308b9a0e569d8ea94b865deb"
+    },
+    "docs/deployment/m23/b2d-security-decision.json": {
+      "availability": "GIT_TRACKED",
+      "bytes": 6693,
+      "sha256": "b4c3c9af0d099ffb67bf476efb6cd8deb3f9b7492ad3c10d738f30e83075ce84"
+    },
+    "outputs/deployment/m23-b2c/acquisition-receipts.json": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 208104,
+      "sha256": "142dae8e6e64e2034d12c3244524e5f148060b9e5f66fecaa07d37fefad49264"
+    },
+    "outputs/deployment/m23-b2c/notices/wheels/agent-framework-core/agent_framework_core-1.23.0.dist-info/licenses/LICENSE": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    "outputs/deployment/m23-b2d/licence-assessment.json": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 59827,
+      "sha256": "fdf81b5d370cebd40344114d82935323111043a261bdba517e4c11dc3d5cf45d"
+    },
+    "outputs/deployment/m23-b2d/syft-effective-config.yaml": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 17833,
+      "sha256": "cf534889d210105d996c2c134f4346e47bb124f17163898a978229226c48e5b1"
+    },
+    "outputs/deployment/m23-b2d/syft-offline.yaml": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 908,
+      "sha256": "5f5c07ff51514f353f42ef21ca1703c2dcacc0a0311c85046842bfae2cc77d9f"
+    },
+    "outputs/deployment/m23-b2d/syft-scan-commands.json": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 2469,
+      "sha256": "7369e938aee8bcca741ad2001a128b27285025cd38c1323e148649443de92d89"
+    },
+    "outputs/deployment/m23-b2d/syft-wheels.log": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 135,
+      "sha256": "d099d170723bfedbe19305be6d7c33f292791663a2291826925ae43c74ba9fdc"
+    },
+    "outputs/deployment/m23-b2d/validate_closeout.py": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 5209,
+      "sha256": "750795201397c04fca4292e27ee62d003aa9212689d3eb92c1f997b6968df589"
+    },
+    "outputs/deployment/m23-b2d/wheels.syft.json": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 453436,
+      "sha256": "a88324f86881f2a47783774a9f13ea69597d61b1f14997a2a534f53b2838b2ed"
+    }
+  },
+  "licensing_approved": false,
+  "local_document_links_checked": 6,
+  "m23_decision": "DEFERRED — SECURITY GATE NO-GO",
+  "network_download_build_docker_cloud_operations": 0,
+  "new_files": [
+    "docs/deployment/m23/stage-b2d-r7-agent-framework-licence.md",
+    "docs/deployment/m23/r7-agent-framework-licence-reconciliation.json"
+  ],
+  "notice": {
+    "analysis_tree_path": "artifacts/m23-b2d-bhwtbqri/inputs/wheel-analysis/agent_framework_core-1.23.0-py3-none-any/agent_framework_core-1.23.0.dist-info/licenses/LICENSE",
+    "archive_member": "agent_framework_core-1.23.0.dist-info/licenses/LICENSE",
+    "availability": "IGNORED_LOCAL_ONLY",
+    "bytes": 1141,
+    "copyright_owner_as_written": "Microsoft Corporation.",
+    "heading": "MIT License",
+    "retained_path": "outputs/deployment/m23-b2c/notices/wheels/agent-framework-core/agent_framework_core-1.23.0.dist-info/licenses/LICENSE",
+    "scope": "Notice for this wheel; no conclusion for its dependencies or other components",
+    "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+    "wheel_member_bytes_equal_retained_bytes": true,
+    "wheel_record_entry": {
+      "bytes": 1141,
+      "digest": "sha256=ws_MuBL-SCEBqPBFl9_FqZkaaydIJmxHrJG2parhU4M",
+      "path": "agent_framework_core-1.23.0.dist-info/licenses/LICENSE"
+    }
+  },
+  "observed_core_metadata": {
+    "License": [],
+    "License-Expression": [],
+    "License-File": [
+      "LICENSE"
+    ],
+    "licence_classifier": "License :: OSI Approved :: MIT License",
+    "name": "agent-framework-core",
+    "version": "1.23.0"
+  },
+  "omission_cause": {
+    "causal_limits": "These facts do not prove a parser/matcher/cataloger cause or a Syft defect. Remote-lookup disablement and absent metadata fields are not assigned as causes.",
+    "observations": [
+      "Notice exists in wheel, retained notice, analysis tree and Syft package file inventory",
+      "METADATA has MIT classifier and License-File but no License/License-Expression fields",
+      "Retained configuration includes licence content and disables Python remote licence lookup",
+      "Retained log only warns about unnamed directory source; no package-specific explanation"
+    ],
+    "scanner_rerun_or_source_experiment": false,
+    "status": "UNKNOWN",
+    "verified_cause": null
+  },
+  "original_syft_observation": {
+    "artifact_id": "ff2e9cf45308a174",
+    "file": "outputs/deployment/m23-b2d/wheels.syft.json",
+    "found_by": "python-installed-package-cataloger",
+    "licenses": [],
+    "notice_file_inventory_digest_matches": true,
+    "notice_present_in_analysis_tree": true,
+    "producer": "Syft",
+    "producer_version": "1.50.0",
+    "purl": "pkg:pypi/agent-framework-core@1.23.0",
+    "report_modified": false,
+    "schema_version": "16.1.10",
+    "sha256": "a88324f86881f2a47783774a9f13ea69597d61b1f14997a2a534f53b2838b2ed"
+  },
+  "package_installation": 0,
+  "preservation": {
+    "application_dependencies_security_gates": "UNCHANGED",
+    "baseline_file_hashes_checked": 546,
+    "head_unchanged": true,
+    "historical_wheel_notice_receipt_sbom_reports": "UNCHANGED",
+    "mismatches": [],
+    "staged_diff": "EMPTY",
+    "tracked_diff": "EMPTY"
+  },
+  "proposed_spdx_mapping": {
+    "b1_complete_licence_admission_report": false,
+    "basis": "Retained notice text plus MIT Trove classifier, bound through exact archive and RECORD hashes",
+    "license_concluded": "NOASSERTION",
+    "notice_sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+    "package_purl": "pkg:pypi/agent-framework-core@1.23.0",
+    "proposed_license_expression": "MIT",
+    "record_type": "SEPARATE_PROPOSED_ANNOTATION_NOT_A_REGENERATED_SBOM",
+    "replacement_of_original_syft_licenses": false,
+    "review_status": "PENDING_REVIEW",
+    "wheel_sha256": "b16e8b44c0033e28d339d03d3b6367f0bec2dd8da9d533b8ba6c278d6a72bd01"
+  },
+  "scope": "STATIC_RETAINED_EVIDENCE_RECONCILIATION_FOR_ONE_EXACT_WHEEL",
+  "security_gates_passed": false,
+  "self_hash_excluded": true,
+  "staging_commits_pushes": false,
+  "status": "PENDING_REVIEW",
+  "verification": [
+    {
+      "check": "B2B/B2C actual inventory bytes match retained .sha256 pins",
+      "id": "V01",
+      "result": "MATCH"
+    },
+    {
+      "check": "Acquisition receipt matches B2C catalog receipt pin and frozen B2B inventory hash",
+      "id": "V02",
+      "result": "MATCH"
+    },
+    {
+      "check": "Actual wheel filename, byte size and SHA-256 match B2B, B2C and acquisition receipt",
+      "id": "V03",
+      "result": "MATCH"
+    },
+    {
+      "check": "Non-executing ZIP METADATA Name/Version/core-metadata pin and WHEEL tag",
+      "id": "V04",
+      "result": "MATCH"
+    },
+    {
+      "check": "Wheel notice bytes equal retained notice; recorded SHA-256/size match",
+      "id": "V05",
+      "result": "MATCH"
+    },
+    {
+      "check": "Wheel RECORD sha256/size match notice bytes",
+      "id": "V06",
+      "result": "MATCH"
+    },
+    {
+      "check": "Retained B2D analysis-tree notice bytes and Syft file-record digest/size match",
+      "id": "V07",
+      "result": "MATCH"
+    },
+    {
+      "check": "Original Syft report hash matches B2D SBOM manifest; exact package record licenses remains empty",
+      "id": "V08",
+      "result": "MATCH"
+    },
+    {
+      "check": "B2D licence assessment hash matches security-decision evidence pin",
+      "id": "V09",
+      "result": "MATCH"
+    },
+    {
+      "check": "Retained config/log inspected statically; no package-specific omission explanation established",
+      "id": "V10",
+      "result": "ROOT_CAUSE_UNKNOWN"
+    },
+    {
+      "check": "All task-entry tracked and selected retained input hashes preserved",
+      "file_count": 546,
+      "id": "V11",
+      "result": "MATCH"
+    },
+    {
+      "check": "B1 unconditional build refusal unchanged; index and HEAD unchanged",
+      "id": "V12",
+      "result": "MATCH"
+    }
+  ],
+  "verification_result": "INTEGRITY_AND_TRACEABILITY_MATCH; ROOT_CAUSE_UNKNOWN; APPROVAL_PENDING",
+  "vulnerability_remediation": false,
+  "wheel": {
+    "availability": "IGNORED_LOCAL_ONLY",
+    "bytes": 829938,
+    "distribution": "agent-framework-core",
+    "filename": "agent_framework_core-1.23.0-py3-none-any.whl",
+    "metadata_identity_verified": true,
+    "path": "artifacts/m23-b2c-sdnhdt5a/agent_framework_core-1.23.0-py3-none-any.whl",
+    "publisher_signature_authentication": "NOT_ESTABLISHED_BY_THIS_RECONCILIATION",
+    "purl": "pkg:pypi/agent-framework-core@1.23.0",
+    "recorded_identity_sources": [
+      "docs/deployment/m23/b2b-acquisition-inventory.json#/wheels",
+      "docs/deployment/m23/b2c-artifact-inventory.json#/objects",
+      "outputs/deployment/m23-b2c/acquisition-receipts.json#/objects"
+    ],
+    "sha256": "b16e8b44c0033e28d339d03d3b6367f0bec2dd8da9d533b8ba6c278d6a72bd01",
+    "tag": "py3-none-any",
+    "version": "1.23.0"
+  }
+}

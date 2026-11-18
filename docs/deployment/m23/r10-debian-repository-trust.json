@@ -1,0 +1,1073 @@
+{
+  "acquired_code_or_verifier_execution": 0,
+  "acquisition_authorized": false,
+  "all_nine_r8_findings": "UNRESOLVED_BLOCKING",
+  "approval": null,
+  "assessment_date": "2026-11-18",
+  "b1_build_refusal_and_limits": "UNCHANGED",
+  "baseline_git_commit": "ec39d8d5f28dbe5e854ce9cba39ae14c40b37e36",
+  "candidate_image_key_material": {
+    "aggregate_keyring": {
+      "bytes": 55918,
+      "keys": [
+        {
+          "binding_or_self_signature_verified": false,
+          "fingerprint": "1F89983E0081FDE018F3CC9673A4F27B8DD47936",
+          "kind": "primary",
+          "primary_fingerprint_by_packet_position": "1F89983E0081FDE018F3CC9673A4F27B8DD47936"
+        },
+        {
+          "binding_or_self_signature_verified": false,
+          "fingerprint": "A7236886F3CCCAAD148A27F80E98404D386FA1D9",
+          "kind": "subkey",
+          "primary_fingerprint_by_packet_position": "1F89983E0081FDE018F3CC9673A4F27B8DD47936"
+        },
+        {
+          "binding_or_self_signature_verified": false,
+          "fingerprint": "AC530D520F2F3269F5E98313A48449044AAD5C5D",
+          "kind": "primary",
+          "primary_fingerprint_by_packet_position": "AC530D520F2F3269F5E98313A48449044AAD5C5D"
+        },
+        {
+          "binding_or_self_signature_verified": false,
+          "fingerprint": "ED541312A33F1128F10B1C6C54404762BBB6E853",
+          "kind": "subkey",
+          "primary_fingerprint_by_packet_position": "AC530D520F2F3269F5E98313A48449044AAD5C5D"
+        },
+        {
+          "binding_or_self_signature_verified": false,
+          "fingerprint": "A4285295FC7B1A81600062A9605C66F00D6C9793",
+          "kind": "primary",
+          "primary_fingerprint_by_packet_position": "A4285295FC7B1A81600062A9605C66F00D6C9793"
+        },
+        {
+          "binding_or_self_signature_verified": false,
+          "fingerprint": "4D64FEC119C2029067D6E791F8D2585B8783D481",
+          "kind": "primary",
+          "primary_fingerprint_by_packet_position": "4D64FEC119C2029067D6E791F8D2585B8783D481"
+        },
+        {
+          "binding_or_self_signature_verified": false,
+          "fingerprint": "B8B80B5B623EAB6AD8775C45B7C5D7D6350947F8",
+          "kind": "primary",
+          "primary_fingerprint_by_packet_position": "B8B80B5B623EAB6AD8775C45B7C5D7D6350947F8"
+        },
+        {
+          "binding_or_self_signature_verified": false,
+          "fingerprint": "4CB50190207B4758A3F73A796ED0E7B82643E131",
+          "kind": "subkey",
+          "primary_fingerprint_by_packet_position": "B8B80B5B623EAB6AD8775C45B7C5D7D6350947F8"
+        },
+        {
+          "binding_or_self_signature_verified": false,
+          "fingerprint": "05AB90340C0C5E797F44A8C8254CF3B5AEC0A8F0",
+          "kind": "primary",
+          "primary_fingerprint_by_packet_position": "05AB90340C0C5E797F44A8C8254CF3B5AEC0A8F0"
+        },
+        {
+          "binding_or_self_signature_verified": false,
+          "fingerprint": "B0CAB9266E8C3929798B3EEEBDE6D2B9216EC7A8",
+          "kind": "subkey",
+          "primary_fingerprint_by_packet_position": "05AB90340C0C5E797F44A8C8254CF3B5AEC0A8F0"
+        },
+        {
+          "binding_or_self_signature_verified": false,
+          "fingerprint": "04B54C3CDCA79751B16BC6B5225629DF75B188BD",
+          "kind": "primary",
+          "primary_fingerprint_by_packet_position": "04B54C3CDCA79751B16BC6B5225629DF75B188BD"
+        },
+        {
+          "binding_or_self_signature_verified": false,
+          "fingerprint": "B8E5F13176D2A7A75220028078DBA3BC47EF2265",
+          "kind": "subkey",
+          "primary_fingerprint_by_packet_position": "04B54C3CDCA79751B16BC6B5225629DF75B188BD"
+        },
+        {
+          "binding_or_self_signature_verified": false,
+          "fingerprint": "5E04A1E3223A19A20706E20F9904613D4CCE68C6",
+          "kind": "primary",
+          "primary_fingerprint_by_packet_position": "5E04A1E3223A19A20706E20F9904613D4CCE68C6"
+        },
+        {
+          "binding_or_self_signature_verified": false,
+          "fingerprint": "89C87ACEA5DD6B8E6A7068808E9F831205B4BA95",
+          "kind": "subkey",
+          "primary_fingerprint_by_packet_position": "5E04A1E3223A19A20706E20F9904613D4CCE68C6"
+        },
+        {
+          "binding_or_self_signature_verified": false,
+          "fingerprint": "41587F7DB8C774BCCF131416762F67A0B2C39DE4",
+          "kind": "primary",
+          "primary_fingerprint_by_packet_position": "41587F7DB8C774BCCF131416762F67A0B2C39DE4"
+        }
+      ],
+      "sha256": "506b815cbb32d9b6066b4a2aa524071e071761e7e7f68c3ac74f3061ba852017",
+      "trust": "NOT_ESTABLISHED",
+      "virtual_path": "usr/share/keyrings/debian-archive-keyring.pgp"
+    },
+    "filesystem_extraction_or_key_import": false,
+    "independent_trust": "NOT_ESTABLISHED_SAME_CANDIDATE_CANNOT_BOOTSTRAP_ITS_OWN_AUTHENTICITY",
+    "keyring_package": {
+      "Architecture": "all",
+      "Source": null,
+      "Status": "install ok installed",
+      "Version": "2025.1"
+    },
+    "origin_authentication": "UPSTREAM_IMAGE_SIGNATURE_AND_INDEPENDENT_PROVENANCE_NOT_ESTABLISHED",
+    "packet_order_not_certified_key_relationship": true,
+    "public_key_virtual_paths": {
+      "etc/apt/trusted.gpg.d/debian-archive-bookworm-automatic.asc": {
+        "bytes": 11861,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": null,
+        "mode": "0o644",
+        "sha256": "c2a9a16fde95e037bafd0fa6b7e31f41b4ff1e85851de5558f19a2a2f0e955e2",
+        "type": "file"
+      },
+      "etc/apt/trusted.gpg.d/debian-archive-bookworm-security-automatic.asc": {
+        "bytes": 11873,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": null,
+        "mode": "0o644",
+        "sha256": "74f81645b4e3156d1e9a88c8dd9259271b89c7099d64af89a2a6996b592faa1f",
+        "type": "file"
+      },
+      "etc/apt/trusted.gpg.d/debian-archive-bookworm-stable.asc": {
+        "bytes": 461,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": null,
+        "mode": "0o644",
+        "sha256": "521e9f6a9f9b92ee8d5ce74345e8cfd04028dae9db6f571259d584b293549824",
+        "type": "file"
+      },
+      "etc/apt/trusted.gpg.d/debian-archive-bullseye-automatic.asc": {
+        "bytes": 11861,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": null,
+        "mode": "0o644",
+        "sha256": "0b7dc94b880f0b63e2093394b113cafd870badb86e020a35614f49b9d83beb1e",
+        "type": "file"
+      },
+      "etc/apt/trusted.gpg.d/debian-archive-bullseye-security-automatic.asc": {
+        "bytes": 11873,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": null,
+        "mode": "0o644",
+        "sha256": "716e79393c724d14ecba8be46e99ecbe1b689f67ceff3cb3cab28f6e69e8b8b8",
+        "type": "file"
+      },
+      "etc/apt/trusted.gpg.d/debian-archive-bullseye-stable.asc": {
+        "bytes": 3403,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": null,
+        "mode": "0o644",
+        "sha256": "fb260ce8521a2faa4937d98a29a5347807e10614b97d510fbabe5480c803bda9",
+        "type": "file"
+      },
+      "etc/apt/trusted.gpg.d/debian-archive-trixie-automatic.asc": {
+        "bytes": 11861,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": null,
+        "mode": "0o644",
+        "sha256": "6f1d277429dd7ffedcc6f8688a7ad9a458859b1139ffa026d1eeaadcbffb0da7",
+        "type": "file"
+      },
+      "etc/apt/trusted.gpg.d/debian-archive-trixie-security-automatic.asc": {
+        "bytes": 11873,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": null,
+        "mode": "0o644",
+        "sha256": "844c07d242db37f283afab9d5531270a0550841e90f9f1a9c3bd599722b808b7",
+        "type": "file"
+      },
+      "etc/apt/trusted.gpg.d/debian-archive-trixie-stable.asc": {
+        "bytes": 1384,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": null,
+        "mode": "0o644",
+        "sha256": "4d097bb93f83d731f475c5b92a0c2fcf108cfce1d4932792fca72d00b48d198b",
+        "type": "file"
+      },
+      "usr/share/keyrings/debian-archive-bookworm-automatic.gpg": {
+        "bytes": 0,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": "debian-archive-bookworm-automatic.pgp",
+        "mode": "0o777",
+        "type": "symlink"
+      },
+      "usr/share/keyrings/debian-archive-bookworm-automatic.pgp": {
+        "bytes": 8700,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": null,
+        "mode": "0o644",
+        "sha256": "59dbde1397f8edc4e4aa24829ba36f9583ea5b4480091c34b89dad9e56360a19",
+        "type": "file"
+      },
+      "usr/share/keyrings/debian-archive-bookworm-security-automatic.gpg": {
+        "bytes": 0,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": "debian-archive-bookworm-security-automatic.pgp",
+        "mode": "0o777",
+        "type": "symlink"
+      },
+      "usr/share/keyrings/debian-archive-bookworm-security-automatic.pgp": {
+        "bytes": 8709,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": null,
+        "mode": "0o644",
+        "sha256": "8bdddebd345030721f22d0f6a7291a4791a2183621bd444cc6a683d7ade73a6e",
+        "type": "file"
+      },
+      "usr/share/keyrings/debian-archive-bookworm-stable.gpg": {
+        "bytes": 0,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": "debian-archive-bookworm-stable.pgp",
+        "mode": "0o777",
+        "type": "symlink"
+      },
+      "usr/share/keyrings/debian-archive-bookworm-stable.pgp": {
+        "bytes": 280,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": null,
+        "mode": "0o644",
+        "sha256": "1891e84fa2e1ff6db0acfbc0e398824379b415534dd0154ecb1d21e70fe2ac62",
+        "type": "file"
+      },
+      "usr/share/keyrings/debian-archive-bullseye-automatic.gpg": {
+        "bytes": 0,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": "debian-archive-bullseye-automatic.pgp",
+        "mode": "0o777",
+        "type": "symlink"
+      },
+      "usr/share/keyrings/debian-archive-bullseye-automatic.pgp": {
+        "bytes": 8700,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": null,
+        "mode": "0o644",
+        "sha256": "9395df01c1c6226584206a77d237c60fdc7039a015ece4e6bd3b1947db6c3b1e",
+        "type": "file"
+      },
+      "usr/share/keyrings/debian-archive-bullseye-security-automatic.gpg": {
+        "bytes": 0,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": "debian-archive-bullseye-security-automatic.pgp",
+        "mode": "0o777",
+        "type": "symlink"
+      },
+      "usr/share/keyrings/debian-archive-bullseye-security-automatic.pgp": {
+        "bytes": 8709,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": null,
+        "mode": "0o644",
+        "sha256": "e551f90fa954a65b3b6c54160f9d8485bee806318afe7a6998c4d9bece8e0df3",
+        "type": "file"
+      },
+      "usr/share/keyrings/debian-archive-bullseye-stable.gpg": {
+        "bytes": 0,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": "debian-archive-bullseye-stable.pgp",
+        "mode": "0o777",
+        "type": "symlink"
+      },
+      "usr/share/keyrings/debian-archive-bullseye-stable.pgp": {
+        "bytes": 2453,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": null,
+        "mode": "0o644",
+        "sha256": "0cdd043ff2e04448802488fd4a4e3812c298a1ab5d81374ea9a9693a274cef8c",
+        "type": "file"
+      },
+      "usr/share/keyrings/debian-archive-keyring.gpg": {
+        "bytes": 0,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": "debian-archive-keyring.pgp",
+        "mode": "0o777",
+        "type": "symlink"
+      },
+      "usr/share/keyrings/debian-archive-keyring.pgp": {
+        "bytes": 55918,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": null,
+        "mode": "0o644",
+        "sha256": "506b815cbb32d9b6066b4a2aa524071e071761e7e7f68c3ac74f3061ba852017",
+        "type": "file"
+      },
+      "usr/share/keyrings/debian-archive-removed-keys.gpg": {
+        "bytes": 0,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": "debian-archive-removed-keys.pgp",
+        "mode": "0o777",
+        "type": "symlink"
+      },
+      "usr/share/keyrings/debian-archive-removed-keys.pgp": {
+        "bytes": 72636,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": null,
+        "mode": "0o644",
+        "sha256": "0ff45da93c7fd62cc3f10b4c5019985caf49e5959bb3bf992f558d11963870fa",
+        "type": "file"
+      },
+      "usr/share/keyrings/debian-archive-trixie-automatic.gpg": {
+        "bytes": 0,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": "debian-archive-trixie-automatic.pgp",
+        "mode": "0o777",
+        "type": "symlink"
+      },
+      "usr/share/keyrings/debian-archive-trixie-automatic.pgp": {
+        "bytes": 8698,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": null,
+        "mode": "0o644",
+        "sha256": "8dbd0029697f8c9b009eeb9a153c6536b62ca031fa0a5b4cec74e8d718fccef6",
+        "type": "file"
+      },
+      "usr/share/keyrings/debian-archive-trixie-security-automatic.gpg": {
+        "bytes": 0,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": "debian-archive-trixie-security-automatic.pgp",
+        "mode": "0o777",
+        "type": "symlink"
+      },
+      "usr/share/keyrings/debian-archive-trixie-security-automatic.pgp": {
+        "bytes": 8707,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": null,
+        "mode": "0o644",
+        "sha256": "be1a7981908ab9010352131fcbf101a9556f6a61db76a19a1c146d31ef2d72d8",
+        "type": "file"
+      },
+      "usr/share/keyrings/debian-archive-trixie-stable.gpg": {
+        "bytes": 0,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": "debian-archive-trixie-stable.pgp",
+        "mode": "0o777",
+        "type": "symlink"
+      },
+      "usr/share/keyrings/debian-archive-trixie-stable.pgp": {
+        "bytes": 962,
+        "layer_sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+        "linkname": null,
+        "mode": "0o644",
+        "sha256": "abced156a22aa8683b228299ac35c1ea51515eef900cec0e562f56716dfe3915",
+        "type": "file"
+      }
+    },
+    "retained_frozen_layer": {
+      "attempts": 1,
+      "bytes": 29856132,
+      "file": "/Users/privilege/Desktop/GitHub_repository/enterprise-azure-agentic-ai-claims-processing/artifacts/m23-b2d-r4-_p7rg8ny/layer-sha256-37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41.tar.gz",
+      "filename": "layer-sha256-37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41.tar.gz",
+      "sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+      "source_url": "https://registry-1.docker.io/v2/library/python/blobs/sha256:37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41",
+      "status": "INTEGRITY_VERIFIED_STATIC_INSPECTION_PENDING"
+    },
+    "selected_public_key_files_read_in_memory": 7,
+    "trixie_keyring_metadata": [
+      {
+        "armored_and_binary_bytes_correspond": true,
+        "armored_sha256": "6f1d277429dd7ffedcc6f8688a7ad9a458859b1139ffa026d1eeaadcbffb0da7",
+        "armored_virtual_path": "etc/apt/trusted.gpg.d/debian-archive-trixie-automatic.asc",
+        "bytes": 8698,
+        "independent_trust": "NOT_ESTABLISHED",
+        "keys": [
+          {
+            "binding_or_self_signature_verified": false,
+            "fingerprint": "04B54C3CDCA79751B16BC6B5225629DF75B188BD",
+            "kind": "primary",
+            "primary_fingerprint_by_packet_position": "04B54C3CDCA79751B16BC6B5225629DF75B188BD",
+            "public_key_algorithm_id": 1
+          },
+          {
+            "binding_or_self_signature_verified": false,
+            "fingerprint": "B8E5F13176D2A7A75220028078DBA3BC47EF2265",
+            "kind": "subkey",
+            "primary_fingerprint_by_packet_position": "04B54C3CDCA79751B16BC6B5225629DF75B188BD",
+            "public_key_algorithm_id": 1
+          }
+        ],
+        "role": "automatic",
+        "sha256": "8dbd0029697f8c9b009eeb9a153c6536b62ca031fa0a5b4cec74e8d718fccef6",
+        "virtual_path": "usr/share/keyrings/debian-archive-trixie-automatic.pgp"
+      },
+      {
+        "armored_and_binary_bytes_correspond": true,
+        "armored_sha256": "844c07d242db37f283afab9d5531270a0550841e90f9f1a9c3bd599722b808b7",
+        "armored_virtual_path": "etc/apt/trusted.gpg.d/debian-archive-trixie-security-automatic.asc",
+        "bytes": 8707,
+        "independent_trust": "NOT_ESTABLISHED",
+        "keys": [
+          {
+            "binding_or_self_signature_verified": false,
+            "fingerprint": "5E04A1E3223A19A20706E20F9904613D4CCE68C6",
+            "kind": "primary",
+            "primary_fingerprint_by_packet_position": "5E04A1E3223A19A20706E20F9904613D4CCE68C6",
+            "public_key_algorithm_id": 1
+          },
+          {
+            "binding_or_self_signature_verified": false,
+            "fingerprint": "89C87ACEA5DD6B8E6A7068808E9F831205B4BA95",
+            "kind": "subkey",
+            "primary_fingerprint_by_packet_position": "5E04A1E3223A19A20706E20F9904613D4CCE68C6",
+            "public_key_algorithm_id": 1
+          }
+        ],
+        "role": "security-automatic",
+        "sha256": "be1a7981908ab9010352131fcbf101a9556f6a61db76a19a1c146d31ef2d72d8",
+        "virtual_path": "usr/share/keyrings/debian-archive-trixie-security-automatic.pgp"
+      },
+      {
+        "armored_and_binary_bytes_correspond": true,
+        "armored_sha256": "4d097bb93f83d731f475c5b92a0c2fcf108cfce1d4932792fca72d00b48d198b",
+        "armored_virtual_path": "etc/apt/trusted.gpg.d/debian-archive-trixie-stable.asc",
+        "bytes": 962,
+        "independent_trust": "NOT_ESTABLISHED",
+        "keys": [
+          {
+            "binding_or_self_signature_verified": false,
+            "fingerprint": "41587F7DB8C774BCCF131416762F67A0B2C39DE4",
+            "kind": "primary",
+            "primary_fingerprint_by_packet_position": "41587F7DB8C774BCCF131416762F67A0B2C39DE4",
+            "public_key_algorithm_id": 22
+          }
+        ],
+        "role": "stable",
+        "sha256": "abced156a22aa8683b228299ac35c1ea51515eef900cec0e562f56716dfe3915",
+        "virtual_path": "usr/share/keyrings/debian-archive-trixie-stable.pgp"
+      }
+    ],
+    "unexecuted_verifier_package": {
+      "Architecture": "amd64",
+      "Source": "rust-sequoia-sqv (1.3.0-3)",
+      "Status": "install ok installed",
+      "Version": "1.3.0-3+b2"
+    }
+  },
+  "claimed_issuer_to_candidate_key_correspondences": [
+    {
+      "candidate_primary_by_packet_order": "05AB90340C0C5E797F44A8C8254CF3B5AEC0A8F0",
+      "candidate_public_key_present": true,
+      "claimed_signature_issuer": "B0CAB9266E8C3929798B3EEEBDE6D2B9216EC7A8",
+      "independent_primary_trust": false,
+      "repository": "trixie-security",
+      "signature_verified": false,
+      "subkey_binding_verified": false
+    },
+    {
+      "candidate_primary_by_packet_order": "5E04A1E3223A19A20706E20F9904613D4CCE68C6",
+      "candidate_public_key_present": true,
+      "claimed_signature_issuer": "89C87ACEA5DD6B8E6A7068808E9F831205B4BA95",
+      "independent_primary_trust": false,
+      "repository": "trixie-security",
+      "signature_verified": false,
+      "subkey_binding_verified": false
+    },
+    {
+      "candidate_primary_by_packet_order": "B8B80B5B623EAB6AD8775C45B7C5D7D6350947F8",
+      "candidate_public_key_present": true,
+      "claimed_signature_issuer": "4CB50190207B4758A3F73A796ED0E7B82643E131",
+      "independent_primary_trust": false,
+      "repository": "trixie-updates",
+      "signature_verified": false,
+      "subkey_binding_verified": false
+    },
+    {
+      "candidate_primary_by_packet_order": "04B54C3CDCA79751B16BC6B5225629DF75B188BD",
+      "candidate_public_key_present": true,
+      "claimed_signature_issuer": "B8E5F13176D2A7A75220028078DBA3BC47EF2265",
+      "independent_primary_trust": false,
+      "repository": "trixie-updates",
+      "signature_verified": false,
+      "subkey_binding_verified": false
+    },
+    {
+      "candidate_primary_by_packet_order": "B8B80B5B623EAB6AD8775C45B7C5D7D6350947F8",
+      "candidate_public_key_present": true,
+      "claimed_signature_issuer": "4CB50190207B4758A3F73A796ED0E7B82643E131",
+      "independent_primary_trust": false,
+      "repository": "trixie",
+      "signature_verified": false,
+      "subkey_binding_verified": false
+    },
+    {
+      "candidate_primary_by_packet_order": "04B54C3CDCA79751B16BC6B5225629DF75B188BD",
+      "candidate_public_key_present": true,
+      "claimed_signature_issuer": "B8E5F13176D2A7A75220028078DBA3BC47EF2265",
+      "independent_primary_trust": false,
+      "repository": "trixie",
+      "signature_verified": false,
+      "subkey_binding_verified": false
+    },
+    {
+      "candidate_primary_by_packet_order": "41587F7DB8C774BCCF131416762F67A0B2C39DE4",
+      "candidate_public_key_present": true,
+      "claimed_signature_issuer": "41587F7DB8C774BCCF131416762F67A0B2C39DE4",
+      "independent_primary_trust": false,
+      "repository": "trixie",
+      "signature_verified": false,
+      "subkey_binding_verified": false
+    }
+  ],
+  "decision": "NO_GO_INDEPENDENT_TRUST_NOT_ESTABLISHED",
+  "detached_release_alternative": {
+    "evaluated": false,
+    "new_download_authorized": false,
+    "requires": "Exact original Release plus matching Release.gpg from same approved snapshot; same trust/freshness/semantic checks",
+    "unsigned_fallback_allowed": false
+  },
+  "document_binding": {
+    "bytes": 8963,
+    "file": "docs/deployment/m23/stage-b2d-r10-debian-repository-trust.md",
+    "sha256": "a9ebb8028432421a86421e75e5382c1abdba1ea5615aa9665ac1b67eefd5181c"
+  },
+  "downloads_installations_builds_vulnerability_scans_docker_azure_vm_operations": 0,
+  "format": "m23-r10-debian-repository-trust-v1",
+  "historical_evidence_modifications": false,
+  "host_discovery": {
+    "candidate_path_metadata": [
+      {
+        "path": "/usr/share/keyrings/debian-archive-keyring.gpg",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/usr/share/keyrings/debian-archive-keyring.pgp",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/usr/local/share/keyrings",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/opt/homebrew/share/keyrings",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/opt/local/share/keyrings",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/opt/homebrew/bin/gpgv",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/usr/local/bin/gpgv",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/opt/local/bin/gpgv",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/opt/homebrew/bin/gpg",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/usr/local/bin/gpg",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/opt/local/bin/gpg",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/opt/homebrew/bin/sqv",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/usr/local/bin/sqv",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/opt/homebrew/bin/sq",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/usr/local/bin/sq",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/usr/local/MacGPG2/bin/gpg",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/usr/local/MacGPG2/bin/gpg2",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/usr/local/MacGPG2/bin/gpgv",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/Applications/GPG Keychain.app",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/Library/Frameworks/GPGME.framework",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/opt/homebrew/Cellar/gnupg",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/opt/homebrew/Cellar/gnupg@2.2",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/usr/local/Cellar/gnupg",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/opt/homebrew/Cellar/sequoia-sq",
+        "present": false,
+        "symlink": false
+      },
+      {
+        "path": "/opt/homebrew/Cellar/sequoia-sqv",
+        "present": false,
+        "symlink": false
+      }
+    ],
+    "personal_keyring_access_or_import": false,
+    "scope": "PATH and explicitly listed common host locations only; not an exhaustive host search",
+    "system_trust_store_changes": false,
+    "verifier_paths": {
+      "gpg": null,
+      "gpg2": null,
+      "gpgv": null,
+      "sq": null,
+      "sqv": null
+    }
+  },
+  "input_bindings": {
+    "/Users/privilege/Desktop/GitHub_repository/enterprise-azure-agentic-ai-claims-processing/artifacts/m23-b2d-r4-_p7rg8ny/layer-sha256-37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41.tar.gz": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 29856132,
+      "sha256": "37fb86c2a767b88d500c6872195f88078f64765fe0d2f9cc375cc2efbd4c0a41"
+    },
+    "deployment/build_container.py": {
+      "availability": "GIT_TRACKED",
+      "bytes": 8716,
+      "sha256": "be59a34d288eb63bcc60361d28f5375d17f378aeedd20f794bd397919792ee5d"
+    },
+    "deployment/supply_chain.py": {
+      "availability": "GIT_TRACKED",
+      "bytes": 22822,
+      "sha256": "512bc09e7c83e2564685e75f6924c0890a0b672115bd5dc9865e017c53fe566f"
+    },
+    "docs/deployment/m23/r4-trixie-artifact-inventory.json": {
+      "availability": "GIT_TRACKED",
+      "bytes": 4182,
+      "sha256": "e9cadab3476480d71652d247b079ebc41757eef867f8c69acc917d64cf73e930"
+    },
+    "docs/deployment/m23/r4-trixie-artifact-inventory.sha256": {
+      "availability": "GIT_TRACKED",
+      "bytes": 100,
+      "sha256": "2f48e1c7fa55a680658d21ab031158c09f73cc8fad9b4a0ef77138bd9922be4b"
+    },
+    "docs/deployment/m23/r7-agent-framework-licence-reconciliation.json": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 13082,
+      "sha256": "1d12b56806ff9ff7c700b21c31bbd867153622d26ddb65bc888d9e3df28db216"
+    },
+    "docs/deployment/m23/r8-high-cve-applicability.json": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 39039,
+      "sha256": "cd4c84ba0c15eb74c3ba8977ad77c4b85cd9b55d5ab484b5b11e21f7c5721bc6"
+    },
+    "docs/deployment/m23/r9-zlib-acquisition-preflight.json": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 21101,
+      "sha256": "731256cb5ad6d76c9d295488ec62b01045af77c1ec886ccbe75ada8954b45989"
+    },
+    "outputs/deployment/m23-b2d-r4/component-comparison.json": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 24031,
+      "sha256": "1679f907449c8272b84d3e99121527acc43342e4c44c5fdffd6c8de7dafa903f"
+    },
+    "outputs/deployment/m23-b2d-r4/files.json": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 33494,
+      "sha256": "deb2229e5392cf3125275ad5b343cae3f0ca49080061ffc3fec494d9fea418ac"
+    },
+    "outputs/deployment/m23-b2d-r4/filesystem-inventory.json": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 2267846,
+      "sha256": "6f7518df238c6227ba815f149b6af6a378290d41246500140079213e07d11f33"
+    },
+    "outputs/deployment/m23-b2d-r6/endpoints.json": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 23210,
+      "sha256": "c453f651d956d826b38ed3dd4a582c108efc5dadbc4115f449b8a124e569edb7"
+    },
+    "outputs/deployment/m23-b2d-r6/files.json": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 7086,
+      "sha256": "c63c9c9b07c46b9392bd0bfa5c4f3710a91c6b2bfd7fb2241466fc4fbfd4378e"
+    },
+    "outputs/deployment/m23-b2d-r6/raw/debian-archive-keys.html": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 10718,
+      "sha256": "b271f4c351a3b54f6a6be9667bb834809d12ee514055b903ccb06839d274e3e0"
+    },
+    "outputs/deployment/m23-b2d-r6/raw/trixie-InRelease.txt": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 140421,
+      "sha256": "0584fba32e13e0ab8285fb16c27adea1ec03a73669c18702821094fd6ca86675"
+    },
+    "outputs/deployment/m23-b2d-r6/raw/trixie-binary.xz": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 9678380,
+      "sha256": "7778d3e3f303b7ddb8ce0fe7c8d57473a076c6bf2e8f241f75421d2396352498"
+    },
+    "outputs/deployment/m23-b2d-r6/raw/trixie-security-InRelease.txt": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 43409,
+      "sha256": "04571365972ce858df6d8e69808899bbd3eb2c9888669eaf3d825e79216a3576"
+    },
+    "outputs/deployment/m23-b2d-r6/raw/trixie-security-binary.xz": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 305616,
+      "sha256": "b94f61d001779ae6a1d468503a1f4f0045307ca8bac17dc58c7eda9cdf42eb59"
+    },
+    "outputs/deployment/m23-b2d-r6/raw/trixie-security-source.xz": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 268324,
+      "sha256": "571f5ca6b5642fdfb615eac2cac590ad8a4a767c0a4ab59a6804ff6487a62191"
+    },
+    "outputs/deployment/m23-b2d-r6/raw/trixie-source.xz": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 10540436,
+      "sha256": "6002f81f463a2d976d84b34170367cc16da2d60bd0ba9ab9d868d6e1c1a935d9"
+    },
+    "outputs/deployment/m23-b2d-r6/raw/trixie-updates-InRelease.txt": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 47340,
+      "sha256": "72859cf437bc59ec21baebaef3838981a68a5beae8d0adf4bfcc8726d1f4158f"
+    },
+    "outputs/deployment/m23-b2d-r6/raw/trixie-updates-binary.xz": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 1108,
+      "sha256": "eea860c5dea11680e64299adb2736c2367c4235763a66f2b70ca61ce1b51978a"
+    },
+    "outputs/deployment/m23-b2d-r6/raw/trixie-updates-source.xz": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 1400,
+      "sha256": "810077786dba4b427b1f8aa18a6a3e72cf3e4226cd1c52dea02e91de020bdf50"
+    },
+    "outputs/deployment/m23-b2d-r6/zlib-update-proposal.json": {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 3115,
+      "sha256": "31f850c73923185e23beab80791bed65a64d0f0a890791ad7604bab73b9a5c6a"
+    }
+  },
+  "m23_security_gate": "NO_GO",
+  "missing_prerequisites": [
+    "Independently authenticated role-approved Debian keyring/certificate and provenance/enrolment, with trusted validity/revocation evidence",
+    "Approved trusted verifier with independently established binary provenance or authentic independent exact-envelope verification receipt",
+    "Successful cryptographic primary/subkey and Release verification under explicit suite/co-signer policy",
+    "Trusted acquisition-time clock and signed Date/Valid-Until plus main-suite freshness/rollback policy",
+    "R6/R9 complete remediation/database/coverage prerequisites and separate acquisition approval remain required"
+  ],
+  "new_files": [
+    "docs/deployment/m23/stage-b2d-r10-debian-repository-trust.md",
+    "docs/deployment/m23/r10-debian-repository-trust.json"
+  ],
+  "preservation": {
+    "baseline_file_hashes_checked": 549,
+    "head_unchanged": true,
+    "mismatches": [],
+    "original_keyrings_layers_metadata_reports_source_dependencies_and_gates": "UNCHANGED",
+    "six_preexisting_r7_r8_r9_documents": "UNCHANGED",
+    "staged_diff": "EMPTY",
+    "tracked_diff": "EMPTY"
+  },
+  "privilege_escalations": 0,
+  "r7_licence_review": "PENDING_REVIEW",
+  "required_trust_chain": [
+    {
+      "requirement": "Authenticated role-approved Debian primary/certificate/keyring bytes with independent provenance/enrolment; candidate image/page/fingerprint match alone insufficient",
+      "result": "NOT_ESTABLISHED",
+      "stage": "Independent trust anchor"
+    },
+    {
+      "requirement": "Verified primary/self-certification, signing-subkey binding/capability, expiry/revocation, exact signer fingerprints and approved repository role",
+      "result": "NOT_VERIFIED",
+      "stage": "Certification and validity"
+    },
+    {
+      "requirement": "Identified trusted verifier/version/binary provenance or independently authenticated verifier-host receipt bound to exact envelope, keyring, signer, time and status records",
+      "result": "NOT_ESTABLISHED",
+      "stage": "Approved verifier or independent receipt"
+    },
+    {
+      "requirement": "Conforming verification of exact clear-signed InRelease bytes; approved signature/co-signer policy, Suite/Codename/Origin/Label/Architecture and trusted acquisition-time freshness/rollback policy",
+      "result": "NOT_VERIFIED",
+      "stage": "Release signature and signed metadata semantics"
+    },
+    {
+      "requirement": "Authenticated InRelease payload to six exact Packages/Sources descriptors, exact zlib record/closure and future actual binary size/hash",
+      "result": "INTERNAL_HASH_CORRESPONDENCE_ONLY_NOT_AUTHENTICATED",
+      "stage": "Index and package binding"
+    }
+  ],
+  "retained_key_page": {
+    "captured_at": "2026-11-17T14:06:04.237560+00:00",
+    "file": "outputs/deployment/m23-b2d-r6/raw/debian-archive-keys.html",
+    "new_request_or_current_validation": false,
+    "project_trust_anchor_enrolment_or_independent_signature_receipt": false,
+    "sha256": "b271f4c351a3b54f6a6be9667bb834809d12ee514055b903ccb06839d274e3e0",
+    "tls_verification_recorded_at_capture": true,
+    "trixie_primary_fingerprints_correspond": true,
+    "url": "https://ftp-master.debian.org/keys.html"
+  },
+  "retained_release_signature_metadata": [
+    {
+      "file": "outputs/deployment/m23-b2d-r6/raw/trixie-security-InRelease.txt",
+      "kind": "trixie-security",
+      "sha256": "04571365972ce858df6d8e69808899bbd3eb2c9888669eaf3d825e79216a3576",
+      "signature_packets": [
+        {
+          "claimed_issuers": [
+            {
+              "authenticated": false,
+              "key_version": 4,
+              "subpacket_area": "hashed",
+              "type": "issuer_fingerprint",
+              "value": "B0CAB9266E8C3929798B3EEEBDE6D2B9216EC7A8"
+            },
+            {
+              "authenticated": false,
+              "subpacket_area": "unhashed",
+              "type": "issuer_key_id",
+              "value": "BDE6D2B9216EC7A8"
+            }
+          ],
+          "cryptographic_signature_verified": false,
+          "hash_algorithm_id": 8,
+          "public_key_algorithm_id": 1,
+          "signature_type": 1,
+          "signature_version": 4
+        },
+        {
+          "claimed_issuers": [
+            {
+              "authenticated": false,
+              "key_version": 4,
+              "subpacket_area": "hashed",
+              "type": "issuer_fingerprint",
+              "value": "89C87ACEA5DD6B8E6A7068808E9F831205B4BA95"
+            },
+            {
+              "authenticated": false,
+              "subpacket_area": "unhashed",
+              "type": "issuer_key_id",
+              "value": "8E9F831205B4BA95"
+            }
+          ],
+          "cryptographic_signature_verified": false,
+          "hash_algorithm_id": 8,
+          "public_key_algorithm_id": 1,
+          "signature_type": 1,
+          "signature_version": 4
+        }
+      ],
+      "signature_status": "NOT_VERIFIED"
+    },
+    {
+      "file": "outputs/deployment/m23-b2d-r6/raw/trixie-updates-InRelease.txt",
+      "kind": "trixie-updates",
+      "sha256": "72859cf437bc59ec21baebaef3838981a68a5beae8d0adf4bfcc8726d1f4158f",
+      "signature_packets": [
+        {
+          "claimed_issuers": [
+            {
+              "authenticated": false,
+              "key_version": 4,
+              "subpacket_area": "hashed",
+              "type": "issuer_fingerprint",
+              "value": "4CB50190207B4758A3F73A796ED0E7B82643E131"
+            },
+            {
+              "authenticated": false,
+              "subpacket_area": "unhashed",
+              "type": "issuer_key_id",
+              "value": "6ED0E7B82643E131"
+            }
+          ],
+          "cryptographic_signature_verified": false,
+          "hash_algorithm_id": 8,
+          "public_key_algorithm_id": 1,
+          "signature_type": 1,
+          "signature_version": 4
+        },
+        {
+          "claimed_issuers": [
+            {
+              "authenticated": false,
+              "key_version": 4,
+              "subpacket_area": "hashed",
+              "type": "issuer_fingerprint",
+              "value": "B8E5F13176D2A7A75220028078DBA3BC47EF2265"
+            },
+            {
+              "authenticated": false,
+              "subpacket_area": "unhashed",
+              "type": "issuer_key_id",
+              "value": "78DBA3BC47EF2265"
+            }
+          ],
+          "cryptographic_signature_verified": false,
+          "hash_algorithm_id": 8,
+          "public_key_algorithm_id": 1,
+          "signature_type": 1,
+          "signature_version": 4
+        }
+      ],
+      "signature_status": "NOT_VERIFIED"
+    },
+    {
+      "file": "outputs/deployment/m23-b2d-r6/raw/trixie-InRelease.txt",
+      "kind": "trixie",
+      "sha256": "0584fba32e13e0ab8285fb16c27adea1ec03a73669c18702821094fd6ca86675",
+      "signature_packets": [
+        {
+          "claimed_issuers": [
+            {
+              "authenticated": false,
+              "key_version": 4,
+              "subpacket_area": "hashed",
+              "type": "issuer_fingerprint",
+              "value": "4CB50190207B4758A3F73A796ED0E7B82643E131"
+            },
+            {
+              "authenticated": false,
+              "subpacket_area": "unhashed",
+              "type": "issuer_key_id",
+              "value": "6ED0E7B82643E131"
+            }
+          ],
+          "cryptographic_signature_verified": false,
+          "hash_algorithm_id": 8,
+          "public_key_algorithm_id": 1,
+          "signature_type": 1,
+          "signature_version": 4
+        },
+        {
+          "claimed_issuers": [
+            {
+              "authenticated": false,
+              "key_version": 4,
+              "subpacket_area": "hashed",
+              "type": "issuer_fingerprint",
+              "value": "B8E5F13176D2A7A75220028078DBA3BC47EF2265"
+            },
+            {
+              "authenticated": false,
+              "subpacket_area": "unhashed",
+              "type": "issuer_key_id",
+              "value": "78DBA3BC47EF2265"
+            }
+          ],
+          "cryptographic_signature_verified": false,
+          "hash_algorithm_id": 8,
+          "public_key_algorithm_id": 1,
+          "signature_type": 1,
+          "signature_version": 4
+        },
+        {
+          "claimed_issuers": [
+            {
+              "authenticated": false,
+              "key_version": 4,
+              "subpacket_area": "hashed",
+              "type": "issuer_fingerprint",
+              "value": "41587F7DB8C774BCCF131416762F67A0B2C39DE4"
+            },
+            {
+              "authenticated": false,
+              "subpacket_area": "unhashed",
+              "type": "issuer_key_id",
+              "value": "762F67A0B2C39DE4"
+            }
+          ],
+          "cryptographic_signature_verified": false,
+          "hash_algorithm_id": 8,
+          "public_key_algorithm_id": 22,
+          "signature_type": 1,
+          "signature_version": 4
+        }
+      ],
+      "signature_status": "NOT_VERIFIED"
+    }
+  ],
+  "review_status": "PENDING_REVIEW",
+  "reviewer_identity": null,
+  "scope": "LOCAL_RETAINED_PUBLIC_KEY_AND_SIGNATURE_METADATA_ASSESSMENT_ONLY",
+  "security_gates_passed": false,
+  "self_hash_excluded": true,
+  "signature": null,
+  "signature_observation_limits": {
+    "all_signature_statuses": "NOT_VERIFIED",
+    "cryptographic_primary_self_certifications_verified": 0,
+    "cryptographic_release_signatures_verified": 0,
+    "cryptographic_subkey_bindings_verified": 0,
+    "independently_trusted_primaries_established": 0,
+    "matching_checksums_or_issuer_fields_are_authenticity": false,
+    "method": "Bounded static OpenPGP packet metadata parsing and version-4 public-key fingerprint identification, not a signature verifier",
+    "signed_metadata_packet_algorithms": "V4 canonical-text; SHA-256; RSA(1) plus stable EdDSA(22)"
+  },
+  "staging_commits_pushes": false,
+  "trust_store_changes": 0,
+  "verification": {
+    "aggregate_primary_key_packets": 9,
+    "aggregate_subkey_packets": 6,
+    "approved_independent_trust_chain": false,
+    "claimed_issuer_candidate_key_correspondences": 7,
+    "cryptographic_signature_verifications": 0,
+    "frozen_layer_actual_sha256_size_match": true,
+    "index_correspondences_are_not_authenticity": true,
+    "local_document_links": 2,
+    "metadata_correspondence_is_not_authenticity": true,
+    "r9_compressed_index_hash_size_correspondences_rechecked": 6,
+    "recorded_source_file_hash_size_matches": 10,
+    "retained_envelopes": 3,
+    "selected_virtual_public_key_file_hash_size_matches": 7,
+    "signature_packets_structurally_observed": 7,
+    "trixie_armored_binary_key_correspondences": 3,
+    "trixie_primary_fingerprint_correspondences_to_retained_page": 3
+  },
+  "zlib_expected_binding": {
+    "actual_binary_acquired_or_verified": false,
+    "architecture": "amd64",
+    "expected_bytes": 88720,
+    "expected_sha256": "8c27c342230503b73dfde629642c3b352e87b554e06d60cf58772f236a305ceb",
+    "package": "zlib1g",
+    "repository_authentication": "NOT_ESTABLISHED",
+    "version": "1:1.3.dfsg+really1.3.1-1+deb13u1"
+  }
+}
