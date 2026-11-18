@@ -1,0 +1,210 @@
+{
+  "alternative_code_or_configuration_created": false,
+  "application_demonstrations_or_app_imports": 0,
+  "assessment_date": "2026-11-18",
+  "available_metadata": {
+    "app_sandbox": "APPLE_SDK_RECOMMENDED_API; NO_TASK_RUNNER_IMPLEMENTED_OR_VERIFIED",
+    "commands_not_found_on_inspected_path": [
+      "unshare",
+      "bwrap",
+      "firejail",
+      "tart",
+      "qemu-system-aarch64",
+      "qemu-system-x86_64",
+      "prlimit"
+    ],
+    "hardware_virtualization_support": "QUERY_DENIED_UNKNOWN",
+    "hypervisor_framework": true,
+    "virtualization_entitlement": "com.apple.security.virtualization",
+    "virtualization_framework": true,
+    "vmware_fusion": {
+      "backend_mode": "0o4755",
+      "backend_uid": 0,
+      "build": "24995814",
+      "conventional_parent_direct_guest_bundle_count": 1,
+      "current_vendor_support_licence_and_guest_readiness": "UNVERIFIED",
+      "display_only_codesign_warning": "binary contains an invalid entitlements blob. The OS will ignore these entitlements.",
+      "executed": false,
+      "guest_contents_inspected": false,
+      "setuid_backend": true,
+      "signature_trust_verification": "NOT_RUN",
+      "version": "25.0.0"
+    }
+  },
+  "baseline_git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+  "builds_or_installations": 0,
+  "diagnosis": {
+    "denying_profile_or_ancestor": "NOT_IDENTIFIED",
+    "error": "sandbox-exec: sandbox_apply: Operation not permitted",
+    "leading_explanation": "Attempted legacy sandbox initialization inside an already restricted execution context, consistent with local SDK contract",
+    "profile_syntax_independently_proved": false,
+    "resource_limits_causation": "NOT_ESTABLISHED",
+    "retry_or_bypass_attempted": false,
+    "returncode": 71,
+    "verified": "OS refused legacy sandbox policy installation before test program launch"
+  },
+  "docker_or_cloud_operations": 0,
+  "document_bindings": {
+    "README.md": {
+      "bytes": 13413,
+      "sha256": "3adeadd9bf46287866908e872dc5d45fb1a7701933da5b1fb82b51619fd5d83b"
+    }
+  },
+  "external_service_requests": 0,
+  "format": "m24-p3c-isolation-alternative-assessment-v1",
+  "historical_security_decisions": "M22 pending-review restrictions; M23 DEFERRED — SECURITY GATE NO-GO; B1 unconditional refusal unchanged",
+  "host": {
+    "effective_uid": 501,
+    "machine": "arm64",
+    "release": "24.6.0",
+    "sdk_resolved_path": "/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk",
+    "sysname": "Darwin"
+  },
+  "local_links_checked": 3,
+  "local_primary_source_bindings": {
+    "/Applications/VMware Fusion.app/Contents/Info.plist": {
+      "bytes": 12306,
+      "resolved_path": "/Applications/VMware Fusion.app/Contents/Info.plist",
+      "sha256": "32a47e9618c075e75fb289212bdad8877d9fd2c56c5349a9cb91bfebbb4fd104"
+    },
+    "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Virtualization.framework/Headers/VZDiskImageStorageDeviceAttachment.h": {
+      "bytes": 4587,
+      "resolved_path": "/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/System/Library/Frameworks/Virtualization.framework/Versions/A/Headers/VZDiskImageStorageDeviceAttachment.h",
+      "sha256": "25c8a2a05392858f49c68be474a1288eef3df7fc249224c078240d74873c8d6b"
+    },
+    "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Virtualization.framework/Headers/VZSharedDirectory.h": {
+      "bytes": 1068,
+      "resolved_path": "/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/System/Library/Frameworks/Virtualization.framework/Versions/A/Headers/VZSharedDirectory.h",
+      "sha256": "6ed49f42474598808a164c8800c00e300dec9451cd3087f6a2bf186706de8e34"
+    },
+    "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Virtualization.framework/Headers/VZVirtualMachineConfiguration.h": {
+      "bytes": 9157,
+      "resolved_path": "/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/System/Library/Frameworks/Virtualization.framework/Versions/A/Headers/VZVirtualMachineConfiguration.h",
+      "sha256": "6bed91e382a03084348c76446de17212d8b0d9ee6ec26f675931276d97298671"
+    },
+    "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sandbox.h": {
+      "bytes": 3475,
+      "resolved_path": "/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sandbox.h",
+      "sha256": "5baa98c212110d6323f7d73f4b42b0072a4c66a826a46c8bfd8fb850305f9416"
+    },
+    "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/resource.h": {
+      "bytes": 19900,
+      "resolved_path": "/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/sys/resource.h",
+      "sha256": "67b82d1a9c0d5e788bcfed206e5a63d519e9f05879f475e736827e4131959f68"
+    },
+    "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/share/man/man2/execve.2": {
+      "bytes": 9138,
+      "resolved_path": "/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/share/man/man2/execve.2",
+      "sha256": "b9f82f4315cf772693609ec3cd2bf33d83dc00ba4ef51df9c00c2b3f23db59d4"
+    },
+    "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/share/man/man2/fork.2": {
+      "bytes": 4666,
+      "resolved_path": "/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/share/man/man2/fork.2",
+      "sha256": "e9ab8f14990c2aa679887ecb15a317b2f0b37d096c2b3390c9008362a539c428"
+    },
+    "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/share/man/man2/getrlimit.2": {
+      "bytes": 6888,
+      "resolved_path": "/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/share/man/man2/getrlimit.2",
+      "sha256": "8f796b5a816d946dfa8a3e737eeb221033bd10e9411cfb70878cc598b2b7cf6a"
+    },
+    "/usr/share/man/man1/sandbox-exec.1": {
+      "bytes": 1102,
+      "resolved_path": "/usr/share/man/man1/sandbox-exec.1",
+      "sha256": "0d264f72dc6a8e0db5474840f33b512542c469beb109ed146c17055da287336b"
+    },
+    "/usr/share/man/man7/sandbox.7": {
+      "bytes": 2495,
+      "resolved_path": "/usr/share/man/man7/sandbox.7",
+      "sha256": "9043d9296715714f95b4de6c5f88a5436c5cc3b83b62641327212078c5c69b04"
+    },
+    "/usr/share/man/man8/pfctl.8": {
+      "bytes": 19758,
+      "resolved_path": "/usr/share/man/man8/pfctl.8",
+      "sha256": "90e1be935d2ffcbabd540011283165642f77f895138b0f27f1e71bbe116a852b"
+    }
+  },
+  "metadata_queries_denied": [
+    {
+      "command": "ps -o pid=,ppid=,comm= -p <shell> -p <parent>",
+      "elevation_requested": false,
+      "error": "operation not permitted: ps",
+      "exit_code": 127
+    },
+    {
+      "command": "/usr/sbin/sysctl -n kern.hv_support",
+      "elevation_requested": false,
+      "error": "sysctl fmt -1 1024 1: Operation not permitted",
+      "exit_code": 1
+    }
+  ],
+  "new_files": [
+    "docs/milestones/m24-p3c/README.md",
+    "docs/milestones/m24-p3c/verification.json"
+  ],
+  "new_isolation_probes": 0,
+  "p3a_bindings": {
+    "README.md": "41fd49569bc3b3df1ee31223a4cbf2dad9d9341fcd2fa172a2acca0a434c4489",
+    "verification.json": "5f9999ff5076b21e9956e7381a3c67b25dae8a3f16e574edb8e0a76ba03d2a6a"
+  },
+  "p3b_local_receipts": {
+    "bootstrap": {
+      "path": "/private/tmp/m24-p3b-11a6439-20261118/control/bootstrap-result.json",
+      "sha256": "25e924642806d6e62a171201dfc0d2cc28c62ec673d273fd8ce89af3a65e8de0"
+    },
+    "decision": {
+      "path": "/private/tmp/m24-p3b-11a6439-20261118/control/decision.json",
+      "sha256": "7eea565d6270811d5d122f5f93447e6a02bc4d1ddf63eb053c7de6cec845dbb0"
+    },
+    "profile": {
+      "path": "/private/tmp/m24-p3b-11a6439-20261118/control/bootstrap.sb",
+      "sha256": "c60efe20fa6f8cb61a14badd065343c77a646ba2ecbf0b7c1861da9886cf6fb9"
+    }
+  },
+  "preservation": {
+    "database_metadata_records_match": 2,
+    "file_hashes_checked": 574,
+    "file_hashes_match": 574,
+    "head_unchanged": true,
+    "p3b_receipts_preserved": true,
+    "staged_diff": "EMPTY",
+    "tracked_diff": "EMPTY"
+  },
+  "privilege_escalations": 0,
+  "recommendation": "NO_GO_FOR_G1_OR_ALTERNATIVE_IMPLEMENTATION_IN_P3C; REVIEW_APP_SANDBOX_CANDIDATE_SEPARATELY",
+  "recommended_candidate": {
+    "actual_child_inheritance_proven": false,
+    "implementation_authorized": false,
+    "implemented": false,
+    "mechanism": "Normal-user signed App Sandbox host runner in separately approved host launch context",
+    "network_denial_proven": false,
+    "per_invocation_seconds": 300,
+    "readonly_filesystem_proven": false,
+    "required_scratch_cap_bytes": 1073741824,
+    "resource_bounds_proven": false,
+    "runtime_or_python_packaging_proven": false,
+    "session_seconds": 1800
+  },
+  "resource_control_assessment": {
+    "aggregate_one_gibibyte_scratch": "UNRESOLVED; RLIMIT_FSIZE_AND_POLLING_NOT_SUFFICIENT_PROOF",
+    "aggregate_session_wall_time": "NEEDS_INDEPENDENT_CONTROLLER",
+    "cpu_file_size_file_descriptors_core": "DOCUMENTED_PER_PROCESS_HARD_LIMITS; NOT_EXERCISED",
+    "darwin_rss": "NOT_A_PROVEN_HARD_AGGREGATE_MEMORY_QUOTA",
+    "exec_inheritance": "DOCUMENTED; NOT_EXERCISED",
+    "nproc": "USER_WIDE; NOT_TASK_ISOLATION"
+  },
+  "scope": "ASSESSMENT_ONLY_NO_ALTERNATIVE_IMPLEMENTATION",
+  "self_hash_excluded": true,
+  "staging_commits_pushes": false,
+  "unsupported_or_blocked": [
+    "Legacy sandbox-exec and sandbox_init deprecated; bootstrap policy installation refused",
+    "No ready task-specific signed App Sandbox runner or reviewed entitlement/descriptor/path inventory",
+    "Hard aggregate scratch cap and independent bounded supervisor unresolved",
+    "VM without network adapter does not deny guest loopback/listeners",
+    "Virtualization entitlement and usable hardware not verified",
+    "Installed Fusion setuid backend and entitlement display warning require separate review; no unprivileged route assumed",
+    "Guest OS and pinned runtime readiness unverified",
+    "Python hooks, chmod, clean environment, hash checks and rlimits alone do not satisfy P3A",
+    "Administrative firewall/account/mount changes and privilege escalation outside scope"
+  ],
+  "vm_launches": 0
+}

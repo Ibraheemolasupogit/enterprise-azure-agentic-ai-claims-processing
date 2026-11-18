@@ -1,0 +1,247 @@
+{
+  "application_imports_demonstrations_tests_or_sdk_calls": 0,
+  "assessment_date": "2026-11-18",
+  "baseline_git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+  "dependency_changes": false,
+  "document_bindings": {
+    "README.md": {
+      "bytes": 24726,
+      "sha256": "53a4b2e3d89daff8010685b9451ef72b77ba9234d6675cee53150fd8e111c12f"
+    }
+  },
+  "entry_point_symbol_count": 13,
+  "entry_point_symbols_checked": {
+    "src/claims_ai/api/__main__.py": [
+      "offline_report"
+    ],
+    "src/claims_ai/api/fixtures.py": [
+      "demo_application"
+    ],
+    "src/claims_ai/outcomes/demo.py": [
+      "approved_fixture"
+    ],
+    "src/claims_ai/quality_ops/operations.py": [
+      "exercise",
+      "api_review_probe",
+      "mcp_probe",
+      "outcome_probes"
+    ],
+    "src/claims_ai/reviewer_ui/__main__.py": [
+      "demonstrate",
+      "snapshot"
+    ],
+    "src/claims_ai/security_hardening/evaluation.py": [
+      "restart_observation",
+      "evaluate"
+    ],
+    "src/claims_ai/workflow/__main__.py": [
+      "offline_report",
+      "demo_request"
+    ]
+  },
+  "evidence_regeneration": false,
+  "existing_cli_flag_contracts": [
+    {
+      "execution": "NOT_RUN",
+      "flags": [
+        "--output",
+        "--spec-root"
+      ],
+      "module": "claims_ai.workflow"
+    },
+    {
+      "execution": "NOT_RUN",
+      "flags": [
+        "--openapi-output",
+        "--output",
+        "--spec-root"
+      ],
+      "module": "claims_ai.api"
+    },
+    {
+      "execution": "NOT_RUN",
+      "flags": [
+        "--html-dir",
+        "--output",
+        "--spec-root"
+      ],
+      "module": "claims_ai.reviewer_ui"
+    },
+    {
+      "execution": "NOT_RUN",
+      "flags": [
+        "--candidate-root",
+        "--operations-root",
+        "--output",
+        "--spec-root",
+        "--telemetry-output"
+      ],
+      "module": "claims_ai.quality_ops"
+    },
+    {
+      "execution": "NOT_RUN",
+      "flags": [
+        "--fixture-root",
+        "--output"
+      ],
+      "module": "claims_ai.security_hardening"
+    }
+  ],
+  "existing_test_function_count": 12,
+  "existing_test_functions_checked": [
+    "tests/test_api.py::test_early_blocked_workflow_has_status_but_no_invented_review_recommendation",
+    "tests/test_api.py::test_supervisor_routing_cannot_be_bypassed_through_http",
+    "tests/test_api.py::test_redacted_structured_api_logs_never_include_credentials_payloads_or_errors",
+    "tests/test_reviewer_ui.py::test_snapshot_redacts_csrf_and_tickets",
+    "tests/test_security_hardening.py::test_real_api_ui_revocation_and_duplicate_receipts",
+    "tests/test_security_hardening.py::test_gateway_lifecycle_rechecked_on_genuine_sdk_requests",
+    "tests/test_security_hardening.py::test_corrupt_or_unavailable_store_never_recovers_authority",
+    "tests/test_outcomes.py::test_corrupted_projections_and_runtime_are_rejected_without_repair",
+    "tests/test_outcomes.py::test_schema_and_file_compatibility_fail_closed",
+    "tests/test_quality_ops_operational.py::test_actual_sdk_records_do_not_contain_domain_or_identity_payloads",
+    "tests/test_quality_ops_operational.py::test_zero_trace_sampling_cannot_remove_business_audit",
+    "tests/test_quality_ops_operational.py::test_storage_failure_and_export_failure_cannot_acknowledge_partial_outcome"
+  ],
+  "fixture_ids_checked": [
+    "valid-v1",
+    "missing-estimate",
+    "gradual-wear-exclusion",
+    "high-value-threshold"
+  ],
+  "format": "m24-p2-documentation-verification-v1",
+  "inspected_input_bindings": {
+    "data/evaluation/m22/v1/candidate-manifest.json": "42e0eb827c26cbd3202c127f777aef6cd17c59e543548ff5b368f1008a361d8b",
+    "data/evaluation/m22/v1/reviews/templates.json": "a3f2b771ec8d6cf268959af1acedef5588817cfa0d53788485085024c3a8fd68",
+    "data/rules/motor/v1/scenarios.json": "b047e92386ef6eb8066388fe8f7d1db099b83d090915cde9a076862ac7441cef",
+    "deployment/build_container.py": "be59a34d288eb63bcc60361d28f5375d17f378aeedd20f794bd397919792ee5d",
+    "deployment/supply_chain.py": "512bc09e7c83e2564685e75f6924c0890a0b672115bd5dc9865e017c53fe566f",
+    "src/claims_ai/api/__main__.py": "d6092b01862fc35215aa4d80358997e994d3fcaaf7125f4c31dac5ea77d8b92a",
+    "src/claims_ai/api/fixtures.py": "e439b4e48f6de688a016253e362284cf6d8cf38b0dc1cd245f5100a9f0efe307",
+    "src/claims_ai/outcomes/demo.py": "11c82ed47955f6d44217bd8451c6f3a85b44c6c67ff574e0298a06270401fc4c",
+    "src/claims_ai/quality_ops/__main__.py": "6338bdf1c68fe8d35a930d56224569d0c996d70a1e628c61083cf0186c7a4328",
+    "src/claims_ai/quality_ops/operations.py": "1cac0cf66c6ee458c033aa0cfba8e6783b316436f22a58f5f8b4b60e19896e37",
+    "src/claims_ai/quality_ops/runner.py": "e473b6a41227e7ee74d63c8e3cb63f0478bafe92ebcbdfb29257aa473662a05e",
+    "src/claims_ai/quality_ops/telemetry.py": "5eac7202c57de4e34937d82f11266b77f5a6e84ad0368f1dffb58f200f2e523f",
+    "src/claims_ai/reviewer_ui/__main__.py": "6e509e5c00434b1de713623569dd0ae2d75c851fcb2b1826acea8a7a9a27768d",
+    "src/claims_ai/security_hardening/__main__.py": "f5246120273e95021a4a554f16a34b9abc1d3b9e82ecf4978202cc680a5e1764",
+    "src/claims_ai/security_hardening/evaluation.py": "294f84f8bb6d71f4911ea782c24c3eaf4bd2e5b12ec0d4e6282cf0d5be1db07d",
+    "src/claims_ai/workflow/__main__.py": "cb056a04b87a01ac394cc2434a3994452c89d13ea2e2e7584d1eb10d9aabd51c",
+    "tests/test_api.py": "4d5df57a24330be3f6c45c5c361a2ff83452c81a0637b95e8a81f060864d744f",
+    "tests/test_outcomes.py": "7714bb4f585db1e490be1a0cf28083ee3bfcb0fcbc1e8b555b327a0160e78827",
+    "tests/test_quality_ops_operational.py": "8447c9e9689bfbf21cbf50710d889c218487336b24f2bace479be1d6d15fce04",
+    "tests/test_reviewer_ui.py": "758b0ff77ac49ed9df39e073d9bcc6c96fbc45d8aae25191984065466718f8fb",
+    "tests/test_security_hardening.py": "419d42f46391902bd50478900c657343f09ebab210f5c325317cd584219f1a74"
+  },
+  "local_document_links_checked": 17,
+  "network_docker_build_azure_operations": 0,
+  "new_files": [
+    "docs/milestones/m24-p2/README.md",
+    "docs/milestones/m24-p2/verification.json"
+  ],
+  "p1_document_bindings": {
+    "README.md": {
+      "bytes": 60365,
+      "sha256": "53159a9d250f6dab44961e50810f6345d307143fe2ccb53fd4fc849dca99ad56"
+    },
+    "catalogue.json": {
+      "bytes": 55790,
+      "sha256": "adc2fcba5f0129a96683c4071452f1861f057fa457bef37f78dd30b561253d21"
+    },
+    "evidence-hashes.json": {
+      "bytes": 119072,
+      "sha256": "2abb6072d5199a72dba797319491bc4fbfc2930ae567eed5f890701c7b9b0573"
+    },
+    "verification.json": {
+      "bytes": 2711,
+      "sha256": "cefec2838c82b43535573e1ee3d707fc7042c99ba867da0f915de17759556bae"
+    }
+  },
+  "p1_existing_file_hashes_reverified": 154,
+  "p1_gap_register": "G01-G08 remain open; no new acceptance or missing receipt inferred",
+  "p1_historical_expected_pins_reverified": 39,
+  "p1_reference_ids_checked": [
+    "A001",
+    "A011",
+    "A021",
+    "A023",
+    "A024",
+    "A025",
+    "A026",
+    "A027",
+    "A028",
+    "A029",
+    "A030",
+    "A031",
+    "A034",
+    "A078",
+    "A084",
+    "A092",
+    "A107",
+    "A117",
+    "A119",
+    "A122",
+    "A124",
+    "A125",
+    "A130",
+    "A131",
+    "A132",
+    "A137",
+    "A138",
+    "A142",
+    "A143",
+    "A146",
+    "A148",
+    "A150",
+    "A151",
+    "A153",
+    "A154",
+    "A157",
+    "A159",
+    "A165",
+    "A170",
+    "A175"
+  ],
+  "p3_recommendation": "CONDITIONAL_GO_FOR_SEPARATELY_AUTHORISED_OFFLINE_EXECUTION_ONLY",
+  "preservation": {
+    "mismatches": [],
+    "preexisting_git_tracked_untracked_and_p1_file_paths": 564,
+    "prior_four_untracked_p1_documents_preserved": true,
+    "sha256_matches": 564,
+    "tracked_worktree_diff": "EMPTY"
+  },
+  "scenario_design_coverage": {
+    "count": 6,
+    "execution_status": "NOT_RUN",
+    "ids": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06"
+    ]
+  },
+  "scope": "DESIGN_AND_DOCUMENTATION_ONLY",
+  "security_boundaries": {
+    "b1_unconditional_build_refusal": "STATICALLY_VERIFIED_UNCHANGED",
+    "m12_timing_limitations": "RETAINED",
+    "m19_corrected_baseline": {
+      "FAIL": 0,
+      "NOT_TESTED": 8,
+      "PASS": 80
+    },
+    "m20_api_ui_recommendation_to_outcome_handoff": "NOT_AUTOMATIC; EXPLICIT_SEPARATE_SYNTHETIC_HOST_INPUT",
+    "m22_independent_quality": "NOT_TESTED",
+    "m22_no_reviewer_identities_approvals_or_signatures_added": true,
+    "m22_pending_review_cases": 60,
+    "m23": "DEFERRED — SECURITY GATE NO-GO",
+    "m8_failure_ids": [
+      "Q-007",
+      "Q-012",
+      "Q-015",
+      "Q-029"
+    ]
+  },
+  "self_hash_excluded": true,
+  "staging_commits_pushes": false
+}

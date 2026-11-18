@@ -1,0 +1,1072 @@
+{
+  "baseline_git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+  "catalogue_documents_are_not_part_of_baseline_commit": true,
+  "container_cloud_or_independent_quality_acceptance": false,
+  "coverage": 23,
+  "entries": [
+    {
+      "blockers_and_approval_requirements": [
+        "Owner review before implementation or deployment; no independent operational acceptance established."
+      ],
+      "capability": "Fictional motor-claims charter, target architecture, security/evaluation/deployment plans and repository exclusions; documentation only.",
+      "capability_status": "DOCUMENTED_ONLY",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [
+        "2026-10-30"
+      ],
+      "evidence_availability": [
+        "GIT_TRACKED"
+      ],
+      "evidence_refs": [],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A037",
+        "A036",
+        "A033",
+        "A080"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "2026-10-30: nine-document/file/link/whitespace checks reported; no runtime tests.",
+      "limitations": [
+        "Fictional operating model and provisional business targets are not observed insurer outcomes.",
+        "Architecture is a target; later delivered scopes must be read separately."
+      ],
+      "milestone": 1,
+      "milestone_records": [
+        "A051"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [
+        "G01"
+      ],
+      "title": "Charter and architecture baseline",
+      "validation_environment": "Documentation/file checks; no runtime environment or executable verification claimed.",
+      "validation_status_source": "docs/milestones/milestone-1.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "Real identity, policy approval, persistence and external adapters require separately scoped implementation/review."
+      ],
+      "capability": "Typed synthetic contracts, immutable validation, lifecycle/human-supervisor guards, local settings/redacted logging and adapter protocols.",
+      "capability_status": "IMPLEMENTED_WITHIN_RECORDED_OFFLINE_SCOPE",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [
+        "2026-10-30"
+      ],
+      "evidence_availability": [
+        "GIT_TRACKED"
+      ],
+      "evidence_refs": [],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A145",
+        "A140",
+        "A134",
+        "A141",
+        "A147",
+        "A168"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "2026-10-30: 115 source and 115 independent-wheel tests, Ruff/mypy and package inclusion/rebuild checks reported.",
+      "limitations": [
+        "Library contracts and trusted assertions are not an API, authenticated roles, live processing or durable transactions.",
+        "Hashes in domain metadata are not original-byte verification; serialisation is not redaction."
+      ],
+      "milestone": 2,
+      "milestone_records": [
+        "A063"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [
+        "G02"
+      ],
+      "title": "Python engineering foundation",
+      "validation_environment": "macOS, Python 3.12.8, Pydantic 2.11.7; original venv reused host packages. Independent project-wheel checks shared host dependencies.",
+      "validation_status_source": "docs/milestones/milestone-2.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "Named operating-model roles are responsibilities, not staffed reviewers or accepted risks."
+      ],
+      "capability": "Requirements FR-001–FR-015/NFR-001–NFR-009, fictional process/roles, traceability, risks and deterministic/human authority ADR.",
+      "capability_status": "DOCUMENTED_ONLY",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [
+        "2026-10-30"
+      ],
+      "evidence_availability": [
+        "GIT_TRACKED"
+      ],
+      "evidence_refs": [],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A038",
+        "A040",
+        "A039",
+        "A020"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "2026-10-30: 14 documents, 157 links/anchors and 60 symbols checked; no new runtime test run. M2's 115-test result is historical.",
+      "limitations": [
+        "Planned verification specifications do not establish requirement satisfaction or regulatory compliance."
+      ],
+      "milestone": 3,
+      "milestone_records": [
+        "A071"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [
+        "G03"
+      ],
+      "title": "Business process and architecture refinement",
+      "validation_environment": "Static document/AST/file checks; no new runtime validation environment claimed.",
+      "validation_status_source": "docs/milestones/milestone-3.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "Independent label/domain/policy review and a genuinely held-out quality scope are outstanding."
+      ],
+      "capability": "Seeded PDF/PNG/native-text authoring, 12 development scenarios, draft policies and source-linked authored labels.",
+      "capability_status": "IMPLEMENTED_WITHIN_RECORDED_OFFLINE_SCOPE",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [
+        "2026-10-30"
+      ],
+      "evidence_availability": [
+        "GIT_TRACKED"
+      ],
+      "evidence_refs": [
+        "A014",
+        "A013"
+      ],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A135",
+        "A012",
+        "A160"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "2026-10-30: 149 source tests; two 153-file generations equal; PDFKit inspected 65 PDFs and existing Pillow inspected ten PNGs, as historically reported.",
+      "limitations": [
+        "Single-author development labels, simple layouts and schematic images are not independent holdout truth, OCR performance or policy approval.",
+        "Case documents remain quarantined; coverage outcomes remain null."
+      ],
+      "milestone": 4,
+      "milestone_records": [
+        "A072"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [
+        "G04"
+      ],
+      "title": "Synthetic motor claims dataset and ground truth",
+      "validation_environment": "Python 3.12.8/Pydantic 2.11.7; native macOS PDFKit and pre-existing Pillow for artifact inspection.",
+      "validation_status_source": "docs/milestones/milestone-4.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "Provider implementation/calls and independent label/quality acceptance require separate scope and approval."
+      ],
+      "capability": "Versioned extraction/scoring contracts, denominators/cohorts, clean failures and a deterministic oracle fixture CLI.",
+      "capability_status": "IMPLEMENTED_WITHIN_RECORDED_OFFLINE_SCOPE",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [],
+      "evidence_availability": [
+        "GIT_TRACKED",
+        "IGNORED_LOCAL_ONLY"
+      ],
+      "evidence_refs": [
+        "A093",
+        "A094"
+      ],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A133",
+        "A079",
+        "A158"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "202 tests and lint/type/package checks reported; source/wheel fixture reports reproduced. All extraction responses are SIMULATED; latency/usage remain null.",
+      "limitations": [
+        "Oracle labels do not establish live parser/provider quality, cost or latency; unsupported images are excluded explicitly.",
+        "The phrase 'approved annotations' in M5 preservation prose is not evidence of independent approval; M4 explicitly identifies authored development labels."
+      ],
+      "milestone": 5,
+      "milestone_records": [
+        "A073"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [],
+      "title": "Document intelligence benchmark foundation",
+      "validation_environment": "Recorded reuse: Python 3.12.8/Pydantic 2.11.7/pytest 8.4.1; OS is not independently restated in this milestone.",
+      "validation_status_source": "docs/milestones/milestone-5.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "Authenticated intake/scan/provider assertions and operational integration require separate approval."
+      ],
+      "capability": "Deterministic typed mapping, source/hash/ownership checks, normalisation, quarantine/quality holds and guarded local evidence history/admission.",
+      "capability_status": "IMPLEMENTED_WITHIN_RECORDED_OFFLINE_SCOPE",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [],
+      "evidence_availability": [
+        "GIT_TRACKED",
+        "IGNORED_LOCAL_ONLY"
+      ],
+      "evidence_refs": [
+        "A099"
+      ],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A136",
+        "A035",
+        "A161"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "251 tests and lint/type/package checks reported. Frozen fixture report: 82 attempts, 75 quarantined, seven duplicates, 334 proposals, zero accepted-history records and no case admission.",
+      "limitations": [
+        "Generated single-page source verification is not general PDF/OCR, authentic scan certification or operational admission.",
+        "Caller-held history is not durable service storage."
+      ],
+      "milestone": 6,
+      "milestone_records": [
+        "A074"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [],
+      "title": "Structured claims evidence processing",
+      "validation_environment": "Recorded reuse: Python 3.12.8/Pydantic 2.11.7; existing simulated extraction fixtures, no live scanner/provider.",
+      "validation_status_source": "docs/milestones/milestone-6.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "Policy-owner approval, authentic source/register authority and independent relevance evaluation remain required."
+      ],
+      "capability": "Draft-policy parsing, deterministic lexical chunks/citations, exact case/policy/version/date filters and explicit abstention.",
+      "capability_status": "IMPLEMENTED_WITHIN_RECORDED_OFFLINE_SCOPE",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [],
+      "evidence_availability": [
+        "GIT_TRACKED",
+        "IGNORED_LOCAL_ONLY"
+      ],
+      "evidence_refs": [
+        "A102"
+      ],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A139",
+        "A032",
+        "A164"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "296 tests and lint/type/package checks reported; 36 queries, 20 retrieved/16 abstained, 110 chunks and 20 returned citation checks. These are mechanics counts, not independent quality.",
+      "limitations": [
+        "No approved policy register/resolver, semantic contradictions, hybrid search, embeddings or signed publication."
+      ],
+      "milestone": 7,
+      "milestone_records": [
+        "A075"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [],
+      "title": "Policy knowledge ingestion and retrieval foundation",
+      "validation_environment": "Recorded reuse: Python 3.12.8/Pydantic 2.11.7; local authored PDF/source pairs and unsigned snapshots.",
+      "validation_status_source": "docs/milestones/milestone-7.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "Independent relevance/holdout review and any new release thresholds require explicit approval; preserve the four failures."
+      ],
+      "capability": "Frozen authored query expectations, separate input/label paths, lexical metrics/cohorts and honest per-query failure reports.",
+      "capability_status": "IMPLEMENTED_WITHIN_RECORDED_OFFLINE_SCOPE",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [],
+      "evidence_availability": [
+        "GIT_TRACKED",
+        "IGNORED_LOCAL_ONLY"
+      ],
+      "evidence_refs": [
+        "A118",
+        "A010"
+      ],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A149",
+        "A082",
+        "A171"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "325 tests reported. Preserved OFFLINE_LEXICAL result: 26/30 authored expectations met; Q-007/Q-012/Q-015/Q-029 remain failures. Fourteen citations/version bindings checked, not general retrieval accuracy.",
+      "limitations": [
+        "Authored labels are not independently adjudicated; synonym miss, two false-positive no-answer cases and an irrelevant extra hit remain.",
+        "Quoted injection text is inert data, not observed command execution."
+      ],
+      "milestone": 8,
+      "milestone_records": [
+        "A076"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [],
+      "title": "Policy retrieval and RAG evaluation foundation",
+      "validation_environment": "Recorded reuse: Python 3.12.8/Pydantic 2.11.7; authored native-text lexical evaluation, no live model/search service.",
+      "validation_status_source": "docs/milestones/milestone-8.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "Real policy/rule publication and semantic labels require independent owner/domain review."
+      ],
+      "capability": "Six versioned provisional rules, exact source/policy/evidence binding, four-state findings and non-binding integer-pence illustrations.",
+      "capability_status": "IMPLEMENTED_WITHIN_RECORDED_OFFLINE_SCOPE",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [
+        "2026-07-01"
+      ],
+      "evidence_availability": [
+        "GIT_TRACKED",
+        "IGNORED_LOCAL_ONLY"
+      ],
+      "evidence_refs": [
+        "A120",
+        "A011"
+      ],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A151",
+        "A022",
+        "A173"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "385 tests reported; 23 scenarios/138 findings; zero final outcomes and zero settlement authority. FAIL rule findings are not failed software tests or approved claim denials.",
+      "limitations": [
+        "Policy parameters, cause/category labels and financial illustrations remain fictional/unapproved; no operational Assessment or autonomous decision is produced."
+      ],
+      "milestone": 9,
+      "milestone_records": [
+        "A077"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [],
+      "title": "Deterministic motor claims rules foundation",
+      "validation_environment": "Recorded reuse: Python 3.12.8/Pydantic 2.11.7; supplied synthetic scan/reviewer/classification assertions.",
+      "validation_status_source": "docs/milestones/milestone-9.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "Live provider/model calls, cost scope and independent quality require separate authorisation."
+      ],
+      "capability": "Actual pinned SDK with one bounded advisory assistant, typed results, read-only packet tool and scripted offline client.",
+      "capability_status": "IMPLEMENTED_WITHIN_RECORDED_OFFLINE_SCOPE",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [],
+      "evidence_availability": [
+        "GIT_TRACKED",
+        "IGNORED_LOCAL_ONLY"
+      ],
+      "evidence_refs": [
+        "A090",
+        "A127"
+      ],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A131",
+        "A018",
+        "A156"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "422 source and independent-wheel tests reported; deterministic SDK report. M5–M9 later-environment reruns change runtime metadata, not the preserved original files.",
+      "limitations": [
+        "Real SDK execution with SIMULATED client responses is not live reasoning, prompt-injection resistance or extraction quality.",
+        "No autonomous outcomes; human authority unchanged."
+      ],
+      "milestone": 10,
+      "milestone_records": [
+        "A052"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [],
+      "title": "Microsoft Agent Framework foundation",
+      "validation_environment": "Isolated Python 3.12.8, Agent Framework 1.23.0, Pydantic 2.14.2, pytest 8.4.2; shared pinned dependencies for wheel verification.",
+      "validation_status_source": "docs/milestones/milestone-10.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "Authenticated service identity, distribution/egress and live-provider use require separate review."
+      ],
+      "capability": "Three real SDK read-only functions over verified evidence, exact clauses and provisional findings; case-bound host grants and bounded dispatch.",
+      "capability_status": "IMPLEMENTED_WITHIN_RECORDED_OFFLINE_SCOPE",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [],
+      "evidence_availability": [
+        "GIT_TRACKED",
+        "IGNORED_LOCAL_ONLY"
+      ],
+      "evidence_refs": [
+        "A089"
+      ],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A130",
+        "A023",
+        "A155"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "478 source and independent-wheel tests reported; ten-case scripted SDK demonstration with successful and safe-error controls.",
+      "limitations": [
+        "Host grants are synthetic assertions, not an authentication service; no policy activation, remote gateway or claim authority."
+      ],
+      "milestone": 11,
+      "milestone_records": [
+        "A053"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [],
+      "title": "Governed agent tools and contract testing",
+      "validation_environment": "Isolated Python 3.12.8, Agent Framework 1.23.0/msgspec 0.22.0/Pydantic 2.14.2; no live model.",
+      "validation_status_source": "docs/milestones/milestone-11.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "Timing/timeout semantics must not be weakened for a demo; new state must use current runtime/context. Durable/cloud workflow changes require separate scope."
+      ],
+      "capability": "Six host-controlled stages, bounded retry/cancellation, immutable correlated records and caller-held resumable checkpoints.",
+      "capability_status": "IMPLEMENTED_WITHIN_RECORDED_OFFLINE_SCOPE",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [],
+      "evidence_availability": [
+        "GIT_TRACKED",
+        "IGNORED_LOCAL_ONLY"
+      ],
+      "evidence_refs": [
+        "A125",
+        "A126"
+      ],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A154",
+        "A021",
+        "A175"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "531 source and independent-wheel tests reported. Frozen matching reports are historical observations, not a guarantee of repeated byte identity under timing variation.",
+      "limitations": [
+        "Cooperative timing can add a retry/history difference despite the same safe terminal state; M13 records a 575-pass/one-failure wheel attempt caused by this limit.",
+        "Checkpoints are caller-held/unsigned; no queue-wait deadline, hard preemption, cloud durability or operational assessment/outcome."
+      ],
+      "milestone": 12,
+      "milestone_records": [
+        "A054"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [],
+      "title": "Deterministic claims workflow orchestration",
+      "validation_environment": "Isolated Python 3.12.8, Agent Framework 1.23.0/Pydantic 2.14.2; real cooperative wall-clock deadlines and SIMULATED model client.",
+      "validation_status_source": "docs/milestones/milestone-12.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "Remote transport/identity/gateway and hostile-code isolation require separate scope and evidence."
+      ],
+      "capability": "Actual pinned MCP stdio server, three governed reads, native/framework clients and server-side scope/budget guards.",
+      "capability_status": "IMPLEMENTED_WITHIN_RECORDED_OFFLINE_SCOPE",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [],
+      "evidence_availability": [
+        "GIT_TRACKED",
+        "IGNORED_LOCAL_ONLY"
+      ],
+      "evidence_refs": [
+        "A105",
+        "A128"
+      ],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A143",
+        "A027",
+        "A167"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "576 source/wheel tests in final run; prior 575-pass/one-M12-timing-failure run explicitly retained in narrative. Native MCP and Agent Framework discovery/calls are real.",
+      "limitations": [
+        "Trusted launcher/context and OS are the trust root; no signed user authentication, APIM, resource sandbox or live model.",
+        "M12 timing sensitivity remains."
+      ],
+      "milestone": 13,
+      "milestone_records": [
+        "A055"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [],
+      "title": "Governed MCP server foundation",
+      "validation_environment": "Python 3.12.8, MCP 2.2.0/Agent Framework 1.23.0, local stdio and synthetic host grant; no network service.",
+      "validation_status_source": "docs/milestones/milestone-13.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "Any socket/container/cloud verification and real gateway/identity integration require separate approval."
+      ],
+      "capability": "Actual Streamable HTTP over governed reads, synthetic gateway identity/host binding, static XML/Bicep and fail-closed protocol checks.",
+      "capability_status": "IMPLEMENTED_WITHIN_RECORDED_OFFLINE_SCOPE",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [],
+      "evidence_availability": [
+        "GIT_TRACKED",
+        "IGNORED_LOCAL_ONLY"
+      ],
+      "evidence_refs": [
+        "A104",
+        "A103",
+        "A108"
+      ],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A142",
+        "A083",
+        "A030",
+        "A166"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "Initial 629 source/wheel, corrected 644 source, final 69 focused source and 645 installed-wheel tests are separate snapshots; no final full-source 645 run is invented. Supplied real TCP report is historical source-matched evidence.",
+      "limitations": [
+        "Pre-correction ASGI report is not evidence of corrected runtime; older TCP report does not verify later identity/current-code changes.",
+        "No independent closed-port/shutdown-health probe, real Entra/APIM/TLS or cloud enforcement."
+      ],
+      "milestone": 14,
+      "milestone_records": [
+        "A056"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [],
+      "title": "MCP HTTP transport and APIM governance foundation",
+      "validation_environment": "Python 3.12.8/MCP 2.2.0/Agent Framework 1.23.0; ASGI inside sandbox, supplied loopback report from a permitted external terminal. No new TCP test in P1.",
+      "validation_status_source": "docs/milestones/milestone-14.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "Canonical real identity/assignment and durable operational outcome integration require separate approval; never promote M15 actions automatically."
+      ],
+      "capability": "Assigned synthetic advisory queue/detail, reviewer/supervisor separation, stale/CAS checks and immutable process-local review audit.",
+      "capability_status": "IMPLEMENTED_WITHIN_RECORDED_OFFLINE_SCOPE",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [],
+      "evidence_availability": [
+        "GIT_TRACKED",
+        "IGNORED_LOCAL_ONLY"
+      ],
+      "evidence_refs": [
+        "A119"
+      ],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A137",
+        "A026",
+        "A162"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "729 source and 729 independent-wheel tests, 84 focused; six report scenarios/24 accepted audit events are reported.",
+      "limitations": [
+        "Recommendation approval does not create an operational M20 outcome or close a claim.",
+        "Unsigned process-local audit/session state is volatile; denial telemetry and real human identity remain gaps."
+      ],
+      "milestone": 15,
+      "milestone_records": [
+        "A057"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [],
+      "title": "Governed human review workflow",
+      "validation_environment": "Python 3.12.8, Agent Framework 1.23.0/MCP 2.2.0/Pydantic 2.14.2; synthetic identity and in-memory state.",
+      "validation_status_source": "docs/milestones/milestone-15.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "Real host/identity/persistence integrations and any operational authority need separate review."
+      ],
+      "capability": "Registered-bundle intake, bounded ASGI processing/status/advisory and assigned recommendation-review endpoints with idempotency/CAS and safe errors.",
+      "capability_status": "IMPLEMENTED_WITHIN_RECORDED_OFFLINE_SCOPE",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [
+        "2026-11-10"
+      ],
+      "evidence_availability": [
+        "GIT_TRACKED",
+        "IGNORED_LOCAL_ONLY"
+      ],
+      "evidence_refs": [
+        "A092",
+        "A091",
+        "A109"
+      ],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A132",
+        "A025",
+        "A157"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "2026-11-10: 814 source/814 independent-wheel tests; 85 API cases; actual OpenAPI 3.1.0 with nine paths and 242 resolved references. Fourteen demo scenarios.",
+      "limitations": [
+        "No TCP/browser/TLS/APIM/live Entra, arbitrary uploads or cloud readiness.",
+        "Stores/tombstones are process-local; M15 recommendation actions do not commit M20 outcomes."
+      ],
+      "milestone": 16,
+      "milestone_records": [
+        "A058"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [
+        "G08"
+      ],
+      "title": "Governed FastAPI claims application foundation",
+      "validation_environment": "Real FastAPI TestClient/ASGI, synthetic capabilities and separate installed-wheel target. Exact Python patch and host OS are not explicitly restated in the selected M16 record/receipts; they are not inferred from current constraints.",
+      "validation_status_source": "docs/milestones/milestone-16.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "Browser/accessibility, session delivery, real identity and hosting require separate approved validation."
+      ],
+      "capability": "Server-rendered escaped reviewer UI, host-enrolled sessions/tickets and real API consumption with canonical assignment/CSRF guards.",
+      "capability_status": "IMPLEMENTED_WITHIN_RECORDED_OFFLINE_SCOPE",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [
+        "2026-11-10"
+      ],
+      "evidence_availability": [
+        "GIT_TRACKED",
+        "IGNORED_LOCAL_ONLY"
+      ],
+      "evidence_refs": [
+        "A124",
+        "A123"
+      ],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A150",
+        "A028",
+        "A172"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "2026-11-10: 878 source/878 wheel tests, 64 UI cases and 12 UI/API scenarios in final report; earlier results are historical.",
+      "limitations": [
+        "Structural accessibility is not certification or tested real-browser/TCP/TLS behaviour.",
+        "No real human identity, durable session/audit or insurance outcome authority."
+      ],
+      "milestone": 17,
+      "milestone_records": [
+        "A059"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [
+        "G08"
+      ],
+      "title": "Governed claims reviewer operations UI",
+      "validation_environment": "Real in-process API/UI ASGI, synthetic sessions and HTML/protocol checks, not browser execution. Exact Python patch and host OS are not explicitly restated in the selected M17 record/receipts.",
+      "validation_status_source": "docs/milestones/milestone-17.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "Real provider/identity provisioning, secret custody and deployed ingress require separate authorisation."
+      ],
+      "capability": "Exact offline synthetic signature/claims validation, bounded key discovery/rotation/revocation and independent API/MCP host/case binding.",
+      "capability_status": "IMPLEMENTED_WITHIN_RECORDED_OFFLINE_SCOPE",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [
+        "2026-11-10"
+      ],
+      "evidence_availability": [
+        "GIT_TRACKED",
+        "IGNORED_LOCAL_ONLY"
+      ],
+      "evidence_refs": [
+        "A101",
+        "A100"
+      ],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A138",
+        "A029",
+        "A163"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "2026-11-10: 975 source/975 wheel tests and 97 identity cases; 15-scenario report with network operations prohibited.",
+      "limitations": [
+        "Synthetic signature validity or bearer possession is not proof of real human/workload identity.",
+        "No live Entra/JWKS/APIM, browser/TLS, shared revocation or production custody evidence."
+      ],
+      "milestone": 18,
+      "milestone_records": [
+        "A060"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [
+        "G08"
+      ],
+      "title": "Identity and security foundation",
+      "validation_environment": "Real in-process API/UI/MCP ASGI with ephemeral synthetic issuer/context, no live provider. Exact Python patch and host OS are not explicitly restated in the selected M18 record/receipts.",
+      "validation_status_source": "docs/milestones/milestone-18.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "Independent production security/risk acceptance and live external testing remain separate; no residual-risk owner approval is inferred."
+      ],
+      "capability": "Authored attack evaluation over real offline boundaries plus source-bound MCP response and canonical CLI-output-root remediation.",
+      "capability_status": "IMPLEMENTED_WITHIN_RECORDED_OFFLINE_SCOPE",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [
+        "2026-11-10"
+      ],
+      "evidence_availability": [
+        "GIT_TRACKED",
+        "IGNORED_LOCAL_ONLY"
+      ],
+      "evidence_refs": [
+        "A088",
+        "A086",
+        "A085",
+        "A087"
+      ],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A129",
+        "A144",
+        "A152",
+        "A019",
+        "A165"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "2026-11-10: original 1,090 source/wheel tests and 79 PASS/1 FAIL/8 NOT_TESTED; remediation 1,128 source/wheel tests and retained 80 PASS/0 FAIL/8 NOT_TESTED baseline. F-002 has separate nine-check evidence.",
+      "limitations": [
+        "F-001/F-002 closure is limited to demonstrated local paths; host compromise, real semantic model attacks, live identity/gateway/browser and distributed limits remain untested.",
+        "80/0/8 is not a production security score; eight NOT_TESTED identities remain unchanged."
+      ],
+      "milestone": 19,
+      "milestone_records": [
+        "A062",
+        "A061"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [
+        "G08"
+      ],
+      "title": "AI threat model and adversarial security testing",
+      "validation_environment": "Real offline SDK/runtime guards, explicitly simulated/injected rows and eight unexecuted production scopes; independent wheel checks share pinned dependencies. Exact Python patch and host OS are not explicitly restated in the selected M19 records/receipts.",
+      "validation_status_source": "docs/milestones/milestone-19.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "Fresh same-runtime stores need original approved source/context and current authority; never migrate/rehash historical stores silently.",
+        "Production policy/identity/persistence, retention and recovery need separate approval."
+      ],
+      "capability": "Bounded local SQLite outcome lifecycle, explicit approved supplied synthetic assessments, current human decisions, atomic audit/receipts/outbox and fixed-context process recovery.",
+      "capability_status": "IMPLEMENTED_WITHIN_RECORDED_OFFLINE_SCOPE",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [
+        "2026-11-10"
+      ],
+      "evidence_availability": [
+        "GIT_TRACKED",
+        "IGNORED_LOCAL_ONLY"
+      ],
+      "evidence_refs": [
+        "A107",
+        "A106",
+        "A110"
+      ],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A146",
+        "A024",
+        "A169"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "2026-11-10: 1,227 source/1,227 wheel tests, 99 M20 cases; 13 report scenarios and seven actual SIGKILL/restart probes per demonstration.",
+      "limitations": [
+        "M9 findings/M15 approvals are not automatically operational assessments/outcomes; explicit separate host approval is required.",
+        "Same-runtime process recovery is not power-loss, WORM, cloud/distributed durability or external exactly-once delivery."
+      ],
+      "milestone": 20,
+      "milestone_records": [
+        "A064"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [
+        "G08"
+      ],
+      "title": "Durable human case outcomes and recovery",
+      "validation_environment": "Local SQLite and trusted child processes with supplied synthetic source/approval/current authority, not cloud services. Exact Python patch and host OS are not explicitly restated in the selected M20 record/receipts.",
+      "validation_status_source": "docs/milestones/milestone-20.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "Real identity/provider and deployed security need separate authorisation; current independent anchors and same-runtime context remain mandatory."
+      ],
+      "capability": "Six isolated fixture identity classes, bounded fixture reads, least privilege and authenticated local grant revocation/expiry/disablement composed with canonical API/UI/MCP/outcome services.",
+      "capability_status": "IMPLEMENTED_WITHIN_RECORDED_OFFLINE_SCOPE",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [],
+      "evidence_availability": [
+        "GIT_TRACKED",
+        "IGNORED_LOCAL_ONLY"
+      ],
+      "evidence_refs": [
+        "A122",
+        "A121",
+        "A113",
+        "A112",
+        "A111",
+        "A067"
+      ],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A153",
+        "A034",
+        "A174"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "Original retained M21 receipts: 1,334 source/wheel tests and 107 focused. M22 Stage A separately cites the accepted corrected baseline of 1,338 source/wheel and 111 focused. Catalogue does not replace original logs or claim correction receipts located.",
+      "limitations": [
+        "Shared/global revocation, key/latest-anchor custody, cross-store admission races and host compromise remain outside local assurance.",
+        "file-manifest.json is a changed-path inventory, not per-file hashes; package/report hash evidence is separately retained."
+      ],
+      "milestone": 21,
+      "milestone_records": [
+        "A065"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [
+        "G05",
+        "G08"
+      ],
+      "title": "Security and identity hardening",
+      "validation_environment": "Synthetic fixture profiles, local SQLite and fixed-public-key subprocess restart checks; shared pinned dependency environment recorded. Exact Python patch and host OS are not explicitly restated in the selected M21 record/receipts; no live Entra/provider.",
+      "validation_status_source": "docs/milestones/milestone-21.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "Genuine independent label/source/exposure adjudication, gate/release decision, approved predictor mapping/isolation and authenticated verifier are required before separately authorised scoring.",
+        "Cloud export, real data/provider and production operations remain separately gated."
+      ],
+      "capability": "Frozen 60-case candidate suite/review packet, reference-isolated development evaluator, genuine bounded local OpenTelemetry SDK, executable alerts and audit/fault-recovery controls.",
+      "capability_status": "CONDITIONAL_OFFLINE_ENGINEERING",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [],
+      "evidence_availability": [
+        "GIT_TRACKED",
+        "IGNORED_LOCAL_ONLY"
+      ],
+      "evidence_refs": [
+        "A117",
+        "A114",
+        "A116",
+        "A115",
+        "A002",
+        "A081"
+      ],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A148",
+        "A031",
+        "A078",
+        "A170"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "Python 3.12.8/macOS arm64: final 1,436 source/1,436 independent-wheel tests; 98 focused M22 and 17 operational controls. Earlier 1,434 PASS/2 FAIL wheel topology run remains preserved; no label scores were produced.",
+      "limitations": [
+        "All 60 candidates remain PENDING_REVIEW; 12 independent-quality gates remain NOT_TESTED. Author-visible native text is not an approved blind benchmark.",
+        "Stage A authoring through an aliased data root is unsupported; local snapshot alerts/telemetry are not production monitoring or durable audit."
+      ],
+      "milestone": 22,
+      "milestone_records": [
+        "A066",
+        "A067"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [],
+      "title": "Reproducible quality and operations",
+      "validation_environment": "Isolated Python 3.12.8/macOS arm64; OpenTelemetry API/SDK 1.45.2 and semantic-conventions 0.66b2; local ASGI, SQLite and child processes, no remote exporter.",
+      "validation_status_source": "docs/milestones/milestone-22-stage-b.md"
+    },
+    {
+      "blockers_and_approval_requirements": [
+        "All five reopening criteria in milestone-23.md, zero unresolved Critical/High and complete authenticated fresh database within 1 GiB remain mandatory.",
+        "Separate explicit acquisition, builder implementation/build, runtime and Azure/spending approvals; B1 refusal is not removed by documentation."
+      ],
+      "capability": "Disabled Stage A IaC/workflow/host definitions, B1 signed input admission with unconditional build refusal, pinned Bookworm/Trixie acquisition/static evidence and supported-remediation investigations.",
+      "capability_status": "DEFERRED_SECURITY_GATE_NO_GO",
+      "date_qualification": "Dates are copied from the record; none is inferred from mtime or the P1 hash-check time. If empty, no dated verification is assigned.",
+      "dates_appearing_in_record": [
+        "2026-11-17"
+      ],
+      "evidence_availability": [
+        "GIT_TRACKED",
+        "IGNORED_LOCAL_ONLY"
+      ],
+      "evidence_refs": [
+        "A041",
+        "A043",
+        "A045",
+        "A098",
+        "A095",
+        "A096"
+      ],
+      "implementation_binding": "CURRENT_IMPLEMENTATION_AT_11a6439_NOT_ORIGINAL_MILESTONE_SOURCE_SNAPSHOT",
+      "implementation_refs": [
+        "A084",
+        "A015",
+        "A017",
+        "A016",
+        "A001",
+        "A159"
+      ],
+      "independent_operational_outcome_acceptance": "NOT_ESTABLISHED_BY_SELECTED_EVIDENCE",
+      "last_recorded_validation_status": "Stage A: 12 Bicep compilations, 1,506 full-source tests and 299 focused wheel tests; B1: 434 focused, not a new full suite. R4 reconciles four Trixie layers/87 installed packages/2,653 publisher hashes. R6 stops with no complete supported authenticated remediation route.",
+      "limitations": [
+        "DEFERRED — SECURITY GATE NO-GO. Frozen Bookworm baseline 355 occurrences/158 CVEs (two Critical, 29 distinct High) is not a fresh Trixie scan.",
+        "R6 lists one unapplied zlib update and eight High CVEs without established supported Trixie fixes; applicability and CVE attribution gaps persist.",
+        "Retained DB 1,764,941,824 bytes exceeds unchanged 1 GiB cap; authenticity, CPython/bundled OpenSSL/Cargo/native coverage, licences/reviewer trust, physical builder isolation and Linux runtime remain incomplete.",
+        "AZU-0058, real Entra/cloud adapters/private integration/cost/restore approval remain unresolved; no Azure deployment acceptance."
+      ],
+      "milestone": 23,
+      "milestone_records": [
+        "A070",
+        "A068",
+        "A069",
+        "A047",
+        "A048",
+        "A049",
+        "A050"
+      ],
+      "p1_runtime_revalidation": "NOT_RUN",
+      "recorded_scope_acceptance": "Recorded local/documentation acceptance or recommendation only; not a newly issued P1 acceptance.",
+      "supporting_evidence_gaps": [
+        "G06",
+        "G07"
+      ],
+      "title": "Governed Azure deployment",
+      "validation_environment": "Stage A/B1 host checks: Python 3.12.8/macOS arm64. Linux AMD64 image contents were acquired/read as data; no Linux container build/run. R6 captured public metadata previously; P1 makes no requests.",
+      "validation_status_source": "docs/milestones/milestone-23.md"
+    }
+  ],
+  "format": "m24-p1-capability-evidence-catalogue-v1",
+  "independent_review": {
+    "approval": null,
+    "reviewer_identity": null,
+    "status": "NOT_ASSERTED"
+  },
+  "observed_at": "2026-11-17T14:56:50.478262+00:00",
+  "p2_recommendation": "GO_FOR_SEPARATELY_AUTHORISED_OFFLINE_ARCHITECTURE_AND_DEMONSTRATION_DESIGN_ONLY",
+  "runtime_execution_authorised": false,
+  "scope": "AUTHORISED_DOCUMENTATION_ONLY_M1_M23",
+  "supporting_evidence_gaps": [
+    {
+      "availability": "MISSING_NOT_LOCATED_IN_REVIEWED_INVENTORY",
+      "description": "No separately retained raw M1 document-validation receipt is identified; the tracked milestone narrative is the available record.",
+      "id": "G01",
+      "independent_approval": null,
+      "milestone": 1,
+      "path": null,
+      "qualification": "No absence outside the reviewed repository/local output inventory is asserted; no replacement evidence was generated.",
+      "sha256": null
+    },
+    {
+      "availability": "MISSING_NOT_LOCATED_IN_REVIEWED_INVENTORY",
+      "description": "The milestone does not identify a durable original 115-test log or a source-bound M2 archive path/hash; current dist files are not assumed to be M2 artifacts.",
+      "id": "G02",
+      "independent_approval": null,
+      "milestone": 2,
+      "path": null,
+      "qualification": "No absence outside the reviewed repository/local output inventory is asserted; no replacement evidence was generated.",
+      "sha256": null
+    },
+    {
+      "availability": "MISSING_NOT_LOCATED_IN_REVIEWED_INVENTORY",
+      "description": "Separate raw M3 document-check/per-file preservation receipts are not identified by the record.",
+      "id": "G03",
+      "independent_approval": null,
+      "milestone": 3,
+      "path": null,
+      "qualification": "No absence outside the reviewed repository/local output inventory is asserted; no replacement evidence was generated.",
+      "sha256": null
+    },
+    {
+      "availability": "MISSING_NOT_LOCATED_IN_REVIEWED_INVENTORY",
+      "description": "Temporary render/contact-sheet QA is described outside repository deliverables; no retained path is provided for independent reinspection.",
+      "id": "G04",
+      "independent_approval": null,
+      "milestone": 4,
+      "path": null,
+      "qualification": "No absence outside the reviewed repository/local output inventory is asserted; no replacement evidence was generated.",
+      "sha256": null
+    },
+    {
+      "availability": "MISSING_NOT_LOCATED_IN_REVIEWED_INVENTORY",
+      "description": "Known outputs/packages/m21 logs retain 1,334 results; separately linked raw 1,338/111 acceptance-correction receipts are not located. The later baseline claim is retained as documentary evidence only.",
+      "id": "G05",
+      "independent_approval": null,
+      "milestone": 21,
+      "path": null,
+      "qualification": "No absence outside the reviewed repository/local output inventory is asserted; no replacement evidence was generated.",
+      "sha256": null
+    },
+    {
+      "availability": "CONVERSATION_ONLY_NO_REPOSITORY_ARTIFACT",
+      "description": "R1/R2/R5 have conversation-only assessments; no separate repository reports are claimed.",
+      "id": "G06",
+      "independent_approval": null,
+      "milestone": 23,
+      "path": null,
+      "qualification": "No absence outside the reviewed repository/local output inventory is asserted; no replacement evidence was generated.",
+      "sha256": null
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY_PUBLICATION_GAP",
+      "description": "Full raw scanner/validation/acquisition evidence is ignored/local-only; public tracked summaries/pins are not a portable complete evidence archive.",
+      "id": "G07",
+      "independent_approval": null,
+      "milestone": 23,
+      "path": null,
+      "qualification": "No absence outside the reviewed repository/local output inventory is asserted; no replacement evidence was generated.",
+      "sha256": null
+    },
+    {
+      "availability": "MISSING_ENVIRONMENT_DETAIL_IN_SELECTED_EVIDENCE",
+      "description": "Exact Python patch and host OS are not explicitly restated in the selected M16–M21 records/receipts. Execution surfaces and isolation are recorded; nearby milestone environments and current dependency declarations are not substituted as observations.",
+      "id": "G08",
+      "independent_approval": null,
+      "milestone": null,
+      "milestones": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "path": null,
+      "qualification": "A distinct external receipt may exist; P1 does not infer or generate it.",
+      "sha256": null
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "application_imports_or_demonstrations": 0,
+  "artifact_bindings": {
+    "README.md": {
+      "bytes": 60365,
+      "sha256": "53159a9d250f6dab44961e50810f6345d307143fe2ccb53fd4fc849dca99ad56"
+    },
+    "catalogue.json": {
+      "bytes": 55790,
+      "sha256": "adc2fcba5f0129a96683c4071452f1861f057fa457bef37f78dd30b561253d21"
+    },
+    "evidence-hashes.json": {
+      "bytes": 119072,
+      "sha256": "2abb6072d5199a72dba797319491bc4fbfc2930ae567eed5f890701c7b9b0573"
+    }
+  },
+  "availability_counts": {
+    "GIT_TRACKED": 133,
+    "IGNORED_LOCAL_ONLY": 42
+  },
+  "baseline_git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+  "checked_at": "2026-11-17T14:56:52.517500+00:00",
+  "dependency_changes": false,
+  "directory_references_without_single_file_digest": 21,
+  "entry_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "environment_detail_qualification": "M16–M21 exact Python patch/host OS not inferred; execution surfaces retained; see G08.",
+  "evidence_regeneration": false,
+  "existing_file_sha256_values": 154,
+  "existing_reference_records": 175,
+  "final_independent_file_checks": {
+    "baseline_preservation": "1504/1504 MATCH",
+    "environment_details_not_inferred": true,
+    "file_hashes": 154,
+    "gap_records": 8,
+    "only_four_new_document_files": true,
+    "recorded_pin_matches": 39
+  },
+  "format": "m24-p1-documentation-verification-v1",
+  "historical_consistency": {
+    "m12_timing_limitation_retained": true,
+    "m19_accepted_offline_baseline": {
+      "FAIL": 0,
+      "NOT_TESTED": 8,
+      "PASS": 80
+    },
+    "m19_original_counts": {
+      "FAIL": 1,
+      "NOT_TESTED": 8,
+      "PASS": 79
+    },
+    "m22_candidates_pending_review": 60,
+    "m22_independent_quality": "NOT_TESTED",
+    "m23": "DEFERRED — SECURITY GATE NO-GO",
+    "m8_failures_preserved": [
+      "Q-007",
+      "Q-012",
+      "Q-015",
+      "Q-029"
+    ]
+  },
+  "independent_approval": null,
+  "m22_existing_inventory_member_hashes": 6,
+  "m4_existing_manifest_member_hashes": 152,
+  "milestones_covered": 23,
+  "network_docker_build_azure_operations": 0,
+  "new_application_validation": "NOT_RUN",
+  "new_catalogue_local_links_checked": 222,
+  "new_document_files": [
+    "README.md",
+    "catalogue.json",
+    "evidence-hashes.json",
+    "verification.json"
+  ],
+  "preexisting_files_preserved": 1504,
+  "recorded_sha256_matches": 39,
+  "selected_evidence_paths_missing": 0,
+  "selected_historical_record_missing_links": [],
+  "self_hash_excluded": true,
+  "staging_commits_pushes": false,
+  "unlocated_or_local_publication_gap_records": 8
+}

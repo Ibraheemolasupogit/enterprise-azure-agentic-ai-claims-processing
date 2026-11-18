@@ -1,0 +1,298 @@
+{
+  "application_imports_demonstrations_tests_sdk_calls": 0,
+  "assessment_date": "2026-11-18",
+  "baseline_git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+  "checks": {
+    "b1_unconditional_build_refusal": "STATICALLY_VERIFIED_UNCHANGED",
+    "consistent_status_three_documents": true,
+    "local_links_checked": 394,
+    "local_markdown_anchors_checked": 26,
+    "m22_reviews_approvals_signatures": "UNCHANGED_PENDING_NULL",
+    "markdown_whitespace": "PASS",
+    "missing_local_links_or_anchors": [],
+    "private_key_or_jwt_patterns_found": false,
+    "review_files_text_and_at_most_256_kib": true,
+    "scope_of_secret_check": "Simple documentation pattern check, not full independent secret audit",
+    "selected_review_files_not_ignored": true,
+    "six_not_tested_rows": true
+  },
+  "current_status_files": [
+    "README.md",
+    "docs/milestones/roadmap.md",
+    "docs/milestones/milestone-24.md"
+  ],
+  "decision": "OFFLINE DOCUMENTATION COMPLETE / EXECUTION BLOCKED / DEPLOYMENT NO-GO",
+  "demonstrations": [
+    {
+      "id": "D01",
+      "m24_runs": 0,
+      "scenario": "Normal advisory",
+      "status": "NOT_TESTED"
+    },
+    {
+      "id": "D02",
+      "m24_runs": 0,
+      "scenario": "Missing evidence",
+      "status": "NOT_TESTED"
+    },
+    {
+      "id": "D03",
+      "m24_runs": 0,
+      "scenario": "Supervisor escalation",
+      "status": "NOT_TESTED"
+    },
+    {
+      "id": "D04",
+      "m24_runs": 0,
+      "scenario": "Unauthorised access",
+      "status": "NOT_TESTED"
+    },
+    {
+      "id": "D05",
+      "m24_runs": 0,
+      "scenario": "Revoked replay",
+      "status": "NOT_TESTED"
+    },
+    {
+      "id": "D06",
+      "m24_runs": 0,
+      "scenario": "Recovery/failure handling",
+      "status": "NOT_TESTED"
+    }
+  ],
+  "existing_evidence_byte_identical_archival_copies": 2,
+  "format": "m24-p4-documentation-closeout-v1",
+  "historical_evidence_regeneration": false,
+  "historical_results_preserved": {
+    "b1": "UNCONDITIONAL_BUILD_REFUSAL; THRESHOLDS_CAPS_UNCHANGED",
+    "m12": "TIMING_LIMITATIONS_RETAINED",
+    "m19_corrected": {
+      "FAIL": 0,
+      "NOT_TESTED": 8,
+      "PASS": 80
+    },
+    "m19_original": {
+      "FAIL": 1,
+      "NOT_TESTED": 8,
+      "PASS": 79
+    },
+    "m22_historical_installed_wheel_tests": 1436,
+    "m22_historical_operational_controls": 17,
+    "m22_historical_source_tests": 1436,
+    "m22_independent_quality_not_tested": 12,
+    "m22_pending_review": 60,
+    "m23": "DEFERRED — SECURITY GATE NO-GO",
+    "m8": {
+      "conformance": "26/30",
+      "failures": [
+        "Q-007",
+        "Q-012",
+        "Q-015",
+        "Q-029"
+      ]
+    }
+  },
+  "isolation_implementation_or_probe_execution": 0,
+  "m24_original_runtime_exit_criteria": "NOT_FULFILLED",
+  "manual_git_readiness": "GO_FOR_MANUAL_REVIEW_AND_DOCUMENTATION_ONLY_COMMIT",
+  "manual_review_file_count": 16,
+  "manual_review_files": [
+    "README.md",
+    "docs/milestones/roadmap.md",
+    "docs/milestones/milestone-24.md",
+    "docs/milestones/m24-p1/README.md",
+    "docs/milestones/m24-p1/catalogue.json",
+    "docs/milestones/m24-p1/evidence-hashes.json",
+    "docs/milestones/m24-p1/verification.json",
+    "docs/milestones/m24-p2/README.md",
+    "docs/milestones/m24-p2/verification.json",
+    "docs/milestones/m24-p3a/README.md",
+    "docs/milestones/m24-p3a/verification.json",
+    "docs/milestones/m24-p3c/README.md",
+    "docs/milestones/m24-p3c/verification.json",
+    "docs/milestones/m24-p4/p3b/bootstrap-result.json",
+    "docs/milestones/m24-p4/p3b/bootstrap-profile.txt",
+    "docs/milestones/m24-p4/verification.json"
+  ],
+  "network_download_install_build_docker_cloud_operations": 0,
+  "preservation": {
+    "all_original_p3b_private_receipts": "UNCHANGED",
+    "baseline_paths_hashed": 576,
+    "database_bytes_not_rehashed": true,
+    "existing_database_metadata_records_unchanged": 2,
+    "head_unchanged": true,
+    "historical_pin_matches": 39,
+    "m1_m23_records_outputs_data_application_tests_dependencies_security_gates": "UNCHANGED",
+    "only_existing_paths_changed": [
+      "README.md",
+      "docs/milestones/roadmap.md"
+    ],
+    "p1_reference_file_hashes_reverified": 154,
+    "p3c_primary_source_hashes_reverified": 12,
+    "prior_ten_stage_documents": "UNCHANGED",
+    "staged_diff": "EMPTY",
+    "unchanged_paths": 574
+  },
+  "reopening_requirements": [
+    "Separately approve a supported non-elevated host isolation implementation and exact runtime/entitlement/path policy",
+    "Prove allowed and denied operations, protected state and actual child/grandchild inheritance using harmless probes before application payload",
+    "Prove bounded controller, 300-second invocation and 1800-second session ceilings plus 1073741824-byte aggregate new-state limit; missing requirements reject before payload",
+    "Bind then-current source/environment/input/controller hashes, exclusive private paths, redaction and preservation; never reuse P3B directory as fresh",
+    "Obtain separate G1-twice or full P2 demonstration approval; no automatic progression; M22 independent scoring and M23 container/cloud gates remain separate"
+  ],
+  "review_file_bindings_excluding_self": {
+    "README.md": {
+      "bytes": 42408,
+      "kind": "UTF8_TEXT",
+      "sha256": "003959f68357b79ab201fa040549914667c02285c172cb76d221132a97f3f3bf"
+    },
+    "docs/milestones/m24-p1/README.md": {
+      "bytes": 60365,
+      "kind": "UTF8_TEXT",
+      "sha256": "53159a9d250f6dab44961e50810f6345d307143fe2ccb53fd4fc849dca99ad56"
+    },
+    "docs/milestones/m24-p1/catalogue.json": {
+      "bytes": 55790,
+      "kind": "UTF8_TEXT",
+      "sha256": "adc2fcba5f0129a96683c4071452f1861f057fa457bef37f78dd30b561253d21"
+    },
+    "docs/milestones/m24-p1/evidence-hashes.json": {
+      "bytes": 119072,
+      "kind": "UTF8_TEXT",
+      "sha256": "2abb6072d5199a72dba797319491bc4fbfc2930ae567eed5f890701c7b9b0573"
+    },
+    "docs/milestones/m24-p1/verification.json": {
+      "bytes": 2711,
+      "kind": "UTF8_TEXT",
+      "sha256": "cefec2838c82b43535573e1ee3d707fc7042c99ba867da0f915de17759556bae"
+    },
+    "docs/milestones/m24-p2/README.md": {
+      "bytes": 24726,
+      "kind": "UTF8_TEXT",
+      "sha256": "53a4b2e3d89daff8010685b9451ef72b77ba9234d6675cee53150fd8e111c12f"
+    },
+    "docs/milestones/m24-p2/verification.json": {
+      "bytes": 8541,
+      "kind": "UTF8_TEXT",
+      "sha256": "d1051aa2366acf967168046d2c8f0b2c9c5dc3c49878841e46af38a2056dac41"
+    },
+    "docs/milestones/m24-p3a/README.md": {
+      "bytes": 18607,
+      "kind": "UTF8_TEXT",
+      "sha256": "41fd49569bc3b3df1ee31223a4cbf2dad9d9341fcd2fa172a2acca0a434c4489"
+    },
+    "docs/milestones/m24-p3a/verification.json": {
+      "bytes": 33418,
+      "kind": "UTF8_TEXT",
+      "sha256": "5f9999ff5076b21e9956e7381a3c67b25dae8a3f16e574edb8e0a76ba03d2a6a"
+    },
+    "docs/milestones/m24-p3c/README.md": {
+      "bytes": 13413,
+      "kind": "UTF8_TEXT",
+      "sha256": "3adeadd9bf46287866908e872dc5d45fb1a7701933da5b1fb82b51619fd5d83b"
+    },
+    "docs/milestones/m24-p3c/verification.json": {
+      "bytes": 9986,
+      "kind": "UTF8_TEXT",
+      "sha256": "5864b4cc2a6a4a72de414899f38fda3e42ad909e0cdd2a406568d5b3c9e75e27"
+    },
+    "docs/milestones/m24-p4/p3b/bootstrap-profile.txt": {
+      "bytes": 138,
+      "kind": "UTF8_TEXT",
+      "sha256": "c60efe20fa6f8cb61a14badd065343c77a646ba2ecbf0b7c1861da9886cf6fb9"
+    },
+    "docs/milestones/m24-p4/p3b/bootstrap-result.json": {
+      "bytes": 877,
+      "kind": "UTF8_TEXT",
+      "sha256": "25e924642806d6e62a171201dfc0d2cc28c62ec673d273fd8ce89af3a65e8de0"
+    },
+    "docs/milestones/milestone-24.md": {
+      "bytes": 13670,
+      "kind": "UTF8_TEXT",
+      "sha256": "12ccdf26de0c7c38923d9715c5d6792bd09346fdb8bd82838f1cf66e2bf6c2f2"
+    },
+    "docs/milestones/roadmap.md": {
+      "bytes": 14065,
+      "kind": "UTF8_TEXT",
+      "sha256": "b6c9512eb16537ce43cb4f39b8be8c5e51fb2fb754697349dc0435d626fa76f3"
+    }
+  },
+  "scope": "DOCUMENTATION_CONSOLIDATION_ONLY",
+  "self_hash_excluded": true,
+  "stage_evidence": {
+    "P1": {
+      "file_hashes": 154,
+      "gap_ids": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05",
+        "G06",
+        "G07",
+        "G08"
+      ],
+      "git_tracked": 133,
+      "historical_pins": 39,
+      "ignored_local_only": 42,
+      "local_links_reported": 222,
+      "milestones": 23,
+      "references": 175,
+      "verification": "docs/milestones/m24-p1/verification.json"
+    },
+    "P2": {
+      "cli_contracts": 5,
+      "entry_point_symbols": 13,
+      "execution": "NOT_RUN",
+      "scenario_designs": 6,
+      "selected_test_functions": 12,
+      "verification": "docs/milestones/m24-p2/verification.json"
+    },
+    "P3A": {
+      "enforcement": "NOT_TESTED",
+      "fixture_ids": 6,
+      "runtime_metadata_pins": 39,
+      "verification": "docs/milestones/m24-p3a/verification.json"
+    },
+    "P3B": {
+      "application_demonstrations": 0,
+      "archival_copies": [
+        {
+          "byte_identical": true,
+          "bytes": 877,
+          "git_copy_path": "docs/milestones/m24-p4/p3b/bootstrap-result.json",
+          "new_execution": false,
+          "sha256": "25e924642806d6e62a171201dfc0d2cc28c62ec673d273fd8ce89af3a65e8de0",
+          "source_availability": "LOCAL_ONLY",
+          "source_path": "/private/tmp/m24-p3b-11a6439-20261118/control/bootstrap-result.json"
+        },
+        {
+          "byte_identical": true,
+          "bytes": 138,
+          "git_copy_path": "docs/milestones/m24-p4/p3b/bootstrap-profile.txt",
+          "new_execution": false,
+          "sha256": "c60efe20fa6f8cb61a14badd065343c77a646ba2ecbf0b7c1861da9886cf6fb9",
+          "source_availability": "LOCAL_ONLY",
+          "source_path": "/private/tmp/m24-p3b-11a6439-20261118/control/bootstrap.sb"
+        }
+      ],
+      "bootstrap_returncode": 71,
+      "elapsed_seconds": 0.006855,
+      "error": "sandbox-exec: sandbox_apply: Operation not permitted",
+      "full_decision_local_only": {
+        "copied_to_git": false,
+        "path": "/private/tmp/m24-p3b-11a6439-20261118/control/decision.json",
+        "sha256": "7eea565d6270811d5d122f5f93447e6a02bc4d1ddf63eb053c7de6cec845dbb0"
+      },
+      "test_program_launched": false
+    },
+    "P3C": {
+      "application_or_containment_execution": "NOT_RUN",
+      "candidate": "Normal-user App Sandbox host runner, unimplemented/unverified",
+      "exact_denial_cause": "NOT_PROVED",
+      "local_primary_source_bindings": 12,
+      "verification": "docs/milestones/m24-p3c/verification.json"
+    }
+  },
+  "staging_commits_pushes": false
+}

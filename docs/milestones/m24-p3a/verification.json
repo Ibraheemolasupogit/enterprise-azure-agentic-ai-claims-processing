@@ -1,0 +1,877 @@
+{
+  "application_imports_demonstrations_tests_isolation_probes": 0,
+  "assessment_date": "2026-11-18",
+  "baseline_git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+  "checks": {
+    "entry_point_symbol_count": 13,
+    "entry_point_symbols": {
+      "src/claims_ai/api/__main__.py": [
+        "offline_report"
+      ],
+      "src/claims_ai/api/fixtures.py": [
+        "demo_application"
+      ],
+      "src/claims_ai/outcomes/demo.py": [
+        "approved_fixture"
+      ],
+      "src/claims_ai/quality_ops/operations.py": [
+        "exercise",
+        "api_review_probe",
+        "mcp_probe",
+        "outcome_probes"
+      ],
+      "src/claims_ai/reviewer_ui/__main__.py": [
+        "demonstrate",
+        "snapshot"
+      ],
+      "src/claims_ai/security_hardening/evaluation.py": [
+        "restart_observation",
+        "evaluate"
+      ],
+      "src/claims_ai/workflow/__main__.py": [
+        "offline_report",
+        "demo_request"
+      ]
+    },
+    "existing_cli_flag_contracts": [
+      {
+        "execution": "NOT_RUN",
+        "flags": [
+          "--output",
+          "--spec-root"
+        ],
+        "module": "claims_ai.workflow",
+        "static_contract": "GO"
+      },
+      {
+        "execution": "NOT_RUN",
+        "flags": [
+          "--openapi-output",
+          "--output",
+          "--spec-root"
+        ],
+        "module": "claims_ai.api",
+        "static_contract": "GO"
+      },
+      {
+        "execution": "NOT_RUN",
+        "flags": [
+          "--html-dir",
+          "--output",
+          "--spec-root"
+        ],
+        "module": "claims_ai.reviewer_ui",
+        "static_contract": "GO"
+      },
+      {
+        "execution": "NOT_RUN",
+        "flags": [
+          "--candidate-root",
+          "--operations-root",
+          "--output",
+          "--spec-root",
+          "--telemetry-output"
+        ],
+        "module": "claims_ai.quality_ops",
+        "static_contract": "GO"
+      },
+      {
+        "execution": "NOT_RUN",
+        "flags": [
+          "--fixture-root",
+          "--output"
+        ],
+        "module": "claims_ai.security_hardening",
+        "static_contract": "GO"
+      }
+    ],
+    "existing_test_function_count": 12,
+    "existing_test_functions": [
+      "tests/test_api.py::test_early_blocked_workflow_has_status_but_no_invented_review_recommendation",
+      "tests/test_api.py::test_supervisor_routing_cannot_be_bypassed_through_http",
+      "tests/test_api.py::test_redacted_structured_api_logs_never_include_credentials_payloads_or_errors",
+      "tests/test_reviewer_ui.py::test_snapshot_redacts_csrf_and_tickets",
+      "tests/test_security_hardening.py::test_real_api_ui_revocation_and_duplicate_receipts",
+      "tests/test_security_hardening.py::test_gateway_lifecycle_rechecked_on_genuine_sdk_requests",
+      "tests/test_security_hardening.py::test_corrupt_or_unavailable_store_never_recovers_authority",
+      "tests/test_outcomes.py::test_corrupted_projections_and_runtime_are_rejected_without_repair",
+      "tests/test_outcomes.py::test_schema_and_file_compatibility_fail_closed",
+      "tests/test_quality_ops_operational.py::test_actual_sdk_records_do_not_contain_domain_or_identity_payloads",
+      "tests/test_quality_ops_operational.py::test_zero_trace_sampling_cannot_remove_business_audit",
+      "tests/test_quality_ops_operational.py::test_storage_failure_and_export_failure_cannot_acknowledge_partial_outcome"
+    ],
+    "fixture_ids": [
+      "valid-v1",
+      "valid-v2",
+      "missing-estimate",
+      "gradual-wear-exclusion",
+      "high-value-threshold",
+      "conflicting-amounts"
+    ],
+    "identity_manifest_members": 7,
+    "local_document_links": 8,
+    "m22_inventory_members": 6,
+    "p1_file_hashes": 154,
+    "p1_historical_pins": 39,
+    "p2_inspected_input_bindings": 21,
+    "rule_manifest_members": 2,
+    "test_collection": "NOT_RUN"
+  },
+  "dependency_changes": false,
+  "document_bindings": {
+    "README.md": {
+      "bytes": 18607,
+      "sha256": "41fd49569bc3b3df1ee31223a4cbf2dad9d9341fcd2fa172a2acca0a434c4489"
+    }
+  },
+  "environment": {
+    "configured_python_version": "3.12.8",
+    "host_metadata": {
+      "machine": "arm64",
+      "release": "24.6.0",
+      "sysname": "Darwin"
+    },
+    "include_system_site_packages": false,
+    "interpreter_target": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "interpreter_target_present": true,
+    "native_wheel_metadata": [
+      {
+        "distribution": "cffi",
+        "native_import": "NOT_TESTED",
+        "tags": [
+          "cp312-cp312-macosx_11_0_arm64"
+        ],
+        "version": "2.1.1",
+        "wheel_metadata_path": ".venv/lib/python3.12/site-packages/cffi-2.1.1.dist-info/WHEEL",
+        "wheel_metadata_sha256": "65d47419e480660d7ba329a734f3f7358ce8eba23b2db4806ef595c5328959fe"
+      },
+      {
+        "distribution": "cryptography",
+        "native_import": "NOT_TESTED",
+        "tags": [
+          "cp311-abi3-macosx_11_0_arm64"
+        ],
+        "version": "50.0.2",
+        "wheel_metadata_path": ".venv/lib/python3.12/site-packages/cryptography-50.0.2.dist-info/WHEEL",
+        "wheel_metadata_sha256": "96f985b465650f71b86992fc892c82e72b15557fbb9855563b0c8a6b1fa6d712"
+      },
+      {
+        "distribution": "msgspec",
+        "native_import": "NOT_TESTED",
+        "tags": [
+          "cp312-cp312-macosx_11_0_arm64"
+        ],
+        "version": "0.22.0",
+        "wheel_metadata_path": ".venv/lib/python3.12/site-packages/msgspec-0.22.0.dist-info/WHEEL",
+        "wheel_metadata_sha256": "7156dcce88ca058d4e5118bde8900f7f0cacc719d55b67b78cb6de2362e7dbdb"
+      },
+      {
+        "distribution": "pydantic-core",
+        "native_import": "NOT_TESTED",
+        "tags": [
+          "cp312-cp312-macosx_11_0_arm64"
+        ],
+        "version": "2.50.2",
+        "wheel_metadata_path": ".venv/lib/python3.12/site-packages/pydantic_core-2.50.2.dist-info/WHEEL",
+        "wheel_metadata_sha256": "e022de6c7daf3c473489fdbe336bb9f0d7ec2f4dd59adfd7bd8f8a0226db5875"
+      },
+      {
+        "distribution": "regex",
+        "native_import": "NOT_TESTED",
+        "tags": [
+          "cp312-cp312-macosx_11_0_arm64"
+        ],
+        "version": "2026.9.29",
+        "wheel_metadata_path": ".venv/lib/python3.12/site-packages/regex-2026.9.29.dist-info/WHEEL",
+        "wheel_metadata_sha256": "7156dcce88ca058d4e5118bde8900f7f0cacc719d55b67b78cb6de2362e7dbdb"
+      },
+      {
+        "distribution": "rpds-py",
+        "native_import": "NOT_TESTED",
+        "tags": [
+          "cp312-cp312-macosx_11_0_arm64"
+        ],
+        "version": "2026.9.1",
+        "wheel_metadata_path": ".venv/lib/python3.12/site-packages/rpds_py-2026.9.1.dist-info/WHEEL",
+        "wheel_metadata_sha256": "00432af65abae21a50692ef850ae61fa7101eb22b04fb2d1e3c61678710d7e53"
+      }
+    ],
+    "pytest_metadata_version": "8.4.2",
+    "python_or_native_execution": "NOT_TESTED",
+    "runtime_metadata": {
+      "agent-framework-core": {
+        "metadata_sha256": "b4a64c0b12515b0313d11c31beec93f911365c0a3101bc14ddc6c7cb18a5202e",
+        "path": ".venv/lib/python3.12/site-packages/agent_framework_core-1.23.0.dist-info/METADATA",
+        "version": "1.23.0"
+      },
+      "annotated-doc": {
+        "metadata_sha256": "8c24d70c5d9153d22123353a906042fd7603df2d15c2196290b0f8a962558c46",
+        "path": ".venv/lib/python3.12/site-packages/annotated_doc-0.0.5.dist-info/METADATA",
+        "version": "0.0.5"
+      },
+      "annotated-types": {
+        "metadata_sha256": "614985b278f601b8ef863f82783b991cc3ada4b89f592eb71c7c48c5f2ef2298",
+        "path": ".venv/lib/python3.12/site-packages/annotated_types-0.8.0.dist-info/METADATA",
+        "version": "0.8.0"
+      },
+      "anyio": {
+        "metadata_sha256": "043aecb571af7189e8a6c528f5d8e32545f1b2cdfaaf761d51e6d5b67ea3ca81",
+        "path": ".venv/lib/python3.12/site-packages/anyio-4.15.1.dist-info/METADATA",
+        "version": "4.15.1"
+      },
+      "attrs": {
+        "metadata_sha256": "4cd40e690f23bf37cbcad34efd6758e062df1df07c86833f7e3ce95bf1fa38cc",
+        "path": ".venv/lib/python3.12/site-packages/attrs-26.1.0.dist-info/METADATA",
+        "version": "26.1.0"
+      },
+      "cffi": {
+        "metadata_sha256": "558bafb9093a8e790175d9ecff9688382981d744877dad86fd6770db0f4dc918",
+        "path": ".venv/lib/python3.12/site-packages/cffi-2.1.1.dist-info/METADATA",
+        "version": "2.1.1"
+      },
+      "click": {
+        "metadata_sha256": "e87bce0bd194de70dfb8e708e0a6b0483009f25611804eaf87bfeb63e6c20501",
+        "path": ".venv/lib/python3.12/site-packages/click-8.5.0.dist-info/METADATA",
+        "version": "8.5.0"
+      },
+      "cryptography": {
+        "metadata_sha256": "047cfc71226409de4318b360aef15c63a2adf609731e3dcf7fe932f14ea042ee",
+        "path": ".venv/lib/python3.12/site-packages/cryptography-50.0.2.dist-info/METADATA",
+        "version": "50.0.2"
+      },
+      "fastapi": {
+        "metadata_sha256": "992e5f62c86d44f18e46273c5e46b72e5b37ec57841e360d2e1efb17f4f5ad24",
+        "path": ".venv/lib/python3.12/site-packages/fastapi-0.162.2.dist-info/METADATA",
+        "version": "0.162.2"
+      },
+      "h11": {
+        "metadata_sha256": "28f326098ac09fcba79b8f180f96087c841fe2456215cb7b872a9c7d5cd19d64",
+        "path": ".venv/lib/python3.12/site-packages/h11-0.16.0.dist-info/METADATA",
+        "version": "0.16.0"
+      },
+      "httpcore2": {
+        "metadata_sha256": "c073bd68b2bd543fbc2bab3763b42ed1e70666536d32c1bf39ef2764fd50b0a4",
+        "path": ".venv/lib/python3.12/site-packages/httpcore2-2.16.0.dist-info/METADATA",
+        "version": "2.16.0"
+      },
+      "httpx2": {
+        "metadata_sha256": "192f20046200ff50911a7278c21dfbee1e1a4c6fa7943227afe9231d28defc3f",
+        "path": ".venv/lib/python3.12/site-packages/httpx2-2.16.0.dist-info/METADATA",
+        "version": "2.16.0"
+      },
+      "idna": {
+        "metadata_sha256": "dbd8c14c1e4ca1e0c9824a6dbc7cbbf78884f38eb52d91148cd3025f671e4b85",
+        "path": ".venv/lib/python3.12/site-packages/idna-3.20.dist-info/METADATA",
+        "version": "3.20"
+      },
+      "jsonschema": {
+        "metadata_sha256": "05b189866ca98a96da3934bf6b83687ced3ff85325273b77e16b705f6d8b26d2",
+        "path": ".venv/lib/python3.12/site-packages/jsonschema-4.26.0.dist-info/METADATA",
+        "version": "4.26.0"
+      },
+      "jsonschema-specifications": {
+        "metadata_sha256": "35abd41757f32b4ea24756920ded47b70173d77cbc052a5a6d3ab583b2e8d89d",
+        "path": ".venv/lib/python3.12/site-packages/jsonschema_specifications-2025.9.1.dist-info/METADATA",
+        "version": "2025.9.1"
+      },
+      "mcp": {
+        "metadata_sha256": "dffdec58283e1c0964a57f5fba19aa80272686ab5b03283d9398f7daac4fe45a",
+        "path": ".venv/lib/python3.12/site-packages/mcp-2.2.0.dist-info/METADATA",
+        "version": "2.2.0"
+      },
+      "mcp-types": {
+        "metadata_sha256": "f29cd43b57497e73976271607090609e7cf79d50c3ea3362196ac36275cdd0f0",
+        "path": ".venv/lib/python3.12/site-packages/mcp_types-2.2.0.dist-info/METADATA",
+        "version": "2.2.0"
+      },
+      "msgspec": {
+        "metadata_sha256": "c7e9d347d94b29c7018e92bc6b7a6d4db020d12cfadfc94015d47f0f15055d58",
+        "path": ".venv/lib/python3.12/site-packages/msgspec-0.22.0.dist-info/METADATA",
+        "version": "0.22.0"
+      },
+      "opentelemetry-api": {
+        "metadata_sha256": "aa93f63be0d6d1f662966e67b22a77c0d9966752e3a32ad87c1347f595cea7cb",
+        "path": ".venv/lib/python3.12/site-packages/opentelemetry_api-1.45.2.dist-info/METADATA",
+        "version": "1.45.2"
+      },
+      "opentelemetry-sdk": {
+        "metadata_sha256": "97f0b558caae567c607dc5b53fc755deb2d0e305fe08093bb8d6c59ed55aa3e4",
+        "path": ".venv/lib/python3.12/site-packages/opentelemetry_sdk-1.45.2.dist-info/METADATA",
+        "version": "1.45.2"
+      },
+      "opentelemetry-semantic-conventions": {
+        "metadata_sha256": "7e443b23ebb345b06a7be96db4803ae81ac7ec8995e37f6814d0f2006b8e6447",
+        "path": ".venv/lib/python3.12/site-packages/opentelemetry_semantic_conventions-0.66b2.dist-info/METADATA",
+        "version": "0.66b2"
+      },
+      "pycparser": {
+        "metadata_sha256": "ad8db5fe2b0e0a3b0e8419fe5041b80be92470a40b06bd9c1462a0a8bb637c92",
+        "path": ".venv/lib/python3.12/site-packages/pycparser-3.12.dist-info/METADATA",
+        "version": "3.12"
+      },
+      "pydantic": {
+        "metadata_sha256": "5e27715d350cc99bc33877404deba2a9491221ae972db8f8c79f64032bee3a01",
+        "path": ".venv/lib/python3.12/site-packages/pydantic-2.14.2.dist-info/METADATA",
+        "version": "2.14.2"
+      },
+      "pydantic-core": {
+        "metadata_sha256": "ca680c6a06d7e24685a8c13f47c56af9f4deaba25272412f8688459cd6dd2dd1",
+        "path": ".venv/lib/python3.12/site-packages/pydantic_core-2.50.2.dist-info/METADATA",
+        "version": "2.50.2"
+      },
+      "pydantic-settings": {
+        "metadata_sha256": "b91d022b9965766da6461234605a501fd2f5bb6a1ff10bcdd16f81daa47434ff",
+        "path": ".venv/lib/python3.12/site-packages/pydantic_settings-2.16.2.dist-info/METADATA",
+        "version": "2.16.2"
+      },
+      "pyjwt": {
+        "metadata_sha256": "1ea0c9f139b8c928276b3628af165955f6f764491448a6ad8f103cdcbb382da3",
+        "path": ".venv/lib/python3.12/site-packages/pyjwt-2.15.1.dist-info/METADATA",
+        "version": "2.15.1"
+      },
+      "python-dotenv": {
+        "metadata_sha256": "87cfee6042412d48df1100ea7822684988c3f2b79de7a250f4717f4df3026d6f",
+        "path": ".venv/lib/python3.12/site-packages/python_dotenv-1.2.4.dist-info/METADATA",
+        "version": "1.2.4"
+      },
+      "python-multipart": {
+        "metadata_sha256": "e9d399d7dea5eddf0e4d24b5c24687a82e7e50bf2c2b30f8f8a06a64d887dd86",
+        "path": ".venv/lib/python3.12/site-packages/python_multipart-0.0.32.dist-info/METADATA",
+        "version": "0.0.32"
+      },
+      "pyyaml": {
+        "metadata_sha256": "03c3b415ed38d09faedc49360e930769b40c58f68585e6de00e2e4916a858d34",
+        "path": ".venv/lib/python3.12/site-packages/pyyaml-6.0.3.dist-info/METADATA",
+        "version": "6.0.3"
+      },
+      "referencing": {
+        "metadata_sha256": "c93b00e6ab1524fd60848376604c189a114374776475c25a31d57be47b29de6a",
+        "path": ".venv/lib/python3.12/site-packages/referencing-0.37.0.dist-info/METADATA",
+        "version": "0.37.0"
+      },
+      "regex": {
+        "metadata_sha256": "33859377dbf8dd38ee3de73fd97faebf4a63d50576e3cc1a9dfe44df08b0936a",
+        "path": ".venv/lib/python3.12/site-packages/regex-2026.9.29.dist-info/METADATA",
+        "version": "2026.9.29"
+      },
+      "rpds-py": {
+        "metadata_sha256": "5d72dca2e387c8d2b4180b68ee87c15b64751e059100a6db58891ec9995445c3",
+        "path": ".venv/lib/python3.12/site-packages/rpds_py-2026.9.1.dist-info/METADATA",
+        "version": "2026.9.1"
+      },
+      "sse-starlette": {
+        "metadata_sha256": "fd6db17b500d90b9f336b57088e0b0f2d122c0473b542dfe4bf4cc4f720d9797",
+        "path": ".venv/lib/python3.12/site-packages/sse_starlette-3.6.0.dist-info/METADATA",
+        "version": "3.6.0"
+      },
+      "starlette": {
+        "metadata_sha256": "82f72dde2c5c3c55d45d9461adce5e30973481f7f3e10b59e497bbc5b8abf598",
+        "path": ".venv/lib/python3.12/site-packages/starlette-1.10.0.dist-info/METADATA",
+        "version": "1.10.0"
+      },
+      "tenacity": {
+        "metadata_sha256": "2e3b45ca8334494f30fd1306d2adce6d47bc5c1d7a4e5df5462a3d1bd74bf5b0",
+        "path": ".venv/lib/python3.12/site-packages/tenacity-9.1.4.dist-info/METADATA",
+        "version": "9.1.4"
+      },
+      "truststore": {
+        "metadata_sha256": "1fd496f290853214e630d96f7163d2dd916f84ebe634b58aa827d6853e8f8610",
+        "path": ".venv/lib/python3.12/site-packages/truststore-0.10.5.dist-info/METADATA",
+        "version": "0.10.5"
+      },
+      "typing-extensions": {
+        "metadata_sha256": "b05084ca1d50879865178d9fff9fabeab61bdfb1f361bfbde95421ffc8f9be46",
+        "path": ".venv/lib/python3.12/site-packages/typing_extensions-4.16.0.dist-info/METADATA",
+        "version": "4.16.0"
+      },
+      "typing-inspection": {
+        "metadata_sha256": "bad3d9e6342ef6750cf5128ec942327b8bebdce0b6e4d6f67cb15b27ae5118da",
+        "path": ".venv/lib/python3.12/site-packages/typing_inspection-0.4.4.dist-info/METADATA",
+        "version": "0.4.4"
+      },
+      "uvicorn": {
+        "metadata_sha256": "9399e5ddda3d26e842d6fb5420c38b0857aac568d53badbdc224b3a21339efa8",
+        "path": ".venv/lib/python3.12/site-packages/uvicorn-0.54.0.dist-info/METADATA",
+        "version": "0.54.0"
+      }
+    },
+    "runtime_pins": {
+      "agent-framework-core": "1.23.0",
+      "annotated-doc": "0.0.5",
+      "annotated-types": "0.8.0",
+      "anyio": "4.15.1",
+      "attrs": "26.1.0",
+      "cffi": "2.1.1",
+      "click": "8.5.0",
+      "cryptography": "50.0.2",
+      "fastapi": "0.162.2",
+      "h11": "0.16.0",
+      "httpcore2": "2.16.0",
+      "httpx2": "2.16.0",
+      "idna": "3.20",
+      "jsonschema": "4.26.0",
+      "jsonschema-specifications": "2025.9.1",
+      "mcp": "2.2.0",
+      "mcp-types": "2.2.0",
+      "msgspec": "0.22.0",
+      "opentelemetry-api": "1.45.2",
+      "opentelemetry-sdk": "1.45.2",
+      "opentelemetry-semantic-conventions": "0.66b2",
+      "pycparser": "3.12",
+      "pydantic": "2.14.2",
+      "pydantic-core": "2.50.2",
+      "pydantic-settings": "2.16.2",
+      "pyjwt": "2.15.1",
+      "python-dotenv": "1.2.4",
+      "python-multipart": "0.0.32",
+      "pyyaml": "6.0.3",
+      "referencing": "0.37.0",
+      "regex": "2026.9.29",
+      "rpds-py": "2026.9.1",
+      "sse-starlette": "3.6.0",
+      "starlette": "1.10.0",
+      "tenacity": "9.1.4",
+      "truststore": "0.10.5",
+      "typing-extensions": "4.16.0",
+      "typing-inspection": "0.4.4",
+      "uvicorn": "0.54.0"
+    },
+    "runtime_pins_matched": 39,
+    "venv_config_sha256": "b14d0b2d49901c56cfa4c7bafd4125fb44385b076875a669f78abe37bf2cd4dc"
+  },
+  "execution_gates": {
+    "E1": "PENDING_SEPARATE_EXECUTION_APPROVAL",
+    "E2": "NO_ISOLATION_RECEIPT",
+    "E3": "BOUNDED_CONTROLLER_NOT_EXERCISED",
+    "E4": "PENDING_DISPOSABLE_FAULT_AND_RECOVERY_APPROVAL"
+  },
+  "format": "m24-p3a-documentation-preflight-v1",
+  "full_p2_batch": {
+    "execution_performed": false,
+    "g6_named_function_selectors": 12,
+    "groups": "G1-G5 twice; G6 once",
+    "limits": {
+      "aggregate_new_state_bytes": 1073741824,
+      "per_invocation_seconds": 300,
+      "session_seconds": 1800
+    },
+    "top_level_invocations": 11
+  },
+  "historical_database_filename_inspection": {
+    "connections_opened": 0,
+    "content_hashes": "NOT_COMPUTED",
+    "coverage_qualification": "Filename candidates only; excludes listed tool/credential directories, differently named and external state not ruled out",
+    "excluded_directories": [
+      ".agents",
+      ".aws",
+      ".codex",
+      ".git",
+      ".mypy_cache",
+      ".pytest_cache",
+      ".ruff_cache",
+      ".venv",
+      "__pycache__",
+      "node_modules"
+    ],
+    "filename_candidates": [
+      {
+        "bytes": 1048576,
+        "ctime_ns": 1794595209130595843,
+        "device": 16777229,
+        "gid": 20,
+        "inode": 170899757,
+        "mode": "0o600",
+        "mtime_ns": 1794593758542188846,
+        "path": "artifacts/m23-b2d-bhwtbqri/trivy-cache/fanal/fanal.db",
+        "symlink": false,
+        "uid": 501
+      },
+      {
+        "bytes": 1764941824,
+        "ctime_ns": 1794595465375239056,
+        "device": 16777229,
+        "gid": 20,
+        "inode": 170888729,
+        "mode": "0o600",
+        "mtime_ns": 1794592709123507069,
+        "path": "artifacts/m23-b2d-bhwtbqri/trivy-cache/db/trivy.db",
+        "symlink": false,
+        "uid": 501
+      }
+    ],
+    "sqlite_connections_opened": 0
+  },
+  "historical_evidence_regenerated": false,
+  "inspected_source_and_spec_hashes": {
+    "data/evaluation/m22/v1/candidate-manifest.json": "42e0eb827c26cbd3202c127f777aef6cd17c59e543548ff5b368f1008a361d8b",
+    "data/evaluation/m22/v1/gates.json": "ef366a34c75b44dce2c784d40210a1db81c16e94bf664dc8fc89dd8745915264",
+    "data/evaluation/m22/v1/inventory.json": "12a06c3a89ce503ce089e3913ffbff7a82e199881b3b8a37df92c2d7c8a034eb",
+    "data/evaluation/m22/v1/reviews/templates.json": "a3f2b771ec8d6cf268959af1acedef5588817cfa0d53788485085024c3a8fd68",
+    "data/operations/m22/v1/alerts.json": "f73a2951c2da8b74b2a2e2d1328bd5d5e6e36bf4a62d3088ad1602c6ecd00459",
+    "data/operations/m22/v1/dashboard.json": "02e816762c91e72fe106dd13e5b48f865cc66ebf4321a8076ee477511ed44dd8",
+    "data/rules/motor/v1/manifest.json": "248c41fc2c740e392d701f9f65384f7a137292e1b1b7306ff164819c24345ab7",
+    "data/rules/motor/v1/scenarios.json": "b047e92386ef6eb8066388fe8f7d1db099b83d090915cde9a076862ac7441cef",
+    "data/rules/motor/v1/specification.json": "47398a0a1161ddfd01739830a5c5590de3595d57a2b106836aefe6f763524ac9",
+    "data/security/identity/v1/manifest.json": "9529e7872af0f4ce9b2bd38c2d5459eb075261fdf3529b31c50a4dc9cd26e12f",
+    "deployment/build_container.py": "be59a34d288eb63bcc60361d28f5375d17f378aeedd20f794bd397919792ee5d",
+    "deployment/supply_chain.py": "512bc09e7c83e2564685e75f6924c0890a0b672115bd5dc9865e017c53fe566f",
+    "requirements/m10-constraints.txt": "e874b059915a894be3c75caf8f6fff336299abfa9ca439aa88edd860d16d4656",
+    "requirements/m13-constraints.txt": "ff3b078f0c793e6d050564df892c337a29742719324c378bbd793c9debea95f7",
+    "requirements/m16-constraints.txt": "1e38b2ab40f659542ec9e2f57a62bc66abd7fe631e54f19455df7ee621df0adc",
+    "requirements/m17-constraints.txt": "e0892063191e8ea82668363b1cc31c70fa9d0fd65aaefb9a8ffd2b03d8a520b5",
+    "requirements/m18-constraints.txt": "e3298f8db1fdf3de5514834600e9d7bb57035a5c736d64eca9422cfc2ec0b20a",
+    "requirements/m19-constraints.txt": "4d4d87c5e141911494b68b21c5460d978813236fdafbbabdcdbd2de11312e6e4",
+    "requirements/m20-constraints.txt": "eaa239b59127ca0c0d60df8de3e719073efeff2408aabc2e2444bad9d451fc3f",
+    "requirements/m21-constraints.txt": "e7eeb133a09ff9f034e915c82aa92fa356f42797dc2e79b435b9845c904f6e9c",
+    "requirements/m22-constraints.txt": "3704727e0e8a02a3778c4a34c65c8fb8f51a39bc3893edd1911cbb544c6154a5",
+    "requirements/m23-constraints.txt": "e67bd78affcf3d08dc7b0e5d4ec96ae71b9eeffc1a0b821c4a968014af8b09e8",
+    "src/claims_ai/api/__main__.py": "d6092b01862fc35215aa4d80358997e994d3fcaaf7125f4c31dac5ea77d8b92a",
+    "src/claims_ai/api/fixtures.py": "e439b4e48f6de688a016253e362284cf6d8cf38b0dc1cd245f5100a9f0efe307",
+    "src/claims_ai/outcomes/demo.py": "11c82ed47955f6d44217bd8451c6f3a85b44c6c67ff574e0298a06270401fc4c",
+    "src/claims_ai/quality_ops/__main__.py": "6338bdf1c68fe8d35a930d56224569d0c996d70a1e628c61083cf0186c7a4328",
+    "src/claims_ai/quality_ops/candidate.py": "a507898be3f182e8470bcfae7d3ddca22fab82c0db973c63f6a2b37eb8dc3780",
+    "src/claims_ai/quality_ops/evaluation.py": "9fa79bc0d0a0834ee85d1c42d995d378bddedafd4c0c632b3a1ea70ea6bc5c11",
+    "src/claims_ai/quality_ops/operations.py": "1cac0cf66c6ee458c033aa0cfba8e6783b316436f22a58f5f8b4b60e19896e37",
+    "src/claims_ai/quality_ops/prediction_worker.py": "8c7bcdc0ce755fd066423902e72daa04d54cbc70050c6be0cb5aab5de0080b72",
+    "src/claims_ai/quality_ops/runner.py": "e473b6a41227e7ee74d63c8e3cb63f0478bafe92ebcbdfb29257aa473662a05e",
+    "src/claims_ai/quality_ops/telemetry.py": "5eac7202c57de4e34937d82f11266b77f5a6e84ad0368f1dffb58f200f2e523f",
+    "src/claims_ai/reviewer_ui/__main__.py": "6e509e5c00434b1de713623569dd0ae2d75c851fcb2b1826acea8a7a9a27768d",
+    "src/claims_ai/rules/__main__.py": "4e9d3473b8ab908ebcd4b7b8cf1b4aff5e6b5be63fb802bed1f0cabad2c0c0d8",
+    "src/claims_ai/rules/fixtures.py": "29be4390e7984e7882cf2b92f2c4588d8ccb0aae87199350193776c24a944c53",
+    "src/claims_ai/security_hardening/__main__.py": "f5246120273e95021a4a554f16a34b9abc1d3b9e82ecf4978202cc680a5e1764",
+    "src/claims_ai/security_hardening/evaluation.py": "294f84f8bb6d71f4911ea782c24c3eaf4bd2e5b12ec0d4e6282cf0d5be1db07d",
+    "src/claims_ai/security_hardening/probes.py": "c63ee6a3e17dd24bc44276c49c83bfd136e759ab1d3a10d86e0be7a228bcb91f",
+    "src/claims_ai/security_hardening/worker.py": "cd798aa977c9bf0e228a50a977cd104a23197edbdfa15a258a956a11413b7232",
+    "src/claims_ai/workflow/__main__.py": "cb056a04b87a01ac394cc2434a3994452c89d13ea2e2e7584d1eb10d9aabd51c",
+    "tests/conftest.py": "a69d17495577ffc4dff824508fefbd82ddc4506afcfcf8ebb8cd934fe53cd1a5",
+    "tests/test_api.py": "4d5df57a24330be3f6c45c5c361a2ff83452c81a0637b95e8a81f060864d744f",
+    "tests/test_outcomes.py": "7714bb4f585db1e490be1a0cf28083ee3bfcb0fcbc1e8b555b327a0160e78827",
+    "tests/test_quality_ops_operational.py": "8447c9e9689bfbf21cbf50710d889c218487336b24f2bace479be1d6d15fce04",
+    "tests/test_reviewer_ui.py": "758b0ff77ac49ed9df39e073d9bcc6c96fbc45d8aae25191984065466718f8fb",
+    "tests/test_security_hardening.py": "419d42f46391902bd50478900c657343f09ebab210f5c325317cd584219f1a74"
+  },
+  "isolation": {
+    "approved_runnable_profile_and_controller_receipt": "NOT_LOCATED_IN_P1_P2",
+    "candidate_binary": "/usr/bin/sandbox-exec",
+    "candidate_binary_present": true,
+    "directory_created_or_reserved": false,
+    "historical_path_permissions": {
+      "data": {
+        "effective_write_access": true,
+        "mode": "0o755"
+      },
+      "docs/milestones/m24-p1": {
+        "effective_write_access": true,
+        "mode": "0o755"
+      },
+      "docs/milestones/m24-p2": {
+        "effective_write_access": true,
+        "mode": "0o755"
+      },
+      "outputs": {
+        "effective_write_access": true,
+        "mode": "0o755"
+      },
+      "src": {
+        "effective_write_access": true,
+        "mode": "0o755"
+      },
+      "tests": {
+        "effective_write_access": true,
+        "mode": "0o755"
+      }
+    },
+    "local_manual": "/usr/share/man/man1/sandbox-exec.1",
+    "local_manual_marks_deprecated": true,
+    "local_manual_sha256": "0d264f72dc6a8e0db5474840f33b512542c469beb109ed146c17055da287336b",
+    "process_tree_network_denial_proof": "NOT_TESTED",
+    "process_tree_readonly_proof": "NOT_TESTED",
+    "proposed_session_root": "/private/tmp/m24-p3b-11a6439-20261118",
+    "proposed_session_root_absent": true
+  },
+  "network_docker_containers_builds_cloud_operations": 0,
+  "new_files": [
+    "docs/milestones/m24-p3a/README.md",
+    "docs/milestones/m24-p3a/verification.json"
+  ],
+  "p1_p2_document_bindings": {
+    "docs/milestones/m24-p1/README.md": {
+      "bytes": 60365,
+      "sha256": "53159a9d250f6dab44961e50810f6345d307143fe2ccb53fd4fc849dca99ad56"
+    },
+    "docs/milestones/m24-p1/catalogue.json": {
+      "bytes": 55790,
+      "sha256": "adc2fcba5f0129a96683c4071452f1861f057fa457bef37f78dd30b561253d21"
+    },
+    "docs/milestones/m24-p1/evidence-hashes.json": {
+      "bytes": 119072,
+      "sha256": "2abb6072d5199a72dba797319491bc4fbfc2930ae567eed5f890701c7b9b0573"
+    },
+    "docs/milestones/m24-p1/verification.json": {
+      "bytes": 2711,
+      "sha256": "cefec2838c82b43535573e1ee3d707fc7042c99ba867da0f915de17759556bae"
+    },
+    "docs/milestones/m24-p2/README.md": {
+      "bytes": 24726,
+      "sha256": "53a4b2e3d89daff8010685b9451ef72b77ba9234d6675cee53150fd8e111c12f"
+    },
+    "docs/milestones/m24-p2/verification.json": {
+      "bytes": 8541,
+      "sha256": "d1051aa2366acf967168046d2c8f0b2c9c5dc3c49878841e46af38a2056dac41"
+    }
+  },
+  "preservation": {
+    "database_metadata": "UNCHANGED",
+    "preexisting_tracked_untracked_and_p1_evidence_files": 566,
+    "sha256_matches": 566,
+    "six_existing_p1_p2_documents": "UNCHANGED",
+    "source_dependencies_security_gates": "UNCHANGED",
+    "staged_diff": "EMPTY",
+    "tracked_diff": "EMPTY"
+  },
+  "recommendation": "GO_TO_SUBMIT_BATCH_FOR_SEPARATE_APPROVAL; NO_GO_TO_EXECUTE_NOW",
+  "scenario_execution_matrix": [
+    {
+      "assertions_are": "EXPECTED_NOT_OBSERVED",
+      "execution_now": "NO_GO",
+      "execution_performed": false,
+      "expected": [
+        "awaiting_human_review",
+        "intake_201",
+        "processing_and_assigned_review_200",
+        "duplicate_receipt_equal",
+        "no_api_ui_outcome_authority"
+      ],
+      "fixtures": [
+        "valid-v1",
+        "valid-v2"
+      ],
+      "groups": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "id": "D01",
+      "name": "Normal advisory",
+      "required_gates": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "static_contract": "GO",
+      "unsupported_adapter_required": false
+    },
+    {
+      "assertions_are": "EXPECTED_NOT_OBSERVED",
+      "execution_now": "NO_GO",
+      "execution_performed": false,
+      "expected": [
+        "awaiting_evidence",
+        "needs_human_attention",
+        "review_entry_absent",
+        "advisory_draft_null"
+      ],
+      "fixtures": [
+        "missing-estimate"
+      ],
+      "groups": [
+        "G1",
+        "G6"
+      ],
+      "id": "D02",
+      "name": "Missing evidence",
+      "required_gates": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "static_contract": "GO",
+      "unsupported_adapter_required": false
+    },
+    {
+      "assertions_are": "EXPECTED_NOT_OBSERVED",
+      "execution_now": "NO_GO",
+      "execution_performed": false,
+      "expected": [
+        "supervisor_required",
+        "reviewer_403",
+        "supervisor_200",
+        "stale_ui_409",
+        "no_api_ui_outcome_authority"
+      ],
+      "fixtures": [
+        "gradual-wear-exclusion",
+        "high-value-threshold",
+        "valid-v1"
+      ],
+      "groups": [
+        "G1",
+        "G3",
+        "G6"
+      ],
+      "id": "D03",
+      "name": "Supervisor escalation",
+      "required_gates": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "static_contract": "GO",
+      "unsupported_adapter_required": false
+    },
+    {
+      "assertions_are": "EXPECTED_NOT_OBSERVED",
+      "execution_now": "NO_GO",
+      "execution_performed": false,
+      "expected": [
+        "cross_case_404",
+        "nonhuman_review_403",
+        "no_identity_api_mcp_401",
+        "three_read_only_tools"
+      ],
+      "fixtures": [
+        "valid-v1",
+        "valid-v2"
+      ],
+      "groups": [
+        "G2",
+        "G3",
+        "G4",
+        "G6"
+      ],
+      "id": "D04",
+      "name": "Unauthorised access",
+      "required_gates": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "static_contract": "GO",
+      "unsupported_adapter_required": false
+    },
+    {
+      "assertions_are": "EXPECTED_NOT_OBSERVED",
+      "execution_now": "NO_GO",
+      "execution_performed": false,
+      "expected": [
+        "revoked_api_ui_mcp_401",
+        "revoked_outcome_duplicate_denied_after_restart",
+        "one_historical_decision_five_audit_events"
+      ],
+      "fixtures": [
+        "valid-v1",
+        "existing_synthetic_grants",
+        "explicit_host_supplied_ELIGIBLE_assessment"
+      ],
+      "groups": [
+        "G4",
+        "G5",
+        "G6"
+      ],
+      "id": "D05",
+      "name": "Revoked replay",
+      "required_gates": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "static_contract": "GO",
+      "unsupported_adapter_required": false
+    },
+    {
+      "assertions_are": "EXPECTED_NOT_OBSERVED",
+      "execution_now": "NO_GO",
+      "execution_performed": false,
+      "expected": [
+        "checkpoint_resume_equal",
+        "bounded_two_attempt_failure",
+        "one_decision_five_events_after_recovery",
+        "failed_audit_zero_decisions_four_events",
+        "corrupt_missing_incompatible_stale_context_denied",
+        "dead_outbox_three_attempts_after_restart"
+      ],
+      "fixtures": [
+        "valid-v1",
+        "identity_attack_catalogue_restart_variants",
+        "explicit_host_supplied_ELIGIBLE_assessment"
+      ],
+      "groups": [
+        "G1",
+        "G4",
+        "G5",
+        "G6"
+      ],
+      "id": "D06",
+      "name": "Recovery and failure",
+      "required_gates": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "static_contract": "GO",
+      "unsupported_adapter_required": false
+    }
+  ],
+  "scope": "PREFLIGHT_AND_DOCUMENTATION_ONLY",
+  "security_decisions_preserved": {
+    "b1_build_refusal": "UNCHANGED_AND_STATICALLY_VERIFIED",
+    "m12_timing_limitations": "RETAINED",
+    "m19": {
+      "FAIL": 0,
+      "NOT_TESTED": 8,
+      "PASS": 80
+    },
+    "m22_independent_quality_metrics_not_tested": 12,
+    "m22_pending_review": 60,
+    "m23": "DEFERRED — SECURITY GATE NO-GO",
+    "m8_failure_ids": [
+      "Q-007",
+      "Q-012",
+      "Q-015",
+      "Q-029"
+    ]
+  },
+  "self_hash_excluded": true,
+  "smallest_initial_batch": {
+    "commands": "Exact P2 workflow command with output work/a/workflow.json and work/b/workflow.json",
+    "complete_p3": false,
+    "groups": [
+      "G1",
+      "G1"
+    ],
+    "remaining": "D04 D05 and durable D06 coverage NOT_TESTED",
+    "repetitions": 2
+  },
+  "staging_commits_pushes": false,
+  "subprocess_bytecode_flags": [
+    {
+      "execution": "NOT_RUN",
+      "explicit_flags": [
+        "-I",
+        "-B"
+      ],
+      "path": "src/claims_ai/quality_ops/operations.py",
+      "symbol": "child_request"
+    },
+    {
+      "execution": "NOT_RUN",
+      "explicit_flags": [
+        "-I",
+        "-B"
+      ],
+      "path": "src/claims_ai/quality_ops/evaluation.py",
+      "symbol": "predict_development"
+    },
+    {
+      "execution": "NOT_RUN",
+      "explicit_flags": [
+        "-I",
+        "-B"
+      ],
+      "path": "src/claims_ai/security_hardening/probes.py",
+      "symbol": "child_probe"
+    }
+  ]
+}

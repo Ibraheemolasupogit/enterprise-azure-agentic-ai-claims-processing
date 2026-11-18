@@ -1,0 +1,3207 @@
+{
+  "artifacts": [
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 1571,
+      "git_blob_oid": "cd7d7f35fa7fb68038d9d1ed27b8b95c39d4aef5",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A001",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": ".github/workflows/m23-deploy.yml",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "3141b7f8da2d94a981064148fbe0dc8b15c8d1004d7f18a36e910a94d39d44e7",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 2440,
+      "git_blob_oid": "2f7330cabb8d0f97358606ee6397ca90d65bb2f9",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "42e0eb827c26cbd3202c127f777aef6cd17c59e543548ff5b368f1008a361d8b",
+      "historical_expected_source": "docs/milestones/milestone-22-stage-b.md",
+      "id": "A002",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "data/evaluation/m22/v1/candidate-manifest.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "42e0eb827c26cbd3202c127f777aef6cd17c59e543548ff5b368f1008a361d8b",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 6118,
+      "git_blob_oid": "2826f4b321d6fa4f99f2723d22828f2f0fd125dd",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "ef366a34c75b44dce2c784d40210a1db81c16e94bf664dc8fc89dd8745915264",
+      "historical_expected_source": "data/evaluation/m22/v1/inventory.json",
+      "id": "A003",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "data/evaluation/m22/v1/gates.json",
+      "present": true,
+      "roles": [
+        "frozen_m22_member"
+      ],
+      "sha256_observed": "ef366a34c75b44dce2c784d40210a1db81c16e94bf664dc8fc89dd8745915264",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 147110,
+      "git_blob_oid": "a2b497fcfc44c70767649ee6fe49b484ecdefd5f",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "39613c9782979e9d0a7804486d769f4fc48a306e36fa7985883e1f15a65607c1",
+      "historical_expected_source": "data/evaluation/m22/v1/inventory.json",
+      "id": "A004",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "data/evaluation/m22/v1/inputs/cases.json",
+      "present": true,
+      "roles": [
+        "frozen_m22_member"
+      ],
+      "sha256_observed": "39613c9782979e9d0a7804486d769f4fc48a306e36fa7985883e1f15a65607c1",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 240,
+      "git_blob_oid": "bc04375122a04ce0d778dd99647f1fec504e8bbe",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "05a8829d55e86bd8d6ee23aadbcb7a87b9a75e2473c5b3bc393ec99bc7791988",
+      "historical_expected_source": "data/evaluation/m22/v1/inventory.json",
+      "id": "A005",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "data/evaluation/m22/v1/inputs/manifest.json",
+      "present": true,
+      "roles": [
+        "frozen_m22_member"
+      ],
+      "sha256_observed": "05a8829d55e86bd8d6ee23aadbcb7a87b9a75e2473c5b3bc393ec99bc7791988",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 897,
+      "git_blob_oid": "5c3800464e4c9efd3890e333e53252384f180467",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A006",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "data/evaluation/m22/v1/inventory.json",
+      "present": true,
+      "roles": [
+        "recorded_digest_source"
+      ],
+      "sha256_observed": "12a06c3a89ce503ce089e3913ffbff7a82e199881b3b8a37df92c2d7c8a034eb",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 1523,
+      "git_blob_oid": "21ff7c1f713376c58ffcd187f3ddb368b3c46803",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "9729fe3b55e6785a9e6636dea136514f1dfe7815eae713bf47cd2fba3b764309",
+      "historical_expected_source": "data/evaluation/m22/v1/inventory.json",
+      "id": "A007",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "data/evaluation/m22/v1/references/guide.md",
+      "present": true,
+      "roles": [
+        "frozen_m22_member"
+      ],
+      "sha256_observed": "9729fe3b55e6785a9e6636dea136514f1dfe7815eae713bf47cd2fba3b764309",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 159319,
+      "git_blob_oid": "2426d43ded1b8206eb7fd3e9a063c3704ab31db6",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "5bb4f12245e0032c2db9188df2280c2263e109f3c3f89e5bb2acd680b417d955",
+      "historical_expected_source": "data/evaluation/m22/v1/inventory.json",
+      "id": "A008",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "data/evaluation/m22/v1/references/labels.json",
+      "present": true,
+      "roles": [
+        "frozen_m22_member"
+      ],
+      "sha256_observed": "5bb4f12245e0032c2db9188df2280c2263e109f3c3f89e5bb2acd680b417d955",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 52249,
+      "git_blob_oid": "1061e0583466093d346425fa2ba43566141dfc70",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "a3f2b771ec8d6cf268959af1acedef5588817cfa0d53788485085024c3a8fd68",
+      "historical_expected_source": "data/evaluation/m22/v1/inventory.json",
+      "id": "A009",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "data/evaluation/m22/v1/reviews/templates.json",
+      "present": true,
+      "roles": [
+        "frozen_m22_member"
+      ],
+      "sha256_observed": "a3f2b771ec8d6cf268959af1acedef5588817cfa0d53788485085024c3a8fd68",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 37127,
+      "git_blob_oid": "e802eb7151e095bdc47dad9b2e50973749aba919",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "91b04bb8b8fd73b0e4ac32a5875e7c7bc4dc78224df1fd5bed4c53a25a9572b0",
+      "historical_expected_source": "docs/milestones/milestone-8.md",
+      "id": "A010",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "data/evaluation/policy-retrieval/v1/queries.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "91b04bb8b8fd73b0e4ac32a5875e7c7bc4dc78224df1fd5bed4c53a25a9572b0",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 3280,
+      "git_blob_oid": "2dad8a13ac02df757e7cff2580f777f991fc9913",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "47398a0a1161ddfd01739830a5c5590de3595d57a2b106836aefe6f763524ac9",
+      "historical_expected_source": "docs/milestones/milestone-9.md",
+      "id": "A011",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "data/rules/motor/v1/specification.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "47398a0a1161ddfd01739830a5c5590de3595d57a2b106836aefe6f763524ac9",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 8155,
+      "git_blob_oid": "c2809bd0bc8d8785d63c5f8e0786a7aacf429ded",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A012",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "data/synthetic/motor/README.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "8572b0818c1ad8373615d8b0def850a3ed79dff6ddf33781cfe957c9907e8d82",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 412507,
+      "git_blob_oid": "36e478ae4d859de6d26419c523ff55412e4e49e8",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A013",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "data/synthetic/motor/v1/ground_truth.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "2c7490c34daca7638d879c16992ea9818043ec368d8eec2e17ac1c12dd6205af",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 37460,
+      "git_blob_oid": "14785bc6a81e81dcca25012b53bb88ca26f2a48b",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "0fa7439208fb8d08279fd38e938fc36ea8c8fdb5a5a9ba6a369b15b41a2a7617",
+      "historical_expected_source": "docs/milestones/milestone-8.md",
+      "id": "A014",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "data/synthetic/motor/v1/manifest.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "0fa7439208fb8d08279fd38e938fc36ea8c8fdb5a5a9ba6a369b15b41a2a7617",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 8716,
+      "git_blob_oid": "94d6087677880caf43e14b787300b0fe98014d6a",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A015",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "deployment/build_container.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "be59a34d288eb63bcc60361d28f5375d17f378aeedd20f794bd397919792ee5d",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 783,
+      "git_blob_oid": "a5aa7026a7af0c1471a033ecefa95190deb58b63",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A016",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "deployment/containers/entrypoint.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "1d6a6f8ecfd72e67b16a6beae467a4c4f484f4b64de2cc9db3e7861170a34067",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 22822,
+      "git_blob_oid": "6f8841ed22400d3e80ccad6ff197dc5cedd46fdd",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A017",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "deployment/supply_chain.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "512bc09e7c83e2564685e75f6924c0890a0b672115bd5dc9865e017c53fe566f",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 8619,
+      "git_blob_oid": "e9a9c0b9aa96b96a631dde03ad6c389ebfb890b4",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A018",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/architecture/agent-framework-foundation.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "4bfd2fa7ecd322e67a5ee15dac0b1c3871c4ba3c7745ca2a6dc54f0e6c1ec3fe",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 20016,
+      "git_blob_oid": "db2342d060ebbfb920821ee36029321d79e802cd",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A019",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/architecture/ai-threat-model-and-adversarial-testing.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "ff0860a63977355e67171e249ecfc663ed6ab688e12d42a9c2b2798697a484f4",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 1877,
+      "git_blob_oid": "b8fa51ad9728ce7e21534aeafdcde4b509f78d97",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A020",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/architecture/decisions/0001-decision-authority.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "d81adea7a3f199371a332b58ca3ee5b9936f7732411a8733f3af6730ca786f78",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 9539,
+      "git_blob_oid": "59ee6361ecf105b9c0580fb562aab75a74cbe39f",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A021",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/architecture/deterministic-claims-workflow.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "d7b69bd27e9d8f916d4acf61d00523ec2a075b7a69923fe09bb55e9d984ebe5a",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 8298,
+      "git_blob_oid": "9717437c9a0a07b89ca66b16027fced18dd5965e",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A022",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/architecture/deterministic-provisional-rules.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "185848540051d94c7e18167685faeb63ac8e39bcf23a08bdf393f18c64660373",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 8650,
+      "git_blob_oid": "8bc16464fa73b627d24273da1621efb15b9bbd65",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A023",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/architecture/governed-agent-tools.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "ec3de6374da29bba5298973ba162bafc993a8e40eb0239142974fdaa1ea00072",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 9104,
+      "git_blob_oid": "6b32c7dfcb14b00c1b18f563516473b8d49364b9",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A024",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/architecture/governed-durable-outcomes.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "2ae064334f4042127f086e9936b6bccaf07594ba0952a0335bc132b8fc5c014b",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 10391,
+      "git_blob_oid": "533a49d53b295d98c73577fbde8ce7af35fe44b9",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A025",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/architecture/governed-fastapi-application.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "235a337747d3164b2c74c80efef33ec835eb657e159057df4b35b8d034b9483d",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 8979,
+      "git_blob_oid": "a0c5d5613346cddbcb4b1e91f3bc2d20ef2d7a48",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A026",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/architecture/governed-human-review.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "ac183050f345235894d4ba2a6619b23ba7b10c76043b27c4c12af024a5587200",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 7213,
+      "git_blob_oid": "16af26e607af6d5b3e782e4ca859c0d27039c120",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A027",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/architecture/governed-mcp-server.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "221aceba34df655b933b64931056efaee74f4a8ff4cde6692156533f0986683c",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 10486,
+      "git_blob_oid": "2a878a9991a1a727e84cae233bcedd3fb903e6d0",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A028",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/architecture/governed-reviewer-ui.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "bf0a6d472146efdfb3b1988d4774cb47061f5772fed033e5f0dd8c5a0f943386",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 16564,
+      "git_blob_oid": "f55451b466dd54327e4182157e4b073bd49400aa",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A029",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/architecture/identity-and-security-foundation.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "b9292789165786542b27d24af463d5fe9f9704c4416d9d76401de54b346eb265",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 6097,
+      "git_blob_oid": "222088c03a4673e5461bf5f81fe9caa5033d03f4",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A030",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/architecture/mcp-http-and-gateway.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "dbc8308a5037259161fc3ec0afa4b15eb864ccb8122af312f50bae4aedcd0571",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 8840,
+      "git_blob_oid": "62f92ebc1bd104608fe504599fbf443ee6a0f555",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A031",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/architecture/offline-quality-and-operations.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "1a20fa90db6600284b8d9a8f3fe5235c579901005360e94f5aa8b9a79931af4c",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 8035,
+      "git_blob_oid": "b0925c1ff578d21a75a8cf970b4d0fb9fcfc0a13",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A032",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/architecture/policy-knowledge-retrieval.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "07d8bf5716de7da9b6d1b1bc0b5ab70bad5e44c9f83c66707c8a1d95c24763d6",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 21511,
+      "git_blob_oid": "bef85d18dc1c325975cbf163904d31ac85c16306",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A033",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/architecture/security-and-governance.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "6dd8d74ff706faa2bcccae9376a152c71bbde943beffe4643346a244a286bd05",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 10447,
+      "git_blob_oid": "cddcade88a7391fad28c2d761f48990637a32702",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A034",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/architecture/security-and-identity-hardening.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "8334538ff0eb422fb69a191aed7f57165ee13eee365346ee2577f7e94f9cb35c",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 10148,
+      "git_blob_oid": "94b0f7a933f05448cec8daff2d4cabe107d37a61",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A035",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/architecture/structured-evidence-processing.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "70d07a50a6b974b872202bed97a6c0a003f13f64f6ef6128b77d37a6fcaabcb2",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 22538,
+      "git_blob_oid": "2ae7771411a91209e8a4f13ec0a0b79c77a736d6",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A036",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/architecture/target-architecture.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "5a983d915fdeeb6aa3fe1fd4e99055a1886faf66c22b9efc9809f55532b48afd",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 9961,
+      "git_blob_oid": "943a131e9da5963105f7d4f367fcc1ad9616fc25",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A037",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/business/project-charter.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "4dac9b493ffe8a309a300a23bc3a9e115b67c612fbe7057e2d1e1c01e2c7d0c6",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 15481,
+      "git_blob_oid": "6f3a6a3a45f0454c9ce290633ee68421c94f9830",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A038",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/business/requirements.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "5ae4c14be662d14b02cbd6a3e31f89a4a225df19f2caf3127230ddd34562e269",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 19057,
+      "git_blob_oid": "3d114039c5f118fe006473206f372b0434a9cc85",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A039",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/business/risk-register.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "ddbe5a235b43d1cbd6df76546964701e872ec323bbd4bc8d0862f65daf290bf9",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 82482,
+      "git_blob_oid": "066d541fb5ad0336157a6db1898c44fe0c4c7ac0",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A040",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/business/traceability-matrix.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "dc13d2fab948553b3407eeb26adb805e562ba65546d1a4a4a261886782f6cb6c",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 72620,
+      "git_blob_oid": "c1b5656f16253c77c122536f75146f14119caea4",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "818ec99db7e67488b58b1d01b7a84267e5b607fd6c3324b19b0f4f25f5285d7b",
+      "historical_expected_source": "docs/deployment/m23/b2b-acquisition-inventory.sha256",
+      "id": "A041",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/deployment/m23/b2b-acquisition-inventory.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "818ec99db7e67488b58b1d01b7a84267e5b607fd6c3324b19b0f4f25f5285d7b",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 117,
+      "git_blob_oid": "45a4cd8b787e9747a58546f75d48cbf953f2f43b",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A042",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/deployment/m23/b2b-acquisition-inventory.sha256",
+      "present": true,
+      "roles": [
+        "recorded_digest_source"
+      ],
+      "sha256_observed": "04b23408eb4b0e88abfe514d5c3d85dabf853cbb80c6cd21d36e18646562e5f5",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 177696,
+      "git_blob_oid": "7aaa9fdc848800bf8f8ca6ec4c45486f700f398b",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "c134c3eab5626d3879f460b82642f5fc652802a4dff2514f35c1438669422d96",
+      "historical_expected_source": "docs/deployment/m23/r3-replacement-base-metadata.sha256",
+      "id": "A043",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/deployment/m23/r3-replacement-base-metadata.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "c134c3eab5626d3879f460b82642f5fc652802a4dff2514f35c1438669422d96",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 100,
+      "git_blob_oid": "44e84d577916ad3952bea76c339c596bd619717c",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A044",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/deployment/m23/r3-replacement-base-metadata.sha256",
+      "present": true,
+      "roles": [
+        "recorded_digest_source"
+      ],
+      "sha256_observed": "b3394c1a855bbab3f6e2c634c0e30a90e7c314b7e35260cce2f3b6ad1f690cbd",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 4182,
+      "git_blob_oid": "d29b9a0f69e69bd1e490f0ae6d225c971320f731",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "e9cadab3476480d71652d247b079ebc41757eef867f8c69acc917d64cf73e930",
+      "historical_expected_source": "docs/deployment/m23/r4-trixie-artifact-inventory.sha256",
+      "id": "A045",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/deployment/m23/r4-trixie-artifact-inventory.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "e9cadab3476480d71652d247b079ebc41757eef867f8c69acc917d64cf73e930",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 100,
+      "git_blob_oid": "cb708fbe75b6a1b685f504d1956673eccbdc3bcf",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A046",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/deployment/m23/r4-trixie-artifact-inventory.sha256",
+      "present": true,
+      "roles": [
+        "recorded_digest_source"
+      ],
+      "sha256_observed": "2f48e1c7fa55a680658d21ab031158c09f73cc8fad9b4a0ef77138bd9922be4b",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 12073,
+      "git_blob_oid": "e6067dad47f3d148454e8afb7f31b94f49941233",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A047",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/deployment/m23/stage-b2d-offline-supply-chain-review.md",
+      "present": true,
+      "roles": [
+        "milestone_addendum"
+      ],
+      "sha256_observed": "0f1622248b15842185afe74447338e0021c407406348ba0ed429d4b5ae136027",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 12166,
+      "git_blob_oid": "e6b25e2674e5b06ad48b34ae6d59f23491b1440a",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A048",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/deployment/m23/stage-b2d-r3-replacement-base-review.md",
+      "present": true,
+      "roles": [
+        "milestone_addendum"
+      ],
+      "sha256_observed": "acb0dd259e0c027b88ff9ccdb30734b2bd1ef6b5a53ffd0013c2d81dbafd8f8c",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 10967,
+      "git_blob_oid": "2fa599f37d89a4bc93bbcfb9ff7cb62d72f9a5ad",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A049",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/deployment/m23/stage-b2d-r4-trixie-acquisition.md",
+      "present": true,
+      "roles": [
+        "milestone_addendum"
+      ],
+      "sha256_observed": "2eac5083e41eb7f107a53eb78c21d5029b431bea28df38121b53c0147f1460db",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 13456,
+      "git_blob_oid": "6b9ec2370e031f9b06f8eefb0de1a686b480fde7",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A050",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/deployment/m23/stage-b2d-r6-supported-remediation-feasibility.md",
+      "present": true,
+      "roles": [
+        "milestone_addendum"
+      ],
+      "sha256_observed": "092fb0500ed11cb767cb73b7c778ab212376407bf556d07afcac79cfd80820b5",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 4879,
+      "git_blob_oid": "47e5d26c18f35d280b8e9df8a9febd3e00012a7f",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A051",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-1.md",
+      "present": true,
+      "roles": [
+        "milestone_record"
+      ],
+      "sha256_observed": "2afe0b04ab521e06933aa28c14d534437e820283847cec6b9040671c5880060b",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 9554,
+      "git_blob_oid": "14229e8fa22cdd0918967fb4bfa8ce0190500c67",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A052",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-10.md",
+      "present": true,
+      "roles": [
+        "milestone_record",
+        "recorded_digest_source"
+      ],
+      "sha256_observed": "11a36357ac0506ca805fda0245e05fca960c2590ada0d0e9457b585adb357e77",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 9188,
+      "git_blob_oid": "f82853046fb55937825ac1cc39fae6a84a0bf3c2",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A053",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-11.md",
+      "present": true,
+      "roles": [
+        "milestone_record",
+        "recorded_digest_source"
+      ],
+      "sha256_observed": "fbdc735140b494181c9e651633326df963bcb63fca87b1e7c79298b254f94198",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 9695,
+      "git_blob_oid": "0b03d342579e582a3b4245de064d459b0a49f0a9",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A054",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-12.md",
+      "present": true,
+      "roles": [
+        "milestone_record",
+        "recorded_digest_source"
+      ],
+      "sha256_observed": "51e0d9e45f5092a65f26dd816754b29b463309c8f7a0db0521c5d0e81c3558cc",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 9540,
+      "git_blob_oid": "e48edfb92a7fe4f178e8fefd7048f3b448a85f72",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A055",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-13.md",
+      "present": true,
+      "roles": [
+        "milestone_record",
+        "recorded_digest_source"
+      ],
+      "sha256_observed": "792943f8cfc98a87b019c4e735dafcfaf19f79a566327a4eab700023c0badabd",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 17177,
+      "git_blob_oid": "1476d96287df51eb710833fe0dcd1ab32f1ecaad",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A056",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-14.md",
+      "present": true,
+      "roles": [
+        "milestone_record",
+        "recorded_digest_source"
+      ],
+      "sha256_observed": "9490ef19f2713005601b5bfd994c8dd2378e695b7c4cfc38c32d08203fabc2e9",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 9232,
+      "git_blob_oid": "dfa24a2fef8ec402a9c02c802d44cca9ff2bdccb",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A057",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-15.md",
+      "present": true,
+      "roles": [
+        "milestone_record",
+        "recorded_digest_source"
+      ],
+      "sha256_observed": "a6b714bf999bb6eee0ca9ac01e906c865faf6d44c94e954d0d8dec5adf08aee7",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 8176,
+      "git_blob_oid": "a706c88d0a8f671a6d445c35c9ba5df57a253010",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A058",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-16.md",
+      "present": true,
+      "roles": [
+        "milestone_record",
+        "recorded_digest_source"
+      ],
+      "sha256_observed": "69f22a4ab242e3ee47ad6432accd5dbe1fffa0583b303d40132c5daa1942faef",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 9643,
+      "git_blob_oid": "bcd4ea572563c97fc5b56bd465f128db0ebebec5",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A059",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-17.md",
+      "present": true,
+      "roles": [
+        "milestone_record",
+        "recorded_digest_source"
+      ],
+      "sha256_observed": "0b0520aae135feea42359a127f0fba4a73534e77a032aa9d8da5923c49985523",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 8866,
+      "git_blob_oid": "0634a41a527c4cc2233c06584e5d041f1c6170d0",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A060",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-18.md",
+      "present": true,
+      "roles": [
+        "milestone_record",
+        "recorded_digest_source"
+      ],
+      "sha256_observed": "8747795188f82ca3d2a07480ff6cedd2382b719ce9225852f6305a8a4db911ff",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 9776,
+      "git_blob_oid": "4be0a3eaebfa29831e8648551a7b77bb641af789",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A061",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-19-remediation.md",
+      "present": true,
+      "roles": [
+        "milestone_addendum",
+        "recorded_digest_source"
+      ],
+      "sha256_observed": "188eaf0308b4599d7b774b13e734f23ae74ec4fdeabfd9ebd3a88b766d8e08a3",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 10191,
+      "git_blob_oid": "7b1adb554a2c4f857a1df5c3e2867efec17c528f",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A062",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-19.md",
+      "present": true,
+      "roles": [
+        "milestone_record",
+        "recorded_digest_source"
+      ],
+      "sha256_observed": "0b623fa8e460ec4ee63c40ae4581cf608056661b7f3b4f1ccc723f57dcfa40a6",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 10289,
+      "git_blob_oid": "8769d5d6e5d119e412dd8098f1f742fa6fccc601",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A063",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-2.md",
+      "present": true,
+      "roles": [
+        "milestone_record"
+      ],
+      "sha256_observed": "0289e1d1ac37cd82fac93b04ab382df1cfe7bd81c31c2d56f76b2801c075edd8",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 8146,
+      "git_blob_oid": "9b7594a76a97c5855fa4f881fc9c29f0d4b26ed5",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A064",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-20.md",
+      "present": true,
+      "roles": [
+        "milestone_record",
+        "recorded_digest_source"
+      ],
+      "sha256_observed": "f803f767ce910a02da57f6b1a895f812377ab2bb4696d9c1ef5f5e004592d9a0",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 8987,
+      "git_blob_oid": "c9d4837faa393900e1d321db9b596a894bc9f2c9",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A065",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-21.md",
+      "present": true,
+      "roles": [
+        "milestone_record",
+        "recorded_digest_source"
+      ],
+      "sha256_observed": "a852f9fca95e13b98451be75d4ba161360ae5dfdd36bd6a5fd1f91b688b547d7",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 12998,
+      "git_blob_oid": "6577286f32a2831a64e5265ad116e740668ed424",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A066",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-22-stage-b.md",
+      "present": true,
+      "roles": [
+        "milestone_record",
+        "recorded_digest_source"
+      ],
+      "sha256_observed": "655a431d03876040fa98b83f865f28143ad09672978f717b0992ce96cb006ff6",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 5088,
+      "git_blob_oid": "d978b71d47b015e00f39c8eccce5f208514be533",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A067",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-22.md",
+      "present": true,
+      "roles": [
+        "existing_evidence",
+        "milestone_addendum"
+      ],
+      "sha256_observed": "3c6b7d746e2951bc5bc3d1b73d82d94991bf01017f9a883184a16056b07f2a80",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 14856,
+      "git_blob_oid": "83fabcbb6d328ef908c81360a307d6c541fa1f46",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A068",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-23-stage-a.md",
+      "present": true,
+      "roles": [
+        "milestone_addendum"
+      ],
+      "sha256_observed": "603bc058d82c2a84d027dda68732b10db98cfec4827bbbfe90f821b694223ec4",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 6573,
+      "git_blob_oid": "5a0b5c2e398ae4e4112862b18888a9c82198b423",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A069",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-23-stage-b1.md",
+      "present": true,
+      "roles": [
+        "milestone_addendum"
+      ],
+      "sha256_observed": "842bb73ae9e44978d15029c613a04b4fc9d6231cf1c3a485d1390dd0da7de273",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 10246,
+      "git_blob_oid": "46a24c49476f2d6948a715da489535c70bea714b",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A070",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-23.md",
+      "present": true,
+      "roles": [
+        "milestone_record"
+      ],
+      "sha256_observed": "ed9d0231dfecc10c200c69ecee6e87b3757838fc18c780b8c824da501c9ce0d6",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 5500,
+      "git_blob_oid": "51c789ed444fc6a316555335dd7efbcfd08bac49",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A071",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-3.md",
+      "present": true,
+      "roles": [
+        "milestone_record"
+      ],
+      "sha256_observed": "9a049e9caa2c2363530a2b5c67c01631f77b20e66a97cf69b4c5558dd5260759",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 7126,
+      "git_blob_oid": "5e4008e2c23c29891ab63338ade0b01d20fa06c0",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A072",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-4.md",
+      "present": true,
+      "roles": [
+        "milestone_record"
+      ],
+      "sha256_observed": "da9bd9cc169d4256dada89e73bb1c3796ef7b3fc91774dc13783d8f3e72b7b55",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 5969,
+      "git_blob_oid": "40abe822898faa9f53cc8dd15b3e0e1435b7b05d",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A073",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-5.md",
+      "present": true,
+      "roles": [
+        "milestone_record"
+      ],
+      "sha256_observed": "5837166b82f16918fdeb5af5f1e0acb77aeb2bbf36615760d25f6b5bf9235476",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 6197,
+      "git_blob_oid": "9279823496577e0d64254952fdc9d6a0c291453e",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A074",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-6.md",
+      "present": true,
+      "roles": [
+        "recorded_digest_source",
+        "milestone_record"
+      ],
+      "sha256_observed": "29415e8ea0a509e50ea3943276bd4bf4e031639c406c8008284704e807d39e73",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 6170,
+      "git_blob_oid": "ea5957fbce5a8f3ee486381e592379a435f12c88",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A075",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-7.md",
+      "present": true,
+      "roles": [
+        "milestone_record",
+        "recorded_digest_source"
+      ],
+      "sha256_observed": "105e190d7cfa88836ec686d4fbbb2a66f179f64a9130ff15ccd35d25e2c684f2",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 7099,
+      "git_blob_oid": "4a644bf14326ae11b97df2a4c2ffad3add2e105e",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A076",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-8.md",
+      "present": true,
+      "roles": [
+        "recorded_digest_source",
+        "milestone_record"
+      ],
+      "sha256_observed": "01d3ef7390a4de097be6a0d2b0ae1eb046e782369c624ebe7be7d636d8b3e827",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 7805,
+      "git_blob_oid": "72214c0430138921791a8495d6aba24bb73a3938",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A077",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/milestones/milestone-9.md",
+      "present": true,
+      "roles": [
+        "milestone_record",
+        "recorded_digest_source"
+      ],
+      "sha256_observed": "f4b2253502d90ffc6704e969600aac8b111823786250f287fc0f7eb6f9b15d43",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 6520,
+      "git_blob_oid": "1386880910a27203a3e0d00c808b514318e8b1b2",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A078",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/operations/m22-runbooks.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "3c414db6beea650bd9c12dea1ee55de27967c34992af3ae20d8a952b3e6ea324",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 11130,
+      "git_blob_oid": "2ea1c6dc629a51ca7cd9a43f6c98bdd61088b283",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A079",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/quality/document-intelligence-benchmark.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "0cbb64947cdd65f70b39d4f6e9fad484eafa613197e5216a56bbd34fcca9653e",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 10692,
+      "git_blob_oid": "9b284ee389ae5436ef4c855b57b59213109b6bf3",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A080",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/quality/evaluation-and-observability.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "ae1f3ab30eed1623a955d11a478abd7ed17fccbe15be197d56d6819f7ddd7a7f",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 1538,
+      "git_blob_oid": "8de73a328c80a8176c3559337227d90fa8b458de",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "3111f57a4ce0f9edbe332501c0a7b25c0bb1356999816d8a5b19c2da10bc8658",
+      "historical_expected_source": "docs/milestones/milestone-22-stage-b.md",
+      "id": "A081",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/quality/m22-independent-review/v1/hash-inventory.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "3111f57a4ce0f9edbe332501c0a7b25c0bb1356999816d8a5b19c2da10bc8658",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 8050,
+      "git_blob_oid": "1fa43c410c538164d1e38228baab756681f02034",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A082",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "docs/quality/policy-retrieval-evaluation.md",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "94bcb0b9fc490906f0fb8710e73f03276a70d04fac28f08bb02f40c34e251bb0",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": null,
+      "git_blob_oid": null,
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "DIRECTORY_REFERENCE_NO_SINGLE_FILE_DIGEST",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A083",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "infra/apim",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": null,
+      "tracked_descendant_count": 4,
+      "type": "directory"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": null,
+      "git_blob_oid": null,
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "DIRECTORY_REFERENCE_NO_SINGLE_FILE_DIGEST",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A084",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "infra/azure",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": null,
+      "tracked_descendant_count": 13,
+      "type": "directory"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 6511,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "a82025c792092867bf7ae06774682c0430f146e08d322aa90e2f25952c90e425",
+      "historical_expected_source": "docs/milestones/milestone-19-remediation.md",
+      "id": "A085",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/adversarial/m19-remediation-paths-source.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "a82025c792092867bf7ae06774682c0430f146e08d322aa90e2f25952c90e425",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 180454,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "08bd7136c68eda874e618a99328283d08ed2976381258872ff019861ce849821",
+      "historical_expected_source": "docs/milestones/milestone-19-remediation.md",
+      "id": "A086",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/adversarial/m19-remediation-source-verified-a.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "08bd7136c68eda874e618a99328283d08ed2976381258872ff019861ce849821",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 2797,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "OBSERVED_SHA256_NO_RECORDED_PIN_CHECKED",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A087",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/adversarial/m19-remediation-summary.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "be07eea7fcb4665f20829b8365400bec3d8f7efe799e059b1f38e6b885fb22fe",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 180515,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "7e3faefd23333482f6fe5a7e318edf731188ab389471807ff8b85265a0354804",
+      "historical_expected_source": "docs/milestones/milestone-19.md",
+      "id": "A088",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/adversarial/m19-verified-a.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "7e3faefd23333482f6fe5a7e318edf731188ab389471807ff8b85265a0354804",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 31611,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "388a0c3a03d4c5a730a7ba4432acc832ee470e4e35b1fc4b7a975e6aa9f47f57",
+      "historical_expected_source": "docs/milestones/milestone-11.md",
+      "id": "A089",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/agent-tools/m11-verified-a.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "388a0c3a03d4c5a730a7ba4432acc832ee470e4e35b1fc4b7a975e6aa9f47f57",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 25016,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "74aad58a9a47340f3f16a926fcd60ce8d5644511a407db19364f6aaa367a53ca",
+      "historical_expected_source": "docs/milestones/milestone-10.md",
+      "id": "A090",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/agents/m10-final-a.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "74aad58a9a47340f3f16a926fcd60ce8d5644511a407db19364f6aaa367a53ca",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 162120,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "090228f5352ea6152a644325133831e0126f0a3becc1793d7699553185f1eb95",
+      "historical_expected_source": "docs/milestones/milestone-16.md",
+      "id": "A091",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/api/m16-openapi-a.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "090228f5352ea6152a644325133831e0126f0a3becc1793d7699553185f1eb95",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 765907,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "287c2dc709f2fdaee562022f43c26e8743c3cda13073a923d76d4f6c84738c60",
+      "historical_expected_source": "docs/milestones/milestone-16.md",
+      "id": "A092",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/api/m16-verified-a.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "287c2dc709f2fdaee562022f43c26e8743c3cda13073a923d76d4f6c84738c60",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 630459,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "bdc5031bc5ec7a99619db618f87f9122a5649dbe71c4b46ba3bd9afedb8bb465",
+      "historical_expected_source": "docs/milestones/milestone-6.md",
+      "id": "A093",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/benchmarks/m5-fixture-a.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "bdc5031bc5ec7a99619db618f87f9122a5649dbe71c4b46ba3bd9afedb8bb465",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 617598,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "OBSERVED_SHA256_NO_RECORDED_PIN_CHECKED",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A094",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/benchmarks/m5-fixture-pdf-only.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "bca2a196f0a2e9d62decc70cbf70eaaa620417afd13e709444d45ae4d4144993",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 14256,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "OBSERVED_SHA256_NO_RECORDED_PIN_CHECKED",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A095",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/deployment/m23-b2d-r4/validation.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "5df5222ca7771f017c69c4ee9853a70a0096754c596b57837d24984d03c9b107",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 6535,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "c2914abf291ca679b9a67e0438d2b9f12db164454ae47b6e04923da152ea5dd4",
+      "historical_expected_source": "outputs/deployment/m23-b2d-r6/assessment.sha256",
+      "id": "A096",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/deployment/m23-b2d-r6/assessment.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "c2914abf291ca679b9a67e0438d2b9f12db164454ae47b6e04923da152ea5dd4",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 82,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "OBSERVED_SHA256_NO_RECORDED_PIN_CHECKED",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A097",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/deployment/m23-b2d-r6/assessment.sha256",
+      "present": true,
+      "roles": [
+        "recorded_digest_source"
+      ],
+      "sha256_observed": "ce03413a009743e8453f2d8b1853eba65f239b8c021f213db62546385de6392e",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 5131,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "OBSERVED_SHA256_NO_RECORDED_PIN_CHECKED",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A098",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/deployment/m23-b2d/security-decision.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "ea3543b8e68a99c75c668eddb352bdd190b750c2da5a91f7ef3cd039112e4f0e",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 1028994,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "92b00d6b8aa5e8655a510342168756749f7ae192c6d783d3f25bc872ecac372e",
+      "historical_expected_source": "docs/milestones/milestone-6.md",
+      "id": "A099",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/evidence/m6-verified-a.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "92b00d6b8aa5e8655a510342168756749f7ae192c6d783d3f25bc872ecac372e",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 170,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "OBSERVED_SHA256_NO_RECORDED_PIN_CHECKED",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A100",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/identity/m18-reproduction-verification.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "dee87a9c745ab65ee9258c1b184c3bd0eec2db1783dfa8dc5ad4bcd78f81e3e3",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 1702,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "4a706e2ec18a56b9fd66181e9754735c78987a27f0cb9f9d1ff44e641ed3819a",
+      "historical_expected_source": "docs/milestones/milestone-18.md",
+      "id": "A101",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/identity/m18-verified-a.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "4a706e2ec18a56b9fd66181e9754735c78987a27f0cb9f9d1ff44e641ed3819a",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 301015,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "0169ba38660ce7cc3a389df20a5b8a78769ceae731cc8eea525d01cac2b7360d",
+      "historical_expected_source": "docs/milestones/milestone-7.md",
+      "id": "A102",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/knowledge/m7-verified-a.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "0169ba38660ce7cc3a389df20a5b8a78769ceae731cc8eea525d01cac2b7360d",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 55822,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "5f373df8044bda5b42031914c3287955e8d0e186d3e1055d2a3ef6ebfc9d6bfb",
+      "historical_expected_source": "docs/milestones/milestone-14.md",
+      "id": "A103",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/mcp-http/m14-loopback-verification.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "5f373df8044bda5b42031914c3287955e8d0e186d3e1055d2a3ef6ebfc9d6bfb",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 55827,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "7a45bb661db5c6091b02de0e515b6117e1424859db6003f9f4591c6ffedc8489",
+      "historical_expected_source": "docs/milestones/milestone-14.md",
+      "id": "A104",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/mcp-http/m14-verified-a.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "7a45bb661db5c6091b02de0e515b6117e1424859db6003f9f4591c6ffedc8489",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 243584,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "19529fe8591ca374a06f70faa7637f5043560d34b3607f3c16075e0d48ed0e23",
+      "historical_expected_source": "docs/milestones/milestone-13.md",
+      "id": "A105",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/mcp/m13-verified-a.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "19529fe8591ca374a06f70faa7637f5043560d34b3607f3c16075e0d48ed0e23",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 1029,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "OBSERVED_SHA256_NO_RECORDED_PIN_CHECKED",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A106",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/outcomes/m20-reproduction-verification.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "d87be84f0ab3a617fee17106a9485a8446a756abee57696a02e6e42bde42db32",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 4808,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "5a7797e44f9f39b07c94ce483547c0270abe7e2d55a811f7f22f0604b2dd555c",
+      "historical_expected_source": "docs/milestones/milestone-20.md",
+      "id": "A107",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/outcomes/m20-source-verified-a.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "5a7797e44f9f39b07c94ce483547c0270abe7e2d55a811f7f22f0604b2dd555c",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 140920,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "1e480b90640d4b5ac8f7a585a622e22cb0e3aefb0cb49d29c443f58a53ae8287",
+      "historical_expected_source": "docs/milestones/milestone-14.md",
+      "id": "A108",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/packages/m14-final/northstar_claims_ai-0.1.0-py3-none-any.whl",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "1e480b90640d4b5ac8f7a585a622e22cb0e3aefb0cb49d29c443f58a53ae8287",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 696,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "OBSERVED_SHA256_NO_RECORDED_PIN_CHECKED",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A109",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/packages/m16/package-verification.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "f6e3bfe98356bfc14decccc10c6ff4c3c201ebd7f9eba3f6e104787405a0bf0d",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 83,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "OBSERVED_SHA256_NO_RECORDED_PIN_CHECKED",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A110",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/packages/m20/source-tests.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "c78b4686c1cac03a7c6c754335951fef8484d7f075027f4410ab4eeb4b1a0096",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 1632,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "OBSERVED_SHA256_NO_RECORDED_PIN_CHECKED",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A111",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/packages/m21/file-manifest.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "fecdaa66cd46f62b1dad615d487e6f21536f8b633755ac90082a321e1c2b3e9c",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 1605,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "OBSERVED_SHA256_NO_RECORDED_PIN_CHECKED",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A112",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/packages/m21/installed-wheel-pytest.log",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "6684e7fa31789256fc82677b14df3cc6229f8b9052890f045717eea081cff376",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 1553,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "OBSERVED_SHA256_NO_RECORDED_PIN_CHECKED",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A113",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/packages/m21/source-pytest.log",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "3a38442cfab4525b84c8fe035e0fa33b9957258799f44c640735f10dc4a52873",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 5241,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "OBSERVED_SHA256_NO_RECORDED_PIN_CHECKED",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A114",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/packages/m22-stage-b/acceptance-summary.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "52fe5aece15028a4816ef4157cf611fc06e19a42ebe87558bde70ee75443cbfc",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 4962,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "OBSERVED_SHA256_NO_RECORDED_PIN_CHECKED",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A115",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/packages/m22-stage-b/wheel-accepted-real-data.txt",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "f320e2b866d88daefa4dc08f2fabea3f27e9c2052ac9e99d5e1775b572db9eff",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 7015,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "OBSERVED_SHA256_NO_RECORDED_PIN_CHECKED",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A116",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/packages/m22-stage-b/wheel-accepted.txt",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "1cfaa4f3fa4a458466fea549ff791b8a55a16a431cafe7fb93db230b7b720a9f",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 52732,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "0c401924d24a2e4d24a0467d6a2d72475fbc1a1afb68daa9d369f460c3429bc2",
+      "historical_expected_source": "docs/milestones/milestone-22-stage-b.md",
+      "id": "A117",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/quality/m22-stage-b/accepted-source-a.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "0c401924d24a2e4d24a0467d6a2d72475fbc1a1afb68daa9d369f460c3429bc2",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 113064,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "e1b45e98dc8d9e8d6209e3443a3049b5ce5cfde6cdfcb11ab4c62e3f9f7f9340",
+      "historical_expected_source": "docs/milestones/milestone-8.md",
+      "id": "A118",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/retrieval-eval/m8-verified-a.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "e1b45e98dc8d9e8d6209e3443a3049b5ce5cfde6cdfcb11ab4c62e3f9f7f9340",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 4359204,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "2e215ab9de99aa278acbe4521fd53703944427787e62432d7041cd2e70e35ec1",
+      "historical_expected_source": "docs/milestones/milestone-15.md",
+      "id": "A119",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/review/m15-verified-a.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "2e215ab9de99aa278acbe4521fd53703944427787e62432d7041cd2e70e35ec1",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 667418,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "2460f9e54a485a2e3d9670b9b8e36cfc3a676fd62eb744e29c21c561e07822cb",
+      "historical_expected_source": "docs/milestones/milestone-9.md",
+      "id": "A120",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/rules/m9-verified-a.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "2460f9e54a485a2e3d9670b9b8e36cfc3a676fd62eb744e29c21c561e07822cb",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 981,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "OBSERVED_SHA256_NO_RECORDED_PIN_CHECKED",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A121",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/security/m21-reproduction-verification.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "a427a755d415a3868a830b580152dc475c77f002d4e0416598b53c1803189139",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 53503,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "a0e74d5ac1470d76e05ffc83cdf19bda8e71c7219e24fee545e3de0d8a16dcb5",
+      "historical_expected_source": "docs/milestones/milestone-21.md",
+      "id": "A122",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/security/m21-source-verified-a.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "a0e74d5ac1470d76e05ffc83cdf19bda8e71c7219e24fee545e3de0d8a16dcb5",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 603,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "OBSERVED_SHA256_NO_RECORDED_PIN_CHECKED",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A123",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/ui/m17-reproduction-verification.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "6f33e159d5220922b8554015640891ec67dc0b11e72a10a945445e4d70997496",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 1699,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "58926daeb71893b327bf0a81c1be78836e90b126149391d82562a0e7cc0d3aa0",
+      "historical_expected_source": "docs/milestones/milestone-17.md",
+      "id": "A124",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/ui/m17-verified-a.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "58926daeb71893b327bf0a81c1be78836e90b126149391d82562a0e7cc0d3aa0",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 21735659,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "ec0c6c47f439dfd08a7954c220c688446a6ab457340dacd83727f25d53a0adb0",
+      "historical_expected_source": "docs/milestones/milestone-12.md",
+      "id": "A125",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/workflow/m12-verified-a.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "ec0c6c47f439dfd08a7954c220c688446a6ab457340dacd83727f25d53a0adb0",
+      "type": "file"
+    },
+    {
+      "availability": "IGNORED_LOCAL_ONLY",
+      "bytes": 21735659,
+      "git_blob_oid": null,
+      "git_commit": null,
+      "hash_status": "MATCHES_RECORDED_SHA256",
+      "historical_expected_sha256": "ec0c6c47f439dfd08a7954c220c688446a6ab457340dacd83727f25d53a0adb0",
+      "historical_expected_source": "docs/milestones/milestone-12.md",
+      "id": "A126",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "outputs/workflow/m12-verified-b.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "ec0c6c47f439dfd08a7954c220c688446a6ab457340dacd83727f25d53a0adb0",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 340,
+      "git_blob_oid": "0f3a7a7d2af7f94fb71fbde65da022b8238f4ecc",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A127",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "requirements/m10-constraints.txt",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "e874b059915a894be3c75caf8f6fff336299abfa9ca439aa88edd860d16d4656",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 9421,
+      "git_blob_oid": "a11df4c4603a5e07a9077e0062474ef69073d755",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A128",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "requirements/m13-wheel-manifest.json",
+      "present": true,
+      "roles": [
+        "existing_evidence"
+      ],
+      "sha256_observed": "284f2d24ff4a4c16d1e445ed43543aaef3a1973c44a5895946eb16e6ff1f220b",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": null,
+      "git_blob_oid": null,
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "DIRECTORY_REFERENCE_NO_SINGLE_FILE_DIGEST",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A129",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/adversarial",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": null,
+      "tracked_descendant_count": 9,
+      "type": "directory"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": null,
+      "git_blob_oid": null,
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "DIRECTORY_REFERENCE_NO_SINGLE_FILE_DIGEST",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A130",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/agent_tools",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": null,
+      "tracked_descendant_count": 5,
+      "type": "directory"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": null,
+      "git_blob_oid": null,
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "DIRECTORY_REFERENCE_NO_SINGLE_FILE_DIGEST",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A131",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/agents",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": null,
+      "tracked_descendant_count": 6,
+      "type": "directory"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": null,
+      "git_blob_oid": null,
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "DIRECTORY_REFERENCE_NO_SINGLE_FILE_DIGEST",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A132",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/api",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": null,
+      "tracked_descendant_count": 8,
+      "type": "directory"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": null,
+      "git_blob_oid": null,
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "DIRECTORY_REFERENCE_NO_SINGLE_FILE_DIGEST",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A133",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/benchmark",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": null,
+      "tracked_descendant_count": 6,
+      "type": "directory"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 717,
+      "git_blob_oid": "72a5fe13429c0b5a3ef38b292e8bdeb06a4610ef",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A134",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/config.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "7f2b0a733701e7d6ab9e8deece95f802ab96563db89b95f0454c073f0e7e978a",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": null,
+      "git_blob_oid": null,
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "DIRECTORY_REFERENCE_NO_SINGLE_FILE_DIGEST",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A135",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/dataset",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": null,
+      "tracked_descendant_count": 6,
+      "type": "directory"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": null,
+      "git_blob_oid": null,
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "DIRECTORY_REFERENCE_NO_SINGLE_FILE_DIGEST",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A136",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/evidence",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": null,
+      "tracked_descendant_count": 5,
+      "type": "directory"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": null,
+      "git_blob_oid": null,
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "DIRECTORY_REFERENCE_NO_SINGLE_FILE_DIGEST",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A137",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/human_review",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": null,
+      "tracked_descendant_count": 5,
+      "type": "directory"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": null,
+      "git_blob_oid": null,
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "DIRECTORY_REFERENCE_NO_SINGLE_FILE_DIGEST",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A138",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/identity",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": null,
+      "tracked_descendant_count": 7,
+      "type": "directory"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": null,
+      "git_blob_oid": null,
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "DIRECTORY_REFERENCE_NO_SINGLE_FILE_DIGEST",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A139",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/knowledge",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": null,
+      "tracked_descendant_count": 5,
+      "type": "directory"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 6521,
+      "git_blob_oid": "845e0de1f80611e66fa9bb95bb3aac81c56b5ad2",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A140",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/lifecycle.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "376bea6fdcfc378e8eb352f803e2e7a42a988bcf014377be8b5c2969fd1f0486",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 4295,
+      "git_blob_oid": "5c1ce179b018d37e46351299f8c6662d7dd5e520",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A141",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/logging.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "6714ab2c9ceceab31067411d715ab3f8aaf0401b46790cbc695f76a553124b5c",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": null,
+      "git_blob_oid": null,
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "DIRECTORY_REFERENCE_NO_SINGLE_FILE_DIGEST",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A142",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/mcp_http",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": null,
+      "tracked_descendant_count": 6,
+      "type": "directory"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": null,
+      "git_blob_oid": null,
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "DIRECTORY_REFERENCE_NO_SINGLE_FILE_DIGEST",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A143",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/mcp_server",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": null,
+      "tracked_descendant_count": 6,
+      "type": "directory"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 6906,
+      "git_blob_oid": "978ba67b4796b3b16feb2863c100f83b5ab65f2b",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A144",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/mcp_server/client.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "fb6924ad9948ed9ee7d984e728ff7f29d8f4d4f14c5ac9e136b1309c44cbadc3",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 14944,
+      "git_blob_oid": "2686e326db290208099de20d40b93ab06833a1ac",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A145",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/models.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "b1ca122279a071e6fa8cf9e11a631aae0d30dbb5272388ffa996935b869ea010",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": null,
+      "git_blob_oid": null,
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "DIRECTORY_REFERENCE_NO_SINGLE_FILE_DIGEST",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A146",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/outcomes",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": null,
+      "tracked_descendant_count": 10,
+      "type": "directory"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 1684,
+      "git_blob_oid": "2c48e2918b1b0ee999dd445361545ae481460c66",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A147",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/ports.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "61d64deecf3d090798f23630a8a12438c098ee529b9fac476460154c4d0503af",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": null,
+      "git_blob_oid": null,
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "DIRECTORY_REFERENCE_NO_SINGLE_FILE_DIGEST",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A148",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/quality_ops",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": null,
+      "tracked_descendant_count": 20,
+      "type": "directory"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": null,
+      "git_blob_oid": null,
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "DIRECTORY_REFERENCE_NO_SINGLE_FILE_DIGEST",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A149",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/retrieval_eval",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": null,
+      "tracked_descendant_count": 6,
+      "type": "directory"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": null,
+      "git_blob_oid": null,
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "DIRECTORY_REFERENCE_NO_SINGLE_FILE_DIGEST",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A150",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/reviewer_ui",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": null,
+      "tracked_descendant_count": 8,
+      "type": "directory"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": null,
+      "git_blob_oid": null,
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "DIRECTORY_REFERENCE_NO_SINGLE_FILE_DIGEST",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A151",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/rules",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": null,
+      "tracked_descendant_count": 6,
+      "type": "directory"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 5436,
+      "git_blob_oid": "d77b8fd83fbc078c05554b9ff9bff37bee3bc9cd",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A152",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/rules/__main__.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "4e9d3473b8ab908ebcd4b7b8cf1b4aff5e6b5be63fb802bed1f0cabad2c0c0d8",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": null,
+      "git_blob_oid": null,
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "DIRECTORY_REFERENCE_NO_SINGLE_FILE_DIGEST",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A153",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/security_hardening",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": null,
+      "tracked_descendant_count": 9,
+      "type": "directory"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": null,
+      "git_blob_oid": null,
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "DIRECTORY_REFERENCE_NO_SINGLE_FILE_DIGEST",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A154",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "src/claims_ai/workflow",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": null,
+      "tracked_descendant_count": 5,
+      "type": "directory"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 20881,
+      "git_blob_oid": "6970eb0bd488d6d9fbcce8b87069c446abc7dcd3",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A155",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "tests/test_agent_tools.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "15af36e86c95b6324a905107ac12110f3eb7127f66328238831aeaada62f3afa",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 18327,
+      "git_blob_oid": "d5c81a5cdc23dbe90b727601cb78b8fbf6544f98",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A156",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "tests/test_agents.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "37668c77403306202529577112e7536f6aa6a8119be5cf4bc0890709745d8448",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 41180,
+      "git_blob_oid": "9d2a99767ab283d38634c0aca4c8264dc41c383e",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A157",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "tests/test_api.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "4d5df57a24330be3f6c45c5c361a2ff83452c81a0637b95e8a81f060864d744f",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 9774,
+      "git_blob_oid": "62209148638531a99957247178a8cac2793d8b61",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A158",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "tests/test_benchmark_runner.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "e1ffa9fea27ffc014e402140fae216e0a1a4448696838a4c2a09cbc4a803b728",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 28525,
+      "git_blob_oid": "21a5441c8fcd5537584719ad128e8665d26c1aec",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A159",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "tests/test_container_supply_chain.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "61403bcbf7d6044e47c94ac661427f73c6eaaadea2eb0261da3731600c715eb7",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 11668,
+      "git_blob_oid": "8326dc51279635aab3c00c1a08eb7dc6e938074f",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A160",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "tests/test_dataset.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "fecc6837e995e71d3467f5f70e3a86db258c92f57aa7069605844e6fad26b613",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 22613,
+      "git_blob_oid": "c4bf5f965d57af97d0ced743d7be22d3903b6473",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A161",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "tests/test_evidence.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "b27065340d2c0a72dc2e4912b9f7554a8c89fbcee02e91a8ec45f7f4e78202ae",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 27510,
+      "git_blob_oid": "aed89bd1f12ab8bae2528c08e3cba38856d60bec",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A162",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "tests/test_human_review.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "99cf24f749f9fa60c63a4f9ef0313862cfe1787a539f430d45651dfb1889d466",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 25867,
+      "git_blob_oid": "8dbad099207fcbe3a67a3f1be3060a7219a9c5ae",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A163",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "tests/test_identity.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "0eb3ca592fddd8bc042a3e1fadbaf03da3d78bb62260caf49fc9715f6e8159ff",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 21963,
+      "git_blob_oid": "b7e5cce6547092c2bf92c7ca3d613138518c2995",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A164",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "tests/test_knowledge.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "0f3f30d5eef357f6e1d2451f20735c2334d06e8755fa3e89618907e9b40e17d2",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 13367,
+      "git_blob_oid": "c58c17f7cba7ecfecbd60fb33136a9a24ea07ca3",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A165",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "tests/test_m19_remediation.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "1396378fc769e6db157a628c96c36e9e18137de2f565bb6fc7f6b759b6a96ce0",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 23746,
+      "git_blob_oid": "62954bec774c8a96e727141c2b27fc6472be10f2",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A166",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "tests/test_mcp_http.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "f5fe44cdad12abf1fa62feca9338d2361ae74c1f010762c8b545f4dc7756b8bb",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 19485,
+      "git_blob_oid": "fa54cf8eb5f9721108074a3c68c140d569a4f461",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A167",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "tests/test_mcp_server.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "582a882c350a2d6a2add45f48093d78f16837012d422f4962bf1c662fa9b06d4",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 8497,
+      "git_blob_oid": "f9a36e1a6796eafe576afd0ce0b857b259cb3006",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A168",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "tests/test_models.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "1fa1fb5c46ced7bc16aee2e28062d46790407dcb02b396b9cc4816a3e64f7b07",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 37063,
+      "git_blob_oid": "628bc5e997e3301aa9767244553e0bdba22855ff",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A169",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "tests/test_outcomes.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "7714bb4f585db1e490be1a0cf28083ee3bfcb0fcbc1e8b555b327a0160e78827",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 10757,
+      "git_blob_oid": "59b2c1469e96c0210200929b5220d5ea26eec6f5",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A170",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "tests/test_quality_ops_operational.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "8447c9e9689bfbf21cbf50710d889c218487336b24f2bace479be1d6d15fce04",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 12510,
+      "git_blob_oid": "394ef93e42ed78f4f21bbcd3a25621912a8e4e67",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A171",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "tests/test_retrieval_eval.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "8b912b23d48f749418d5c00bd379c13f023d4260992e7532ae5748569f9c673b",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 34699,
+      "git_blob_oid": "eb9ebdd611b4fe937594568ba9ca5f2ea3c65577",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A172",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "tests/test_reviewer_ui.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "758b0ff77ac49ed9df39e073d9bcc6c96fbc45d8aae25191984065466718f8fb",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 17361,
+      "git_blob_oid": "713f39aadf70d9e326250aea6aefcc0d87a01d7c",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A173",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "tests/test_rules.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "dbcfd683a4c4aee10ccb71fa745b5a49879e80ea7eb7be07fdfa5c5175e3b066",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 37966,
+      "git_blob_oid": "035adfba110129d9f56559be714b05fe79f11f7a",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A174",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "tests/test_security_hardening.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "419d42f46391902bd50478900c657343f09ebab210f5c325317cd584219f1a74",
+      "type": "file"
+    },
+    {
+      "availability": "GIT_TRACKED",
+      "bytes": 24104,
+      "git_blob_oid": "f361e730aa8c0171d8449703744a9394bd01ea6d",
+      "git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+      "hash_status": "CURRENT_BYTES_MATCH_BOUND_GIT_BLOB",
+      "historical_expected_sha256": null,
+      "historical_expected_source": null,
+      "id": "A175",
+      "independent_authentication": "NOT_ESTABLISHED_BY_HASH",
+      "path": "tests/test_workflow.py",
+      "present": true,
+      "roles": [
+        "implementation_reference"
+      ],
+      "sha256_observed": "b6efb90723febf9881bd59988856970a2be791271d1f5ffbbf1be531c4169d89",
+      "type": "file"
+    }
+  ],
+  "availability_counts": {
+    "GIT_TRACKED": 133,
+    "IGNORED_LOCAL_ONLY": 42
+  },
+  "baseline_git_commit": "11a64399d8e0166d2e1087dcb8e43242a7a7b711",
+  "current_git_blob_binding": "Current tracked file bytes checked against Git blob at the full baseline commit; original historical source versions are not inferred.",
+  "format": "m24-p1-existing-evidence-index-v1",
+  "hash_check_time": "2026-11-17T14:56:50.478262+00:00",
+  "hash_semantics": "SHA-256 verifies observed bytes/preserved recorded pins, not authenticity, execution, independent acceptance or compatibility with current runtime.",
+  "manifest_member_checks": {
+    "m22_inventory_members": 6,
+    "m4_payload_members": 152
+  }
+}
