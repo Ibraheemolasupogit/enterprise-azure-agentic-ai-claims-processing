@@ -4,7 +4,22 @@ Greenfield Azure portfolio project for **fictional Northstar Insurance Group**, 
 
 ## Evidence status
 
-**M24: OFFLINE DOCUMENTATION COMPLETE / EXECUTION BLOCKED / DEPLOYMENT NO-GO.** The [consolidated milestone report](docs/milestones/milestone-24.md) binds the M1–M23 catalogue, architecture/design, preflight and failed isolation bootstrap. All six M24 demonstrations remain **NOT_TESTED**. No isolation alternative or demonstration is authorized by documentation closeout; M22 review restrictions and M23 security gates remain unchanged.
+**Current repository status (M1–M25): OFFLINE COMPLETE / DEPLOYMENT BLOCKED.** All 25 milestones are delivered within their recorded offline, synthetic scopes. Deployment and production readiness are **not** established: they are blocked by the M23 security gate, M24 execution isolation, M22 independent review and external approvals, not by missing offline code.
+
+| Milestones | Status | Records |
+| --- | --- | --- |
+| M1–M21 | Delivered and tested within each milestone's recorded local/offline scope (foundation, synthetic data, evidence, retrieval, rules, agents, workflow, MCP, human review, API/UI, identity, adversarial testing, durable outcomes, hardening) | [Roadmap](docs/milestones/roadmap.md), per-milestone records in [docs/milestones](docs/milestones/) |
+| M22 | Offline evaluation/operations infrastructure delivered; **60 candidates PENDING_REVIEW**, **12 independent-quality gates NOT_TESTED** | [Stage B](docs/milestones/milestone-22-stage-b.md) |
+| M23 | **DEFERRED — SECURITY GATE NO-GO**: nine High CVEs with UNKNOWN applicability (blocking), Debian signing-key provenance unverified, zlib remediation not acquired/installed/tested, container builds unconditionally refused | [Deferral record](docs/milestones/milestone-23.md), [remediation handoff](docs/deployment/m23/security-remediation-blocked-handoff.md) |
+| M24 | **OFFLINE DOCUMENTATION COMPLETE / EXECUTION BLOCKED / DEPLOYMENT NO-GO**: isolation bootstrap failed; all six demonstrations **NOT_TESTED** | [Consolidated report](docs/milestones/milestone-24.md) |
+| M25 | **OFFLINE COMPLETE**: amendment/reassessment planning and the M20 correction-route fix (P1 `fd19899`, P2 `43eda8b`, P3 `007a0e4`) | [Completion record](docs/milestones/milestone-25.md#m25-completion-offline-complete) |
+
+- **Current-baseline verification (A1, 2026-11-19, local CPython 3.12.8 on macOS arm64, source tree):** full source-tree pytest suite **1,775 passed, 0 failed, 0 skipped** (8 min 58 s); Ruff lint and formatting (188 files) and strict mypy (187 source files) pass. This is **source-tree verification only**, not installed-wheel, Linux, container or deployment verification. Earlier milestones' installed-wheel and process-level evidence is recorded in their own milestone records and was not rerun.
+- **NOT_TESTED:** the six M24 demonstrations; M22 independent quality gates; installed-wheel/Linux execution of M25 code; live Azure, Entra/OIDC, APIM, document-intelligence and model services; cloud persistence, telemetry export, restore and rollback.
+- **Blockers needing external action or approval:** independent Debian key provenance and a signature verifier; supported fixes or an approved base-image decision for the High CVEs; a supported execution-isolation mechanism; a genuine independent M22 reviewer; Azure spend/tenant and policy-owner approvals.
+- **Operational integration not implemented:** recommendation approval (API/UI) is not wired to M20 durable outcomes; no real intake/scanning, amendment executor, real authentication, production hosting, payments or customer communications. These remain **PLANNED** and unauthorised.
+
+The milestone paragraphs below retain each milestone's original scoped wording.
 
 **IMPLEMENTED AND LOCALLY TESTED:** the `claims_ai` Python foundation, Milestone 4 synthetic dataset tools and Milestone 5 offline extraction benchmark. The foundation supplies Pydantic v2 contracts, deterministic state-transition guards, local configuration, redacted JSON logging and typed protocols. The [motor-v1 corpus](data/synthetic/motor/README.md) supplies 12 development scenarios and source-linked labels; policies/coverage interpretations remain unapproved. The [benchmark](docs/quality/document-intelligence-benchmark.md) has typed interfaces and deterministic scoring; **all fixture extraction results are SIMULATED ground-truth echoes**, not OCR/vision/provider performance results.
 
