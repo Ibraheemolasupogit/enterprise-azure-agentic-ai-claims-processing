@@ -342,5 +342,19 @@ demonstrations and historical checkpoint compatibility boundaries remain unchang
 evidence, reviewed facts, rule results and advice depend on changed documents, keeps all of
 them invalidated, orders reassessment steps, states lifecycle preconditions per case state
 and rejects conflicting or invalid amendment requests deterministically. It executes nothing
-and authorises no reuse. Direct M20 correction of reopened closed cases is reported
-BLOCKED under existing contracts; only an indirect full-revalidation route remains. M22, M23 SECURITY GATE NO-GO and M24 NOT_TESTED boundaries remain unchanged.
+and authorises no reuse. As published, P2 reported direct M20 correction of reopened closed
+cases as BLOCKED (finding M25-P2-F1); P3 remediated this. M22, M23 SECURITY GATE NO-GO and
+M24 NOT_TESTED boundaries remain unchanged.
+
+## M25 P3 — M20 correction-route remediation; M25 OFFLINE COMPLETE
+
+[M25 P3](docs/milestones/m25-p3/README.md) fixes M25-P2-F1 with one M20 reducer condition.
+A correction from a stored VALIDATING case (after supervisor reopening or an earlier
+correction) now reuses the existing AWAITING_EVIDENCE transitions, as M20 already did for
+ASSESSING. The lifecycle table and all supervisor, assignment, self-review,
+independent-approval and audit controls are unchanged. The P2 planner's routes are realigned
+(plan format v2). [M25 is OFFLINE COMPLETE](docs/milestones/milestone-25.md#m25-completion-offline-complete):
+pure planning and the M20 fix are verified offline against synthetic data and temporary local
+SQLite only. Operational integration (API, UI, MCP, executor, persistence beyond M20's local
+store, cloud) is not implemented, not authorised and NOT_TESTED. M22, M23 SECURITY GATE NO-GO
+and M24's six NOT_TESTED demonstrations remain unchanged.

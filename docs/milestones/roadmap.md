@@ -28,6 +28,7 @@ This roadmap implements the greenfield master brief expressed in the [README](..
 | 22 — Reproducible quality and operations | Independently reviewed held-out golden suite, evaluation manifests, OpenTelemetry instrumentation, dashboards/alert definitions, fault-injection and incident/recovery runbooks | Reported counts/results, safety gates, redaction, replay and dependency-failure evidence; M4 development labels are not held-out evaluation results |
 | 23 — Governed Azure deployment | Bicep, protected GitHub Actions/OIDC, environment separation, compatibility/quota matrix and approved budgets | **DEFERRED — SECURITY GATE NO-GO**; [status and reopening criteria](milestone-23.md). Exit evidence still requires authorised deployment: reviewed infrastructure plan, actual service integration/identity tests, smoke checks and cost evidence |
 | 24 — Readiness and portfolio evidence | End-to-end synthetic demonstration, restore/recovery exercise, architecture reconciliation, limitations and teardown plan | **OFFLINE DOCUMENTATION COMPLETE / EXECUTION BLOCKED / DEPLOYMENT NO-GO**; [consolidated report](milestone-24.md). Catalogue/design/preflight and isolation-failure evidence complete; six demonstrations NOT_TESTED. Original runtime/recovery exit evidence remains unfulfilled; no production-readiness claim |
+| 25 — Evidence amendments and reassessment planning (authorised extension) | Pure amendment, dependency-invalidation and reassessment planning plus the bounded M20 correction-route fix | **OFFLINE COMPLETE**; [completion record](milestone-25.md#m25-completion-offline-complete). Synthetic offline verification only; operational integration unauthorised and NOT_TESTED |
 
 Security, tests, provenance, basic telemetry and cost limits start with their first relevant component; later milestones deepen them rather than defer all controls. No milestone is complete solely because code exists. Actual Azure calls in any milestone require separate deployment/spending authorization; local progress uses explicitly labeled simulations where necessary.
 
@@ -37,7 +38,7 @@ Approved requests govern scope: M1–M18 remain delivered as recorded. The appro
 
 Current scope: [M22 Stage B](milestone-22-stage-b.md) adds offline evaluation, genuine local SDK instrumentation, executable dashboard/alert checks and actual process/fault recovery evidence. The [Stage A record](milestone-22.md) is historical; its candidates remain PENDING_REVIEW. Independent quality acceptance still requires genuine review and a configured approval verifier. [M23's deferral record](milestone-23.md) consolidates Stage A/B1 and B2D R1–R6 findings without overwriting historical evidence. Stop at the security gate: supported fixes/applicability, authenticated provenance, a complete authenticated database within 1 GiB and CPython/OpenSSL/Cargo/native coverage must be resolved, with separate acquisition/build/runtime approvals. B1 unconditionally refuses builds; Azure execution remains unauthorised. M24 P1–P4 documentation and the bounded isolation assessment do not authorize isolation implementation or demonstrations; reopening requires the separate approvals and containment evidence in [M24](milestone-24.md). No cloud resource, operational policy publication or production insurance outcome is authorised. Git commits/pushes remain manual and separate.
 
-## M25 — Evidence amendments and reassessment planning (authorised extension)
+## M25 — Evidence amendments and reassessment planning (OFFLINE COMPLETE)
 
 [P1](milestone-25.md) implements only a pure, versioned source-bound metadata planner and
 synthetic unit/regression evidence. It describes verification, stale-material invalidation
@@ -54,3 +55,7 @@ BLOCKED rather than changing M20/lifecycle contracts. Integration remains unauth
 [P3](m25-p3/README.md) remediates M25-P2-F1 inside M20 with one reducer condition: corrections
 from a stored VALIDATING case reuse the existing AWAITING_EVIDENCE hop. No lifecycle table,
 contract or authority control changes; integration remains unauthorised.
+
+M25 is **OFFLINE COMPLETE** ([completion record](milestone-25.md#m25-completion-offline-complete)).
+Operational integration remains unauthorised and NOT_TESTED. All existing gates above are
+unchanged.

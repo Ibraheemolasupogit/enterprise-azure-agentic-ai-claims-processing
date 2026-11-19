@@ -1,5 +1,8 @@
 # Milestone 25 — Evidence amendments and reassessment planning
 
+Status: **OFFLINE COMPLETE** (2026-11-19). Offline synthetic scope only; operational
+integration is not authorised and NOT_TESTED. See [completion](#m25-completion-offline-complete).
+
 ## P1: planning correctness only
 
 The authorised first phase adds a pure immutable, versioned metadata planner over existing
@@ -76,3 +79,48 @@ Recorded validation: the new route tests failed on the unfixed reducer for the d
 canonical plan hashes; 619 regressions (complete M20, P1, models, lifecycle, M15, M21, M22
 operational, M19) passed. A full source-tree suite, Ruff, formatting and strict mypy passed.
 No historical store, checkpoint or recorded M20 evidence was replayed, migrated or regenerated.
+
+## M25 completion (OFFLINE COMPLETE)
+
+M25 delivered its approved offline scope in three published phases. Evidence packets are
+unchanged; each binds its own phase's files by SHA-256. Bindings later superseded by
+appended documentation remain verifiable at the listed commits.
+
+| Phase | Commit | Delivered | Evidence |
+| --- | --- | --- | --- |
+| P1 | `fd19899` | Pure, immutable, versioned planner: added/removed/replaced references, reason codes, invalidation, verification/reassessment requirements and execution preconditions; source-binding and fail-closed input checks | [P1 packet](m25-p1/README.md), [verification](m25-p1/verification.json) |
+| P2 | `43eda8b` | Per-item dependency labels with conservative invalidation of all derived material, ordered reassessment steps, per-state lifecycle preconditions, fail-closed handling of repeated and conflicting requests; finding M25-P2-F1 | [P2 packet](m25-p2/README.md), [verification](m25-p2/verification.json) |
+| P3 | `007a0e4` | Option E1 M20 correction-route fix after a PASS authority-path check; planner routes realigned (plan format v2) | [P3 packet](m25-p3/README.md), [verification](m25-p3/verification.json) |
+
+**Verified** (offline, synthetic data, local CPython 3.12.8 on macOS arm64, source tree):
+
+- P1 input validation, deterministic canonical output, immutability, limits and rejection
+  of authority-bearing input.
+- P2 dependency labels, step ordering, routes checked against `lifecycle.ALLOWED_TRANSITIONS`,
+  request reconciliation and rejection of forged or inconsistent plans.
+- P3 reopen → correct → independent revalidation → publication with temporary SQLite. Still
+  refused: correction of closed cases, reviewer reopening, unassigned/non-human/self-review
+  actors, reviewers on supervisor-required assessments, wrong replacement revisions or
+  content, stale bindings and stale approvals. Audit replay and rehashed-audit tamper
+  detection.
+- Regressions (472 at P2, 619 at P3) and full source-tree suites (1,767 at P2, 1,775 at P3);
+  Ruff, formatting and strict mypy at each phase.
+
+**NOT_TESTED:**
+
+- Installed-wheel execution; Linux or container runtime; SIGKILL fault probes on the new
+  correction path.
+- M20 correction from `quarantined`, `processing_failed` or `received`. These are planner
+  routes permitted by the lifecycle table, but M20 never stores those states.
+- Actual document bytes and authenticity (the planner validates metadata only).
+- External M15 review stores; end-to-end execution of a plan against M20.
+- Any operational integration: API, UI, MCP, executor, automated reopening, cloud.
+- Independent review of M25; compatibility with historical stores or checkpoints, which are
+  incompatible by design because the source fingerprint changed and nothing was migrated.
+
+No further M25 development is proposed. Operational integration would need separately
+approved authority, lifecycle, audit and execution-containment design. It also remains
+constrained by M24's unestablished isolation. M22 independent-review restrictions
+(60 PENDING_REVIEW candidates; 12 independent-quality metrics NOT_TESTED), M23
+**DEFERRED — SECURITY GATE NO-GO** and M24 **EXECUTION BLOCKED / DEPLOYMENT NO-GO**, with all
+six demonstrations NOT_TESTED, are unchanged. No production insurance outcome is authorised.
