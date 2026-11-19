@@ -12,8 +12,12 @@
   "approvals": {
     "budget": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
     "cloud_validation": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
+    "cost_exposure": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
+    "evidence": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
+    "execution_template": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
     "identity_rbac": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
     "network": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
+    "provider_registration": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
     "provisioning": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
     "region_capacity": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
     "scope": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
@@ -32,11 +36,34 @@
     "resource_group": null,
     "subscription_id": null
   },
-  "format": "azure-infrastructure-validation-contract-v1",
+  "checklist": [
+    {"stage": 1, "name": "scope_region_identity_network", "approvals": ["scope", "region_capacity", "identity_rbac", "network"]},
+    {"stage": 2, "name": "cost_exposure_acceptance", "approvals": ["cost_exposure"]},
+    {"stage": 3, "name": "provider_registration", "approvals": ["provider_registration"]},
+    {"stage": 4, "name": "budget_values", "approvals": ["budget"]},
+    {"stage": 5, "name": "execution_template_gate_copy", "approvals": ["execution_template"]},
+    {"stage": 6, "name": "arm_validate_and_what_if", "approvals": ["cloud_validation"]},
+    {"stage": 7, "name": "provisioning_window", "approvals": ["provisioning"]},
+    {"stage": 8, "name": "teardown", "approvals": ["teardown"]},
+    {"stage": 9, "name": "evidence_record", "approvals": ["evidence"]}
+  ],
+  "execution": {
+    "approved_parameters_sha256": null,
+    "approved_template_sha256": null,
+    "approved_whatif_sha256": null,
+    "resource_group": null,
+    "reviewed_template_sha256": null,
+    "run_id": null,
+    "window_end_utc": null,
+    "window_start_utc": null
+  },
+  "format": "azure-infrastructure-validation-contract-v2",
   "notes": [
     "Preparation only. Null means not approved, never zero or default.",
     "Budgets notify and do not stop spending; operator stop and expiry teardown are mandatory.",
-    "The proposed maximum lifetime is an upper bound for owner review, not an approved value."
+    "The proposed maximum lifetime is an upper bound for owner review, not an approved value.",
+    "APPROVED_FOR_VALIDATION permits ARM validate and what-if only; provisioning needs APPROVED_FOR_EXECUTION_WINDOW.",
+    "The repository template gate stays false-only in every state; only a hash-bound execution copy may differ."
   ],
   "proposed_max_lifetime_hours": 72,
   "provisioning_allowed": false,

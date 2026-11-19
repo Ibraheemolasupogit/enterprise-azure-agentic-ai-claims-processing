@@ -26,9 +26,9 @@ approved budget and lifetime, monitored, and completely torn down. Specifically:
 | File | Purpose |
 | --- | --- |
 | [`infra/azure-validation/main.bicep`](../../infra/azure-validation/main.bicep) | Minimal template with its own hard `@allowed([false])` provisioning gate |
-| [`infra/azure-validation/contract.json`](../../infra/azure-validation/contract.json) | Scope, resource allow-list, approval records (all pending) and approved values (all null) |
-| [`deployment/infra_validation.py`](../../deployment/infra_validation.py) | Offline validator: contract shape, scope, resource allow-list, gate, tags, secure settings and the unchanged M23 gate |
-| [`tests/test_infra_validation.py`](../../tests/test_infra_validation.py) | Positive checks and fail-closed security mutations |
+| [`infra/azure-validation/contract.json`](../../infra/azure-validation/contract.json) | Contract v2: scope, resource allow-list, 12 approval records, the 9-stage checklist, approved values and the hash-bound `execution` block (all pending or null) |
+| [`deployment/infra_validation.py`](../../deployment/infra_validation.py) | Offline validator: contract states, template and M23 gates, contract-bound authorisation, strict what-if check, teardown **planning** and purge-identity check. It never calls Azure, deploys or deletes |
+| [`tests/test_infra_validation.py`](../../tests/test_infra_validation.py) | Positive checks and fail-closed mutations for every control |
 
 ## Resources (all behind the hard gate)
 
@@ -54,47 +54,93 @@ optional `includeContainerEnvironment` defaults to `false`. Enabling it needs an
 review of the environment's platform egress, because the subnet denies Internet egress. The
 contract proposes a **maximum 72-hour lifetime** as an upper bound; it isn't an approved value.
 
-## Offline validation (available now)
+## Contract states (default deny)
+
+| Status | Permits | Requires |
+| --- | --- | --- |
+| `PREPARATION_ONLY` (repository default) | Nothing; `execution` must be all null | — |
+| `APPROVED_FOR_VALIDATION` | ARM validate and what-if **only**; provisioning stays refused | Stages 1–6 approved; artifacts bound by hash |
+| `APPROVED_FOR_EXECUTION_WINDOW` | One provisioning window of **at most 2 hours**, ending no later than the approved expiry | Stages 1–8 approved; artifacts **and the passing what-if** bound by hash |
+
+In **every** state, the repository template `infra/azure-validation/main.bicep` stays
+false-only and `--check-provisioning` refuses it. Only an **execution copy** may open the gate.
+That copy is compiled with the pinned Bicep 0.48.1 and bound by SHA-256, and it must differ from
+the reviewed compiled template **only** in the gate's `allowedValues`. The M23 template
+`infra/azure/main.bicep` is never changed.
+
+## Approval checklist (9 stages, 12 contract approvals)
+
+| Stage | Contract approvals | Evidence required |
+| --- | --- | --- |
+| 1 Scope, region, identity, network | `scope`, `region_capacity`, `identity_rbac`, `network` | Resource list; subscription and region; deployer identity matrix (group-scoped, no secrets); no ingress or public IPs |
+| 2 Cost exposure | `cost_exposure` | Accepted exposure statement (realistic ≈ $0; stated worst case; budgets don't stop spend) |
+| 3 Provider registration | `provider_registration` | Registration states before and after (`Microsoft.Network`) |
+| 4 Budget values | `budget` | Amount, contacts, start/end dates, expiry |
+| 5 Execution template | `execution_template` | Reviewed and execution compiled hashes; one-line gate diff |
+| 6 ARM validate and what-if | `cloud_validation` | Retained `whatif.json` passing `--check-whatif` |
+| 7 Provisioning window | `provisioning` | Window start and end (≤ 2 h), bound what-if hash |
+| 8 Teardown | `teardown` | Approved teardown plan and identity checks |
+| 9 Evidence record | `evidence` | Receipts filed; no gate or evidence changes |
+
+Each approval record needs status, identity, time and an evidence SHA-256. Approval of one
+stage never implies the next. Any change to resources, region, SKU, permissions, budget,
+template, parameters or window invalidates the affected approvals.
+
+## Offline commands
 
 ```sh
-python3 -I -B deployment/infra_validation.py --root .                       # PASS, cloud_calls 0
+python3 -I -B deployment/infra_validation.py --root .                       # PASS; repository gate FALSE_ONLY
 python3 -I -B deployment/infra_validation.py --root . --check-provisioning  # always refused (exit 78)
-.venv/bin/python -m pytest tests/test_infra_validation.py
+# With an approved contract copy and the exact artifacts (refusal = exit 78):
+python3 -I -B deployment/infra_validation.py --contract C --authorize-validation \
+  --reviewed-template REVIEWED.json --execution-template EXEC.json --parameters PARAMS.json
+python3 -I -B deployment/infra_validation.py --contract C --check-whatif whatif.json
+python3 -I -B deployment/infra_validation.py --contract C --authorize-execution \
+  --reviewed-template REVIEWED.json --execution-template EXEC.json --parameters PARAMS.json --whatif whatif.json
+python3 -I -B deployment/infra_validation.py --contract C --plan-teardown state.json
+python3 -I -B deployment/infra_validation.py --contract C --verify-purge VAULT DELETED_VAULT_ID
 ```
 
-## Approval checklist (each separate, recorded in the contract)
+Every fail-closed decision runs **locally** on files exported from Cloud Shell. Cloud Shell
+only runs the owner-approved commands.
 
-| # | Approval | Evidence required |
-| --- | --- | --- |
-| 1 | **Scope:** this exact resource list; no workload, data or ingress; quality stays NOT_TESTED | Signed scope record |
-| 2 | **Region and capacity:** subscription, region, SKU support and quota | Owner-recorded subscription and region |
-| 3 | **Budget:** amount, contacts, start/end dates, stop threshold, expiry (≤72 h proposed), expiry owner | Dated price quote for this resource list in the billing currency |
-| 4 | **Identity and RBAC:** owner pre-creates the resource group; deployer gets Contributor on that group only; GitHub OIDC tied to a protected environment and branch, or a named operator; no client secrets | Identity matrix |
-| 5 | **Network:** no ingress or public IPs; decision on the optional Container Apps environment and its egress | Reviewed network plan |
-| 6 | **Template gate change:** a reviewed edit allowing `true` in this template only (never in `infra/azure/main.bicep`) | Reviewed diff |
-| 7 | **Cloud validation:** ARM validate and what-if only | Retained what-if output matching the resource list |
-| 8 | **Provisioning** within a bounded time window | Approval naming the what-if hash and window |
-| 9 | **Teardown and retention:** deletion plan and retained evidence | Signed teardown plan |
+## What-if check
 
-Approval of one step never implies the next. Any change to resources, region, SKU,
-permissions, budget or lifetime invalidates the affected approvals.
+The what-if must contain **exactly one `Create`** for each of the seven deployed types (NSG,
+virtual network, managed identity, Key Vault, Log Analytics workspace, diagnostic setting,
+budget). Everything must be in the approved resource group with the `nsval-` naming, and the
+diagnostic setting must be `vault-audit` on the vault. Types are parsed in full, including child
+and extension segments: a vault secret is `microsoft.keyvault/vaults/secrets`, not a vault. Any
+other type or change type, including `Unsupported`, any duplicate or any missing type stops the
+process for an owner decision.
 
-## Controlled teardown
+## Fail-closed teardown (plan only; owner executes after the teardown approval)
 
-1. **Trigger:** at the approved expiry, when the budget stop threshold is reached, on any stop
-   condition, or when validation completes, whichever comes first.
-2. **Export evidence:** the activity log for the resource group, the deployment record and
-   the budget notification history, to approved local storage.
-3. **Delete the whole resource group.** Don't delete resources individually.
-4. **Key Vault:** the vault moves to soft-deleted state for 7 days. The owner either purges it
-   (allowed, since purge protection isn't enabled) or records the retained name and its
-   expiry. No secrets ever existed in it.
-5. **Verify:** no resources remain in the group or carry the validation tag; no remaining
-   deployments; cost analysis shows no new charges after deletion, re-checked after billing
-   latency (24–48 h).
-6. **Revoke:** remove the deployer's role assignment and OIDC federated credential, or the
-   operator's access, and the resource group if pre-created.
-7. **Record:** teardown receipts and final cost, without changing existing gates or evidence.
+`--plan-teardown` reads an owner-exported state file. That file holds the group (name, tags,
+locks), its resources (IDs, tags), the deployment's output resource IDs (or `null` if missing),
+the deployment state and the budget names. It returns an ordered plan or **refuses for manual
+review**:
+
+- **Group identity:** refuses unless the name equals the approved group, is never
+  `rg-claims-agentic-ai-dev`, and carries `purpose=infrastructure-validation` **and**
+  `infravalRun=<run_id>`. The group must not have existed before; it's created with both tags.
+  Any lock refuses.
+- **Running deployment:** `Running`/`Accepted` gives only *cancel the deployment, then re-plan*.
+- **Partial failure or missing outputs:** works from the actual inventory. Only resources that
+  exist are acted on; an absent group is verify-only.
+- **Unexpected state:** refuses on any unexpected type, untagged resource, resource missing from
+  the deployment record, or more than one candidate per type or budget.
+- **Order:** capture evidence → delete budget → permanently delete the workspace (`--force`) →
+  delete the group (waits for completion) → `--verify-purge` against
+  `az keyvault show-deleted --name <vault> --query properties.vaultId` → purge the vault → verify.
+
+Verification after teardown:
+- group absent;
+- no soft-deleted workspace or vault;
+- every recorded ID returns not-found;
+- no resources carry the validation tag;
+- no role assignments at the group's scope;
+- a cost check at **+72 h** (pay-as-you-go cost data can take up to 72 hours).
 
 ## Stop conditions
 
@@ -107,6 +153,9 @@ Stop and tear down, or don't start, if any of these occur:
 - any step needs a container image, application code, claims data, AI services or a change to
   `infra/azure/main.bicep`;
 - resources or charges remain after teardown;
+- the what-if check, an authorisation check or a teardown plan refuses;
+- the purge target's original ID isn't exactly in the approved group;
+- any step would deploy the repository template or treat a contract file as authority by itself;
 - anything would imply application, quality or production readiness.
 
 ## Limitations
