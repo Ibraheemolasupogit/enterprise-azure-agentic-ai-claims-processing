@@ -45,3 +45,8 @@ and existing M15/M20/M21 execution prerequisites; it does not implement a servic
 authenticate callers, admit evidence or execute claim outcomes. P2 scope and integration
 testing require separate approval. M1–M24 recorded results and all existing security,
 independent-review, demonstration and deployment gates above remain unchanged.
+
+[P2](m25-p2/README.md) adds pure dependency labelling with conservative invalidation,
+ordered reassessment steps, per-state lifecycle preconditions and fail-closed request
+reconciliation. It reports the direct M20 correction route for reopened closed cases as
+BLOCKED rather than changing M20/lifecycle contracts. Integration remains unauthorised.

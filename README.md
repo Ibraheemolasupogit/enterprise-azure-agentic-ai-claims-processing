@@ -335,3 +335,12 @@ It executes no correction and grants no identity, approval or outcome authority.
 [New validation evidence](docs/milestones/m25-p1/README.md) is limited to pure planning and
 targeted regressions. M22 review restrictions, M23 SECURITY GATE NO-GO, M24's six NOT_TESTED
 demonstrations and historical checkpoint compatibility boundaries remain unchanged.
+
+## M25 P2 — Dependency invalidation and reassessment planning
+
+[M25 P2](docs/milestones/m25-p2/README.md) adds a pure planner over P1 that labels which
+evidence, reviewed facts, rule results and advice depend on changed documents, keeps all of
+them invalidated, orders reassessment steps, states lifecycle preconditions per case state
+and rejects conflicting or invalid amendment requests deterministically. It executes nothing
+and authorises no reuse. Direct M20 correction of reopened closed cases is reported
+BLOCKED under existing contracts; only an indirect full-revalidation route remains. M22, M23 SECURITY GATE NO-GO and M24 NOT_TESTED boundaries remain unchanged.

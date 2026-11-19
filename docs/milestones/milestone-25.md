@@ -27,3 +27,27 @@ remains: no historical state migration/replay is authorised or performed.
 
 M22 review restrictions, M23 SECURITY GATE NO-GO and unconditional build refusal, M24's
 six NOT_TESTED demonstrations and historical M8/M12/M19 limitations/results remain intact.
+
+## P2: dependency invalidation and reassessment planning only
+
+The approved second phase adds a pure planner over P1. It
+labels each derived item's dependency on changed evidence, keeps every item conservatively
+invalidated, orders reassessment steps, makes per-state lifecycle preconditions explicit
+and reconciles repeated or conflicting requests with fail-closed codes. P1 code and evidence
+are unchanged; dependency labels never authorise reuse of prior conclusions.
+
+Implementation: [reassessment.py](../../src/claims_ai/reassessment.py).
+Tests: [test_reassessment.py](../../tests/test_reassessment.py).
+Contract, findings and limitations: [P2 packet](m25-p2/README.md).
+Actual checks, hashes and counts: [verification](m25-p2/verification.json).
+
+Recorded validation: 62 focused tests passed twice with matching canonical plan hashes;
+472 regressions (P1, models, lifecycle, selected M6, M15, M20, M21) passed. Ruff lint,
+formatting and strict mypy passed. Local CPython 3.12.8/macOS arm64 only.
+
+Finding M25-P2-F1: M20 `CORRECT` fails closed for a stored `VALIDATING` case, which occurs
+after supervisor reopening or an earlier correction. P2 therefore marks direct correction of
+`CLOSED`/`VALIDATING` cases BLOCKED. Amendment remains possible only indirectly, via
+independent revalidation of the unchanged inputs first. A bounded M20 remediation is approved
+in principle for a later phase and is not part of P2. Integration still
+needs separately approved authority, lifecycle, audit and execution-containment design.
