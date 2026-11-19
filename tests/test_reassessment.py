@@ -332,7 +332,11 @@ def test_repeat_and_reverse_order_produce_identical_bytes(
 
 EXPECTED_ROUTES = {
     CaseState.RECEIVED: (RouteStatus.SUPPORTED, (CaseState.VALIDATING,), False),
-    CaseState.VALIDATING: (RouteStatus.BLOCKED, (), False),
+    CaseState.VALIDATING: (
+        RouteStatus.SUPPORTED,
+        (CaseState.AWAITING_EVIDENCE, CaseState.VALIDATING),
+        False,
+    ),
     CaseState.EXTRACTING: (RouteStatus.BLOCKED, (), False),
     CaseState.ASSESSING: (
         RouteStatus.SUPPORTED,
@@ -343,7 +347,11 @@ EXPECTED_ROUTES = {
     CaseState.AWAITING_EVIDENCE: (RouteStatus.SUPPORTED, (CaseState.VALIDATING,), False),
     CaseState.QUARANTINED: (RouteStatus.SUPPORTED, (CaseState.VALIDATING,), True),
     CaseState.PROCESSING_FAILED: (RouteStatus.SUPPORTED, (CaseState.VALIDATING,), False),
-    CaseState.CLOSED: (RouteStatus.BLOCKED, (), True),
+    CaseState.CLOSED: (
+        RouteStatus.SUPPORTED,
+        (CaseState.VALIDATING, CaseState.AWAITING_EVIDENCE, CaseState.VALIDATING),
+        True,
+    ),
 }
 
 
@@ -363,10 +371,10 @@ def test_supported_routes_are_allowed_by_lifecycle_table(state: CaseState) -> No
         assert target in lifecycle.ALLOWED_TRANSITIONS[current]
         current = target
     if route.status == RouteStatus.BLOCKED:
-        # M20 CORRECT steps to VALIDATING; that edge is absent from these states,
-        # and a supervisor reopening of CLOSED lands in VALIDATING, which has none either.
-        start = CaseState.VALIDATING if state == CaseState.CLOSED else state
-        assert CaseState.VALIDATING not in lifecycle.ALLOWED_TRANSITIONS[start]
+        # Only EXTRACTING remains blocked: no EXTRACTING -> VALIDATING edge, and M20
+        # never stores it (revalidation passes through it within one command).
+        assert state == CaseState.EXTRACTING
+        assert CaseState.VALIDATING not in lifecycle.ALLOWED_TRANSITIONS[state]
 
 
 def test_route_mirrors_m20_correct_and_reopen_branches() -> None:
@@ -375,7 +383,9 @@ def test_route_mirrors_m20_correct_and_reopen_branches() -> None:
     assert (
         "if case.state == CaseState.CLOSED:\n"
         '            raise OutcomeError("closed_case_requires_reopening")\n'
-        "        if case.state == CaseState.ASSESSING:\n"
+        "        # M25 P3 (Option E1): a stored VALIDATING case (after reopening or an earlier\n"
+        "        # correction) reuses the existing invalidation hop, exactly as ASSESSING does.\n"
+        "        if case.state in (CaseState.ASSESSING, CaseState.VALIDATING):\n"
         "            step(CaseState.AWAITING_EVIDENCE)\n"
         "        step(CaseState.VALIDATING)"
     ) in source
@@ -408,18 +418,23 @@ def test_lifecycle_supervisor_requirement_matches_pure_transition(
     assert lifecycle_route(state).lifecycle_supervisor_required is True
 
 
-def test_closed_case_plan_requires_reopen_then_reports_blocked_route(
+def test_closed_case_plan_requires_reopen_then_awaiting_evidence_route(
     awaiting_case: Case, decision: ReviewerDecision
 ) -> None:
     closed = in_state(awaiting_case, CaseState.CLOSED, decision)
     plan = plan_reassessment(closed, request_for(closed))
-    assert plan.lifecycle.codes == (LifecycleCode.REOPEN, LifecycleCode.REOPENED_UNSUPPORTED)
+    assert plan.lifecycle.codes == (
+        LifecycleCode.REOPEN,
+        LifecycleCode.VALIDATING_VIA_AWAITING_EVIDENCE,
+    )
+    assert plan.lifecycle.status == RouteStatus.SUPPORTED
     assert [s.step for s in plan.steps[:4]] == [
         Step.SOURCE,
         Step.IDENTITY,
         Step.REOPEN,
-        Step.ROUTE_BLOCKED,
+        Step.REVIEW_INVALIDATION,
     ]
+    assert Step.ROUTE_BLOCKED not in {s.step for s in plan.steps}
     assert plan.execution_authorized is False and plan.automatic_transition is False
 
 
@@ -429,7 +444,7 @@ def test_closed_case_plan_requires_reopen_then_reports_blocked_route(
         (CaseState.QUARANTINED, LifecycleCode.QUARANTINE_RELEASE, Step.SUPERVISOR),
         (CaseState.ASSESSING, LifecycleCode.VIA_AWAITING_EVIDENCE, None),
         (CaseState.PROCESSING_FAILED, LifecycleCode.PROCESSING_FAILED, None),
-        (CaseState.VALIDATING, LifecycleCode.IN_FLIGHT, Step.ROUTE_BLOCKED),
+        (CaseState.VALIDATING, LifecycleCode.VALIDATING_VIA_AWAITING_EVIDENCE, None),
         (CaseState.EXTRACTING, LifecycleCode.IN_FLIGHT, Step.ROUTE_BLOCKED),
     ],
 )
@@ -602,17 +617,22 @@ def test_forged_inconsistent_plans_are_rejected(rich_case: Case) -> None:
             ReassessmentPlan.model_validate(forged)
 
 
-def test_forged_closed_plan_cannot_drop_reopen_or_blocker(
+def test_forged_closed_plan_cannot_drop_reopen_or_add_blocker(
     awaiting_case: Case, decision: ReviewerDecision
 ) -> None:
     closed = in_state(awaiting_case, CaseState.CLOSED, decision)
     data = json.loads(plan_reassessment(closed, request_for(closed)).model_dump_json())
-    for drop in (Step.REOPEN.value, Step.ROUTE_BLOCKED.value):
-        steps = [s for s in data["steps"] if s["step"] != drop]
+    without_reopen = [s for s in data["steps"] if s["step"] != Step.REOPEN.value]
+    blocker = {**data["steps"][2], "step": Step.ROUTE_BLOCKED.value, "requirement": None}
+    with_blocker = [*data["steps"][:3], blocker, *data["steps"][3:]]
+    for steps in (without_reopen, with_blocker):
         for n, item in enumerate(steps, start=1):
             item["position"] = n
         with pytest.raises(ValidationError):
             ReassessmentPlan.model_validate({**data, "steps": steps})
+    v1 = {**data, "format": "m25-reassessment-plan-v1"}
+    with pytest.raises(ValidationError):
+        ReassessmentPlan.model_validate(v1)  # P2-era serialized plans are not current.
 
 
 def test_request_decision_cannot_carry_plan_on_conflict(rich_case: Case) -> None:

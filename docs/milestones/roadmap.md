@@ -50,3 +50,7 @@ independent-review, demonstration and deployment gates above remain unchanged.
 ordered reassessment steps, per-state lifecycle preconditions and fail-closed request
 reconciliation. It reports the direct M20 correction route for reopened closed cases as
 BLOCKED rather than changing M20/lifecycle contracts. Integration remains unauthorised.
+
+[P3](m25-p3/README.md) remediates M25-P2-F1 inside M20 with one reducer condition: corrections
+from a stored VALIDATING case reuse the existing AWAITING_EVIDENCE hop. No lifecycle table,
+contract or authority control changes; integration remains unauthorised.

@@ -87,7 +87,8 @@ class LifecycleCode(StrEnum):
     QUARANTINE_RELEASE = "quarantine_release_correction_requires_supervisor"
     PROCESSING_FAILED = "processing_failed_requires_full_revalidation"
     REOPEN = "closed_requires_m20_supervisor_reopening"
-    REOPENED_UNSUPPORTED = "reopened_validating_case_has_no_m20_correction_route"
+    # M25 P3: M20 CORRECT routes a stored VALIDATING case via awaiting_evidence (Option E1).
+    VALIDATING_VIA_AWAITING_EVIDENCE = "validating_corrects_via_awaiting_evidence"
     IN_FLIGHT = "in_flight_processing_state_has_no_m20_correction_route"
 
 
@@ -114,7 +115,13 @@ _ROUTES: dict[
     CaseState, tuple[RouteStatus, tuple[LifecycleCode, ...], tuple[CaseState, ...], bool]
 ] = {
     CaseState.RECEIVED: (_S, (_D.DIRECT,), (CaseState.VALIDATING,), False),
-    CaseState.VALIDATING: (_B, (_D.IN_FLIGHT,), (), False),
+    CaseState.VALIDATING: (
+        _S,
+        (_D.VALIDATING_VIA_AWAITING_EVIDENCE,),
+        (CaseState.AWAITING_EVIDENCE, CaseState.VALIDATING),
+        False,
+    ),
+    # Never stored by M20: revalidation passes through it within one command.
     CaseState.EXTRACTING: (_B, (_D.IN_FLIGHT,), (), False),
     CaseState.ASSESSING: (
         _S,
@@ -126,7 +133,13 @@ _ROUTES: dict[
     CaseState.AWAITING_EVIDENCE: (_S, (_D.DIRECT,), (CaseState.VALIDATING,), False),
     CaseState.QUARANTINED: (_S, (_D.QUARANTINE_RELEASE,), (CaseState.VALIDATING,), True),
     CaseState.PROCESSING_FAILED: (_S, (_D.PROCESSING_FAILED,), (CaseState.VALIDATING,), False),
-    CaseState.CLOSED: (_B, (_D.REOPEN, _D.REOPENED_UNSUPPORTED), (), True),
+    # Supervisor REOPEN lands in validating, then CORRECT takes the E1 hop.
+    CaseState.CLOSED: (
+        _S,
+        (_D.REOPEN, _D.VALIDATING_VIA_AWAITING_EVIDENCE),
+        (CaseState.VALIDATING, CaseState.AWAITING_EVIDENCE, CaseState.VALIDATING),
+        True,
+    ),
 }
 
 
@@ -183,7 +196,8 @@ class PlanStep(Contract):
 
 
 class ReassessmentPlan(Contract):
-    format: Literal["m25-reassessment-plan-v1"] = "m25-reassessment-plan-v1"
+    # v2 (M25 P3): CLOSED and VALIDATING routes follow the remediated M20 CORRECT branch.
+    format: Literal["m25-reassessment-plan-v2"] = "m25-reassessment-plan-v2"
     purpose: Literal["synthetic_dependency_planning_only"] = "synthetic_dependency_planning_only"
     amendment: AmendmentPlan
     amendment_sha256: Sha256

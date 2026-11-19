@@ -117,7 +117,9 @@ def reduce(
         replacement = command.replacement
         if case.state == CaseState.CLOSED:
             raise OutcomeError("closed_case_requires_reopening")
-        if case.state == CaseState.ASSESSING:
+        # M25 P3 (Option E1): a stored VALIDATING case (after reopening or an earlier
+        # correction) reuses the existing invalidation hop, exactly as ASSESSING does.
+        if case.state in (CaseState.ASSESSING, CaseState.VALIDATING):
             step(CaseState.AWAITING_EVIDENCE)
         step(CaseState.VALIDATING)
         if replacement is None or (

@@ -51,3 +51,28 @@ after supervisor reopening or an earlier correction. P2 therefore marks direct c
 independent revalidation of the unchanged inputs first. A bounded M20 remediation is approved
 in principle for a later phase and is not part of P2. Integration still
 needs separately approved authority, lifecycle, audit and execution-containment design.
+
+## P3: M20 correction-route remediation (Option E1)
+
+The approved third phase fixes finding M25-P2-F1. M20 `CORRECT` now routes a stored
+`VALIDATING` case through the existing `validating → awaiting_evidence → validating`
+transitions, exactly as it already did for `assessing`. Supervisor reopening of a closed
+case, and a second correction before revalidation, therefore no longer require independent
+approval of known-stale inputs. The lifecycle table, commands, bindings, audit and storage
+schemas, M15 and M21 are unchanged. A pre-implementation check confirmed that the change
+grants a `VALIDATING` case exactly the correction authority an `awaiting_evidence` case
+already had. The P2 planner's routes are realigned (plan format v2); `EXTRACTING`, which
+M20 never stores, stays blocked.
+
+Implementation: [reducer](../../src/claims_ai/outcomes/reducer.py) (one condition) and
+[planner routes](../../src/claims_ai/reassessment.py).
+Tests: [correction routes](../../tests/test_outcomes_correction_routes.py) and updated
+[planner tests](../../tests/test_reassessment.py).
+Authority check, tests and limitations: [P3 packet](m25-p3/README.md).
+Actual checks, hashes and counts: [verification](m25-p3/verification.json).
+
+Recorded validation: the new route tests failed on the unfixed reducer for the defect itself
+(`invalid_transition`) and pass after the fix. 70 focused tests passed twice with matching
+canonical plan hashes; 619 regressions (complete M20, P1, models, lifecycle, M15, M21, M22
+operational, M19) passed. A full source-tree suite, Ruff, formatting and strict mypy passed.
+No historical store, checkpoint or recorded M20 evidence was replayed, migrated or regenerated.
