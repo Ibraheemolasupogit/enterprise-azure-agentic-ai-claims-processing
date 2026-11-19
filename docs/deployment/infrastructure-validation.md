@@ -111,9 +111,15 @@ Stop and tear down, or don't start, if any of these occur:
 
 ## Limitations
 
-- **Bicep compilation is NOT_TESTED:** no Bicep compiler is installed and installing one was out
-  of scope. Validation is static (`deployment/infra_validation.py`). Compile and what-if
-  checks belong to approval 7.
+- **Local compilation passes; Azure-side checks are NOT_TESTED.** On 2026-11-19 the template
+  compiled with **zero diagnostics** using the pinned Bicep CLI **0.48.1 (`cec7951cf6`)**,
+  SHA-256 `62cd5958c62fa1b738e9b69f24799fabddb90ed83fdb7d6d2563dde376ce479d`. That's the
+  official `bicep-osx-arm64` release asset, whose release digest matches the M23 Stage A pin,
+  signed by Apple Team ID `UBF8T346G9` and kept in git-ignored `artifacts/tools/`. As a
+  control, all 12 M23 compilations reproduced their recorded outputs byte for byte. The
+  compiled ARM template keeps `provisioningApproved` restricted to `false`, with every
+  resource conditioned on it. Local compilation checks the compiler's type and schema model
+  only; ARM validation and what-if (provider acceptance, quota, policy) remain approval 7.
 - **The budget API version (`Microsoft.Consumption/budgets@2021-10-01`) is new to this
   repository.** The other API versions reuse the reviewed M23 modules.
 - **Workspace query access is disabled** (no private link scope), so logs can't be queried

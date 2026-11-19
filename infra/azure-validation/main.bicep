@@ -160,8 +160,12 @@ resource environment 'Microsoft.App/managedEnvironments@2025-07-01' = if (provis
   name: '${name}-cae'
   location: location
   tags: tags
+  dependsOn: [vnet]
   properties: {
-    vnetConfiguration: { infrastructureSubnetId: vnet.properties.subnets[0].id, internal: true }
+    vnetConfiguration: {
+      infrastructureSubnetId: resourceId('Microsoft.Network/virtualNetworks/subnets', '${name}-vnet', 'containers')
+      internal: true
+    }
     workloadProfiles: [{ name: 'Consumption', workloadProfileType: 'Consumption' }]
     appLogsConfiguration: { destination: 'none' }
     publicNetworkAccess: 'Disabled'
