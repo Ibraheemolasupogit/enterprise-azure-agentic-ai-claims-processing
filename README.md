@@ -325,3 +325,13 @@ All 39 existing runtime pins are retained through `requirements/m23-constraints.
 ### M23 Stage B1 — offline supply-chain readiness
 
 [B1 contracts](docs/deployment/m23/stage-b1-supply-chain.md) add source-bound Linux AMD64/CPython 3.12 artifact checks, manylinux glibc/ELF validation, independently pinned Ed25519 review trust and pending provenance/licence/SBOM/vulnerability/reproducibility templates. The original pending manifest is preserved. Build execution is unconditionally refused, including valid reviewed inputs. [B1 validation](docs/milestones/milestone-23-stage-b1.md) concerns offline admission only. Later artifact integrity/static evidence does not supply complete security approval, reviewer enrolment, disconnected-builder or Linux runtime evidence; Azure gates remain disabled. Acquisition, builds and runtime validation require separate approvals under the [reopening criteria](docs/milestones/milestone-23.md#explicit-reopening-criteria).
+
+## M25 P1 — Pure evidence amendment planning
+
+[M25 P1](docs/milestones/milestone-25.md) adds an immutable, deterministic metadata planner
+for evidence additions, removals and replacements, with source-hash/revision preconditions
+and explicit verification, reassessment and stale-review invalidation requirements.
+It executes no correction and grants no identity, approval or outcome authority.
+[New validation evidence](docs/milestones/m25-p1/README.md) is limited to pure planning and
+targeted regressions. M22 review restrictions, M23 SECURITY GATE NO-GO, M24's six NOT_TESTED
+demonstrations and historical checkpoint compatibility boundaries remain unchanged.
