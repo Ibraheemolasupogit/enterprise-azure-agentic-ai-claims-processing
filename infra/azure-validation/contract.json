@@ -1,0 +1,58 @@
+{
+  "allowed_resource_types": [
+    "Microsoft.Consumption/budgets",
+    "Microsoft.Insights/diagnosticSettings",
+    "Microsoft.KeyVault/vaults",
+    "Microsoft.ManagedIdentity/userAssignedIdentities",
+    "Microsoft.Network/networkSecurityGroups",
+    "Microsoft.Network/virtualNetworks",
+    "Microsoft.OperationalInsights/workspaces",
+    "Microsoft.App/managedEnvironments"
+  ],
+  "approvals": {
+    "budget": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
+    "cloud_validation": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
+    "identity_rbac": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
+    "network": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
+    "provisioning": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
+    "region_capacity": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
+    "scope": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
+    "teardown": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"}
+  },
+  "approved_values": {
+    "budget_amount": null,
+    "budget_contact_emails": null,
+    "budget_end_date": null,
+    "budget_start_date": null,
+    "expires_at": null,
+    "include_container_environment": null,
+    "location": null,
+    "log_daily_quota_gb": null,
+    "owner": null,
+    "resource_group": null,
+    "subscription_id": null
+  },
+  "format": "azure-infrastructure-validation-contract-v1",
+  "notes": [
+    "Preparation only. Null means not approved, never zero or default.",
+    "Budgets notify and do not stop spending; operator stop and expiry teardown are mandatory.",
+    "The proposed maximum lifetime is an upper bound for owner review, not an approved value."
+  ],
+  "proposed_max_lifetime_hours": 72,
+  "provisioning_allowed": false,
+  "restrictions": {
+    "m22": "60 PENDING_REVIEW; 12 independent-quality gates NOT_TESTED",
+    "m23": "DEFERRED - SECURITY GATE NO-GO; infra/azure/main.bicep deploymentEnabled remains false-only",
+    "m24": "EXECUTION BLOCKED; six demonstrations NOT_TESTED"
+  },
+  "scope": {
+    "ai_services": false,
+    "application_workload": false,
+    "claims_data": false,
+    "container_images": false,
+    "public_ingress": false,
+    "public_ip": false,
+    "role_assignments": false
+  },
+  "status": "PREPARATION_ONLY"
+}
