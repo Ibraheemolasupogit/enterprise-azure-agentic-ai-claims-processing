@@ -15,7 +15,7 @@
     "cost_exposure": {"approval_identity": "repository-owner", "approval_time": "2026-11-20T00:08:07Z", "evidence_sha256": "ccfa1bab06bed7065f7339a417b4b487e4e6541245c7c9b10beedcfec356cd4f", "status": "APPROVED"},
     "evidence": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
     "execution_template": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
-    "identity_rbac": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
+    "identity_rbac": {"approval_identity": "repository-owner", "approval_time": "2026-11-20T00:24:22Z", "evidence_sha256": "66eaf9969cb488fe1dd4e55b53c00c1d8e1faf9f35aa278f52cdac5ad5ab27e4", "status": "APPROVED"},
     "network": {"approval_identity": "repository-owner", "approval_time": "2026-11-20T00:20:17Z", "evidence_sha256": "b77a417fc6b80fb1a6571ad364405db145f09328c1f458c9694e6b21cbc3da44", "status": "APPROVED"},
     "provider_registration": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
     "provisioning": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
