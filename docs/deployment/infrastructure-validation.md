@@ -46,6 +46,13 @@ approved budget and lifetime, monitored, and completely torn down. Specifically:
 Excluded: API Management, container registry, PostgreSQL, Service Bus, storage, private
 endpoints, container apps, Document Intelligence, AI Search, model services, role assignments.
 
+**Outside the group (scope amendment):** one subscription-scope `Microsoft.Consumption/budgets`,
+`infraval-uks-tmp01-budget`, filtered by `ResourceGroupName` to `rg-claims-infraval-uks-tmp01`. It
+isn't deployed by the template, isn't in the what-if, and isn't touched by the teardown plan.
+Creating and deleting it each need a separate owner approval. It's kept for +24 h/+72 h
+post-teardown monitoring or until its approved expiry. Its values are set at the stage 4 `budget`
+approval.
+
 ## Parameters requiring owner approval (no defaults)
 
 `location` (`uksouth` or `westeurope`), `owner`, `expiresAt`, `budgetAmount`,
@@ -90,7 +97,7 @@ template, parameters or window invalidates the affected approvals.
 
 | Approval | Status | Evidence |
 | --- | --- | --- |
-| `scope` | **APPROVED** 2026-11-20 (repository-owner): seven resources, Container Apps environment disabled, `OctoCAT-Agentic-AI`, `uksouth`, `rg-claims-infraval-uks-tmp01`, 2-hour maximum window | [Record](infra-validation-approvals/2026-11-20-scope-and-cost-exposure.md), SHA-256 `ccfa1bab…56cd4f` |
+| `scope` | **APPROVED**, amended 2026-11-20 (repository-owner): seven in-group resources (environment disabled, `OctoCAT-Agentic-AI`, `uksouth`, `rg-claims-infraval-uks-tmp01`, 2-hour window) **plus one subscription-scope budget** `infraval-uks-tmp01-budget` filtered by `ResourceGroupName` to that group; creation and deletion need separate approval | [Amendment](infra-validation-approvals/2026-11-20-scope-amendment-subscription-budget.md), SHA-256 `32218157…ea2133ad`; original [record](infra-validation-approvals/2026-11-20-scope-and-cost-exposure.md) `ccfa1bab…56cd4f` preserved |
 | `cost_exposure` | **APPROVED** 2026-11-20 (repository-owner): exposure acknowledged; $2 budget alerts aren't hard caps | Same record |
 | `network` | **APPROVED** 2026-11-20 (repository-owner): isolated VNet plan, no policies or locks reported, no existing VNets, Network Watcher **Option A** | [Record](infra-validation-approvals/2026-11-20-stage1-findings-and-network.md), SHA-256 `b77a417f…cbc3da44` |
 | `region_capacity` | **APPROVED** 2026-11-20 (repository-owner): live UK South quota VNets 0/1,000, NSGs 0/5,000; five types supported. Key Vault, Log Analytics and identity quotas not live-checked (residual) | [Record](infra-validation-approvals/2026-11-20-region-capacity.md), SHA-256 `0bbf4246…0eadbe5d` |
@@ -159,6 +166,8 @@ Verification after teardown:
   exist after deployment and after teardown. They're **never deleted** by teardown, and no paid
   Network Watcher feature is enabled;
 - a cost check at **+72 h** (pay-as-you-go cost data can take up to 72 hours).
+- the subscription-scope budget stays in place for the +24 h/+72 h checks; it's deleted only
+  under its separate approval, or auto-deleted at its approved expiry.
 
 ## Stop conditions
 
