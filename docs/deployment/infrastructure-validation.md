@@ -86,6 +86,19 @@ Each approval record needs status, identity, time and an evidence SHA-256. Appro
 stage never implies the next. Any change to resources, region, SKU, permissions, budget,
 template, parameters or window invalidates the affected approvals.
 
+### Recorded approvals
+
+| Approval | Status | Evidence |
+| --- | --- | --- |
+| `scope` | **APPROVED** 2026-11-20 (repository-owner): seven resources, Container Apps environment disabled, `OctoCAT-Agentic-AI`, `uksouth`, `rg-claims-infraval-uks-tmp01`, 2-hour maximum window | [Record](infra-validation-approvals/2026-11-20-scope-and-cost-exposure.md), SHA-256 `ccfa1bab…56cd4f` |
+| `cost_exposure` | **APPROVED** 2026-11-20 (repository-owner): exposure acknowledged; $2 budget alerts aren't hard caps | Same record |
+| `region_capacity` | PENDING: SKU support and quota not yet evidenced | — |
+| All other approvals | PENDING | — |
+
+The contract remains **`PREPARATION_ONLY`** with `provisioning_allowed=false`; all
+`approved_values` and `execution` fields remain `null`. Stage 1 isn't complete until
+`region_capacity`, `identity_rbac` and `network` are also approved.
+
 ## Offline commands
 
 ```sh

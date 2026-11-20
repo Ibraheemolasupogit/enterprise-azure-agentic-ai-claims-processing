@@ -77,12 +77,14 @@ def test_fabricated_approvals_and_values_still_cannot_provision() -> None:
 
 
 def test_incomplete_approval_records_are_rejected() -> None:
+    # Records are written explicitly so the test doesn't depend on any live approval state.
+    empty = {"approval_identity": None, "approval_time": None, "evidence_sha256": None}
     value = contract()
-    value["approvals"]["scope"].update(approval_identity="someone", status="APPROVED")
+    value["approvals"]["scope"] = {**empty, "approval_identity": "someone", "status": "APPROVED"}
     with pytest.raises(ValidationError, match="approval_incomplete_record"):
         validate_contract(value)
     value = contract()
-    value["approvals"]["scope"]["approval_identity"] = "someone"  # PENDING but populated
+    value["approvals"]["scope"] = {**empty, "approval_identity": "someone", "status": "PENDING"}
     with pytest.raises(ValidationError, match="pending_approval_has_values"):
         validate_contract(value)
 
