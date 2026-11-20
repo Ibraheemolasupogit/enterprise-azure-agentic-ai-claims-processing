@@ -103,10 +103,11 @@ template, parameters or window invalidates the affected approvals.
 | `region_capacity` | **APPROVED** 2026-11-20 (repository-owner): live UK South quota VNets 0/1,000, NSGs 0/5,000; five types supported. Key Vault, Log Analytics and identity quotas not live-checked (residual) | [Record](infra-validation-approvals/2026-11-20-region-capacity.md), SHA-256 `0bbf4246…0eadbe5d` |
 | `identity_rbac` | **APPROVED** 2026-11-20 (repository-owner): direct Owner (User, subscription scope), 0 deny assignments, owner deploys personally via Cloud Shell, no service principal, federated identity or secrets; least privilege acknowledged | [Record](infra-validation-approvals/2026-11-20-identity-rbac.md), SHA-256 `66eaf996…d5ab27e4` |
 | `provider_registration` | **APPROVED** 2026-11-20 (repository-owner): register `Microsoft.Network` only, by the owner in Cloud Shell, to enable live quota checks. **Performed 2026-11-20** (`NotRegistered` → `Registered`); [execution record](infra-validation-approvals/2026-11-20-provider-registration-execution.md); [supplement](infra-validation-approvals/2026-11-20-provider-registration-execution-supplement.md) (SHA-256 `d4fcc724…275a5fe8`): resource-group count unchanged at 1, `NetworkWatcherRG` and the validation group absent (group-level observation, not a full inventory) | [Record](infra-validation-approvals/2026-11-20-provider-registration.md), SHA-256 `6ac6063f…580cf132` |
+| `budget` | **APPROVED** 2026-11-20 (repository-owner): amount 2 (subscription billing currency, **not yet determined**), public contact `ibraheemolasupo@yahoo.com`, `Actual` alerts at 50/80/100% (`GreaterThanOrEqualTo`), monthly 2026-11-01 to 2026-12-31, no action group, `owner=repository-owner`; applies to the template budget and `infraval-uks-tmp01-budget`; stop if the post-creation currency is unexpected; creation and deletion need separate approval | [Record](infra-validation-approvals/2026-11-20-budget.md), SHA-256 `55641a5f…7bd5d410` |
 | All other approvals | PENDING | — |
 
 The contract remains **`PREPARATION_ONLY`** with `provisioning_allowed=false`; all
-`approved_values` and `execution` fields remain `null`. **Stage 1 is complete.** Stages 4–9 remain pending.
+`approved_values` and `execution` fields remain `null`. **Stage 1 is complete.** Stage 4 budget values are approved (creation not yet approved); stages 5–9 remain pending.
 
 ## Offline commands
 

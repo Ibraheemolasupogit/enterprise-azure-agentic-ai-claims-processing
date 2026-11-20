@@ -10,7 +10,7 @@
     "Microsoft.App/managedEnvironments"
   ],
   "approvals": {
-    "budget": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
+    "budget": {"approval_identity": "repository-owner", "approval_time": "2026-11-20T01:26:08Z", "evidence_sha256": "55641a5f8886e940c4a768f093b24fce9527f7e3bc56b0a35a6e82dd7bd5d410", "status": "APPROVED"},
     "cloud_validation": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
     "cost_exposure": {"approval_identity": "repository-owner", "approval_time": "2026-11-20T00:08:07Z", "evidence_sha256": "ccfa1bab06bed7065f7339a417b4b487e4e6541245c7c9b10beedcfec356cd4f", "status": "APPROVED"},
     "evidence": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
@@ -24,15 +24,15 @@
     "teardown": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"}
   },
   "approved_values": {
-    "budget_amount": null,
-    "budget_contact_emails": null,
-    "budget_end_date": null,
-    "budget_start_date": null,
+    "budget_amount": 2,
+    "budget_contact_emails": ["ibraheemolasupo@yahoo.com"],
+    "budget_end_date": "2026-12-31",
+    "budget_start_date": "2026-11-01",
     "expires_at": null,
     "include_container_environment": null,
     "location": null,
     "log_daily_quota_gb": null,
-    "owner": null,
+    "owner": "repository-owner",
     "resource_group": null,
     "subscription_id": null
   },
