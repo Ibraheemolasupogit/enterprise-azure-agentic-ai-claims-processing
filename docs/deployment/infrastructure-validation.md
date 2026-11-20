@@ -93,8 +93,9 @@ template, parameters or window invalidates the affected approvals.
 | `scope` | **APPROVED** 2026-11-20 (repository-owner): seven resources, Container Apps environment disabled, `OctoCAT-Agentic-AI`, `uksouth`, `rg-claims-infraval-uks-tmp01`, 2-hour maximum window | [Record](infra-validation-approvals/2026-11-20-scope-and-cost-exposure.md), SHA-256 `ccfa1bab…56cd4f` |
 | `cost_exposure` | **APPROVED** 2026-11-20 (repository-owner): exposure acknowledged; $2 budget alerts aren't hard caps | Same record |
 | `network` | **APPROVED** 2026-11-20 (repository-owner): isolated VNet plan, no policies or locks reported, no existing VNets, Network Watcher **Option A** | [Record](infra-validation-approvals/2026-11-20-stage1-findings-and-network.md), SHA-256 `b77a417f…cbc3da44` |
-| `region_capacity` | PENDING: UK South support confirmed, but live network quota isn't (`SubscriptionHasNoUsages` while `Microsoft.Network` is unregistered); recheck after stage 3 | Same record (findings) |
+| `region_capacity` | PENDING: UK South support confirmed, but live network quota isn't (`SubscriptionHasNoUsages` while `Microsoft.Network` is unregistered); recheck after the approved stage 3 registration is performed | [Findings](infra-validation-approvals/2026-11-20-stage1-findings-and-network.md) |
 | `identity_rbac` | **APPROVED** 2026-11-20 (repository-owner): direct Owner (User, subscription scope), 0 deny assignments, owner deploys personally via Cloud Shell, no service principal, federated identity or secrets; least privilege acknowledged | [Record](infra-validation-approvals/2026-11-20-identity-rbac.md), SHA-256 `66eaf996…d5ab27e4` |
+| `provider_registration` | **APPROVED** 2026-11-20 (repository-owner): register `Microsoft.Network` only, by the owner in Cloud Shell, to enable live quota checks; not yet performed | [Record](infra-validation-approvals/2026-11-20-provider-registration.md), SHA-256 `6ac6063f…580cf132` |
 | All other approvals | PENDING | — |
 
 The contract remains **`PREPARATION_ONLY`** with `provisioning_allowed=false`; all
