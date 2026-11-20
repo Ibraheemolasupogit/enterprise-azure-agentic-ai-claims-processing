@@ -49,9 +49,10 @@ endpoints, container apps, Document Intelligence, AI Search, model services, rol
 **Outside the group (scope amendment):** one subscription-scope `Microsoft.Consumption/budgets`,
 `infraval-uks-tmp01-budget`, filtered by `ResourceGroupName` to `rg-claims-infraval-uks-tmp01`. It
 isn't deployed by the template, isn't in the what-if, and isn't touched by the teardown plan.
-Creating and deleting it each need a separate owner approval. It's kept for +24 h/+72 h
-post-teardown monitoring or until its approved expiry. Its values are set at the stage 4 `budget`
-approval.
+**It exists:** the owner created it on 2026-11-20 (2 GBP, monthly, 2026-11-01 to 2026-12-31;
+[execution record](infra-validation-approvals/2026-11-20-subscription-budget-execution.md)). It's
+kept for +24 h/+72 h post-teardown monitoring or until its expiry on 2026-12-31; deleting it
+earlier needs a separate owner approval.
 
 ## Parameters requiring owner approval (no defaults)
 
@@ -103,11 +104,11 @@ template, parameters or window invalidates the affected approvals.
 | `region_capacity` | **APPROVED** 2026-11-20 (repository-owner): live UK South quota VNets 0/1,000, NSGs 0/5,000; five types supported. Key Vault, Log Analytics and identity quotas not live-checked (residual) | [Record](infra-validation-approvals/2026-11-20-region-capacity.md), SHA-256 `0bbf4246…0eadbe5d` |
 | `identity_rbac` | **APPROVED** 2026-11-20 (repository-owner): direct Owner (User, subscription scope), 0 deny assignments, owner deploys personally via Cloud Shell, no service principal, federated identity or secrets; least privilege acknowledged | [Record](infra-validation-approvals/2026-11-20-identity-rbac.md), SHA-256 `66eaf996…d5ab27e4` |
 | `provider_registration` | **APPROVED** 2026-11-20 (repository-owner): register `Microsoft.Network` only, by the owner in Cloud Shell, to enable live quota checks. **Performed 2026-11-20** (`NotRegistered` → `Registered`); [execution record](infra-validation-approvals/2026-11-20-provider-registration-execution.md); [supplement](infra-validation-approvals/2026-11-20-provider-registration-execution-supplement.md) (SHA-256 `d4fcc724…275a5fe8`): resource-group count unchanged at 1, `NetworkWatcherRG` and the validation group absent (group-level observation, not a full inventory) | [Record](infra-validation-approvals/2026-11-20-provider-registration.md), SHA-256 `6ac6063f…580cf132` |
-| `budget` | **APPROVED** 2026-11-20 (repository-owner): amount 2 (subscription billing currency, **not yet determined**), public contact `ibraheemolasupo@yahoo.com`, `Actual` alerts at 50/80/100% (`GreaterThanOrEqualTo`), monthly 2026-11-01 to 2026-12-31, no action group, `owner=repository-owner`; applies to the template budget and `infraval-uks-tmp01-budget`; stop if the post-creation currency is unexpected; creation and deletion need separate approval | [Record](infra-validation-approvals/2026-11-20-budget.md), SHA-256 `55641a5f…7bd5d410` |
+| `budget` | **APPROVED** 2026-11-20 (repository-owner): amount 2 (subscription billing currency; **GBP**, established at creation), public contact `ibraheemolasupo@yahoo.com`, `Actual` alerts at 50/80/100% (`GreaterThanOrEqualTo`), monthly 2026-11-01 to 2026-12-31, no action group, `owner=repository-owner`; applies to the template budget and `infraval-uks-tmp01-budget`; stop if the post-creation currency is unexpected; creation and deletion need separate approval. **Subscription budget created 2026-11-20** (PUT 02:18:10Z, GET check passed 02:18:13Z; 2 GBP, current spend 0.00 GBP) after two runs stopped before any write on an absence-check parser defect; [execution record](infra-validation-approvals/2026-11-20-subscription-budget-execution.md), SHA-256 `ec041f24…20c57aa5`. The template's resource-group budget isn't deployed | [Record](infra-validation-approvals/2026-11-20-budget.md), SHA-256 `55641a5f…7bd5d410` |
 | All other approvals | PENDING | — |
 
 The contract remains **`PREPARATION_ONLY`** with `provisioning_allowed=false`; all
-`approved_values` and `execution` fields remain `null`. **Stage 1 is complete.** Stage 4 budget values are approved (creation not yet approved); stages 5–9 remain pending.
+`approved_values` and `execution` fields remain `null`. **Stage 1 is complete.** Stage 4 budget values are approved and the subscription budget exists (GBP); stages 5–9 remain pending.
 
 ## Offline commands
 
