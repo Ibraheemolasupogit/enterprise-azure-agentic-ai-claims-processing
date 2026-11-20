@@ -33,6 +33,10 @@ approved budget and lifetime, monitored, and completely torn down. Specifically:
 | [`tests/test_infra_subscription_preflight.py`](../../tests/test_infra_subscription_preflight.py) | Positive and negative preflight and lint tests; the proposal's G9 procedures must pass strict `lint` |
 | [`deployment/infra_stage6_validate_whatif.sh`](../../deployment/infra_stage6_validate_whatif.sh) | Stage 6 ARM validate and what-if procedure (**prepared, not approved**); see [Stage 6 procedure](#stage-6-procedure-prepared-not-approved) |
 | [`tests/test_infra_stage6_procedure.py`](../../tests/test_infra_stage6_procedure.py) | Runs the stage 6 procedure offline against a stub `az`: passes only on an approved synthetic contract and fails closed on every refusal path |
+| [`deployment/infra_stage7_deploy.sh`](../../deployment/infra_stage7_deploy.sh) | Stage 7 one-time deployment procedure (**prepared, not approved**); see [Stage 7 and 8 procedures](#stage-7-and-8-procedures-prepared-not-approved) |
+| [`deployment/infra_stage8_teardown.sh`](../../deployment/infra_stage8_teardown.sh), [`deployment/infra_stage8_cost_check.sh`](../../deployment/infra_stage8_cost_check.sh) | Stage 8 resume-safe teardown and read-only +24 h/+72 h checks (**prepared, not approved**) |
+| [`deployment/infra_evidence.py`](../../deployment/infra_evidence.py) | Offline evidence helper (stdlib only): assembles the validator's teardown state, pins teardown targets, checks the exact post-deployment inventory, masks GUIDs, and checks the post-teardown spend |
+| [`tests/test_infra_stage7_stage8_procedures.py`](../../tests/test_infra_stage7_stage8_procedures.py) | Runs the stage 7, stage 8 and cost-check procedures offline against a stateful stub `az`, including partial failure, cancel, resume and refusal paths |
 
 ## Resources (all behind the hard gate)
 
@@ -177,6 +181,59 @@ the command-level rules (`lint_commands`) apply to it. Both G9 blocks pass the s
 
 Not tested against real Azure: the `az deployment group validate`/`what-if` flags and output
 shapes are exercised only through a stub. An unexpected flag or shape fails closed.
+
+## Stage 7 and 8 procedures (prepared, not approved)
+
+Both procedures and the cost check pass strict `lint`. **None is approved, and none may run**
+before its own approval is recorded. Stage 7 needs `provisioning` (and the validator also requires
+`teardown` to be approved first); stage 8 needs `teardown`. They're separately gated: stage 7
+contains no delete, purge or cancel, and stage 8 contains no deployment or create.
+
+**Stage 7 (`infra_stage7_deploy.sh`)**, in a fresh Cloud Shell directory with eight hash-checked
+files (`contract.json`, `execution.json`, `reviewed.json`, `parameters.json`, `whatif.json`, the
+preflight, the validator and the evidence helper):
+1. manifest check; offline `--authorize-execution` (stages 1–8, `APPROVED_FOR_EXECUTION_WINDOW`,
+   exact template, parameters and what-if hashes, and now inside the window);
+2. bootstrap and preflight;
+3. the group is unchanged since stage 6 and has **no deployment**, so a second run refuses;
+4. **one** `az deployment group create` (`<run_id>-deploy`, `--mode Incremental`, synchronous);
+5. evidence capture, then `--plan-teardown` and `expect-full`: exactly one of each of the seven
+   types, all tagged and in the deployment record, no role assignment at the group scope;
+6. teardown targets pinned in `targets.json`; masked copies in `evidence-masked/`.
+
+Any failure prints `STAGE7_STOPPED`: no retry; go to stage 8.
+
+**Stage 8 (`infra_stage8_teardown.sh`)**, in the stage 7 directory. It's resume-safe: each run
+re-reads the live state, re-plans with the validator and acts only on what exists, against the
+pinned targets.
+1. manifest check; offline gate (the validator must approve teardown);
+2. bootstrap and preflight;
+3. live state → `--plan-teardown` → targets must match the stage 7 record;
+4. in the validator's order, each step verifying its result: delete the **resource-group**
+   budget → permanently delete the workspace (`--force true`) → delete the group →
+   `--verify-purge` on the soft-deleted vault's original ID → purge → verify;
+5. verification: group absent; no soft-deleted vault or workspace; no recorded ID anywhere in the
+   subscription; no resource tagged `purpose=infrastructure-validation`; no role assignment at the
+   group's scope; the subscription budget **still exists**; `NetworkWatcherRG` recorded only;
+   `teardown-receipt.json` written.
+
+A `Running`/`Accepted` deployment is cancelled first, then the run exits for a rerun. A partial
+deployment deletes only what exists. A lock, a changed target, an unexpected or untagged resource,
+a role assignment or a purge target outside the group stops before any deletion. After a stopped
+purge, a rerun finishes the pinned purge. A soft-deleted workspace stops for owner review.
+Teardown is never refused for lateness; the run records `EXPIRY_BREACHED` instead.
+
+**Cost checks (`infra_stage8_cost_check.sh`, `CHECKPOINT_HOURS=24` or `72`)**: read-only;
+refuses before the checkpoint is due. It re-checks absence and reads the subscription budget's
+current spend, which must be in GBP and below the approved amount (2). Only +72 h closes the cost
+check.
+
+**Sensitive output.** `deployment.json`, `state.json`, `plan.json`, `targets.json` and the
+`ev*/` and `cost-*/` directories contain the raw subscription ID. Only the `*-masked/` copies (every
+GUID replaced) may be shared, after a manual check; nothing is committed.
+
+Not tested against real Azure: the `az` flags and output shapes (deployment, `az rest` budgets,
+workspace `--force true`, Key Vault show-deleted/purge) are exercised only through a stub.
 
 ## What-if check
 

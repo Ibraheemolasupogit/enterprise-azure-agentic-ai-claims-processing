@@ -7,13 +7,14 @@ nothing. Full procedure: [infrastructure-validation.md](infrastructure-validatio
 
 ## Repository state
 
-- **Last commit:** `88b09e4` (`main`).
-- **Uncommitted, awaiting the owner** (owner stages, commits and pushes manually):
-  - `docs/deployment/infra-validation-approvals/2026-11-20-g2-g3a-approval.md` (new, G2/G3-A
-    **APPROVED**, SHA-256 `bcb8f7909c08b9612421fc96dbeaa81dc229220cee7c80c138c3a7192933ecf2`)
-  - `infra/azure-validation/contract.json` (the six G2 `approved_values` only)
-  - `tests/test_infra_subscription_preflight.py` (live commitment is now set)
-  - `docs/deployment/infrastructure-validation.md` and this handover (status)
+- **Last commit:** `0d9f3ff` (`main`).
+- **Uncommitted, awaiting the owner** (prepared, not approved):
+  - `deployment/infra_stage7_deploy.sh`, `deployment/infra_stage8_teardown.sh`,
+    `deployment/infra_stage8_cost_check.sh`, `deployment/infra_evidence.py` (new)
+  - `tests/test_infra_stage7_stage8_procedures.py` (new)
+  - `docs/deployment/infrastructure-validation.md` and this handover
+- **Drafted, not recorded:** the stage 6 `cloud_validation` approval (scratchpad only). Stage 6
+  artifacts are in git-ignored `outputs/deployment/infra-validation-execution/`.
 - Validation at last run: full suite 2030 passed; Ruff, strict mypy and `git diff --check`
   clean; contract validation PASS; `--check-provisioning` and `--authorize-validation` refused
   (exit 78).
@@ -71,10 +72,9 @@ the raw ID stays in memory and is never printed):
   shell tracing and GUID literals.
 
 Remaining gaps, to close before stage 6:
-1. ~~Stage 6 procedure~~ **Prepared, not approved** (uncommitted):
-   `deployment/infra_stage6_validate_whatif.sh` runs integrity, offline authorisation and the
-   preflight before any other Azure command. The stage 7 and 8 procedures (deployment,
-   teardown, purge, subscription-budget deletion) aren't written yet.
+1. ~~Stage 6, 7 and 8 procedures~~ **Prepared, not approved** (stage 7/8 uncommitted):
+   `infra_stage6_validate_whatif.sh`, `infra_stage7_deploy.sh`, `infra_stage8_teardown.sh` and
+   `infra_stage8_cost_check.sh`, each running the preflight before any other Azure command.
 2. ~~Lint ordering and strict mode~~ **Closed offline** (uncommitted): strict `lint` requires
    `set -euo pipefail`, the bootstrap and the exact preflight before every other `az` command,
    and fail-closed verification. `lint_commands` keeps the command-level rules only.
