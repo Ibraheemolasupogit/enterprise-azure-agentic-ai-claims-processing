@@ -72,15 +72,18 @@ the raw ID stays in memory and is never printed):
   shell tracing and GUID literals.
 
 Remaining gaps, to close before stage 6:
-1. Stage 6, 7 and 8 procedures (validate and what-if, deployment, teardown, purge, subscription
-   budget deletion) aren't written yet, so they aren't wired to the preflight.
-2. `lint` doesn't check that the preflight runs before the first write, or that
-   `set -euo pipefail` is present.
-3. The validator never calls the preflight.
-4. The integrity of the module and contract copies uploaded to Cloud Shell relies on manual
-   SHA-256 checks.
+1. ~~Stage 6 procedure~~ **Prepared, not approved** (uncommitted):
+   `deployment/infra_stage6_validate_whatif.sh` runs integrity, offline authorisation and the
+   preflight before any other Azure command. The stage 7 and 8 procedures (deployment,
+   teardown, purge, subscription-budget deletion) aren't written yet.
+2. ~~Lint ordering and strict mode~~ **Closed offline** (uncommitted): strict `lint` requires
+   `set -euo pipefail`, the bootstrap and the exact preflight before every other `az` command,
+   and fail-closed verification. `lint_commands` keeps the command-level rules only.
+3. The validator never calls the preflight (the stage 6 procedure chains them).
+4. Upload integrity: the stage 6 procedure checks `SHA256SUMS` for exactly six files, but the
+   manifest itself still needs a manual comparison with the repository.
 5. Azure error messages may show `/subscriptions/<id>` in the terminal; mask output before
-   sharing.
+   sharing. `validate.json` and `whatif.json` contain the raw ID.
 
 ## Proposed execution window (not approved)
 

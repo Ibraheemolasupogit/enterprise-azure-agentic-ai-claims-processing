@@ -29,8 +29,10 @@ approved budget and lifetime, monitored, and completely torn down. Specifically:
 | [`infra/azure-validation/contract.json`](../../infra/azure-validation/contract.json) | Contract v2: scope, resource allow-list, 12 approval records, the 9-stage checklist, approved values and the hash-bound `execution` block (all pending or null) |
 | [`deployment/infra_validation.py`](../../deployment/infra_validation.py) | Offline validator: contract states, template and M23 gates, contract-bound authorisation, strict what-if check, teardown **planning** and purge-identity check. It never calls Azure, deploys or deletes |
 | [`tests/test_infra_validation.py`](../../tests/test_infra_validation.py) | Positive checks and fail-closed mutations for every control |
-| [`deployment/infra_subscription_preflight.py`](../../deployment/infra_subscription_preflight.py) | Cloud Shell subscription preflight (stdlib only): compares the live subscription with an approved `sha256:` commitment, the name `OctoCAT-Agentic-AI` and the `Enabled` state, and checks that the session's `$SUB` is that subscription. Never prints or stores the raw ID; refusals exit 78. `lint` requires `--subscription "$SUB"` on every `az` command and rejects `az account set`, shell tracing and GUID literals |
-| [`tests/test_infra_subscription_preflight.py`](../../tests/test_infra_subscription_preflight.py) | Positive and negative preflight and lint tests; the proposal's procedures must pass `lint` |
+| [`deployment/infra_subscription_preflight.py`](../../deployment/infra_subscription_preflight.py) | Cloud Shell subscription preflight (stdlib only): compares the live subscription with an approved `sha256:` commitment, the name `OctoCAT-Agentic-AI` and the `Enabled` state, and checks that the session's `$SUB` is that subscription. Never prints or stores the raw ID; refusals exit 78. `lint` requires strict mode, the preflight before every other `az` command, `--subscription "$SUB"` on every `az` command and fail-closed verification, and rejects `az account set`, shell tracing and GUID literals |
+| [`tests/test_infra_subscription_preflight.py`](../../tests/test_infra_subscription_preflight.py) | Positive and negative preflight and lint tests; the proposal's G9 procedures must pass strict `lint` |
+| [`deployment/infra_stage6_validate_whatif.sh`](../../deployment/infra_stage6_validate_whatif.sh) | Stage 6 ARM validate and what-if procedure (**prepared, not approved**); see [Stage 6 procedure](#stage-6-procedure-prepared-not-approved) |
+| [`tests/test_infra_stage6_procedure.py`](../../tests/test_infra_stage6_procedure.py) | Runs the stage 6 procedure offline against a stub `az`: passes only on an approved synthetic contract and fails closed on every refusal path |
 
 ## Resources (all behind the hard gate)
 
@@ -131,6 +133,50 @@ python3 -I -B deployment/infra_validation.py --contract C --verify-purge VAULT D
 
 Every fail-closed decision runs **locally** on files exported from Cloud Shell. Cloud Shell
 only runs the owner-approved commands.
+
+## Stage 6 procedure (prepared, not approved)
+
+[`deployment/infra_stage6_validate_whatif.sh`](../../deployment/infra_stage6_validate_whatif.sh)
+is the owner's Cloud Shell procedure for stage 6. **It isn't approved and mustn't run** before
+the stage 6 `cloud_validation` approval, the G2 and G3-A decisions and the G9 group creation.
+Any failed step stops it with a non-zero exit; there's no retry, create, delete or `--no-wait`.
+
+1. **Upload integrity (offline):** `SHA256SUMS` must list exactly `contract.json`,
+   `execution.json`, `infra_subscription_preflight.py`, `infra_validation.py`,
+   `parameters.json` and `reviewed.json`, and every hash must match.
+2. **Offline authorisation:** `--authorize-validation` must return
+   `AUTHORIZED_FOR_VALIDATION_ONLY` / `NOT_AUTHORIZED`. The resource group, run ID, location and
+   expiry come from the contract, and the approved expiry must still be in the future. The
+   repository contract (`PREPARATION_ONLY`) refuses here, before any Azure command.
+3. **Subscription identity:** the bootstrap, then the preflight `check`, before every other
+   Azure command.
+4. **Group state (read-only):** the group exists, `Succeeded`, in the approved location, with
+   exactly the three G9 tags, and has no resources, locks or deployments.
+5. **ARM validate, then what-if** of the bound execution template and parameters.
+6. **Offline `--check-whatif`** (exactly the seven `Create`s), then proof that the group is
+   still empty and no deployment is in progress.
+7. Prints only the SHA-256 of `whatif.json` and `validate.json`. Both files hold the raw
+   subscription ID; they stay in Cloud Shell and are never committed or shared unmasked.
+
+**Procedure lint.** `infra_subscription_preflight.py lint` refuses a procedure unless:
+- its first statement is exactly `set -euo pipefail`, and nothing relaxes it (`set +e`,
+  `set +o pipefail`, `set +u`);
+- `$SUB` is assigned once, by `SUB=$(az account show --query id -o tsv)`, and never
+  reassigned, exported, read or unset;
+- the exact preflight `check --contract contract.json` runs after the bootstrap and before
+  every other `az` command (an unknown verb counts as a write: `write_before_preflight`);
+- every `az` command carries exactly `--subscription "$SUB"`, with no `--no-wait`;
+- no `az`, `test`, `python3` or `sha256sum` statement is a condition (`if`, `while`, `until`,
+  `!`) or part of an `&&`/`||` list, and no test can pass on empty output (`test !`,
+  `test -z`, `test -n`, `!=`, `= ""`);
+- no `local`/`export`/`declare` masks a failing command substitution.
+
+Quoted JMESPath and Python text is masked first, so its `&&`, `!=` and `==` don't count. The
+one-off read-only `commit` snippet can't run `check` (no commitment is approved yet), so only
+the command-level rules (`lint_commands`) apply to it. Both G9 blocks pass the strict rules.
+
+Not tested against real Azure: the `az deployment group validate`/`what-if` flags and output
+shapes are exercised only through a stub. An unexpected flag or shape fails closed.
 
 ## What-if check
 

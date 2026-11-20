@@ -21,6 +21,7 @@ from deployment.infra_subscription_preflight import (  # noqa: E402
     check,
     commitment,
     lint,
+    lint_commands,
 )
 
 MODULE = ROOT / "deployment/infra_subscription_preflight.py"
@@ -236,7 +237,160 @@ def test_proposal_procedures_pass_lint() -> None:
     blocks = re.findall(r"```bash\n(.*?)```", PROPOSAL.read_text(), re.S)
     assert len(blocks) == 3
     for block in blocks:
-        assert "az " in block and lint(block) == []
+        assert "az " in block and lint_commands(block) == []
+    # The G9 create and cleanup procedures also pass the strict procedure rules.
+    assert lint(blocks[1]) == [] and lint(blocks[2]) == []
+    # The one-off read-only commit snippet runs before any commitment is approved, so it can't
+    # run `check`; the strict rules correctly refuse it as a procedure.
+    assert {"missing_strict_mode", "preflight_missing"} <= set(lint(blocks[0]))
+
+
+# --- Strict procedure rules: strict mode, preflight ordering and fail-closed verification -----
+
+HEAD = """set -euo pipefail
+SUB=$(az account show --query id -o tsv)
+az account show --subscription "$SUB" -o json | INFRAVAL_SUB="$SUB" \\
+  python3 -I infra_subscription_preflight.py check --contract contract.json
+"""
+BOOT = """set -euo pipefail
+RG=rg-claims-infraval-uks-tmp01
+SUB=$(az account show --query id -o tsv)
+"""
+PRE = """az account show --subscription "$SUB" -o json | INFRAVAL_SUB="$SUB" \\
+  python3 -I infra_subscription_preflight.py check --contract contract.json
+"""
+
+
+@pytest.mark.parametrize(
+    "body",
+    [
+        "",
+        'az group create -n "$RG" -l uksouth --subscription "$SUB" -o none\n',
+        'test "$(az group exists -n "$RG" --subscription "$SUB")" = false\n',
+        # Operators inside quoted JMESPath or Python are not shell operators.
+        'test "$(az deployment group list -g "$RG" --subscription "$SUB" '
+        "--query \"length([?a!='b' && c!='d'])\" -o tsv)\" = 0\n",
+        "test \"$(python3 -I -c 'print(1 == 1 or 0 != 1)')\" = True\n",
+        # A non-verification helper may tolerate grep's no-match status.
+        'N=$(printf \'%s\\n\' "$NAMES" | grep -cxF "$RG" || true)\ntest "$N" = 0\n',
+        "# az group delete -n x   (comments are ignored)\n",
+        'X=$(az group show -n "$RG" --subscription "$SUB" --query name -o tsv)\n',
+    ],
+)
+def test_strict_lint_accepts_fail_closed_procedures(body: str) -> None:
+    assert lint(HEAD + body) == []
+    assert lint("#!/usr/bin/env bash\n# comment\n" + HEAD + body) == []
+
+
+@pytest.mark.parametrize(
+    ("script", "violation"),
+    [
+        # strict mode
+        (HEAD.replace("set -euo pipefail\n", ""), "missing_strict_mode"),
+        (HEAD.replace("set -euo pipefail", "set -eu"), "missing_strict_mode"),
+        (HEAD.replace("set -euo pipefail", "set -e -o pipefail"), "missing_strict_mode"),
+        ("RG=x\n" + HEAD, "missing_strict_mode"),
+        (HEAD + "set +e\n", "strict_mode_disabled"),
+        (HEAD + "set +o pipefail\n", "strict_mode_disabled"),
+        (HEAD + "set +u\n", "strict_mode_disabled"),
+        (HEAD + "true; set +e\n", "strict_mode_disabled"),
+        # preflight before the first Azure command (and so before the first write)
+        (BOOT, "preflight_missing"),
+        (BOOT + 'az group create -n "$RG" --subscription "$SUB"\n' + PRE, "write_before_preflight"),
+        (
+            BOOT + 'az deployment group what-if -g "$RG" --subscription "$SUB"\n' + PRE,
+            "write_before_preflight",
+        ),
+        (BOOT + 'az group list --subscription "$SUB" -o tsv\n' + PRE, "az_before_preflight"),
+        (
+            BOOT + 'test "$(az group exists -n "$RG" --subscription "$SUB")" = false\n' + PRE,
+            "az_before_preflight",
+        ),
+        (
+            BOOT + PRE.replace("check --contract contract.json", "check --approved x"),
+            "preflight_missing",
+        ),
+        (BOOT + PRE.replace(" | ", " || "), "preflight_missing"),
+        (BOOT + "# " + PRE, "preflight_missing"),
+        ("set -euo pipefail\n" + PRE + BOOT.split("\n", 1)[1], "preflight_before_bootstrap"),
+        (
+            "set -euo pipefail\n" + PRE.replace('"$SUB"', '"$(az account show --query id -o tsv)"'),
+            "bootstrap_missing",
+        ),
+        # $SUB fixed by the bootstrap and never changed afterwards
+        (HEAD + "SUB=$(az account show --query id -o tsv)\n", "sub_reassigned"),
+        (HEAD + "SUB=other\n", "sub_reassigned"),
+        (HEAD + "export SUB=other\n", "sub_reassigned"),
+        (HEAD + "declare -x SUB=other\n", "sub_reassigned"),
+        (HEAD + "true; SUB=other\n", "sub_reassigned"),
+        (HEAD + "read -r SUB < f\n", "sub_reassigned"),
+        (HEAD + "unset SUB\n", "sub_reassigned"),
+        (HEAD + 'test "$(az account show --query id -o tsv)" = x\n', "bootstrap_not_assigned"),
+        # fail-closed verification
+        (
+            HEAD + 'test "$(az group exists -n "$RG" --subscription "$SUB")" = false || true\n',
+            "failure_suppressed",
+        ),
+        (
+            HEAD + 'az group create -n "$RG" --subscription "$SUB" || echo ignored\n',
+            "failure_suppressed",
+        ),
+        (
+            HEAD + 'az group show -n "$RG" --subscription "$SUB" && az group list '
+            '--subscription "$SUB"\n',
+            "failure_suppressed",
+        ),
+        (
+            HEAD + 'test "$(az group list --subscription "$SUB" || echo 0)" = 0\n',
+            "failure_suppressed",
+        ),
+        (HEAD + "sha256sum -c SUMS || true\n", "failure_suppressed"),
+        (HEAD + "python3 -I -B infra_validation.py --root . || :\n", "failure_suppressed"),
+        (
+            HEAD + 'if az group exists -n "$RG" --subscription "$SUB"; then :; fi\n',
+            "conditional_verification",
+        ),
+        (
+            HEAD + 'while az group show -n "$RG" --subscription "$SUB"; do :; done\n',
+            "conditional_verification",
+        ),
+        (HEAD + '! test "$X" = 0\n', "conditional_verification"),
+        (
+            HEAD + 'test -z "$(az lock list -g "$RG" --subscription "$SUB" -o tsv)"\n',
+            "weak_verification",
+        ),
+        (HEAD + 'test -n "$X"\n', "weak_verification"),
+        (HEAD + "[ ! -f x ]\n", "weak_verification"),
+        (
+            HEAD + 'test "$(az group exists -n "$RG" --subscription "$SUB")" != true\n',
+            "weak_verification",
+        ),
+        (
+            HEAD + 'test "$(az lock list -g "$RG" --subscription "$SUB" -o tsv)" = ""\n',
+            "weak_verification",
+        ),
+        (HEAD + "test \"$X\" = ''\n", "weak_verification"),
+        (
+            HEAD + 'local X=$(az group show -n "$RG" --subscription "$SUB" -o tsv)\n',
+            "masked_substitution",
+        ),
+        (
+            HEAD + 'export X=$(az group show -n "$RG" --subscription "$SUB" -o tsv)\n',
+            "masked_substitution",
+        ),
+        (HEAD + 'az group delete -n "$RG" --subscription "$SUB" --yes --no-wait\n', "async"),
+        (HEAD + 'test "$(az group list --subscription "$SUB)" = 0\n', "unbalanced_quotes"),
+    ],
+)
+def test_strict_lint_refuses(script: str, violation: str) -> None:
+    violations = lint(script)
+    assert any(violation in v for v in violations), violations
+
+
+def test_lint_commands_alone_does_not_enforce_procedure_rules() -> None:
+    write_first = BOOT + 'az group create -n "$RG" --subscription "$SUB"\n' + PRE
+    assert lint_commands(write_first) == []
+    assert any("write_before_preflight" in v for v in lint(write_first))
 
 
 def test_no_guid_literal_in_module_tests_or_proposal() -> None:
