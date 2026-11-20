@@ -93,14 +93,13 @@ template, parameters or window invalidates the affected approvals.
 | `scope` | **APPROVED** 2026-11-20 (repository-owner): seven resources, Container Apps environment disabled, `OctoCAT-Agentic-AI`, `uksouth`, `rg-claims-infraval-uks-tmp01`, 2-hour maximum window | [Record](infra-validation-approvals/2026-11-20-scope-and-cost-exposure.md), SHA-256 `ccfa1bab…56cd4f` |
 | `cost_exposure` | **APPROVED** 2026-11-20 (repository-owner): exposure acknowledged; $2 budget alerts aren't hard caps | Same record |
 | `network` | **APPROVED** 2026-11-20 (repository-owner): isolated VNet plan, no policies or locks reported, no existing VNets, Network Watcher **Option A** | [Record](infra-validation-approvals/2026-11-20-stage1-findings-and-network.md), SHA-256 `b77a417f…cbc3da44` |
-| `region_capacity` | PENDING: UK South support confirmed, but live network quota isn't (`SubscriptionHasNoUsages` while `Microsoft.Network` is unregistered); recheck after the approved stage 3 registration is performed | [Findings](infra-validation-approvals/2026-11-20-stage1-findings-and-network.md) |
+| `region_capacity` | **APPROVED** 2026-11-20 (repository-owner): live UK South quota VNets 0/1,000, NSGs 0/5,000; five types supported. Key Vault, Log Analytics and identity quotas not live-checked (residual) | [Record](infra-validation-approvals/2026-11-20-region-capacity.md), SHA-256 `0bbf4246…0eadbe5d` |
 | `identity_rbac` | **APPROVED** 2026-11-20 (repository-owner): direct Owner (User, subscription scope), 0 deny assignments, owner deploys personally via Cloud Shell, no service principal, federated identity or secrets; least privilege acknowledged | [Record](infra-validation-approvals/2026-11-20-identity-rbac.md), SHA-256 `66eaf996…d5ab27e4` |
-| `provider_registration` | **APPROVED** 2026-11-20 (repository-owner): register `Microsoft.Network` only, by the owner in Cloud Shell, to enable live quota checks; not yet performed | [Record](infra-validation-approvals/2026-11-20-provider-registration.md), SHA-256 `6ac6063f…580cf132` |
+| `provider_registration` | **APPROVED** 2026-11-20 (repository-owner): register `Microsoft.Network` only, by the owner in Cloud Shell, to enable live quota checks. **Performed 2026-11-20** (`NotRegistered` → `Registered`); [execution record](infra-validation-approvals/2026-11-20-provider-registration-execution.md); [supplement](infra-validation-approvals/2026-11-20-provider-registration-execution-supplement.md) (SHA-256 `d4fcc724…275a5fe8`): resource-group count unchanged at 1, `NetworkWatcherRG` and the validation group absent (group-level observation, not a full inventory) | [Record](infra-validation-approvals/2026-11-20-provider-registration.md), SHA-256 `6ac6063f…580cf132` |
 | All other approvals | PENDING | — |
 
 The contract remains **`PREPARATION_ONLY`** with `provisioning_allowed=false`; all
-`approved_values` and `execution` fields remain `null`. Stage 1 isn't complete until
-`region_capacity` is also approved (live network quota, after stage 3 registration).
+`approved_values` and `execution` fields remain `null`. **Stage 1 is complete.** Stages 4–9 remain pending.
 
 ## Offline commands
 
