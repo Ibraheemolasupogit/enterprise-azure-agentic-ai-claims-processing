@@ -7,18 +7,18 @@ nothing. Full procedure: [infrastructure-validation.md](infrastructure-validatio
 
 ## Repository state
 
-- **Last commit:** `03fe7cc` (`main`, in sync with `origin/main` when written).
-- **Uncommitted, awaiting the owner** (reviewed GO; owner stages, commits and pushes manually):
-  - `deployment/infra_subscription_preflight.py` (new)
-  - `tests/test_infra_subscription_preflight.py` (new, 70 tests)
-  - `docs/deployment/infra-validation-approvals/2026-11-20-g2-approved-values-proposal.md` (new,
-    **PROPOSED — NOT APPROVED**, SHA-256 `e05e9d2d3f54e291c3a0337041db9243083db91e7f55a4eafd7cfbc6f4e9fbd6`)
-  - `docs/deployment/infrastructure-validation.md` (modified: artifacts, proposal citation,
-    corrected `approved_values` wording)
-  - this handover (new)
-- Validation at last run: 368 tests passed; Ruff, strict mypy and `git diff --check` clean;
-  contract validation PASS; `--check-provisioning` refused (exit 78).
-- Contract: **`PREPARATION_ONLY`**, `provisioning_allowed=false`; `execution` block all `null`.
+- **Last commit:** `88b09e4` (`main`).
+- **Uncommitted, awaiting the owner** (owner stages, commits and pushes manually):
+  - `docs/deployment/infra-validation-approvals/2026-11-20-g2-g3a-approval.md` (new, G2/G3-A
+    **APPROVED**, SHA-256 `bcb8f7909c08b9612421fc96dbeaa81dc229220cee7c80c138c3a7192933ecf2`)
+  - `infra/azure-validation/contract.json` (the six G2 `approved_values` only)
+  - `tests/test_infra_subscription_preflight.py` (live commitment is now set)
+  - `docs/deployment/infrastructure-validation.md` and this handover (status)
+- Validation at last run: full suite 2030 passed; Ruff, strict mypy and `git diff --check`
+  clean; contract validation PASS; `--check-provisioning` and `--authorize-validation` refused
+  (exit 78).
+- Contract: **`PREPARATION_ONLY`**, `provisioning_allowed=false`; all `approved_values` set;
+  `execution` block all `null`.
   Both Bicep gates are `@allowed([false])` (`infra/azure-validation/main.bicep`
   `provisioningApproved`, `infra/azure/main.bicep` `deploymentEnabled`).
 
@@ -45,15 +45,14 @@ committed).
 - **G1:** resolved for the five named providers. `Microsoft.Network` was confirmed earlier;
   `Microsoft.Consumption`'s registration state is **unverified** (only the budget operation
   succeeded).
-- **G2 (blocks stage 6):** six `approved_values` are `null`. Proposed in the G2 proposal:
-  `location=uksouth`, `resource_group=rg-claims-infraval-uks-tmp01`,
-  `include_container_environment=false`, `log_daily_quota_gb=1`,
-  `subscription_id=sha256:<owner-computed commitment>`, `expires_at=2026-11-25T16:00:00Z`.
-  **Owner decision needed:** approve via a separate dated record citing `e05e9d2d…` and supplying
-  the commitment from the preflight's `commit` mode.
-- **G3-A:** proposed exception. The resource-group budget's end date `2026-12-31` is later than
-  `expires_at`; the teardown plan deletes that budget. **Owner acceptance needed.** The
-  subscription budget ending later is by design.
+- **G2: approved** 2026-11-20 ([record](infra-validation-approvals/2026-11-20-g2-g3a-approval.md),
+  `bcb8f790…`, citing proposal `e05e9d2d…`): `location=uksouth`,
+  `resource_group=rg-claims-infraval-uks-tmp01`, `include_container_environment=false`,
+  `log_daily_quota_gb=1`, `subscription_id=sha256:8bcf62e8…f8bc686`,
+  `expires_at=2026-11-25T16:00:00Z`. Plan (not in the contract yet): `T0`
+  2026-11-25T13:00:00Z, window end 15:00:00Z, `run_id` `infraval-20261125-01`.
+- **G3-A: accepted** (same record). The resource-group budget is removed at teardown; the
+  subscription budget stays for the +24 h/+72 h cost checks.
 - **G9:** resource-group creation (tagged, empty, absence proven first, post-state asserted) and
   empty-group cleanup (refuses unless the group is idle and empty). **Needs the separate stage 6
   `cloud_validation` approval.** Commands are in the G2 proposal.
@@ -110,13 +109,11 @@ the stage 6 what-if on 2026-11-25. Moving `T0` needs a new dated record.
 
 ## Exact next safe task
 
-Wait for the owner to commit the uncommitted preparation files. Then, only on the owner's
-instruction, record the G2 (and G3-A) approval: a new dated record citing proposal `e05e9d2d…`
-with the owner-supplied commitment, and fill in only the six `approved_values`. The contract
-stays `PREPARATION_ONLY`.
-
-Before stage 6, also close preflight gaps 1–2 offline (write the stage 6 procedure through the
-preflight, and extend `lint`), each under owner approval.
+Wait for the owner to commit the G2/G3-A files. Then, only on the owner's instruction, prepare
+stage 6 offline: rebuild the execution copy (compiled hash must equal `dfc26600…`), generate the
+approved `parameters.json` and the `SHA256SUMS` manifest, and draft the stage 6
+`cloud_validation` approval (G9 creation, the stage 6 script, the `execution` block, status
+`APPROVED_FOR_VALIDATION`) for the owner's decision.
 
 ## Prohibitions (standing)
 

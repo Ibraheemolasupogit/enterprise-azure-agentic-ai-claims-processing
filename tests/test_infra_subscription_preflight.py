@@ -107,8 +107,13 @@ def test_check_refuses_malformed_account_json(raw: str) -> None:
 
 def test_approved_commitment_from_contract() -> None:
     live = json.loads((ROOT / "infra/azure-validation/contract.json").read_text())
+    # The live value is the owner-approved G2 commitment: well-formed, never a raw ID or name.
+    recorded = approved_commitment(live)
+    assert re.fullmatch(r"sha256:[0-9a-f]{64}", recorded) and recorded != APPROVED
+    unset = copy.deepcopy(live)
+    unset["approved_values"]["subscription_id"] = None
     with pytest.raises(PreflightError, match="subscription_not_approved"):
-        approved_commitment(live)  # live value is still null: fail closed
+        approved_commitment(unset)  # a missing commitment fails closed
     filled = copy.deepcopy(live)
     filled["approved_values"]["subscription_id"] = APPROVED
     assert approved_commitment(filled) == APPROVED

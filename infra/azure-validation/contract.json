@@ -28,13 +28,13 @@
     "budget_contact_emails": ["ibraheemolasupo@yahoo.com"],
     "budget_end_date": "2026-12-31",
     "budget_start_date": "2026-11-01",
-    "expires_at": null,
-    "include_container_environment": null,
-    "location": null,
-    "log_daily_quota_gb": null,
+    "expires_at": "2026-11-25T16:00:00Z",
+    "include_container_environment": false,
+    "location": "uksouth",
+    "log_daily_quota_gb": 1,
     "owner": "repository-owner",
-    "resource_group": null,
-    "subscription_id": null
+    "resource_group": "rg-claims-infraval-uks-tmp01",
+    "subscription_id": "sha256:8bcf62e8790b8d138f042ec3628acb09a90b4d684b296bcac1c57be18f8bc686"
   },
   "checklist": [
     {"stage": 1, "name": "scope_region_identity_network", "approvals": ["scope", "region_capacity", "identity_rbac", "network"]},
