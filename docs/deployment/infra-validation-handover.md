@@ -4,6 +4,10 @@ Authority stays with [`infra/azure-validation/contract.json`](../../infra/azure-
 and the dated records in [`infra-validation-approvals/`](infra-validation-approvals/). This note
 grants nothing. Full procedure: [infrastructure-validation.md](infrastructure-validation.md).
 
+This handover preserves the recording-time test results below. The
+[execution and closure runbook](infrastructure-validation.md#execution-and-closure-runbook)
+describes the current preparation and remaining owner decisions.
+
 ## Repository and recording state
 
 - **HEAD and local `origin/main`:** `7bb5399`; clean before this recording. No Git writes by

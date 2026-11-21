@@ -99,6 +99,9 @@ def out(value):
     if q is not None:
         m = re.fullmatch(r"length\(\[\?name=='(.*)'\]\)", q)
         if q in ("length(@)",): value = len(value)
+        elif q.startswith("length([?name!='") and q.endswith("'])"):
+            name = q.removeprefix("length([?name!='").removesuffix("'])")
+            value = sum(1 for item in value if item["name"] != name)
         elif q == "length(value)": value = len(value["value"])
         elif m: value = sum(1 for v in value if v["name"] == m.group(1))
         elif q == "[].id": value = [v["id"] for v in value]
@@ -410,6 +413,24 @@ def test_stage7_deploys_once_and_pins_targets(tmp_path: Path) -> None:
     assert SUB not in masked and "<masked>" in masked
 
 
+def test_stage7_refuses_if_window_closes_during_preflight(tmp_path: Path) -> None:
+    shell = Shell(tmp_path)
+    validator = shell.work / "infra_validation.py"
+    code = validator.read_text()
+    assert code.count("datetime.now(UTC)") == 1
+    after_window = (NOW + timedelta(minutes=101)).strftime(Z)
+    validator.write_text(
+        code.replace(
+            "datetime.now(UTC)",
+            f"datetime.fromisoformat({after_window!r} if Path('ev').exists() else {NOW.strftime(Z)!r})",
+        )
+    )
+    shell.sums()
+    status, out = shell.run(STAGE7)
+    assert status == 78 and "STAGE7_STOPPED" in out
+    assert shell.count("deployment group list") == 1 and writes(shell) == []
+
+
 @pytest.mark.parametrize(
     "c",
     [
@@ -527,6 +548,49 @@ def test_stage8_full_teardown_in_order(tmp_path: Path) -> None:
     assert az["group"] is None and az["deleted_vaults"] == [] and az["deleted_ws"] == []
     assert az["sub_budget"]["name"] == "infraval-uks-tmp01-budget"
     assert (shell.work / "teardown-receipt.json").exists()
+
+
+def test_stage8_reports_expiry_at_verified_completion(tmp_path: Path) -> None:
+    shell = deployed(tmp_path)
+    helper = shell.work / "infra_evidence.py"
+    code = helper.read_text()
+    stamp = 'stamp = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")'
+    assert code.count(stamp) == 1
+    late = (NOW + timedelta(minutes=161)).strftime(Z)
+    helper.write_text(code.replace(stamp, f"stamp = {late!r}"))
+    shell.sums()
+    status, out = shell.run(STAGE8)
+    assert status == 0, out
+    assert "WITHIN_EXPIRY" in out
+    assert "STAGE8_TEARDOWN_VERIFIED: PASS (EXPIRY_BREACHED)" in out
+    assert shell.az()["group"] is None
+
+
+def test_stage8_stops_before_writes_if_another_deployment_exists(tmp_path: Path) -> None:
+    shell = deployed(tmp_path)
+    deployments = shell.az()["group"]["deployments"]
+    deployments["another-run"] = {
+        "name": "another-run",
+        "properties": {"provisioningState": "Running"},
+    }
+    shell.edit(**{"group.deployments": deployments})
+    before = writes(shell)
+    status, out = shell.run(STAGE8)
+    assert status != 0 and "STAGE8_STOPPED" in out
+    assert writes(shell) == before
+    assert not (shell.work / "teardown-receipt.json").exists()
+
+
+def test_stage8_stops_before_writes_on_unrecognized_deployment_state(tmp_path: Path) -> None:
+    shell = deployed(tmp_path)
+    deployments = shell.az()["group"]["deployments"]
+    deployments[f"{RUN}-deploy"]["properties"]["provisioningState"] = "Creating"
+    shell.edit(**{"group.deployments": deployments})
+    before = writes(shell)
+    status, out = shell.run(STAGE8)
+    assert status != 0 and "unexpected deployment state" in out
+    assert writes(shell) == before
+    assert not (shell.work / "teardown-receipt.json").exists()
 
 
 def test_stage8_refuses_without_teardown_approval_before_any_az_call(tmp_path: Path) -> None:

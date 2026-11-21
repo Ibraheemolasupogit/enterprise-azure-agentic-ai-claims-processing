@@ -49,8 +49,15 @@ SUB_BUDGET_URL="https://management.azure.com/subscriptions/{subscriptionId}/prov
 capture_state() {
   az group show -n "$RG" --subscription "$SUB" -o json > "$EV/group.json"
   az lock list -g "$RG" --subscription "$SUB" -o json > "$EV/locks.json"
+  OTHER_DEPLOYMENTS=$(az deployment group list -g "$RG" --subscription "$SUB" --query "length([?name!='$DEPLOYMENT'])" -o tsv)
+  test "$OTHER_DEPLOYMENTS" = 0
   az resource list -g "$RG" --subscription "$SUB" -o json > "$EV/resources.json"
   az deployment group show -g "$RG" -n "$DEPLOYMENT" --subscription "$SUB" -o json > "$EV/deployment.json"
+  DEPLOYMENT_STATE=$(python3 -I -B infra_evidence.py get "$EV/deployment.json" properties provisioningState)
+  case "$DEPLOYMENT_STATE" in
+    Succeeded|Failed|Canceled|Running|Accepted) ;;
+    *) echo "unexpected deployment state" >&2; exit 1 ;;
+  esac
   az rest --method get --subscription "$SUB" -o json --url "$BUDGETS_URL?api-version=2021-10-01" > "$EV/budgets.json"
   az role assignment list --scope "/subscriptions/$SUB/resourceGroups/$RG" --subscription "$SUB" --query "[].scope" -o json > "$EV/roles.json"
   test "$(python3 -I -B infra_evidence.py count-scopes "$RG" < "$EV/roles.json")" = 0
@@ -110,7 +117,6 @@ verify_absent() {
   test "$(az role assignment list --all --subscription "$SUB" --query "[].scope" -o json | python3 -I -B infra_evidence.py count-scopes "$RG")" = 0
   test "$(az rest --method get --subscription "$SUB" --url "$SUB_BUDGET_URL" --query name -o tsv)" = infraval-uks-tmp01-budget
   az group exists -n NetworkWatcherRG --subscription "$SUB" > "$EV/networkwatcherrg-exists.txt"
-  python3 -I -B infra_evidence.py receipt teardown-receipt.json
 }
 
 # 4. Live state -> validator plan -> pinned targets. An absent group is verify-only.
@@ -141,4 +147,7 @@ done
 
 python3 -I -B infra_evidence.py mask "$EV" "$EV-masked"
 echo "NetworkWatcherRG exists: $(cat "$EV/networkwatcherrg-exists.txt") (recorded only; never deleted)"
-echo "STAGE8_TEARDOWN_VERIFIED: PASS ($(cat "$EV/expiry-status.txt")). Cost checks due at +24h and +72h."
+python3 -I -B infra_evidence.py receipt teardown-receipt.json
+VERIFIED=$(python3 -I -B infra_evidence.py get teardown-receipt.json teardown_verified_utc)
+COMPLETION=$(python3 -I -c 'import sys; from datetime import datetime; print("EXPIRY_BREACHED" if datetime.fromisoformat(sys.argv[1]) > datetime.fromisoformat(sys.argv[2]) else "WITHIN_EXPIRY")' "$VERIFIED" "$EXPIRES")
+echo "STAGE8_TEARDOWN_VERIFIED: PASS ($COMPLETION). Cost checks due at +24h and +72h."

@@ -29,10 +29,13 @@ sha256sum --strict --quiet -c SHA256SUMS
 
 # 2. Offline authorisation: stages 1-8 approved, APPROVED_FOR_EXECUTION_WINDOW, exact template,
 #    parameters and what-if hashes, and now inside the approved window. Refusal exits 78.
-python3 -I -B infra_validation.py --contract contract.json --authorize-execution \
-  --reviewed-template reviewed.json --execution-template execution.json \
-  --parameters parameters.json --whatif whatif.json > authorize.json
-test "$(python3 -I -B infra_evidence.py get authorize.json decision)" = AUTHORIZED_FOR_WINDOW
+authorize_execution() {
+  python3 -I -B infra_validation.py --contract contract.json --authorize-execution \
+    --reviewed-template reviewed.json --execution-template execution.json \
+    --parameters parameters.json --whatif whatif.json > authorize.json
+  test "$(python3 -I -B infra_evidence.py get authorize.json decision)" = AUTHORIZED_FOR_WINDOW
+}
+authorize_execution
 RG=$(python3 -I -B infra_evidence.py get authorize.json resource_group)
 RUN=$(python3 -I -B infra_evidence.py get authorize.json run_id)
 LOCATION=$(python3 -I -B infra_evidence.py get contract.json approved_values location)
@@ -55,6 +58,7 @@ test "$(az lock list -g "$RG" --subscription "$SUB" --query "length(@)" -o tsv)"
 test "$(az deployment group list -g "$RG" --subscription "$SUB" --query "length(@)" -o tsv)" = 0
 
 # 5. The one deployment: the bound execution template and parameters, Incremental, synchronous.
+authorize_execution
 az deployment group create -g "$RG" --subscription "$SUB" -n "$DEPLOYMENT" --mode Incremental \
   --template-file execution.json --parameters @parameters.json -o json > deployment.json
 test "$(python3 -I -B infra_evidence.py get deployment.json properties provisioningState)" = Succeeded

@@ -65,7 +65,7 @@ policy artifacts exist, with deployment gates disabled.
 | **Human-in-the-loop governance** | Assigned review queues; supervisor escalation and separation of duties; durable human outcomes with audit, receipts, corrections and reopening (local SQLite); evidence-amendment planning | — | Wiring UI recommendations to durable outcomes: not implemented |
 | **Security and DevSecOps** | Offline identity with key rotation and revocation; least-privilege grants; adversarial suite; supply-chain admission checks; recorded container-security decision | Synthetic identities, not Entra ID | Entra ID, API Management enforcement, managed identity: NOT_TESTED |
 | **Evaluation and operations** | Offline evaluation harness; OpenTelemetry instrumentation; fault injection with real process crashes | Development labels, not an independent benchmark | Independent quality review: NOT_TESTED |
-| **Azure infrastructure** | Bicep modules, OIDC workflow and API Management policy as **static, offline-validated** artifacts | — | **No Azure resource deployed**; cloud integration NOT_TESTED |
+| **Azure infrastructure** | Offline-validated Bicep, OIDC workflow and API Management policy | Infrastructure procedures tested with local stubs | Application deployment blocked. Infrastructure-only Stage 6 execution pending |
 
 Details: [agents](docs/architecture/agent-framework-foundation.md) ·
 [tools](docs/architecture/governed-agent-tools.md) ·
@@ -116,7 +116,7 @@ skipped. Component-level commands are in the [engineering notes](docs/milestones
 
 `make check` runs Ruff formatting and lint checks, strict mypy and the full pytest suite.
 
-- **Latest recorded run: 1,775 passed, 0 failed, 0 skipped** on CPython 3.12.8, macOS arm64, using
+- **Recorded M25 source-tree run: 1,775 passed, 0 failed, 0 skipped** on CPython 3.12.8, macOS arm64, using
   the source tree. This is **not** installed-wheel, Linux, container or deployment verification.
 - **Adversarial suite: 80 PASS / 0 FAIL / 8 NOT_TESTED** across workflow, tools, MCP, API/UI,
   human review and identity controls ([threat model](docs/architecture/ai-threat-model-and-adversarial-testing.md)).
@@ -149,7 +149,11 @@ What this repository does **not** claim:
 
 ## Deployment Status
 
-**DEPLOYMENT BLOCKED.** No Azure resource has been deployed.
+**APPLICATION DEPLOYMENT BLOCKED.** The separate Option C infrastructure validation has a Stage 6
+approval for November 25, 2026. ARM validation and what-if remain pending, and Stages 7–9
+require separate decisions. Both repository Bicep gates are false-only. The owner previously
+created the subscription budget described in the infrastructure record.
+[Execution and closure runbook](docs/deployment/infrastructure-validation.md#execution-and-closure-runbook).
 
 | Gate | Status | Record |
 | --- | --- | --- |

@@ -124,3 +124,11 @@ constrained by M24's unestablished isolation. M22 independent-review restriction
 (60 PENDING_REVIEW candidates; 12 independent-quality metrics NOT_TESTED), M23
 **DEFERRED — SECURITY GATE NO-GO** and M24 **EXECUTION BLOCKED / DEPLOYMENT NO-GO**, with all
 six demonstrations NOT_TESTED, are unchanged. No production insurance outcome is authorised.
+
+### Repository closure status
+
+M25 remains offline complete. The separate Option C infrastructure workflow has a recorded
+Stage 6 approval for November 25, 2026, and offline procedure checks. Cloud validation,
+deployment, teardown, cost checks and final evidence are pending. Follow the
+[execution and closure runbook](../deployment/infrastructure-validation.md#execution-and-closure-runbook)
+for those decisions. Historical phase hashes remain verifiable at the listed commits.

@@ -15,6 +15,61 @@ DEFERRED — SECURITY GATE NO-GO**, M22's independent-review restrictions and M2
 NOT_TESTED demonstrations are unchanged, and nothing here represents application, quality or
 production readiness.
 
+## Execution and closure runbook
+
+Use the original November 25, 2026 UTC plan for run `infraval-20261125-01`, group
+`rg-claims-infraval-uks-tmp01` in `uksouth`, with hard expiry **16:00 UTC**. The committed
+[Stage 6 record](infra-validation-approvals/2026-11-21-stage6-cloud-validation.md) controls
+scope and timing. The owner controls one session and keeps other operators out of the target
+group because the live checks are sequential.
+
+1. **Stage 6, from 08:00, PASS by 11:00.** On the owner's separate execution instruction,
+   verify the six files and manifest in the ignored
+   `outputs/deployment/infra-validation-execution/upload-stage6/` bundle against the committed
+   contract and bound hashes. Verify the Stage 6 script and G9 block hashes separately. Use a fresh
+   Cloud Shell Bash directory. Follow the recorded subscription preflight and optional
+   `Microsoft.Consumption` check, then run the
+   [exact G9 creation block](infra-validation-approvals/2026-11-20-g2-approved-values-proposal.md#creation-one-write)
+   once. Run `bash ./infra_stage6_validate_whatif.sh` once and retain private outputs and hashes.
+2. **Review, 11:00–12:45.** Review the unmodified what-if and its passing exact-seven-Create
+   check. Obtain separate Stage 7 and Stage 8 approvals covering exact script and artifact
+   hashes, the window and the partial-failure recovery procedure. Commit the approvals and
+   contract with the passing what-if hash before 13:00. Confirm the owner can complete cleanup
+   by expiry and can collect the required read-only evidence.
+3. **Stage 7, 13:00–15:00 if separately approved.** Build the fresh eight-file bundle described
+   below with the approved execution contract, real passing what-if and manifest. Compare all
+   files and separate Stage 7/8/cost script hashes with the approved sources. Run
+   `bash ./infra_stage7_deploy.sh` once. Retain the deployment receipt, masked inventory and pinned
+   teardown targets. Record the presence or absence of both `NetworkWatcherRG` and
+   `NetworkWatcher_uksouth` after deployment, with UTC timestamps.
+4. **Stage 8, verified absence by 16:00 if separately approved.** Use the same directory and
+   run `bash ./infra_stage8_teardown.sh` promptly after deployment review or after a failed
+   submission with a verified deployment record. Follow the stop and re-plan rules below.
+   Record the Network Watcher group and instance again without changing either. Keep the
+   teardown receipt. `EXPIRY_BREACHED` at completion records a deadline breach even if
+   absence eventually verifies.
+5. **Cost checks.** From the verified teardown time, run
+   `CHECKPOINT_HOURS=24 bash ./infra_stage8_cost_check.sh` no earlier than +24 h, then
+   `CHECKPOINT_HOURS=72 bash ./infra_stage8_cost_check.sh` no earlier than +72 h under the
+   Stage 8 approval. Retain the subscription budget. Record scope, GBP spend, residual checks
+   and receipt hashes. A passing +72 h check establishes the approved threshold result.
+6. **Stage 9, separate owner decision.** Review Stage 6 outputs, Stage 7 inventory, Stage 8
+   absence and timing, and both cost checks before filing a dated closure record. Include the
+   approved commit, run ID, hashes, UTC times, masked receipts, and disposition of G9, Network
+   Watcher and the subscription budget. Mark exceptions and missing checks explicitly.
+   Keep raw subscription identifiers and Cloud Shell outputs private.
+
+Stop on a hash, approval, subscription, provider, inventory or CLI failure, or on a what-if
+outside the exact approved set. Do not retry a deployment, register providers, filter the
+what-if, or improvise recovery. Abort if Stage 6 misses 11:00 or Stage 7/8 approvals are missing
+at 13:00. If no deployment was submitted and the group qualifies, immediately use the
+[exact G9 cleanup block](infra-validation-approvals/2026-11-20-g2-approved-values-proposal.md#empty-group-cleanup-only-if-stage-7-doesnt-follow)
+and verify absence by 16:00. The dated record supersedes the earlier cleanup timing. If
+submission is uncertain, another deployment exists, the expected deployment record is missing
+or has an unrecognized state, or cleanup refuses, stop for owner review and separately authorised
+recovery.
+M23 remains blocked throughout.
+
 ## Purpose
 
 Prove, with real evidence, that a minimal landing zone can be validated, provisioned within an
