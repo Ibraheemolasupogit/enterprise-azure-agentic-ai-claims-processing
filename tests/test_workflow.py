@@ -134,14 +134,22 @@ def test_existing_lifecycle_and_admission_records_form_one_exact_chain(
 def test_duplicate_and_concurrent_execution_does_not_repeat_the_agent(
     request_value: WorkflowRequest,
 ) -> None:
+    from claims_ai.agent_tools.contracts import ToolLimits
+
     services = ObservedStages()
-    runner = WorkflowRunner(services=services)
+    limits = WorkflowLimits(
+        run_timeout_seconds=60.0,
+        stage_timeout_seconds=10.0,
+        tools=ToolLimits(timeout_seconds=30.0, tool_timeout_seconds=5.0),
+    )
+    runner = WorkflowRunner(limits=limits, services=services)
 
     async def run() -> None:
         results = await asyncio.gather(
             *(runner.run(request_value, demo_grant(request_value)) for _ in range(3))
         )
         assert results[0] == results[1] == results[2]
+        assert all(result.state == State.REVIEW and result.next_stage is None for result in results)
         assert services.calls == list(STAGES)
 
     asyncio.run(run())
