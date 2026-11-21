@@ -34,8 +34,8 @@ RUN=$(python3 -I -B infra_evidence.py get contract.json execution run_id)
 LOCATION=$(python3 -I -B infra_evidence.py get contract.json approved_values location)
 EXPIRES=$(python3 -I -B infra_evidence.py get contract.json approved_values expires_at)
 DEPLOYMENT="$RUN-deploy"
-EV="ev8-$(date -u +%Y%m%dT%H%M%SZ)"
-mkdir -m 700 "$EV"
+STAMP=$(date -u +%Y%m%dT%H%M%SZ)
+EV=$(mktemp -d "ev8-$STAMP.XXXXXXXX")
 python3 -I -c 'import sys; from datetime import UTC, datetime; print("EXPIRY_BREACHED" if datetime.now(UTC) > datetime.fromisoformat(sys.argv[1]) else "WITHIN_EXPIRY")' "$EXPIRES" | tee "$EV/expiry-status.txt"
 
 # 3. Subscription identity (read-only), before every other Azure command.

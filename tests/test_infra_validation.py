@@ -55,7 +55,7 @@ def contract() -> dict[str, Any]:
 def test_current_template_and_contract_pass_and_never_provision() -> None:
     result = validate_repository(ROOT)
     assert result["status"] == "PASS" and result["cloud_calls"] == 0
-    assert result["provisioning"] == "REFUSED_PREPARATION_ONLY"
+    assert result["provisioning"] == "REPOSITORY_TEMPLATE_NOT_DEPLOYABLE"
     assert result["m23_gate"] == "UNCHANGED_FALSE_ONLY"
     with pytest.raises(ValidationError, match="provisioning_refused_preparation_only"):
         refuse_provisioning(contract())
@@ -465,11 +465,15 @@ def test_whatif_fails_closed(doc: dict[str, Any], code: str) -> None:
 # --- Contract-bound authorisation ----------------------------------------------------
 
 
-def test_repository_contract_refuses_validation_and_execution() -> None:
-    with pytest.raises(ValidationError, match="contract_not_approved_for_validation"):
-        authorize_validation(contract(), REVIEWED_BYTES, EXEC_BYTES, PARAMS_BYTES)
+def test_repository_contract_refuses_unbound_validation_and_later_stages() -> None:
+    value = contract()
+    assert value["status"] == "APPROVED_FOR_VALIDATION"
+    with pytest.raises(ValidationError, match="reviewed_template_hash_mismatch"):
+        authorize_validation(value, REVIEWED_BYTES, EXEC_BYTES, PARAMS_BYTES)
     with pytest.raises(ValidationError, match="contract_not_approved_for_execution"):
-        authorize_execution(contract(), REVIEWED_BYTES, EXEC_BYTES, PARAMS_BYTES, WHATIF_BYTES, NOW)
+        authorize_execution(value, REVIEWED_BYTES, EXEC_BYTES, PARAMS_BYTES, WHATIF_BYTES, NOW)
+    with pytest.raises(ValidationError, match="approval_incomplete:teardown"):
+        plan_teardown(value, {"group": None})
 
 
 def test_fully_approved_contract_authorizes_only_the_bound_window() -> None:
@@ -728,7 +732,7 @@ def test_checklist_maps_nine_stages_onto_every_approval_exactly_once() -> None:
 @pytest.mark.parametrize(
     ("fn", "code"),
     [
-        (lambda c: c["execution"].update(run_id="x"), "preparation_execution_must_be_null"),
+        (lambda c: c.update(status="PREPARATION_ONLY"), "preparation_execution_must_be_null"),
         (
             lambda c: c.update(status="APPROVED_FOR_VALIDATION", provisioning_allowed=True),
             "provisioning_must_be_false",

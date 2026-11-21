@@ -274,9 +274,14 @@ def test_stage6_passes_on_approved_contract_and_clean_group(tmp_path: Path) -> N
     assert len(json.loads((work / "whatif-check.json").read_text())) == 7
 
 
-def test_repository_contract_refuses_before_any_azure_command(tmp_path: Path) -> None:
-    live: dict[str, Any] = json.loads(CONTRACT.read_text())  # PREPARATION_ONLY
-    code, calls, _ = run(stage(tmp_path, live), tmp_path)
+def test_preparation_only_contract_refuses_before_any_azure_command(tmp_path: Path) -> None:
+    preparation: dict[str, Any] = json.loads(CONTRACT.read_text())
+    preparation["status"] = "PREPARATION_ONLY"
+    preparation["execution"] = dict.fromkeys(preparation["execution"])
+    preparation["approvals"]["cloud_validation"].update(
+        status="PENDING", approval_identity=None, approval_time=None, evidence_sha256=None
+    )
+    code, calls, _ = run(stage(tmp_path, preparation), tmp_path)
     assert code == 78 and calls == []
 
 

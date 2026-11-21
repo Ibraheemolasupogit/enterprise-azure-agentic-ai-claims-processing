@@ -1,8 +1,12 @@
 # Azure infrastructure validation (Option C)
 
-**Status: PREPARATION ONLY — NOT PROVISIONED.** Prepared 2026-11-19 at baseline `43cbf5b` under
-the owner's approval to prepare an infrastructure-only validation. No Azure call, validation,
-provisioning or spending has occurred, and none is authorised by this document.
+**Status: APPROVED_FOR_VALIDATION — APPROVAL RECORDED ONLY; NOT PROVISIONED.** Stage 6
+`cloud_validation` and G9 were recorded at `2026-11-21T00:48:17Z`, baseline `7bb5399`, in the
+[Stage 6 approval](infra-validation-approvals/2026-11-21-stage6-cloud-validation.md), SHA-256
+`3c15dfde020c6a0931628cbeb5c3db0e07c21de980d9c7792ffec4de271dbccb`.
+No Azure call was made during this recording. The owner must commit and verify the approved
+files before any separately instructed execution on November 25. This document itself grants
+no execution, provisioning, other-resource deletion, provider registration or application deployment.
 
 This validation deploys **no claims application, container image, claims data, AI service,
 public IP or public ingress**. It's separate from the M23 deployment foundation:
@@ -26,12 +30,12 @@ approved budget and lifetime, monitored, and completely torn down. Specifically:
 | File | Purpose |
 | --- | --- |
 | [`infra/azure-validation/main.bicep`](../../infra/azure-validation/main.bicep) | Minimal template with its own hard `@allowed([false])` provisioning gate |
-| [`infra/azure-validation/contract.json`](../../infra/azure-validation/contract.json) | Contract v2: scope, resource allow-list, 12 approval records, the 9-stage checklist, approved values and the hash-bound `execution` block (all pending or null) |
+| [`infra/azure-validation/contract.json`](../../infra/azure-validation/contract.json) | Contract v2: stages 1–6 approved; stages 7–9 pending; five execution bindings set; what-if hash and Stage 7 window fields null |
 | [`deployment/infra_validation.py`](../../deployment/infra_validation.py) | Offline validator: contract states, template and M23 gates, contract-bound authorisation, strict what-if check, teardown **planning** and purge-identity check. It never calls Azure, deploys or deletes |
 | [`tests/test_infra_validation.py`](../../tests/test_infra_validation.py) | Positive checks and fail-closed mutations for every control |
 | [`deployment/infra_subscription_preflight.py`](../../deployment/infra_subscription_preflight.py) | Cloud Shell subscription preflight (stdlib only): compares the live subscription with an approved `sha256:` commitment, the name `OctoCAT-Agentic-AI` and the `Enabled` state, and checks that the session's `$SUB` is that subscription. Never prints or stores the raw ID; refusals exit 78. `lint` requires strict mode, the preflight before every other `az` command, `--subscription "$SUB"` on every `az` command and fail-closed verification, and rejects `az account set`, shell tracing and GUID literals |
 | [`tests/test_infra_subscription_preflight.py`](../../tests/test_infra_subscription_preflight.py) | Positive and negative preflight and lint tests; the proposal's G9 procedures must pass strict `lint` |
-| [`deployment/infra_stage6_validate_whatif.sh`](../../deployment/infra_stage6_validate_whatif.sh) | Stage 6 ARM validate and what-if procedure (**prepared, not approved**); see [Stage 6 procedure](#stage-6-procedure-prepared-not-approved) |
+| [`deployment/infra_stage6_validate_whatif.sh`](../../deployment/infra_stage6_validate_whatif.sh) | Stage 6 ARM validate and what-if procedure (**approval recorded; not executed**); see [Stage 6 procedure](#stage-6-procedure-approval-recorded-not-executed) |
 | [`tests/test_infra_stage6_procedure.py`](../../tests/test_infra_stage6_procedure.py) | Runs the stage 6 procedure offline against a stub `az`: passes only on an approved synthetic contract and fails closed on every refusal path |
 | [`deployment/infra_stage7_deploy.sh`](../../deployment/infra_stage7_deploy.sh) | Stage 7 one-time deployment procedure (**prepared, not approved**); see [Stage 7 and 8 procedures](#stage-7-and-8-procedures-prepared-not-approved) |
 | [`deployment/infra_stage8_teardown.sh`](../../deployment/infra_stage8_teardown.sh), [`deployment/infra_stage8_cost_check.sh`](../../deployment/infra_stage8_cost_check.sh) | Stage 8 resume-safe teardown and read-only +24 h/+72 h checks (**prepared, not approved**) |
@@ -113,12 +117,22 @@ template, parameters or window invalidates the affected approvals.
 | `identity_rbac` | **APPROVED** 2026-11-20 (repository-owner): direct Owner (User, subscription scope), 0 deny assignments, owner deploys personally via Cloud Shell, no service principal, federated identity or secrets; least privilege acknowledged | [Record](infra-validation-approvals/2026-11-20-identity-rbac.md), SHA-256 `66eaf996…d5ab27e4` |
 | `provider_registration` | **APPROVED** 2026-11-20 (repository-owner): register `Microsoft.Network` only, by the owner in Cloud Shell, to enable live quota checks. **Performed 2026-11-20** (`NotRegistered` → `Registered`); [execution record](infra-validation-approvals/2026-11-20-provider-registration-execution.md); [supplement](infra-validation-approvals/2026-11-20-provider-registration-execution-supplement.md) (SHA-256 `d4fcc724…275a5fe8`): resource-group count unchanged at 1, `NetworkWatcherRG` and the validation group absent (group-level observation, not a full inventory) | [Record](infra-validation-approvals/2026-11-20-provider-registration.md), SHA-256 `6ac6063f…580cf132` |
 | `budget` | **APPROVED** 2026-11-20 (repository-owner): amount 2 (subscription billing currency; **GBP**, established at creation), public contact `ibraheemolasupo@yahoo.com`, `Actual` alerts at 50/80/100% (`GreaterThanOrEqualTo`), monthly 2026-11-01 to 2026-12-31, no action group, `owner=repository-owner`; applies to the template budget and `infraval-uks-tmp01-budget`; stop if the post-creation currency is unexpected; creation and deletion need separate approval. **Subscription budget created 2026-11-20** (PUT 02:18:10Z, GET check passed 02:18:13Z; 2 GBP, current spend 0.00 GBP) after two runs stopped before any write on an absence-check parser defect; [execution record](infra-validation-approvals/2026-11-20-subscription-budget-execution.md), SHA-256 `ec041f24…20c57aa5`. The template's resource-group budget isn't deployed | [Record](infra-validation-approvals/2026-11-20-budget.md), SHA-256 `55641a5f…7bd5d410` |
-| `execution_template` | **APPROVED** 2026-11-20 (repository-owner): one exact execution copy, bound to Bicep 0.48.1 (`62cd5958…`), reviewed source `4beed4f7…08d82b`, reviewed compiled `28c29de5…c41a17` and execution compiled `dfc26600…bb970989` (one-line gate change, never committed). Not yet written to the `execution` block. **G1 resolved** 2026-11-20: the five named providers confirmed `Registered` by owner query; `Microsoft.Network` confirmed earlier; `Microsoft.Consumption` state unverified (budget operation succeeded) ([verification record](infra-validation-approvals/2026-11-20-g1-provider-states.md), SHA-256 `df2d7079…b9bf4775`). **G2 and G3-A approved** 2026-11-20 (repository-owner; [G2/G3-A approval](infra-validation-approvals/2026-11-20-g2-g3a-approval.md), SHA-256 `bcb8f790…2933ecf2`, citing the [proposal](infra-validation-approvals/2026-11-20-g2-approved-values-proposal.md) `e05e9d2d…f4e9fbd6`): the six G2 `approved_values` set, including the subscription commitment; plan `T0` 2026-11-25T13:00:00Z, window end 15:00:00Z, `run_id` `infraval-20261125-01` (not yet in the `execution` block); resource-group budget end date accepted as an exception and removed at teardown. **G9 not approved** (stage 6); G4–G8 open | [Record](infra-validation-approvals/2026-11-20-execution-template.md), SHA-256 `1d69d8bb…650bf8ba` |
-| All other approvals | PENDING | — |
+| `execution_template` | **APPROVED** 2026-11-20 (repository-owner): one exact execution copy, bound to Bicep 0.48.1 (`62cd5958…`), reviewed source `4beed4f7…08d82b`, reviewed compiled `28c29de5…c41a17` and execution compiled `dfc26600…bb970989` (one-line gate change, never committed). Now bound in the `execution` block by the Stage 6 record. **G1 resolved** 2026-11-20: the five named providers confirmed `Registered` by owner query; `Microsoft.Network` confirmed earlier; `Microsoft.Consumption` state unverified (budget operation succeeded) ([verification record](infra-validation-approvals/2026-11-20-g1-provider-states.md), SHA-256 `df2d7079…b9bf4775`). **G2 and G3-A approved** 2026-11-20 (repository-owner; [G2/G3-A approval](infra-validation-approvals/2026-11-20-g2-g3a-approval.md), SHA-256 `bcb8f790…2933ecf2`, citing the [proposal](infra-validation-approvals/2026-11-20-g2-approved-values-proposal.md) `e05e9d2d…f4e9fbd6`): the six G2 `approved_values` set, including the subscription commitment; plan `T0` 2026-11-25T13:00:00Z, window end 15:00:00Z, `run_id` `infraval-20261125-01` (now bound for Stage 6; window fields remain null); resource-group budget end date accepted as an exception and removed at teardown. **G9 approved by the separate Stage 6 record**, with immediate cleanup on abort and verified absence by 2026-11-25T16:00:00Z; G4–G8 remain as recorded | [Record](infra-validation-approvals/2026-11-20-execution-template.md), SHA-256 `1d69d8bb…650bf8ba` |
+| `cloud_validation` and G9 | **APPROVED** 2026-11-21T00:48:17Z (repository-owner), baseline `7bb5399`: the exact bound Stage 6 validate/what-if procedure and G9 command blocks only; no execution performed. Immediate empty-group cleanup on abort; verified absence by 2026-11-25T16:00:00Z; failed cleanup requires a recorded stop and separately authorised recovery | [Stage 6 record](infra-validation-approvals/2026-11-21-stage6-cloud-validation.md), SHA-256 `3c15dfde020c6a0931628cbeb5c3db0e07c21de980d9c7792ffec4de271dbccb` |
+| `provisioning`, `teardown`, `evidence` | PENDING | — |
 
-The contract remains **`PREPARATION_ONLY`** with `provisioning_allowed=false`. The stage 4 budget
-values, `owner` and the six G2 values are set in `approved_values`; all `execution` fields
-remain `null`. **Stage 1 is complete.** Stage 4 budget values are approved and the subscription budget exists (GBP). Stage 5 `execution_template` is approved; G1, G2 and G3 are resolved and G4–G8 remain open. Stage 6 needs its own `cloud_validation` approval (including G9). Stages 6–9 remain pending.
+The contract is **`APPROVED_FOR_VALIDATION`** with `provisioning_allowed=false`. Existing
+`approved_values` and prior approvals are unchanged. The execution block now binds the run ID,
+resource group and reviewed-template, execution-template and parameter hashes. The what-if hash
+and Stage 7 window fields remain `null`; stages 7–9 remain `PENDING`. Stage 6 execution is
+**NOT_TESTED**, and no new Azure state is asserted. G1, G2 and G3 are resolved as recorded;
+`Microsoft.Consumption` registration is still unverified, and G4–G8 retain their recorded limits.
+
+The rebuilt local bundle is `outputs/deployment/infra-validation-execution/upload-stage6/`.
+Its manifest matches the updated, currently uncommitted contract and pinned bytes. Before upload,
+the owner must commit and compare every bundled file with the committed sources; regenerate the
+manifest if any bytes change. The older `upload-provisional/` bundle remains unchanged and is
+not the Stage 6 approved bundle. Both repository Bicep gates remain false-only.
 
 ## Offline commands
 
@@ -138,12 +152,15 @@ python3 -I -B deployment/infra_validation.py --contract C --verify-purge VAULT D
 Every fail-closed decision runs **locally** on files exported from Cloud Shell. Cloud Shell
 only runs the owner-approved commands.
 
-## Stage 6 procedure (prepared, not approved)
+## Stage 6 procedure (approval recorded; not executed)
 
 [`deployment/infra_stage6_validate_whatif.sh`](../../deployment/infra_stage6_validate_whatif.sh)
-is the owner's Cloud Shell procedure for stage 6. **It isn't approved and mustn't run** before
-the stage 6 `cloud_validation` approval and the G9 group creation (G2 and G3-A are approved).
-Any failed step stops it with a non-zero exit; there's no retry, create, delete or `--no-wait`.
+is the owner's bound Cloud Shell procedure for Stage 6. Its approval and G9 are recorded, but
+**execution has not occurred**. The owner must first commit and verify the exact bundle and
+separately instruct execution within the November 25 schedule. G9 creation must pass first.
+The pinned script's preparation-only comments are preserved to keep its approved bytes unchanged;
+the contract and dated record govern its approval status. Any failed step stops it with a
+non-zero exit; there's no retry, create, delete or `--no-wait` inside the Stage 6 procedure.
 
 1. **Upload integrity (offline):** `SHA256SUMS` must list exactly `contract.json`,
    `execution.json`, `infra_subscription_preflight.py`, `infra_validation.py`,
@@ -151,7 +168,7 @@ Any failed step stops it with a non-zero exit; there's no retry, create, delete 
 2. **Offline authorisation:** `--authorize-validation` must return
    `AUTHORIZED_FOR_VALIDATION_ONLY` / `NOT_AUTHORIZED`. The resource group, run ID, location and
    expiry come from the contract, and the approved expiry must still be in the future. The
-   repository contract (`PREPARATION_ONLY`) refuses here, before any Azure command.
+   recorded contract authorises validation only; provisioning and teardown remain refused.
 3. **Subscription identity:** the bootstrap, then the preflight `check`, before every other
    Azure command.
 4. **Group state (read-only):** the group exists, `Succeeded`, in the approved location, with

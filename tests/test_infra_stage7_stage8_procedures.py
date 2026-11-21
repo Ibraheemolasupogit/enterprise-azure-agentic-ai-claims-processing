@@ -554,13 +554,21 @@ def test_stage8_partial_deployment_deletes_only_what_exists(tmp_path: Path) -> N
 
 def test_stage8_running_deployment_is_cancelled_first(tmp_path: Path) -> None:
     shell = Shell(tmp_path, faults={"create": "partial:nsg", "partial_state": "Running"})
+    stamp = "20261125T130000Z"
+    date = tmp_path / "bin" / "date"
+    date.write_text(f"#!/bin/sh\nprintf '%s\\n' {stamp}\n")
+    date.chmod(0o755)
     assert shell.run(STAGE7)[0] != 0
     code, out = shell.run(STAGE8)
     assert code == 3 and "STAGE8_CANCEL_REQUESTED" in out
     assert [c.split(" -")[0] for c in writes(shell)[1:]] == ["deployment group cancel"]
+    (evidence,) = shell.work.glob(f"ev8-{stamp}.????????")
+    first_capture = (evidence / "group.json").read_bytes()
     code, out = shell.run(STAGE8)  # rerun after the cancel: the group goes
     assert code == 0, out
     assert shell.az()["group"] is None
+    assert len(list(shell.work.glob(f"ev8-{stamp}.????????"))) == 2
+    assert (evidence / "group.json").read_bytes() == first_capture
 
 
 @pytest.mark.parametrize(
