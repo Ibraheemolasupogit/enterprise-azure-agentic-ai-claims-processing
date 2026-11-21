@@ -49,13 +49,20 @@ az account show --subscription "$SUB" -o json | INFRAVAL_SUB="$SUB" \
   python3 -I infra_subscription_preflight.py check --contract contract.json
 
 # 4. The G9 group is unchanged since stage 6: tags, location, empty, unlocked, no deployment.
-test "$(az group exists -n "$RG" --subscription "$SUB")" = true
-test "$(az group show -n "$RG" --subscription "$SUB" --query properties.provisioningState -o tsv)" = Succeeded
-test "$(az group show -n "$RG" --subscription "$SUB" --query location -o tsv)" = "$LOCATION"
-test "$(az group show -n "$RG" --subscription "$SUB" --query tags -o json | python3 -I -c 'import json, sys; print(json.load(sys.stdin) == {"purpose": "infrastructure-validation", "infravalRun": sys.argv[1], "expiresAt": sys.argv[2]})' "$RUN" "$EXPIRES")" = True
-test "$(az resource list -g "$RG" --subscription "$SUB" --query "length(@)" -o tsv)" = 0
-test "$(az lock list -g "$RG" --subscription "$SUB" --query "length(@)" -o tsv)" = 0
-test "$(az deployment group list -g "$RG" --subscription "$SUB" --query "length(@)" -o tsv)" = 0
+CHECK_OUTPUT=$(az group exists -n "$RG" --subscription "$SUB")
+test "$CHECK_OUTPUT" = true
+CHECK_OUTPUT=$(az group show -n "$RG" --subscription "$SUB" --query properties.provisioningState -o tsv)
+test "$CHECK_OUTPUT" = Succeeded
+CHECK_OUTPUT=$(az group show -n "$RG" --subscription "$SUB" --query location -o tsv)
+test "$CHECK_OUTPUT" = "$LOCATION"
+CHECK_OUTPUT=$(az group show -n "$RG" --subscription "$SUB" --query tags -o json | python3 -I -c 'import json, sys; print(json.load(sys.stdin) == {"purpose": "infrastructure-validation", "infravalRun": sys.argv[1], "expiresAt": sys.argv[2]})' "$RUN" "$EXPIRES")
+test "$CHECK_OUTPUT" = True
+CHECK_OUTPUT=$(az resource list -g "$RG" --subscription "$SUB" --query "length(@)" -o tsv)
+test "$CHECK_OUTPUT" = 0
+CHECK_OUTPUT=$(az lock list -g "$RG" --subscription "$SUB" --query "length(@)" -o tsv)
+test "$CHECK_OUTPUT" = 0
+CHECK_OUTPUT=$(az deployment group list -g "$RG" --subscription "$SUB" --query "length(@)" -o tsv)
+test "$CHECK_OUTPUT" = 0
 
 # 5. The one deployment: the bound execution template and parameters, Incremental, synchronous.
 authorize_execution

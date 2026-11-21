@@ -91,6 +91,10 @@ line = " ".join(args)
 path = os.environ["AZSTATE"]
 st = json.load(open(path))
 open(os.environ["CALLS"], "a").write(line + "\n")
+failed_read = st["faults"].get("failed_read")
+if failed_read and all(fragment in line for fragment in failed_read):
+    print("0")
+    sys.exit(7)
 def save(): json.dump(st, open(path, "w"))
 def opt(name, default=None):
     return args[args.index(name) + 1] if name in args else default
@@ -498,6 +502,12 @@ def test_stage7_second_run_refuses(tmp_path: Path) -> None:
     assert code != 0 and shell.count("deployment group create") == 1
 
 
+def test_stage7_checks_read_exit_status_before_deploying(tmp_path: Path) -> None:
+    shell = Shell(tmp_path, faults={"failed_read": ["resource list", "--query length(@)"]})
+    code, _ = shell.run(STAGE7)
+    assert code == 7 and writes(shell) == []
+
+
 @pytest.mark.parametrize(
     "state",
     [
@@ -741,6 +751,18 @@ def test_cost_check_passes_after_the_checkpoint(tmp_path: Path) -> None:
         assert code == 0, out
         assert f"COST_CHECK_+{hours}h: PASS" in out and "currentSpend=0.12 GBP" in out
     assert writes(shell) == before  # read-only
+
+
+@pytest.mark.parametrize("script", [STAGE8, COST])
+def test_stage8_checks_read_exit_status_before_reporting_success(
+    tmp_path: Path, script: Path
+) -> None:
+    shell = deployed(tmp_path) if script == STAGE8 else torn_down(tmp_path, 73)
+    shell.edit(faults={"failed_read": ["resource list", "--tag purpose="]})
+    code, output = shell.run(script, CHECKPOINT_HOURS="72")
+    assert code == 7 and ": PASS" not in output
+    if script == STAGE8:
+        assert not (shell.work / "teardown-receipt.json").exists()
 
 
 @pytest.mark.parametrize("hours", ["12", "", "72; true"])

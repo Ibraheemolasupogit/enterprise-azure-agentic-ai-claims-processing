@@ -72,31 +72,38 @@ cancel_deployment() {
 
 delete_budget() {
   az rest --method delete --subscription "$SUB" --url "$BUDGETS_URL/$1?api-version=2021-10-01"
-  test "$(az rest --method get --subscription "$SUB" --url "$BUDGETS_URL?api-version=2021-10-01" --query "length(value)" -o tsv)" = 0
+  CHECK_OUTPUT=$(az rest --method get --subscription "$SUB" --url "$BUDGETS_URL?api-version=2021-10-01" --query "length(value)" -o tsv)
+  test "$CHECK_OUTPUT" = 0
 }
 
 delete_workspace() {
   az monitor log-analytics workspace delete -g "$RG" -n "$1" --force true --yes --subscription "$SUB"
-  test "$(az resource list -g "$RG" --subscription "$SUB" --resource-type Microsoft.OperationalInsights/workspaces --query "length(@)" -o tsv)" = 0
-  test "$(az monitor log-analytics workspace list-deleted-workspaces --subscription "$SUB" --query "length([?name=='$1'])" -o tsv)" = 0
+  CHECK_OUTPUT=$(az resource list -g "$RG" --subscription "$SUB" --resource-type Microsoft.OperationalInsights/workspaces --query "length(@)" -o tsv)
+  test "$CHECK_OUTPUT" = 0
+  CHECK_OUTPUT=$(az monitor log-analytics workspace list-deleted-workspaces --subscription "$SUB" --query "length([?name=='$1'])" -o tsv)
+  test "$CHECK_OUTPUT" = 0
 }
 
 delete_group() {
   test "$1" = "$RG"
-  test "$(az lock list -g "$RG" --subscription "$SUB" --query "length(@)" -o tsv)" = 0
+  CHECK_OUTPUT=$(az lock list -g "$RG" --subscription "$SUB" --query "length(@)" -o tsv)
+  test "$CHECK_OUTPUT" = 0
   az group delete -n "$RG" --yes --subscription "$SUB"
-  test "$(az group exists -n "$RG" --subscription "$SUB")" = false
+  CHECK_OUTPUT=$(az group exists -n "$RG" --subscription "$SUB")
+  test "$CHECK_OUTPUT" = false
 }
 
 purge_vault() {
   DELETED_ID=$(az keyvault show-deleted --name "$1" --subscription "$SUB" --query properties.vaultId -o tsv)
   test "$(python3 -I -B infra_validation.py --contract contract.json --verify-purge "$1" "$DELETED_ID")" = '"PURGE_TARGET_VERIFIED"'
   az keyvault purge --name "$1" --location "$LOCATION" --subscription "$SUB"
-  test "$(az keyvault list-deleted --subscription "$SUB" --query "length([?name=='$1'])" -o tsv)" = 0
+  CHECK_OUTPUT=$(az keyvault list-deleted --subscription "$SUB" --query "length([?name=='$1'])" -o tsv)
+  test "$CHECK_OUTPUT" = 0
 }
 
 verify_absent() {
-  test "$(az group exists -n "$RG" --subscription "$SUB")" = false
+  CHECK_OUTPUT=$(az group exists -n "$RG" --subscription "$SUB")
+  test "$CHECK_OUTPUT" = false
   VAULT=$(python3 -I -B infra_evidence.py get-optional targets.json vault)
   WORKSPACE=$(python3 -I -B infra_evidence.py get-optional targets.json workspace)
   case "$VAULT" in
@@ -110,12 +117,18 @@ verify_absent() {
   esac
   case "$WORKSPACE" in
     none) ;;
-    *) test "$(az monitor log-analytics workspace list-deleted-workspaces --subscription "$SUB" --query "length([?name=='$WORKSPACE'])" -o tsv)" = 0 ;;
+    *)
+       CHECK_OUTPUT=$(az monitor log-analytics workspace list-deleted-workspaces --subscription "$SUB" --query "length([?name=='$WORKSPACE'])" -o tsv)
+       test "$CHECK_OUTPUT" = 0 ;;
   esac
-  test "$(az resource list --subscription "$SUB" --query "[].id" -o json | python3 -I -B infra_evidence.py count-ids targets.json)" = 0
-  test "$(az resource list --subscription "$SUB" --tag purpose=infrastructure-validation --query "length(@)" -o tsv)" = 0
-  test "$(az role assignment list --all --subscription "$SUB" --query "[].scope" -o json | python3 -I -B infra_evidence.py count-scopes "$RG")" = 0
-  test "$(az rest --method get --subscription "$SUB" --url "$SUB_BUDGET_URL" --query name -o tsv)" = infraval-uks-tmp01-budget
+  CHECK_OUTPUT=$(az resource list --subscription "$SUB" --query "[].id" -o json | python3 -I -B infra_evidence.py count-ids targets.json)
+  test "$CHECK_OUTPUT" = 0
+  CHECK_OUTPUT=$(az resource list --subscription "$SUB" --tag purpose=infrastructure-validation --query "length(@)" -o tsv)
+  test "$CHECK_OUTPUT" = 0
+  CHECK_OUTPUT=$(az role assignment list --all --subscription "$SUB" --query "[].scope" -o json | python3 -I -B infra_evidence.py count-scopes "$RG")
+  test "$CHECK_OUTPUT" = 0
+  CHECK_OUTPUT=$(az rest --method get --subscription "$SUB" --url "$SUB_BUDGET_URL" --query name -o tsv)
+  test "$CHECK_OUTPUT" = infraval-uks-tmp01-budget
   az group exists -n NetworkWatcherRG --subscription "$SUB" > "$EV/networkwatcherrg-exists.txt"
 }
 

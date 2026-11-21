@@ -35,11 +35,16 @@ az account show --subscription "$SUB" -o json | INFRAVAL_SUB="$SUB" \
   python3 -I infra_subscription_preflight.py check --contract contract.json
 
 # 3. Still absent, nothing soft-deleted, nothing tagged, no recorded ID back.
-test "$(az group exists -n "$RG" --subscription "$SUB")" = false
-test "$(az keyvault list-deleted --subscription "$SUB" --query "length([?name=='$VAULT'])" -o tsv)" = 0
-test "$(az monitor log-analytics workspace list-deleted-workspaces --subscription "$SUB" --query "length([?name=='$WORKSPACE'])" -o tsv)" = 0
-test "$(az resource list --subscription "$SUB" --query "[].id" -o json | python3 -I -B infra_evidence.py count-ids targets.json)" = 0
-test "$(az resource list --subscription "$SUB" --tag purpose=infrastructure-validation --query "length(@)" -o tsv)" = 0
+CHECK_OUTPUT=$(az group exists -n "$RG" --subscription "$SUB")
+test "$CHECK_OUTPUT" = false
+CHECK_OUTPUT=$(az keyvault list-deleted --subscription "$SUB" --query "length([?name=='$VAULT'])" -o tsv)
+test "$CHECK_OUTPUT" = 0
+CHECK_OUTPUT=$(az monitor log-analytics workspace list-deleted-workspaces --subscription "$SUB" --query "length([?name=='$WORKSPACE'])" -o tsv)
+test "$CHECK_OUTPUT" = 0
+CHECK_OUTPUT=$(az resource list --subscription "$SUB" --query "[].id" -o json | python3 -I -B infra_evidence.py count-ids targets.json)
+test "$CHECK_OUTPUT" = 0
+CHECK_OUTPUT=$(az resource list --subscription "$SUB" --tag purpose=infrastructure-validation --query "length(@)" -o tsv)
+test "$CHECK_OUTPUT" = 0
 
 # 4. Cost: the subscription budget (filtered to the validation group) still exists, in GBP and
 #    below the approved amount.
