@@ -11,7 +11,7 @@
   ],
   "approvals": {
     "budget": {"approval_identity": "repository-owner", "approval_time": "2026-11-20T01:26:08Z", "evidence_sha256": "55641a5f8886e940c4a768f093b24fce9527f7e3bc56b0a35a6e82dd7bd5d410", "status": "APPROVED"},
-    "cloud_validation": {"approval_identity": "repository-owner", "approval_time": "2026-11-21T00:48:17Z", "evidence_sha256": "3c15dfde020c6a0931628cbeb5c3db0e07c21de980d9c7792ffec4de271dbccb", "status": "APPROVED"},
+    "cloud_validation": {"approval_identity": "repository-owner", "approval_time": "2026-11-21T05:46:44Z", "evidence_sha256": "773811f3887fc80fa3c8e0a96b91dbfd90d219720fb8ee5f447ea905e8c8a19f", "status": "APPROVED"},
     "cost_exposure": {"approval_identity": "repository-owner", "approval_time": "2026-11-20T00:08:07Z", "evidence_sha256": "ccfa1bab06bed7065f7339a417b4b487e4e6541245c7c9b10beedcfec356cd4f", "status": "APPROVED"},
     "evidence": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
     "execution_template": {"approval_identity": "repository-owner", "approval_time": "2026-11-20T05:16:14Z", "evidence_sha256": "1d69d8bbdc82551a3fcad00f7bd6d277e08b26c4cd26a5c85dd292d0650bf8ba", "status": "APPROVED"},
@@ -28,7 +28,7 @@
     "budget_contact_emails": ["ibraheemolasupo@yahoo.com"],
     "budget_end_date": "2026-12-31",
     "budget_start_date": "2026-11-01",
-    "expires_at": "2026-11-25T16:00:00Z",
+    "expires_at": "2026-11-21T16:00:00Z",
     "include_container_environment": false,
     "location": "uksouth",
     "log_daily_quota_gb": 1,
@@ -48,12 +48,12 @@
     {"stage": 9, "name": "evidence_record", "approvals": ["evidence"]}
   ],
   "execution": {
-    "approved_parameters_sha256": "d668581c7e7c0b9a025ebedc9c124058be6ea371ff649084f9dd9c3ed6208b7c",
+    "approved_parameters_sha256": "b679e8e0b170b1fa2bc9ed162125ea2c968ebf5e5a7b06c728c11ca937f0a946",
     "approved_template_sha256": "dfc26600fb9c8748fdf9fead8078bf281f4482ae27ed987c004adf33bb970989",
     "approved_whatif_sha256": null,
     "resource_group": "rg-claims-infraval-uks-tmp01",
     "reviewed_template_sha256": "28c29de5f4d0bc36529a5682246da5324cb9b2db8267583b8227254e55c41a17",
-    "run_id": "infraval-20261125-01",
+    "run_id": "infraval-20261121-01",
     "window_end_utc": null,
     "window_start_utc": null
   },
