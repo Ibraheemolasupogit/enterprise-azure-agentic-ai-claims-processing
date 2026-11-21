@@ -9,7 +9,7 @@ matched the original Cloud Shell SHA-256 values supplied by the owner.
 | --- | --- |
 | Stage 7 deployment `infraval-20261121-01-deploy` | Owner reported `STAGE7_DEPLOYED PASS`. ARM recorded `Succeeded` at `2026-11-21T09:58:04.656146Z`. The ARM timestamp and the start inferred from its reported duration fall within the 09:00–11:00 UTC window. |
 | Stage 8 teardown | The receipt confirms the owner-reported verification time, `2026-11-21T10:02:56Z`, 5h 57m 04s before the 16:00 UTC cleanup deadline. The owner reported `STAGE8_TEARDOWN_VERIFIED PASS`. |
-| Network Watcher | Owner reported `NetworkWatcherRG` present (`true`) and untouched. The `NetworkWatcher_uksouth` instance observation remains to be verified separately. |
+| Network Watcher | The original teardown archive records `NetworkWatcherRG` present (`true`). Its observation file has a UTC modification time of `2026-11-21T10:02:56Z`, matching the receipt. The approved script only observes the group, and the owner reported it was left untouched. The original procedure did not capture `NetworkWatcher_uksouth` instance status. |
 
 ## Scope, controls and offline verification
 
@@ -21,10 +21,15 @@ matched the original Cloud Shell SHA-256 values supplied by the owner.
   pinned targets and approved what-if. The recorded resource-group inventory passed
   the exact-inventory check and the teardown plan regenerated from that state matched.
   [Stage 7 approval](infra-validation-approvals/2026-11-21-stage7-provisioning.md)
-- Stage 8 required a single operator and a fresh plan against pinned targets. Unexpected state,
-  locks or target drift stop teardown. The procedure verifies group and resource absence,
-  including soft-deleted items and scoped role assignments, and checks that the subscription
-  budget is retained. Network Watcher is observed and left untouched.
+- Stage 8 required a single operator and a fresh plan against pinned targets. The archived
+  pre-teardown deployment matches the Stage 7 receipt byte-for-byte. The captured state
+  reproduced the approved teardown plan and showed the expected inventory and resource-group
+  budget, zero locks and an empty scoped role-assignment list.
+  The teardown receipt is written only after the approved procedure confirms the validation
+  group is absent, the bound vault and workspace are absent from soft-delete listings, no
+  recorded IDs or validation-tagged resources remain, there are no scoped role assignments,
+  and the subscription budget is retained. These post-teardown checks are supported by that
+  receipt and the owner-reported PASS. The script did not persist the individual query results.
   [Stage 8 approval](infra-validation-approvals/2026-11-21-stage8-teardown-and-cost-checks.md)
 - The Stage 6 evidence matched the approved SHA-256 digests below. The committed contract,
   approval-record and procedure bindings, and all eight upload files passed offline integrity
@@ -37,11 +42,12 @@ matched the original Cloud Shell SHA-256 values supplied by the owner.
 
 ## Private receipt digests
 
-These SHA-256 digests were computed from the local receipt bytes. The owner verified
-the original Cloud Shell output and supplied its four Stage 7 SHA-256 values. The
-comparison against those owner-supplied values passed for all four files. The Stage 8
-receipt contains the verified UTC timestamp. Its supporting `ev8-*` artifacts were
-unavailable for review.
+These SHA-256 digests were computed from the local evidence bytes. All four Stage 7
+receipt digests match the original Cloud Shell values verified and supplied by the
+owner. The original Stage 8 archive matched the owner-supplied digest and was inspected
+without extracting files. It contains the pre-teardown capture, the `WITHIN_EXPIRY`
+start marker and the final Network Watcher group observation. The separately retained
+teardown receipt establishes the completion time.
 
 | Receipt | Local SHA-256 |
 | --- | --- |
@@ -50,15 +56,17 @@ unavailable for review.
 | `plan.json` | `0c9a7c94f61b2e4ff9b3ca1bfa0dc9c4b52367b841c3a66b07f1efeb4c933de1` |
 | `targets.json` | `db8f31e6efa91733e5f75bf38a0e016476292a8296e931aa0447d59fd313ef65` |
 | `teardown-receipt.json` | `ea435ece228247362103a37059f32dba4360c8a3d2a30288dc503306ec9421e5` |
+| `stage8-evidence-private-20261121.tar.gz` | `7182f3cff02c1b32d857c2803e18826c7a5eeb2af7cc9fa6da832ad61f18debb` |
 
 ## Stage 9 closure checklist — pending owner decision
 
 - [x] Compare the four Stage 7 receipt digests with the original Cloud Shell values supplied
   by the owner. All four matched.
-- [ ] Reconcile the Stage 8 `ev8-*` evidence with the teardown receipt. Confirm absence
-  checks, subscription budget retention, and Network Watcher group and instance observations.
-  Compare with any contemporaneous digests. Keep originals private and review masked copies
+- [x] Reconcile the original Stage 8 archive with the teardown receipt and record which
+  checks are supported by the receipt. Keep originals private and review masked copies
   before sharing.
+- [ ] Record the missing execution-time `NetworkWatcher_uksouth` instance observation as
+  an evidence gap for the owner decision. Date any later observation separately.
 - [ ] **+24 h, due 2026-11-22 10:02:56 UTC.** Retain the masked result from the approved read-only
   cost procedure. Confirm scoped absence and the retained subscription budget's reported spend
   in GBP below £2. Pending.
