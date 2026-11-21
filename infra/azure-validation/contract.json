@@ -18,10 +18,10 @@
     "identity_rbac": {"approval_identity": "repository-owner", "approval_time": "2026-11-20T00:24:22Z", "evidence_sha256": "66eaf9969cb488fe1dd4e55b53c00c1d8e1faf9f35aa278f52cdac5ad5ab27e4", "status": "APPROVED"},
     "network": {"approval_identity": "repository-owner", "approval_time": "2026-11-20T00:20:17Z", "evidence_sha256": "b77a417fc6b80fb1a6571ad364405db145f09328c1f458c9694e6b21cbc3da44", "status": "APPROVED"},
     "provider_registration": {"approval_identity": "repository-owner", "approval_time": "2026-11-20T00:31:39Z", "evidence_sha256": "6ac6063f3205a1645cf1519a4699d38ded090c7d3503560d35409133580cf132", "status": "APPROVED"},
-    "provisioning": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"},
+    "provisioning": {"approval_identity": "repository-owner", "approval_time": "2026-11-21T08:48:27Z", "evidence_sha256": "0be9c0fb533efdf6f7cca925a7d29e80522446d129212db84520d515b9c1cca4", "status": "APPROVED"},
     "region_capacity": {"approval_identity": "repository-owner", "approval_time": "2026-11-20T00:39:42Z", "evidence_sha256": "0bbf4246159d7c20627f01cec3c77d93509993fc906a5188ef0fcaa30eadbe5d", "status": "APPROVED"},
     "scope": {"approval_identity": "repository-owner", "approval_time": "2026-11-20T00:08:07Z", "evidence_sha256": "3221815769defb3af9d3434b36ac5341b6ac10de41fcee8fbd80f4eeea2133ad", "status": "APPROVED"},
-    "teardown": {"approval_identity": null, "approval_time": null, "evidence_sha256": null, "status": "PENDING"}
+    "teardown": {"approval_identity": "repository-owner", "approval_time": "2026-11-21T08:48:27Z", "evidence_sha256": "9a972620a843943b4580a2035b6b2a34ce66a7b3f768cce32ceed0f0bd418a92", "status": "APPROVED"}
   },
   "approved_values": {
     "budget_amount": 2,
@@ -50,12 +50,12 @@
   "execution": {
     "approved_parameters_sha256": "b679e8e0b170b1fa2bc9ed162125ea2c968ebf5e5a7b06c728c11ca937f0a946",
     "approved_template_sha256": "dfc26600fb9c8748fdf9fead8078bf281f4482ae27ed987c004adf33bb970989",
-    "approved_whatif_sha256": null,
+    "approved_whatif_sha256": "2e329d3001625274eb407a64ee61ec8f6af2764b9960405bd7ed057e0f5abf30",
     "resource_group": "rg-claims-infraval-uks-tmp01",
     "reviewed_template_sha256": "28c29de5f4d0bc36529a5682246da5324cb9b2db8267583b8227254e55c41a17",
     "run_id": "infraval-20261121-01",
-    "window_end_utc": null,
-    "window_start_utc": null
+    "window_end_utc": "2026-11-21T11:00:00Z",
+    "window_start_utc": "2026-11-21T09:00:00Z"
   },
   "format": "azure-infrastructure-validation-contract-v2",
   "notes": [
@@ -66,7 +66,7 @@
     "The repository template gate stays false-only in every state; only a hash-bound execution copy may differ."
   ],
   "proposed_max_lifetime_hours": 72,
-  "provisioning_allowed": false,
+  "provisioning_allowed": true,
   "restrictions": {
     "m22": "60 PENDING_REVIEW; 12 independent-quality gates NOT_TESTED",
     "m23": "DEFERRED - SECURITY GATE NO-GO; infra/azure/main.bicep deploymentEnabled remains false-only",
@@ -81,5 +81,5 @@
     "public_ip": false,
     "role_assignments": false
   },
-  "status": "APPROVED_FOR_VALIDATION"
+  "status": "APPROVED_FOR_EXECUTION_WINDOW"
 }
